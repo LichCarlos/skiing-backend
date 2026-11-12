@@ -28,7 +28,7 @@ CMD ["pnpm", "db:deploy"]
 
 FROM build AS production-dependencies
 RUN --mount=type=cache,id=linji-api-pnpm,target=/pnpm/store \
-    pnpm prune --prod --store-dir=/pnpm/store
+    npm_config_store_dir=/pnpm/store pnpm prune --prod
 
 FROM base AS runtime
 ENV NODE_ENV=production PORT=8080

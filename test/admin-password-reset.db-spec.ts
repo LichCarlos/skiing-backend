@@ -31,7 +31,7 @@ describe('Managed password reset with real HTTP and PostgreSQL', () => {
     const disposableCi =
       process.env.GITHUB_ACTIONS === 'true' &&
       process.env.LINJI_DATABASE_TEST_DISPOSABLE === 'true' &&
-      url.pathname === '/linji_snow';
+      url.pathname === '/linji_validation';
     const disposableClosure =
       process.env.LINJI_DATABASE_TEST_DISPOSABLE === 'true' &&
       process.env.BUSINESS_CLOSURE_CONFIRM ===
