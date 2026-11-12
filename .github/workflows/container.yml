@@ -14,7 +14,6 @@ jobs:
     env:
       CONTAINER_RUNTIME_IMAGE: linji/backend:validation
       CONTAINER_TOOLS_IMAGE: linji/backend-tools:validation
-      LINJI_CONTAINER_VALIDATION_DIR: ${{ runner.temp }}/backend-container-validation
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -33,6 +32,8 @@ jobs:
       - run: docker build --target runtime -t "$CONTAINER_RUNTIME_IMAGE" .
       - run: docker build --target tools -t "$CONTAINER_TOOLS_IMAGE" .
       - run: pnpm test:container
+        env:
+          LINJI_CONTAINER_VALIDATION_DIR: ${{ runner.temp }}/backend-container-validation
       - uses: actions/upload-artifact@v4
         if: always()
         with:

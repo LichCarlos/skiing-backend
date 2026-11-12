@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/linji_snow
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/linji_validation
       INITIAL_ADMIN_ACCOUNT: ci-system-admin
       INITIAL_ADMIN_PASSWORD: ci-only-database-seed-password
       LINJI_DATABASE_TEST_DISPOSABLE: 'true'
@@ -22,11 +22,11 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: linji_snow
+          POSTGRES_DB: linji_validation
         ports:
           - 5432:5432
         options: >-
-          --health-cmd "pg_isready -U postgres -d linji_snow"
+          --health-cmd "pg_isready -U postgres -d linji_validation"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 10
