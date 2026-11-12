@@ -1,0 +1,573 @@
+{
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "secureBrokerTests": 12,
+  "kafkaIntegrationTests": 10,
+  "skippedTests": 0,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/kafka-secure-broker-20261104.json",
+      "sha256": "4bdc05b459ded5ebe2cb746e4a7c6e0058bf168391d614cdbdfe3dea27d10a46",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitTests": 1323,
+        "sourceTools": 20,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "compiledOpenapi": 0,
+        "secureBrokerTests": 12,
+        "kafkaIntegrationTests": 10
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/kafka-secure-broker-20261104.json",
+      "sha256": "69ef967770499ac9df24ed737e842be312b05e3f67840c06e6bbe752ccd3854f",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 3045,
+        "sourceTools": 20,
+        "releaseTools": 20,
+        "uncachedBuilds": 2,
+        "standaloneChecks": 2,
+        "productCodeChanged": false
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/kafka-secure-broker-20261104.json",
+      "sha256": "15e57651c4d3df3efbbff20a9446994c8d60ea1ba52b6d81c6495cde41927ae2",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 1217,
+        "sourceTools": 20,
+        "artifactTools": 10,
+        "expoDoctor": "20/20",
+        "platformExports": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "artifactSeal": 0,
+        "relocatedArtifactVerify": 0,
+        "productCodeChanged": false
+      }
+    }
+  ],
+  "commands": 25,
+  "finalizationCommands": 7,
+  "audit": {
+    "markdownFiles": 270,
+    "checkedLinks": 2448,
+    "broken": []
+  },
+  "verifiedReferences": 126,
+  "references": [
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/backend-source.log",
+      "sha256": "9b02f2e5277b3f4a164536e7eec44b8a19168e6c6d8dc03f95cf9318bb1f3ab1"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/backend-source-verify.log",
+      "sha256": "890cc97bd5cfd0538a6e2971002acf5540c3ac477fcf21325cd31f7c10c47db7"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/backend-install.log",
+      "sha256": "0fcc68369f42383ec5551505c0c4e8cb913ab810bf05572dd162ccdbc451cbd1"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/backend-generate.log",
+      "sha256": "e0a5c8210cbb59d52c4968f146ccb94e93594d75edcabd5bafdf11f7d6724fb9"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/backend-check.log",
+      "sha256": "84ff1ab957d36748591264905a69bf4ea2a5bdc90f27f7cd25384cd6e7510918"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/backend-e2e.log",
+      "sha256": "52a68428ef6a5b0d97773d5c1d3786b9b1f420ef657ac751d3657a1da7ef265c"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/backend-openapi.log",
+      "sha256": "ea8a0c11e512711230e77345d3bd79cc09157ced5625d1c797ad18f425f4b676"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/web-source.log",
+      "sha256": "364cbee5d78eea8021bff49d1e3417c70445526c199ae8020dd8c952469e4afb"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/web-source-verify.log",
+      "sha256": "4f404ef05a70381e7f21fe0c96ec1c5bd6a74c2ef0a4ea03e393a678ebb32868"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/web-install.log",
+      "sha256": "811a3a9415b902f13f970d08397a54b826674ed589bc6b1a43dbc68d71f8bda1"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/web-check.log",
+      "sha256": "4c995a4d6dc61bcaaf91aee7acf2d735b0f131baa6cd1c5c67beec028fa8c640"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/web-build.log",
+      "sha256": "d8fdf6f2cd52b94a47d40b27b6438d42f9ef876ab0d7b02822d5c3ce6cade3f9"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/web-web-release.log",
+      "sha256": "2ba4660e9669934d16b01f5e16bfb5862bf00ab3905cc3abbd5c296065e9f2df"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/web-admin-release.log",
+      "sha256": "1660eb532c261adcf56cee9c531ddb916cb83089fe2e4132fd3472ff235a8a8e"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-source.log",
+      "sha256": "6eab0ed2b657bab84c3bfbd25124960bbba950db839ab6be3560a6aacf7051fc"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-source-verify.log",
+      "sha256": "db6dac0de3203348c5b9fd336829cb07cb49442f1834446bcdc17784a07033ec"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-install.log",
+      "sha256": "075a1556fdf7d815ccd58cd064061797013f371e84f90b41843f475490a9fb5e"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-check.log",
+      "sha256": "1080ebe7216f46fba578cf589b8a7c01a9c6eb0205347ec5de1f4bd00b5335ae"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-export.log",
+      "sha256": "10c845e452d818de45201049bf30fbc7b2abac91547bf0457a44eeb1c92919fa"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-seal.log",
+      "sha256": "6dd26bb91fb78a0a5984eab65da601effb704d619bc2660f705ce1fa0e9dda87"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-verify.log",
+      "sha256": "0cb2a5032ad6d99aad97537067d60971382a5184f7f96135872c3f8143ad7ca9"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-relocated-verify.log",
+      "sha256": "18e260794936afc0209d826ee6d50e3207229c763d7249e19bb1f77247da8800"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/commands.json",
+      "sha256": "f434da8844010f40b2fb8ff3c1003501544f7164dc30c6509680eda64ba5e4f7"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/snapshots.json",
+      "sha256": "9e6f01baacae2c4dc588a135935ea4ac21587c1930a2546ce2a1bed2c81cf428"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/integration-source.json",
+      "sha256": "03b044e8019990184bf482506e3f0f7d7de6ee3ecda20ef65bb80b4185d9c537"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/backend-module-paths.json",
+      "sha256": "e4e63cbad80363293e05c279ad7f362f2d39293e7563834f2fcfaed76701aaac"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/web-module-paths.json",
+      "sha256": "21ce5c87494ea26ef2afa78499f00dc81b6b9080a7e3f637284ffdd2467c16b7"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/app-module-paths.json",
+      "sha256": "40299988274526377ea2a2964b1c2610d8774d37508390e18a626309e0b9b51e"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/validated/backend/.source-export.json",
+      "sha256": "61547c3221861d9bda5d4a6552e8e0452fa60147b93429f1c2842dd5f548d73f"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/validated/web/.source-export.json",
+      "sha256": "aff8a73b7e3deb96e934bf3a4b196e873543cf1cd432fc22b84ee916eed79138"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final/validated/app/.source-export.json",
+      "sha256": "93fbeac05b503a544d05c059b48d02fd7d45f93ed0f319c99d526afa6a1f2edf"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/cleanup-proof.json",
+      "sha256": "3303b719ac475ea813e23cb36352a309316ce05ea7d99ee7f4a560fef35c9e28"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/cleanup-proof.log",
+      "sha256": "fb971ec7f60708aacf052bc69b1ec910764dc676a29c6d4ee72dde0fc4f04bad"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/cleanup-proof.mjs",
+      "sha256": "df048fef8c7d7f43e95453858851ef9fcc59532ad223362cdc08509e17bab554"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/prepare-runtime.mjs",
+      "sha256": "180a82d38f68721f53ffbaa6ed6690edaa8520e6c77a488149d61e41cbf73826"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/secure-broker.py",
+      "sha256": "a5860db4065449306cd9d4ef335c5393cf8a4cd5267c454e933ff051b6de6e39"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/validate-secure-local.mjs",
+      "sha256": "95b76c02cbb61c8f053708fe24e215fd5300b0acd8d5caa85cbf8d30f1266a59"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final-check.mjs",
+      "sha256": "a606e5ce682933c7a2019c6e3032f123bec80ee4c4eeb37904c4c2faf529827d"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/evidence.mjs",
+      "sha256": "6ac0066bc070ec06aff9db70ce8a068f5e7d14ca6b98d3d99bb957586e1b082c"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110345/linux-broker.py",
+      "sha256": "9fb4cdfd70da1e3815717e4b18908b9b85fd5c29682511e7fc30f45e43c4b3ec"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110345/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110414/report.json",
+      "sha256": "3caf6a21b746d9834c3c3b4d806f1bc3051f599edcb34515a05486d0cadf000d"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110414/serial.log",
+      "sha256": "2caf60769b6448a75572cd8955b516f2b2d9fc7e555669663f02cb8ecd6d56e3"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110414/linux-broker.py",
+      "sha256": "50db462d01027683d24b27d2e35f0fec3c5cf90aee470158425d6ccb41ff02b5"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110414/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110630/report.json",
+      "sha256": "26e6d077dd01f0a74fd7a9a66239978d135e66707c037f72b5555424e2720e04"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110630/serial.log",
+      "sha256": "dc835d04887bf36b6f008498ced985868977aca18c935e1e959640a587a00ed8"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110630/linux-broker.py",
+      "sha256": "48ffa17afadce1206abab9b9b3419647cc840f49be63966aaff2eb21e2fb72cd"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110630/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110919/report.json",
+      "sha256": "4db1be9f26ef7e5ae4d4e3d47c4274b005f77e0f7214f97ed495a70679cc3298"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110919/runner.log",
+      "sha256": "ff8f944a5c6aa40eb58465277da4bfef85fc412d5ca13c4840a1630f2a1269e9"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110919/serial.log",
+      "sha256": "b822960e44ad5dcb4cc39b965ffa5cbb80634142634feea2d8a2f5ba4423c71a"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110919/linux-broker.py",
+      "sha256": "a5860db4065449306cd9d4ef335c5393cf8a4cd5267c454e933ff051b6de6e39"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-110919/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/report.json",
+      "sha256": "1368c112c25c107eca7780c101b86afc350308c8fd4977eb8b4c5d4009ce88ca"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/runner.log",
+      "sha256": "e2e0c4e88cddeb613d15ad9992935ffd63211effcf1b0c9b64093e1e05dc9147"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/serial.log",
+      "sha256": "ff8f795f43ca8b4955105e11209f5b63c2d584b461989f5b3a282f5e037133b9"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/linux-broker.py",
+      "sha256": "a5860db4065449306cd9d4ef335c5393cf8a4cd5267c454e933ff051b6de6e39"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/database/report.json",
+      "sha256": "a9b8d4d9d493c36b89b4de54f5fcfc21843892a7857f606942c63d21fa01b177"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/database/security-suite.log",
+      "sha256": "f5dc1b8d7ac2907c2be360cbd38a1d57b8a3bb924d25934e5d373bbc7d6c01ed"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/database/security-tests.json",
+      "sha256": "4e048de7c5d46379fe78b4089d7ee68994c3589696f9b9f496c54aa008f97209"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/database/migrate-deploy.log",
+      "sha256": "3a8772c9080cc14d38bd914f45a0db5608c7c38ca26d7d4b494695a35eb35abe"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111229/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/report.json",
+      "sha256": "8492b97360a6633b02923e33c1c185ab69fac1ca3fa1f8227b67e5aabec1bbcc"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/runner.log",
+      "sha256": "a2bf6c26fc8d6988b1a8809aaa6e704578887d04f5b17822f1cf8fbc31adfa95"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/serial.log",
+      "sha256": "e528d2ab6128e21d00faed035ce4749f1f0273c0e9e1d20bc5a7cfb0e9cf31a2"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/linux-broker.py",
+      "sha256": "a5860db4065449306cd9d4ef335c5393cf8a4cd5267c454e933ff051b6de6e39"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/database/report.json",
+      "sha256": "656a04bfc2b22a09ad74739d3fc6cbfc5990dfb0540597cddeea1911c7c22cd0"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/database/security-suite.log",
+      "sha256": "41b03652fb0bf4006253ffdefc56720aa0c472bda06851047b94094e45599b4e"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/database/security-tests.json",
+      "sha256": "0d454bca46a16f2898982de0b1aaed8cb826490e207caa1d82428ef3fd8f8cd9"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/database/migrate-deploy.log",
+      "sha256": "33d150386b095812bfcea2d8e263bf870e986eade5074a6bc4e501a3f972b13f"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111605/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/report.json",
+      "sha256": "2f91b1908e09ea77b22b09093cd5e80e66e379aad47a0287c1482477d95ad399"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/runner.log",
+      "sha256": "ab5d059280976f6cdac339c8901ec3e1e99d8c3df2d8d42b4607b34532f940cb"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/serial.log",
+      "sha256": "c1ec05861d6ce7e1244e9a42dc7a899bdf2fa74d106423e5d51b42e4fcf0834c"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/linux-broker.py",
+      "sha256": "a5860db4065449306cd9d4ef335c5393cf8a4cd5267c454e933ff051b6de6e39"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/database/report.json",
+      "sha256": "ff3e022bd7bf328f630be0096fc98c99a3b1c35372822d16f92f9a0c33910ab3"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/database/security-suite.log",
+      "sha256": "68c50e7eb3eae6298da4cabd69e0df97b9361275a917893235024b06dbf5e28e"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/database/security-tests.json",
+      "sha256": "01c6591314afc52527f41f6678805607bee1feda8abd4f3caec4ab2351db4c1c"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/database/integration-suite.log",
+      "sha256": "675bf1c546a8ba99a3917d308b3b3b6b5710e2fe8d9d2755d380fec78016a65a"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/database/integration-tests.json",
+      "sha256": "d4497779e7ad606f8c0b4a644afcebf7bbbb0fb67b3639e687a8f0763de3a061"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/database/migrate-deploy.log",
+      "sha256": "705a7009a6f66d2112f0b06d7a4e5bee4f4f9c6f81b5da6f25b021e75acf7852"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/database/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/run-111902/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/helpers/kafka-integration-transport.ts",
+      "sha256": "ec82954f307a983bd586e27369da19c1bf36d94ae38cd9125c26a27e13b7b512"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/helpers/kafka-integration-transport.spec.ts",
+      "sha256": "a002afe3759b9ba083b80d2a4fbcf90f7484852c62608d5861c9b7e1533772bc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/kafka-security.integration-spec.ts",
+      "sha256": "63672711d366850f0b1194d5b3e44a8915f3ee539f4a6a6ea81b33570a4fdaa0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/kafka-rag.integration-spec.ts",
+      "sha256": "fece8ce22c2c3228c3e6007fac46fabf6a38f3dc223785c2a4f128995858aa82"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/worker-shutdown.integration-spec.ts",
+      "sha256": "e61bd5b2049fd12fc4d5f6b52336e454a51695ac776eeec9f6b4a472cbea0682"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/vitest.config.kafka-security.ts",
+      "sha256": "ba588d3691d956e5c823249f1c9e91f650769a104f9bee3d0a5123991e1b6a09"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "dcca83d526432be53a07606795c38f31caac743489217b1d9e978731298ce8bf"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/result-totals.json",
+      "sha256": "c35b9b16769d0f3dd40799ab0b47706faca746fb135b10ac1d5c8453914a179e"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/update-docs.mjs",
+      "sha256": "91ea337cc501307cfe8d61b216ade67e0e1e1f1e04f1b384f68bea2dbac75968"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/finalize.mjs",
+      "sha256": "392dfccb2c04e3748e86d7784f512c10d66488f048843e41927f47aba3a49e78"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final-proof.mjs",
+      "sha256": "77efb4023eba8441e1afff880d380cc376625e17c8f4b4b3df71d3b5ab0ca240"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final-commands.json",
+      "sha256": "3c69a8c799df61dd7e91cd8dc4bb54a320cdb0db388411d3d8df6228effdf1da"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/final-audit.log",
+      "sha256": "a770b97672c3bf0968872bb04d1c75305dd62a56d05c67350da338224dbef7f4"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/backend-format.log",
+      "sha256": "ec65e384731d5bdfb166e658ac3fdce36a1da77a80b3924f039fc2c2a09d79df"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/web-format.log",
+      "sha256": "1a8c1804f8956652159d348c9146a22e841292120e81bc13db09f793cb93a785"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/app-format.log",
+      "sha256": "7a1109138f36bb19ca45ddae5b8be9e42eb5e9c54801bf07c2ce9372c5059e76"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/backend-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/web-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-kafka-secure/20261104/app-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "E:/desktop/lishiqi/README.md",
+      "sha256": "b8461962549aeaea23a36766218d9f2ba76bd38ae5c3976cffaf9bf8abebcb97"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/README.md",
+      "sha256": "648d7538ca6c8f76d068d7311da4f8a06c16949fd258ca1ce4680ac1108e9e99"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/00-项目治理/阶段与验收规则.md",
+      "sha256": "b3843a69f583dda50b04f8f1ac1de0fc98ab029e4359ed1e73362b5967adf6a3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "733ae6c049767c522a8ecda79998095e813dbe9acfe614b46073d11a337cc201"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/05-测试质量/测试覆盖与现状.md",
+      "sha256": "732cb3d1834d9452d320f10c4c6dfcfd18817e7cf72df5b259aa6e2b25b08777"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/本地运行与部署现状.md",
+      "sha256": "942c4607f9992c47c043df864b00ac06716f73e9fccbb623e4d10ed008084f10"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "1cd80483e073d23c7b4231e9248285c03a915c395a5622e33a283f3edbe6dedf"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "1f5b2c6a354b4985471da78bc3d5b7d87a03810d48c55ba85572355d11ca78df"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "2ea804144660d65af7f9f7fe3a43a252397812e636967d6ae0a4cb6afc01d9c2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "8b805f4e8e822cf55f6608f1bc5961380c6b7040983df46246f9b91e94ce5c78"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/kafka-secure-broker-validation.md",
+      "sha256": "0f7d08d64bedffdda73018ff3f1595f812259e3edb93a526935b054a25c402bc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/kafka-transport-security.md",
+      "sha256": "7ec2c04307caf4b01157355a8bdf0efdd23476be7846391b68cc6d152da53fa6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/fixtures/kafka-tls/README.md",
+      "sha256": "60ba7607f801ee4e33d9c79f5e53f68a92c137ed5a9355886a7f4ff5a8ab178e"
+    }
+  ],
+  "overallGoalComplete": false
+}

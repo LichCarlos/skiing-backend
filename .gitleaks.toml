@@ -1,0 +1,30 @@
+title = "Linji API security; narrowly scoped public fixture exceptions"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Public OpenAPI SHA-256 checksums in validation records"
+condition = "AND"
+paths = ['''docs/validation/[^\r\n]+\.json$''']
+regexTarget = "match"
+regexes = ['''(?i)(?:openapiSha256|threeRepositoryOpenapiSha256)"\s*:\s*"[a-f0-9]{64}"''']
+
+[[allowlists]]
+description = "Fixed database lease UUIDs in three offline test fixtures"
+condition = "AND"
+paths = ['''src/modules/integration-events/(?:application/outbox-delivery\.service|infrastructure/prisma-outbox\.store)\.spec\.ts$''', '''test/shutdown\.e2e-spec\.ts$''']
+regexTarget = "match"
+regexes = ["lockToken: '(?:d2d050db-62f6-427a-9342-8308a5732b1c|ed38d69c-67c0-4c7f-9dc5-2a36fb6acc55)'"]
+
+[[allowlists]]
+description = "Stable Inbox consumer identities; these are public routing names"
+condition = "AND"
+paths = ['''src/modules/integration-events/infrastructure/rag-dependency-event-handler\.ts$''']
+regexTarget = "match"
+regexes = ["consumerKey: 'rag-(?:resort|dictionary)-dependencies\\.v1'"]
+
+[[allowlists]]
+description = "Public localhost TEST ONLY broker private key; never a runtime credential"
+paths = ['''test/fixtures/kafka-tls/broker-key\.pem$''']
+rules = ["private-key"]

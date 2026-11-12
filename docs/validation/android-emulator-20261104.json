@@ -1,0 +1,296 @@
+{
+  "date": "2026-11-04",
+  "stage": "android-native-emulator",
+  "overallGoalComplete": false,
+  "contract": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "environment": {
+    "androidApi": 35,
+    "abi": "x86_64",
+    "emulator": "emulator-5560",
+    "expoGo": "58.0.5",
+    "expoSdk": 58,
+    "reactNative": "0.88.1",
+    "apkSha256": "d979cf81c56c5432c5aa69adc9497521ee72d1f87e92eee33bc949167a40f1a6"
+  },
+  "scenariosPassed": 11,
+  "scenarios": [
+    { "id": "N01", "guestRealApiFeedResortKnowledge": true },
+    { "id": "N02", "selfRegistration": true, "noAutoLogin": true },
+    { "id": "N03", "nativeLogin": true, "sessionPersisted": true },
+    {
+      "id": "N04",
+      "processKilledAndRestored": true,
+      "refreshRotated": true,
+      "noSecondLoginSession": true
+    },
+    { "id": "N05", "backgroundForegroundIdentityPreserved": true },
+    { "id": "N06", "logoutRevokesBackendSession": true },
+    { "id": "N07", "coldRestartRemainsAnonymous": true },
+    { "id": "N09", "nativeAiAnswerDisplayed": true, "persistedMessages": 2 },
+    {
+      "id": "N10",
+      "nativeAiHistoryAfterProcessRestart": true,
+      "persistedCitationVisible": true
+    },
+    { "id": "N11", "favoriteAddListRemove": true, "databaseVerified": true },
+    { "id": "N12", "profileNicknameSavedAndShown": true }
+  ],
+  "engineeringCommands": 25,
+  "allEngineeringCommandsPassed": true,
+  "runtimeProductFilesMatchValidatedSnapshot": true,
+  "productionChange": "App bottom navigation explicitly uses existing expo-symbols platform icons",
+  "schemaChanged": false,
+  "dependenciesChanged": false,
+  "nativeTransport": {
+    "requests": 94,
+    "noOriginCookieOrSetCookie": true,
+    "accessInMemory": true,
+    "secureStoreProcessRestartAndLogoutVerified": true
+  },
+  "ai": {
+    "realLocalBgeM3": true,
+    "realDeepSeek": true,
+    "successfulNativeConversations": 1,
+    "persistedMessages": 2,
+    "embeddingCallCountNotInstrumented": true,
+    "kafkaEnabled": false
+  },
+  "cleanup": {
+    "emulatorStopped": true,
+    "originalUserAvdConfigUnchanged": true,
+    "metroStopped": true,
+    "backendAndStorageStopped": true,
+    "databaseStopped": true,
+    "servicePortsClosed": true,
+    "modelStopped": true,
+    "bucketEmpty": true,
+    "syntheticDatabasePreservedForEvidence": true
+  },
+  "automationFailures": [
+    "metro-first-options-failed.json",
+    "native-ai-first-label-failed.json",
+    "native-auth-first-navigation-failed.json",
+    "native-auth-second-scroll-failed.json",
+    "native-followup-utility-first-failed.json",
+    "native-followup-warm-link-failed.json"
+  ],
+  "remaining": [
+    "full target browser flows",
+    "physical Android and iOS devices",
+    "SecureStore backup/restore and standalone signed packages",
+    "containers and remote CI",
+    "production TLS/capacity/real corpus/monitoring/joint recovery",
+    "D-49/D-50/optional D-09 undecided"
+  ],
+  "evidence": [
+    {
+      "path": "D:/linji-android-device/20261104/native-auth-results.json",
+      "sha256": "6f89bdf31e2bc58aa10d5b522fa2c39f062384b7509f8c8cacd59ff6cbec0be6"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/native-ai-results.json",
+      "sha256": "6b4c6406432cd2e8e06b13a956c90cd7bf05a3ab4deedbe9fb1a996f5aa74887"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/native-followup-results.json",
+      "sha256": "dba3b7741ccc3aa49dda35325bf7c242aff90dfbd2567a256de9b766bee622b9"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/emulator-state.json",
+      "sha256": "d9310156d5a17a455533d4cc5b84be89a7a2185f0e7e896eb108591365cba0c0"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/metro3-state.json",
+      "sha256": "0cc668503664c14a8945b486689e35bf6e49b898057e7582d236746897b20be1"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/services-state.json",
+      "sha256": "5d5c3d6f8953c91ab44a611aa0d51e860e9e90f0064e41d07f7b81a1e341de62"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/commands.json",
+      "sha256": "7d928433749e17ffcc44edee0e8907c61d18a888df0a0210930e1a6aa70c1b2c"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/snapshots.json",
+      "sha256": "1afd68f05a20f16c13e0b5a3fdbfc5783001f71e43f099d5051bca283719928c"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/icons-after-final.png",
+      "sha256": "9e76688caf8287db7a333eaf33a85957a9bc4169b26199698acac76da7a12f09"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/ai-completed.png",
+      "sha256": "6e33d28f6b7313ba51bb90d28c016c9ebb63cf616217320091d1ccbf72b45e49"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/ai-history-restored.png",
+      "sha256": "f96c9f385ceae9a25f453dd1f092b2dbc2daf3754071dd40114364b2445f61e3"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/cold-restored.png",
+      "sha256": "c1ddaad51f3fc01f10c6708e5943ac15d14d0783b95bc9a26ceec9918a3eeb51"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/logged-out.png",
+      "sha256": "b2f66cff61e9b7fd894ecdb764cb7be4d812bb52d0acb3feb12cf04cd553e837"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/cold-anonymous.png",
+      "sha256": "a450d5644b9bb43ce8daec83e002d061704e37d1427dacb0d0a3591d339b61e9"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/favorite-list.png",
+      "sha256": "8aedfd2c61de0ffe8e8b292b7d55f24c36b0af300bb68a1bf56084747bc598e3"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/profile-updated.png",
+      "sha256": "0a6de632ab20ed947d961e9cff65fd8180b2e445923058b9c5a1aafbc1139c00"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/metro-first-options-failed.json",
+      "sha256": "96413ffec68a981ddc66ca5499a47e4c0a97c3debb3d63db51b2cede6ed71cc8"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/native-ai-first-label-failed.json",
+      "sha256": "76bb823293d98b47385ee2e3a03c89a5f0431fe7a6695523de109d4849dcd9eb"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/native-auth-first-navigation-failed.json",
+      "sha256": "b0ee451bac087326b6438d11939f9267741fc4651532674c26a6e1e57582de4e"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/native-auth-second-scroll-failed.json",
+      "sha256": "5d1bc78c401114866b9e6964141496e6abf16968071442e7b745b63834cbbe64"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/native-followup-utility-first-failed.json",
+      "sha256": "3fc86e2f075ce00490d4e771e37d54a107fa4f550bcce824e1b3ba0fb8044e81"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/native-followup-warm-link-failed.json",
+      "sha256": "8ceff818faf4f1d8431a7df62f1fd41c40db4e5be28253f04ac6c0d7e201a605"
+    },
+    {
+      "path": "D:\\linji-android-device\\20261104\\services\\linji-storage-Hif8D4/report.json",
+      "sha256": "f48d6bb8a8fc5911f62c0482c73f2014f14fea2345d9fccd7bf0b14ecf5c8a36"
+    },
+    {
+      "path": "D:\\linji-android-device\\20261104\\services\\linji-storage-Hif8D4/api-results.json",
+      "sha256": "699c04e3160eadcbda34dc7850f534bece381326a8ba9969e0d3a3179f5d0e35"
+    },
+    {
+      "path": "D:\\linji-android-device\\20261104\\services\\linji-storage-Hif8D4/requests.jsonl",
+      "sha256": "b18e3a1a2b86b52a53cdba1af0e396bd4a6017beb69c362fecb22eebc31d066e"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/run-20261104112359982/report.json",
+      "sha256": "f1bad60834dbfd4e0af5cc9650c6a0648872096ce399f6ba998849c3f0869193"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/backend-source.log",
+      "sha256": "bd6df07f61c1c32d9eb437de1673426ac206f9952a8b2b4155224ce9bbbd4319"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/backend-source-verify.log",
+      "sha256": "9a4174ac8080980ad8073c5feee3c9998a9da8463b714e0f6102ab8ffc28457e"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/backend-install.log",
+      "sha256": "f4cb44f3c85345381bfab7c78b0424c3ed4f328bc47e9dcb71183c9b46b0e6d3"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/backend-generate.log",
+      "sha256": "c31e7b73ee095da2cdc7c3c61de99447e6d62da7679163c8fc1ed2fe42d2b7d3"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/backend-check.log",
+      "sha256": "4f2f36bc0bee9ce00f393bbaa14af3f09ef0d73b0f037b59274aa5093f8f7131"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/backend-e2e.log",
+      "sha256": "d5b1e0526e7e9f5cbe38067f2b8ac3e2a2b0c0fd724ae17b85bfb6a2a9b2e4b3"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/backend-openapi.log",
+      "sha256": "257fb947a96da32d3ed9430723b88c329ba88d88ce1909eeb23a6df4bde10231"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/web-source.log",
+      "sha256": "16939a0c65763cdc6a947efe2960fdaa30f57a7e44c13520680b0399ffd3aaeb"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/web-source-verify.log",
+      "sha256": "8b8957ad0cfba2136697a173c950a86e4e39727f6d7e43108dbe4edd1c636cf1"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/web-install.log",
+      "sha256": "904c0459b4ff04d7baa5f6afc7658c57c8159451c5a4e5f9d9d7fb25a7d7b192"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/web-check.log",
+      "sha256": "916e303978618a79d2b4e4b2f923b2b2f4336c18037add213f8d4dec5ebde483"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/web-build.log",
+      "sha256": "70e9db1011890f2614b5050c97b1eeefb6a164ff9a3fc120d84c59a1dee0293d"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/web-web-release.log",
+      "sha256": "e036868d884298136e8b5e944f476655d5b770da5268eba55cc001b6f8c04db0"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/web-admin-release.log",
+      "sha256": "19dbce7053a90604da2896b278e48526cbcc67d94d21632513d2b2aea8e2ffde"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-source.log",
+      "sha256": "cae3f79d4145ed72949033b63580c77480d697a379ea7acc73b6f800a01033b5"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-source-verify.log",
+      "sha256": "7bde6ce9b81e18036f9ae06a48ff8c086819539034b38d74829833445fe7b159"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-install.log",
+      "sha256": "b25b1a21b810c772dde67bc221b041ca72cfa01e8f96fecf73e42d9e0ce56c58"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-check.log",
+      "sha256": "de03e57ac4786039e2d257b4e3c136d333954534b1018769dc8288ef4159c671"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-export.log",
+      "sha256": "3ff88824473af5cdd78377a8128f7a17174d86f1bb1acc39b87814d144d33a40"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-seal.log",
+      "sha256": "45f28aad44bfe4990e4077ec39d9864d52ce304e3db4e3f31628993574d0f9ca"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-verify.log",
+      "sha256": "6e6d12d2f65c57c7f80058c949e3b155b023c30a63b8c49b281f7822f629a32b"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-android-device/20261104/final/app-relocated-verify.log",
+      "sha256": "e194d1e5b07b3aa1468f30581dbadc2449ed9e0d7b7fd71c51959ea176fb5373"
+    }
+  ]
+}

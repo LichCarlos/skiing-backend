@@ -1,0 +1,353 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/resort-reads-20261103.json",
+      "sha256": "6f0510ac04fef4beb41140448b13cf974c13a42c0012885fe8870d26892eb167",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitFiles": 143,
+        "unitTests": 1240,
+        "sourceExportNode": 8,
+        "httpFrameworkFiles": 9,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "productionBusinessCodeChanged": false,
+        "httpFixtureChanged": true,
+        "postFixtureLint": 0,
+        "postFixtureTypes": 0
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/resort-reads-20261103.json",
+      "sha256": "d6470c52a1eef04019675002a33ce499d258d7d79acda90463f4df78d5e17d31",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 2767,
+        "newTests": 43,
+        "resortCombinedTests": 201,
+        "releaseNode": 20,
+        "sourceExportNode": 8,
+        "forcedNextBuilds": 2,
+        "standaloneVerify": 2
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/resort-reads-20261103.json",
+      "sha256": "5f2861eec72c9c1776bd8491454014a42ff097d7c779c83fbbe7f9ae554a8569",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessFiles": 66,
+        "businessTests": 1163,
+        "sourceExportNode": 8,
+        "artifactNode": 10,
+        "doctor": "20/20",
+        "exportPlatforms": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "postExportTypes": 0,
+        "seal": 0,
+        "verify": 0,
+        "relocatedVerify": 0,
+        "businessCodeChanged": false
+      }
+    }
+  ],
+  "audit": {
+    "markdownFiles": 237,
+    "checkedLinks": 2052,
+    "broken": []
+  },
+  "verifiedUniqueReferences": 69,
+  "references": [
+    {
+      "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "64edb3266864456a798a2a1e6d69a7ba9ad68307be4d6b0364553b017ede5d45"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/backend-install.log",
+      "sha256": "9e9b198bd2b77bb92a58001c4c834fc5fe20947a691685fbb46b35baed3ff51d"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/backend-check.log",
+      "sha256": "b7420876603b34e51116ed32a63c9f9ec4036f56625f04997d1356e3c2182074"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/backend-e2e.log",
+      "sha256": "3aa5aadf4187d3eeba05ec16eb1b0309b2670e73c5d48bc6ab0d723a558d0f9e"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/backend-fixture-format.log",
+      "sha256": "b3dce0dd7c0c462f528bd7c2a84cc8ff45599848d3ff7c858e072dbc2e1def7a"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/backend-fixture-lint.log",
+      "sha256": "ba69e0e657fc1be00e898f06a232b0b663f04b3ad2214ea71d730e79f5e207ec"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/backend-fixture-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/admin-runtime.log",
+      "sha256": "0230bb02380c22c843942bcddf25c4a9759c5a6c6fc459b79d7f001edd446af8"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/boundaries-before.log",
+      "sha256": "c203d1c0b990c2f65666a67500ac04432f8e319bf2669f744c447c4dc7181b0a"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/targeted-first.log",
+      "sha256": "6def9e76ff7f60fd1ddebb5583d6a7a899f612b3cd72f2d51379cc64060900f7"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/targeted-second.log",
+      "sha256": "992a842a30fadf26a8e13ac07e844423df59b3ccf211f0b1b8be29bc745bb93a"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/targeted.log",
+      "sha256": "7fd13e6a277f4eb5d64bf5e266eb13dabd58f899374549bb134998b8dcec4fef"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/admin-types.log",
+      "sha256": "3dd115a54d9decc15d9b6f1babec63f20d21966a914759ea6530c5b714007d15"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/admin-http-first.log",
+      "sha256": "48b12330ce1378f5eed15eece7a56e4f78fdea790291fea1605f515fd59f705a"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/admin-runtime-first.log",
+      "sha256": "6d23a5486e655c4ba6c4db7cd3e3a19cd36a344911fb6e5bc87e44d0db4952fc"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/admin-runtime/linji-admin-http-qlbMCI/report.json",
+      "sha256": "9a8b67b3d35ab7b9864754b155cc3f8d75a98c123fe457d1c6ffba37e8118bc1"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/admin-runtime/linji-admin-http-qlbMCI/fixture-verify.log",
+      "sha256": "e5245da3592c6ed67a426c63b2acc9a91f5871e4f857b947ace8803f1ed936c6"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final/admin-runtime/linji-admin-http-BwUanc/report.json",
+      "sha256": "12ae1215647d8192aea2a9fc06d0885eec28fb9817a78a29866e9bc2e0f2283e"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final/admin-runtime/linji-admin-http-BwUanc/client-result.json",
+      "sha256": "66ffb78be11bfc5cf1597489fb979d1125ed565114def0720a5eba1d12d12497"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final/admin-runtime/linji-admin-http-BwUanc/ready.json",
+      "sha256": "2fe696d29e2910c5454c0138e37ecf300a47f6da6616814a0900417fcd9ea82f"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final/admin-runtime/linji-admin-http-BwUanc/migrate-deploy.log",
+      "sha256": "50c8060a72464a19b762a75d374fb4d86a7f02bc0964eb134268cb80a55eef88"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final/admin-runtime/linji-admin-http-BwUanc/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final/admin-runtime/linji-admin-http-BwUanc/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final/admin-runtime/linji-admin-http-BwUanc/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final/admin-runtime/linji-admin-http-BwUanc/fixture-verify.log",
+      "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final/admin-runtime/linji-admin-http-BwUanc/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/cleanup.json",
+      "sha256": "5026f0ecb9cdbbae7774e4fc760d97e10cab2b2a0a41ee209cf5790b868825dc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-responses.ts",
+      "sha256": "7414aad36c377f4786edb6744a85c7caf92681ea70fe16ddb750f9351d1a0c4d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-model.ts",
+      "sha256": "2ac910f4d7cec9fd5b314ec4a5ec9c31a6a8be108118b8c3efc36cde75e59d22"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-queries.ts",
+      "sha256": "806044e637744da598e7775f5ad5f6933fbf5c15af6fa69cfc94fcc1d05f389c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-workflow.ts",
+      "sha256": "ab1905c40455b0a275715cf3e48da4c04241d5279935edb2c6db2406ca1cc424"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-session.tsx",
+      "sha256": "3e95334a095e1c97278da8ef9beb5e403f2346b4e25668fa09abd1e0bcc31f1c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-list.tsx",
+      "sha256": "001dc3fa7be39cec006a158ec4b5c5704831a3d35edb3016371018f2cc131fb0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-editor.tsx",
+      "sha256": "4c05036acc1928db9097076133d574ffc9815d4238dd7b8b3fd8f8cb04127587"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-read-boundaries.test.ts",
+      "sha256": "835e5f767bc74dc3c5777e21004a924cd7d27aa93401079dd67a73b4ef259105"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-page-lifecycle.test.tsx",
+      "sha256": "e7eaf5bffe1502eb5e5b3437dcbc5ddff1232008ebebff240fb0819d8f5687a2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-fixtures.test-helper.ts",
+      "sha256": "fe7d2f19fbca6c3418cc974a68a7b9762824e21942828327bde70389d319c096"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-resorts/resort-queries.test.ts",
+      "sha256": "1193435a7f66ada13db2aae79535512294d21c21b7a8b94bcc36109cf49aa75a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/test/authorization.http-spec.ts",
+      "sha256": "113ac03ef2bcc2fd4c770b8b100c6f16dbcdedca02cdbe8a582724d72b7cf557"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/web-install.log",
+      "sha256": "85b1e4341b0f56be86b10470a037f5e6cc18438b695b62f870175135bfa58bbc"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/web-check.log",
+      "sha256": "bb4cbf9f7894f4037d554be8ac3d00ba5bfa44ecd9480ea23e110cfc58ace8be"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/web-build.log",
+      "sha256": "39a5d5db2a02dd0fa74778fc65ca3b300050a10009098188fd94825251c868c9"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/admin-http.log",
+      "sha256": "c977b8d2df6fba53a1c3b25c02685a3baafc0950af785b7ac5ccb4fa3d2b9034"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/web-code-format.log",
+      "sha256": "c6f3aaef1c1dc3867a523c13217dc8b3c760050427927c77685c94fd91435b37"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/web/.next/release/release-manifest.json",
+      "sha256": "e055e86e1cdcc0bc8f9791cce6f63804bf88a5ae6932faf10f6659c6266402b5"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/.next/release/release-manifest.json",
+      "sha256": "994396918a74694fe4d9647d245098147c48e4ad4e808ea8d0058512b0f932de"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/app-install.log",
+      "sha256": "38ebe004f473351263531532ea04a6618307cec8e1652cf0eba22affc67c403a"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/app-check.log",
+      "sha256": "f4616ca377da570282a7d743d07b7ff4223bd5049ee373def15a55bf5372061e"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/app-export.log",
+      "sha256": "877b8da4183045660b593761e928d59854ac5ff0f377af76e9804061310d55a5"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/app-post-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/app-seal.log",
+      "sha256": "f7370cc84b0b63b174198190d86d595b287a4c03992fa89329fd1b112eb4505a"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/app-verify.log",
+      "sha256": "ce3aac863ea19d01c46fd2def3cb905aee7eaa14f5ef77efa1c6eb9ca6ad89ea"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/app-relocated-verify.log",
+      "sha256": "b310cddf8803e1728234bd6f9e988d6206fa785b6b598c42858b77ef21c9cdf2"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/app-export/linji-export-manifest.json",
+      "sha256": "9822ee0a0bdcede3537859b6f28e5f8cf2427ffb54220d369e813408f0973494"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final-audit.log",
+      "sha256": "d046fffd40f43625be8dcfa87d87adeec2d34953de4d661960928a0d696b6452"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/web-final-format.log",
+      "sha256": "0b95efe7a1df96aa81440f70658e5c8169546d284587f7ba2e8d268fd1aaea15"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/run-http.mjs",
+      "sha256": "7d7d594b9d13b593fd163dbc3552576fc0a6f5e3665aa8ddc1d9be9c55d8f921"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/evidence.mjs",
+      "sha256": "10a6203108affec2aca6cd1e2574aaf6e86bdc87c94f6a845b216c01b1d17381"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/update-docs.mjs",
+      "sha256": "97ac7e906278a99ba5ac60965c9c020e72b5481d569a9274131eb53e62c43ee4"
+    },
+    {
+      "path": "D:/linji-resort-reads/20261103/final-proof.mjs",
+      "sha256": "974c8ecccc1742737eeddaa41e964ab3d07958fb392226f1adbe552666c91265"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/engineering/merchant-resort-read-validation.md",
+      "sha256": "0cb6322a111bc567b032bdb8e891b38c2f4cf8ca02a4bb716abb1327f89fe4bc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/merchant-resort-lifecycle-http-validation.md",
+      "sha256": "1b2714db00527eeb665d131f667ad3e70f75f2d48143a6c65eebc940a94401ca"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "0f17de221cfef181e810a95717e81766b13991e9486e799a809699454311ea0e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "70be22c791e85e0aed1f7aa1b630a40d0f3199ff6de83baf3687842bfb07770e"
+    }
+  ],
+  "overallGoalComplete": false,
+  "pending": [
+    "D-49 merchant lifecycle / D-50 resort lifecycle reasons / D-09 account deletion",
+    "Actual browser/visibility/BFCache/device acceptance",
+    "Kafka/Inbox/timer acceptance; existing Windows AccessDenied unresolved",
+    "Real providers/storage, containers, signed native packages and remote CI"
+  ]
+}

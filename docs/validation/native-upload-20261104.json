@@ -1,0 +1,244 @@
+{
+  "date": "2026-11-04",
+  "stage": "sdk58-native-upload-fix",
+  "overallGoalComplete": false,
+  "contract": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "fix": {
+    "cause": "SDK58 global expo/fetch rejects legacy React Native URI FormData parts",
+    "native": "expo-file-system File implements Blob-compatible multipart data",
+    "web": "browser File/Blob required; preview-only URI rejected",
+    "consumers": ["profile avatar", "community composer"],
+    "directDependencyAdded": "expo-file-system ~58.0.13",
+    "otherDependencyVersionsChanged": false,
+    "unitRegressionsAdded": 4
+  },
+  "native": {
+    "platform": "Android API35 x86_64, Expo Go58.0.5",
+    "scenariosPassed": 3,
+    "scenarios": [
+      { "id": "M01", "nativeRegistrationLogin": true },
+      {
+        "id": "M02",
+        "nativeSystemPhotoPicker": true,
+        "realMultipartScanStorage": true,
+        "avatarForeignKeyAssigned": true
+      },
+      { "id": "M03", "pickerCancellationKeepsAvatar": true }
+    ],
+    "actualReadyAssets": 1,
+    "avatarForeignKeyAssigned": true,
+    "cancellationKeptAvatar": true,
+    "fullCommunityFlowPassed": false,
+    "notCompleted": [
+      "multi-image dynamic submission/reorder/resort/preview",
+      "admin moderation then native public view/like/comment",
+      "published dynamic edit to pending",
+      "native password change"
+    ],
+    "chatAndEmbeddingCalls": 0,
+    "kafkaEnabled": false
+  },
+  "engineering": {
+    "commands": 25,
+    "allPassed": true,
+    "appBusinessTests": 1221,
+    "backendBusinessTests": 1462,
+    "backendHttpTests": 177,
+    "webBusinessTests": 3045,
+    "appDoctor": "20/20",
+    "runtimeMatchesValidatedProductFiles": false,
+    "runtimeFormattingOnlyDifferences": [
+      "composer-session.ts generic trailing comma <T> to <T,>"
+    ],
+    "failuresPreserved": [
+      "first App full check: Go type-aware linter could not allocate memory",
+      "second App full check: VirtualAlloc errno1455 pagefile",
+      "after stopping owned runtime services resumed full App check/export"
+    ],
+    "resumeResources": {
+      "nodeHeapMiB": 1536,
+      "GOMAXPROCS": 2,
+      "GOMEMLIMIT": "1024MiB",
+      "vitestWorkers": 1
+    }
+  },
+  "failedActions": [
+    {
+      "file": "action-04-result.json",
+      "action": "action-04.py",
+      "passed": false,
+      "error": "Database postcondition not met"
+    },
+    {
+      "file": "action-05-result.json",
+      "action": "action-05.py",
+      "passed": false,
+      "error": "[Errno 2] No such file or directory: 'D:\\\\linji-native-media\\\\20261104\\\\metro4-state.json'"
+    },
+    {
+      "file": "action-06-result.json",
+      "action": "action-06.py",
+      "passed": false,
+      "error": "UI target not found: 选择头像"
+    },
+    {
+      "file": "action-09-result.json",
+      "action": "action-09.py",
+      "passed": false,
+      "error": "UI target not found: 图片 2/9"
+    },
+    {
+      "file": "action-10-result.json",
+      "action": "action-10.py",
+      "passed": false,
+      "error": "UI target not found: 动态正文"
+    },
+    {
+      "file": "action-11-result.json",
+      "action": "action-11.py",
+      "passed": false,
+      "error": "[WinError 1455] 页面文件太小，无法完成操作。"
+    }
+  ],
+  "cleanup": {
+    "emulatorStopped": true,
+    "originalUserAvdConfigUnchanged": true,
+    "metroStopped": true,
+    "backendAndStorageStopped": true,
+    "databaseStopped": true,
+    "servicePortsClosed": true,
+    "bucketEmpty": true,
+    "syntheticDatabasePreserved": true
+  },
+  "evidence": [
+    {
+      "path": "D:/linji-native-media/20261104/native-media-results.json",
+      "sha256": "d3f4b5eb2637e321f5c62efc738c8c39432b72e2d81f20205c53342a7de6d5d1"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/reused-runtime.json",
+      "sha256": "0cd588b45dc9bb68bc51e2284a9a852bfdfc6180bdd5afdb2677953ed477c925"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/engineering-commands.json",
+      "sha256": "fb41d6293b3e029c53bd4d06240c310a979eb8cdc867d5c32aebbaf27d9722dd"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/validated-snapshots.json",
+      "sha256": "2535ae2aa84c7197136a84d6361d8a7fe4f07f1f023773e765dbe40804563163"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/final/commands.json",
+      "sha256": "d90606c5d41dad2c505b96b6a0c432314d84d7d5c8db976bad65497f92c9fc7b"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/app-final/commands.json",
+      "sha256": "d0c0d16a0c4eacc747a58d462f1cc58c714b50660c7c7786a64d8d3a6c75b94a"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/app-final-resume/commands.json",
+      "sha256": "fd2fcab3fd0fb3bb0d6bbf7de39a6f1f914fabf4d5ede6d1f6c5f48dcfc948e2"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/final/app-check.log",
+      "sha256": "fa2013c51f37d662de84c21553ce7c3658ef1492ab79d9a10773452e585e329f"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/app-final/app-check.log",
+      "sha256": "c70a5d5c0f7c1c0449703b0f70fa553ae3ef1f0d93241d395cfe4052f8cd7e25"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/emulator-state.json",
+      "sha256": "6801dc05f629acaf54cf349d8bd6e6ead209a7ac6e693e880f7c8b80b2628ff8"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/metro3-state.json",
+      "sha256": "b3a2583a6abb4115e30282c3affed484884ac51ba3b97c52dcd2b619f9d8c47b"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/metro4-state.json",
+      "sha256": "d09b15d877a90d1bae2f21e599e03984534e59a8fb63c0e99910e4ff235f13c4"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/avatar-saved.png",
+      "sha256": "1bb7710728e7a379a506f2fb65055dadcca77902a77536ace66c2672515001ca"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/avatar-cancel-kept.png",
+      "sha256": "53242c45e97662164017c92aaa770583874f82260b59b4244a1c3c170e1f7c6b"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/photo-permission.png",
+      "sha256": "9931e22771d622501fcb3075975d890ed3a6520901c365b847445131caf6a56f"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/two-photos-selected.png",
+      "sha256": "d4da746939a17b1f6663e8ee59305f5240528b834a93351af2b415690bb8c1c9"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/failed-action-04.png",
+      "sha256": "8afc5f22053d00dc4d0ff5334efca405cb4a158e7548a7828356545d48d38284"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-01-result.json",
+      "sha256": "4226f13e58fb953d1d37dcd13604c87a574738d8faf49682979ec8c7cc801346"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-02-result.json",
+      "sha256": "ee9fd2ab6461b85596c15ee28b56e17fdfcaa8963bec053f82ae5ed026221879"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-03-result.json",
+      "sha256": "458b3db94b5dc27237428fe92ef0858f8b7f82f57524c98b719b237610182899"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-04-result.json",
+      "sha256": "51badec207ed497938d8026b8f4f4d72c83c04689fff0bf189fbd3c3d883d1b8"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-05-result.json",
+      "sha256": "173696a50ad9f9096b701f51bd5845c2a8ed1fac45780d153e330881d3c2c23e"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-06-result.json",
+      "sha256": "9062442c78a19123980c16b498fc262d7b586a7a99d833e78657dfbf3911937b"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-07-result.json",
+      "sha256": "cad0bafea106116037cadee9930ebd36c42cb964cd39c223ea3df1e1efbf428c"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-08-result.json",
+      "sha256": "b21e32f63de88b8648a0d0561a576be89bf7adc563bb780045a9a298b85156b1"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-09-result.json",
+      "sha256": "3aa5a22b91e56e2807e385405255b007223b98db80008b8fb9dc8dda2ac54019"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-10-result.json",
+      "sha256": "f3fe49511be2570c0ffc5598d75dbc89244902be275cad2fde3f5eb89996ab22"
+    },
+    {
+      "path": "D:/linji-native-media/20261104/action-11-result.json",
+      "sha256": "86c8349f21b353b9e275632c1af22b660a2ceb4b24bbd9330614aed3794ce2a8"
+    },
+    {
+      "path": "D:\\linji-native-media\\20261104\\services\\linji-storage-W4zCNU/report.json",
+      "sha256": "05890acc455e74f211cb68dc2cb02411c8dd6f0062b30863123c5fa0e828d12d"
+    },
+    {
+      "path": "D:\\linji-native-media\\20261104\\services\\linji-storage-W4zCNU/api-results.json",
+      "sha256": "31c21112fcf05df837befc95d54694bff8f2209ece1850d93d040a46d26ede41"
+    },
+    {
+      "path": "D:\\linji-native-media\\20261104\\services\\linji-storage-W4zCNU/requests.jsonl",
+      "sha256": "036960b0f6209a1968fd8b4719a336c14cbda45713d310f21b50079246d6ad00"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "Kafka consumer long-handler heartbeats, all-started-handler draining on handler/heartbeat rejection, final membership heartbeat before explicit offset commit; Linux integration regression and always-attempted report/broker-log archive added but NOT run",
+  "regression": {
+    "newUnitTests": 8,
+    "consumerTests": 13,
+    "targetedTests": 93,
+    "realKafkaTestAdded": 1,
+    "expectedFullIntegrationTests": 10,
+    "realKafkaExecuted": false,
+    "targetedLog": {
+      "path": "D:/linji-kafka-heartbeat/20261103/targeted.log",
+      "sha256": "ad564c5c8bcdc23b3e448ef68f3e64a0dd676d97074fc07168efe7cfd2024e6b"
+    }
+  },
+  "failedAttempts": [
+    {
+      "reason": "Regression first reproduced 7 failures out of 13 consumer tests; no production fix yet",
+      "reference": {
+        "path": "D:/linji-kafka-heartbeat/20261103/targeted-before.log",
+        "sha256": "59feabc3531fe2096ee2b8712b1f41d93431dfe23062acc591a17628cda7dd5a"
+      }
+    },
+    {
+      "reason": "First full typecheck found missing pause in the previously partial message fixture; added actual KafkaJS payload field. New callback binding warning also fixed; original log preserved",
+      "reference": {
+        "path": "D:/linji-kafka-heartbeat/20261103/backend-check-first.log",
+        "sha256": "9d3abda1aad8e5fb409c9f40332c500dc906abb8183e39be88d59caa80bc9de1"
+      },
+      "commandLedger": {
+        "path": "D:/linji-kafka-heartbeat/20261103/commands-first.json",
+        "sha256": "d630c462b3bcadb711cf8f26b42f21bc4c7b7b076b88a13d492a7e72a130df7d"
+      }
+    },
+    {
+      "reason": "Second typecheck exposed the remaining Kafka record fields in the old partial fixture; both fixtures now use complete typed EachMessagePayload with no assertion",
+      "reference": {
+        "path": "D:/linji-kafka-heartbeat/20261103/backend-check-second.log",
+        "sha256": "0d880a77c2cb65df20a63ff3e50ee850505bbc01cd5be26864dbc1185e4e63e4"
+      },
+      "commandLedger": {
+        "path": "D:/linji-kafka-heartbeat/20261103/commands-second.json",
+        "sha256": "9bc548cc555da6e0acf0566c6c858492e49df3c43b68a65a490b53becaae96b0"
+      }
+    }
+  ],
+  "environment": {
+    "dockerProbe": {
+      "path": "D:/linji-kafka-heartbeat/20261103/docker-probe.json",
+      "sha256": "e6952285053b5be2899a71e659f6f66ce5f8d0b0e8c8b25b375919ff5a411d65"
+    },
+    "dockerStartedOrRestarted": false,
+    "dockerWSLUsed": false,
+    "realKafkaAcceptance": false,
+    "windowsPriorFailureUnresolved": true,
+    "windowsFailureEvidence": [
+      {
+        "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/report.json",
+        "sha256": "34520a4b76df82055b8c9acd04181389747d2514ed24115757a3875ddbd58de4"
+      },
+      {
+        "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/broker.log",
+        "sha256": "ab8d6cd49782f8ec57b0e73c118dde5bfba740348ab18a307014f63d91d8c4b2"
+      }
+    ]
+  },
+  "commandLedger": {
+    "path": "D:/linji-kafka-heartbeat/20261103/commands.json",
+    "sha256": "acdd103caffbef87ef31aec6d522af6bf72a5ac9d9dc3914bc4bde94b1e0afee"
+  },
+  "limitations": [
+    "Fake timers/consumer adapter unit tests do not prove real broker membership or long processing across session timeout; new 35-second Kafka integration case is unexecuted",
+    "Windows native topic-directory rename AccessDenied remains unresolved. No cleanup assertion weakened or failing path silently relabelled as passed",
+    "Docker engine pipe currently absent; no Docker Desktop startup/restart and no Docker WSL access",
+    "CI JSON/JUnit/broker artifacts configured locally; no remote run or successful upload claimed",
+    "No current real Kafka, full database, cross-repository HTTP, browser/device, model/Embedding/storage, container or remote-CI acceptance",
+    "Heartbeat failure drains started handlers but cannot roll back completed effects or prevent another member from receiving replay; Inbox/domain idempotency remains necessary",
+    "CPU-blocking or indefinitely pending handlers are not fixed by event-loop heartbeats. Provider deadlines and production monitoring still required",
+    "D-49/D-50/D-09 unanswered/unimplemented; overall project incomplete; no commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1248,
+    "newUnitTests": 8,
+    "toolTests": 8,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "realKafkaIntegration": "not executed; environment unavailable",
+    "newIntegrationCases": 1,
+    "productionBusinessCodeChanged": true,
+    "ciChanged": true
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/kafka-event.consumer.ts",
+      "sha256": "5dec66eb83358608b1374ecb8b780714752f81736da69de9aea3b786d648c94d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/kafka-event.consumer.spec.ts",
+      "sha256": "6591ed9ef34f2a82174c98051d1312a291ff86e06e3c5cd24ae6a7369e25e8ec"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/kafka-rag.integration-spec.ts",
+      "sha256": "af1e730a360cf11f4d1e3667908380871adce60c037b98296b3f59a0832c3aa7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/.github/workflows/ci.yml",
+      "sha256": "dc914abcd970a49b0194da77a23be96ab68061c8f89d2fca4ad6eaa326b3c9f3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/node_modules/kafkajs/src/consumer/runner.js",
+      "sha256": "fad3247df2e3ba483b94e014e5c5916fd72d7bdfc3b3dfccc5232b60da18306d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/node_modules/kafkajs/src/consumer/index.js",
+      "sha256": "cdf5b3d7c67364b2b55a5c491225c08318054b515e079fa3aa7b7d9f4d8d19dd"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-install.log",
+      "sha256": "625a6173e4159818f2d2b74bb6172dd03c3823c270dc46992ac8356a917ad96c"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-check.log",
+      "sha256": "97b0e1523bfd23de8f1e30958042a49e72887eed9270d84111a57a1197baa2c7"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-e2e.log",
+      "sha256": "4cf68c10b535a72e786054e2dea09599ee300900e81f8577de67d976976d780a"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-final-lint.log",
+      "sha256": "dc2a90bc9c298b8c56cdf35b21a7bd23214786bca1b4a0812d6cefa875b6cef9"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-preflight-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    }
+  ]
+}

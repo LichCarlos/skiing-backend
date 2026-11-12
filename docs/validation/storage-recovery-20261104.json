@@ -1,0 +1,678 @@
+{
+  "date": "2026-11-04",
+  "stage": "database-s3-read-only-recovery-verification",
+  "evidenceVerified": true,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "newUnitTests": 33,
+  "scope": "Read-only recovery gate for all ready Assets and five persisted reference families; repository-owned synthetic Windows PostgreSQL17/pgvector + MinIO validation with SELECT-only database user",
+  "native": {
+    "output": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB",
+    "checks": [
+      { "name": "minio-version", "passed": true },
+      { "name": "postgres-version", "passed": true },
+      { "name": "minio-ready", "passed": true },
+      { "name": "initialize", "passed": true },
+      { "name": "create-database", "passed": true },
+      { "name": "migrate-deploy", "passed": true },
+      { "name": "seed-first", "passed": true },
+      { "name": "seed-second", "passed": true },
+      { "name": "verify-before", "passed": true },
+      { "name": "recovery-scenarios", "passed": true }
+    ],
+    "migrations": 24,
+    "scenarios": [
+      { "label": "read-only-account-denies-update", "passed": true },
+      {
+        "label": "valid",
+        "exitCode": 0,
+        "expectedExitCode": 0,
+        "databaseUnchanged": true,
+        "objectsUnchanged": true
+      },
+      {
+        "label": "no-overwrite",
+        "exitCode": 1,
+        "expectedExitCode": 1,
+        "databaseUnchanged": true,
+        "objectsUnchanged": true
+      },
+      {
+        "label": "missing-unreferenced",
+        "exitCode": 1,
+        "expectedExitCode": 1,
+        "databaseUnchanged": true,
+        "objectsUnchanged": true
+      },
+      {
+        "label": "same-size-corruption",
+        "exitCode": 1,
+        "expectedExitCode": 1,
+        "databaseUnchanged": true,
+        "objectsUnchanged": true
+      },
+      {
+        "label": "wrong-size-mime",
+        "exitCode": 1,
+        "expectedExitCode": 1,
+        "databaseUnchanged": true,
+        "objectsUnchanged": true
+      },
+      {
+        "label": "non-ready-references",
+        "exitCode": 1,
+        "expectedExitCode": 1,
+        "databaseUnchanged": true,
+        "objectsUnchanged": true
+      },
+      {
+        "label": "s3-access-denied",
+        "exitCode": 1,
+        "expectedExitCode": 1,
+        "databaseUnchanged": true,
+        "objectsUnchanged": true
+      },
+      {
+        "label": "mismatched-target",
+        "exitCode": 1,
+        "expectedExitCode": 1,
+        "databaseUnchanged": true,
+        "objectsUnchanged": true
+      },
+      {
+        "label": "repaired",
+        "exitCode": 0,
+        "expectedExitCode": 0,
+        "databaseUnchanged": true,
+        "objectsUnchanged": true
+      }
+    ],
+    "databaseStopped": true,
+    "servicesStopped": true,
+    "portsClosed": true,
+    "referenceKinds": 5,
+    "fixtureAssets": 208,
+    "fixtureReferences": 205,
+    "checksReadOnly": true
+  },
+  "tested": [
+    "All ready objects including unreferenced objects",
+    "Streaming SHA-256, actual/declared bytes, MIME and image signature; 10MiB cap; body deadline and cancellation in unit tests",
+    "Missing unreferenced object, same-size corruption, size/MIME mismatch, unauthorized S3 reads",
+    "Non-ready references across hidden/soft-deleted owners, bounded safe reports",
+    "200-row keyset pagination across 208 assets and 205 references",
+    "SELECT-only database credential; each verification compares all public table data and S3 object-list fingerprints before/after",
+    "New-file-only output, explicit targets, repaired recheck, no automatic retries",
+    "Two read-only RepeatableRead snapshots; changing metadata/reference fingerprints fails"
+  ],
+  "clientProtocolChanged": false,
+  "apiOrSchemaChanged": false,
+  "dependenciesChanged": false,
+  "backendChanged": [
+    "package.json",
+    "scripts/storage-recovery-scenarios.ts",
+    "scripts/validate-storage-recovery.ts",
+    "scripts/verify-storage-recovery.spec.ts",
+    "scripts/verify-storage-recovery.ts"
+  ],
+  "frontendUnchanged": {
+    "web": {
+      "files": 581,
+      "baseline": {
+        "path": "D:/linji-failure-diagnostics/20261104/final/validated/web/.source-export.json",
+        "sha256": "180f95988cfb24ff33690c2620de1d4f8549406108ec004b1eb20bf9884c3492"
+      }
+    },
+    "app": {
+      "files": 238,
+      "baseline": {
+        "path": "D:/linji-failure-diagnostics/20261104/final/validated/app/.source-export.json",
+        "sha256": "f93fbe46d47123d1cb3ead06911e9756091942f7f48fca58d666f6bf5ea58c8e"
+      }
+    }
+  },
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-storage-recovery/20261104/final/validated/backend",
+      "sourceSha256": "f49af0965759aa42d9c87752b3046118d0cbcb809d04c3ddda4b625d16efbdfd",
+      "files": 858,
+      "store": "D:/linji-source-verify/20261104/stores/backend",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-storage-recovery/20261104/final/validated/web",
+      "sourceSha256": "7d51adb61bfd4a4c980ee98824a812becb53a169748ced10346433abafdfdc15",
+      "files": 723,
+      "store": "D:/linji-source-verify/20261104/stores/web",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-storage-recovery/20261104/final/validated/app",
+      "sourceSha256": "5b3bae4464f54ccc47a7464f8f7f3542953d93e6209cdb50a6961928237cfe2a",
+      "files": 327,
+      "store": "D:/linji-source-verify/20261104/stores/app",
+      "reusedOwnStore": true
+    }
+  ],
+  "artifact": {
+    "artifactKind": "expo-bundle-export",
+    "files": 88,
+    "contentSha256": "d7da3f415f732d40e5c76cd6d6fd4b0bd24ea8ac307fb2f5424130812395cc6c",
+    "openapiVersion": "1.51.1",
+    "openapiSha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8",
+    "nativeInstallable": false
+  },
+  "evidence": [
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-source.log",
+      "sha256": "8dcfde1da241a553c58934c0171093853a2f56354adafd219a16dd26f228f393"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-source-verify.log",
+      "sha256": "a160296542a8c2c77f6a470b1e5c133bce163dd687e298f992cf857d8a559462"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-install.log",
+      "sha256": "54112ee2280612d6d11b9e509f0ad9e5267d49be5b484fc0019953f51411d482"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-generate.log",
+      "sha256": "e850b4d2108033ea50c345c47ab2055943d049335283a612f5bec1f1106c7e35"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-check.log",
+      "sha256": "65adc80cdf5a7f46946b0de425826fdfbfc644d85433227f16e27ab162eddf01"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-e2e.log",
+      "sha256": "10646a1ecb4786bf0f3e2135ed22bff5b3fb34117d661b53313bb8edda7bf79b"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-openapi.log",
+      "sha256": "3ff192c23b797435031c149505fa49ae803cb317d65734213a98000209529c9d"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-storage-recovery.log",
+      "sha256": "012ea0c15c50f09f134287cb9934f4782708835340f94ee7855cfb09a7458eb8"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/web-source.log",
+      "sha256": "ba6304e860e7d242b33e9e486cd406c63413fbfd74628268f4f0189c7d6a61f0"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/web-source-verify.log",
+      "sha256": "2e5d7c2ef0f4bcb0e140be563a58e4efedd8a69119f556625fd8307b085c77fd"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/web-install.log",
+      "sha256": "c3c4c0f1b2e4c482b50f7035559c59d196d7007b0a3bc852b4145a4c7bb43965"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/web-check.log",
+      "sha256": "5605b60da65e221ded9c1b7ee8f088fd48d71ccc71efd4e09ac43601261d1605"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/web-build.log",
+      "sha256": "8fb7664a2f0c0f985872e689095ab2bb28dc62a83622246acbdb9d5e0a4d5812"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/web-web-release.log",
+      "sha256": "d5da303086734538d83f813af6219cc2d010903b7790ada460f501de06b730cb"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/web-admin-release.log",
+      "sha256": "54388cdd274cc09cd74d8e09722340bbf004c97c2259e43a188344d4c4915b91"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-source.log",
+      "sha256": "a540911e7728060bef4c154584e194b6a01cf1ccc11c094f6f103c1c6596a2bc"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-source-verify.log",
+      "sha256": "3f485de54ec746d37c48deefb32ab0a767be611475f94a123a249a1e172108a5"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-install.log",
+      "sha256": "ac78609e3e593011fd873763a206c51e83a7ff46da4d24cebd84fea1b6656e42"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-check.log",
+      "sha256": "568cd24fafa9b06a1589add9725431c56939c2b3785245a1659818d9cafc9fbe"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-export.log",
+      "sha256": "ca70760a7089deb15cdb479fd74fe9a49304df785c2aa27b93b7c702635de87e"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-seal.log",
+      "sha256": "1ee384987833f96c4878c8c0fd27fc5ce9a2b7971b4753167983de78cf6f4bb3"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-verify.log",
+      "sha256": "356b4036c2f774e29437307938c6c1153af4fd576157b20cd5a2940b94261104"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-relocated-verify.log",
+      "sha256": "68e00056a5e6eaeff7fb8706a0a356a6ac575fddc550a211048c0ecc1a1f9c5f"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/commands.json",
+      "sha256": "683bc783d872e0ec3ee3716b09b784eb374eb3accf7c7a84cc28591035b26daa"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/snapshots.json",
+      "sha256": "471c7c65f8a4fbe25d0acf02286945c698af935e4a386348dc8128442aa13f16"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/backend-module-paths.json",
+      "sha256": "e8b40b816ba482847fe1fce2f24a16f6895a7f70b0ca482490cab9739f07e51c"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/web-module-paths.json",
+      "sha256": "0831a5e44143a4ab6e6a3e9ed3a438e542026f2c48b2c53b7143d51ecfc4f1dc"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/app-module-paths.json",
+      "sha256": "ecd258761c6ffaea4e50f8fe1dacad567cb36c1af6ae7205c01458da16f7da13"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/validated/backend/.source-export.json",
+      "sha256": "f0d3fb9bf1c0fc6d2635768468962aebdde14fa74abb643e19df356865b2d72b"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/validated/web/.source-export.json",
+      "sha256": "dbfd4bf8018ba8fe92734a98785cfac73ad438b4d2ae110e9734429703b44ae2"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final/validated/app/.source-export.json",
+      "sha256": "790af9e3df188d0d4ee9a5949457c925370fb924d003f9947c5a559aa9675282"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/validated/backend/.source-export.json",
+      "sha256": "06db648a7caf4942fa89cb229e29de66bcf27a1d80dc29f77ae9835678384a25"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/prepare-validation.mjs",
+      "sha256": "f75203ac1a6f117342e7b092ab52d0f26f8b8a0793ab9499d92451a8991cf8fa"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/final-check.mjs",
+      "sha256": "5927fbb671150f24c4115ce06881cd0f5134485633461078da3df57f4a47393a"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/evidence.mjs",
+      "sha256": "dc0b7de4bc825078efb92ab3252804cf6421bc3a3861895411b3ce150a63f4d7"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/initialize.log",
+      "sha256": "03296330ed6e58f10ee86b0335bce0b7c965c44bd32d404a81ec44acc7c08c4f"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/migrate-deploy.log",
+      "sha256": "355c603ce2c8efe2202912899613e68c8094b260b532a9b978844cd345498d46"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/minio-version.log",
+      "sha256": "fa74355260cf82c63b182910e30ecf2167bf691f4c80549ba4c4f811bbed9ef5"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/minio.log",
+      "sha256": "49cfad7509eaa787f08f0445235e1cc1ea64d5ad81baa15f68ad5c291d19f647"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/mismatched-target.log",
+      "sha256": "689127a89003e65e1325ea9e73197e818b3b7fad379682527d681787d99cdab3"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/missing-unreferenced.json",
+      "sha256": "4f086247595e416b685e1f1433e0ea1e814d9d11560cd3fe777e2ec716665744"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/missing-unreferenced.log",
+      "sha256": "d2169e05c4685dd34ea34f08cb6a012cb1166c82cae4a3c47afa57e02722c52b"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/no-overwrite.log",
+      "sha256": "689127a89003e65e1325ea9e73197e818b3b7fad379682527d681787d99cdab3"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/non-ready-references.json",
+      "sha256": "652f4cec924045660d5734259ca50bb660011a8f99ebd07fc80b8a9682be1967"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/non-ready-references.log",
+      "sha256": "8bdcbd7eebc6ccd2139f2abeccd4ff4a5c46f570fb76fcae5a9d09040520a3f1"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/recovery-scenarios.log",
+      "sha256": "b723ee98113c2187361e396cba7667426e20699df04d092ffc3c33f32e55d071"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/repaired.json",
+      "sha256": "e4f1f8ce433f23be5aed793c007d3d2bbc0a159160127018ea40914374facec2"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/repaired.log",
+      "sha256": "b7abd9e87255e9998d382f27d425640195be2f520ce4c1b1e668f8b0feec74e4"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/report.json",
+      "sha256": "b14b781293a3b640b5da444050c3385b2dd3cb8e7705b79cae34cbc4e89f00b1"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/s3-access-denied.json",
+      "sha256": "64a8ce1b216376390d79fece1e3a5e7a419b6927129e44540d06ccd51be809af"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/s3-access-denied.log",
+      "sha256": "3d34236b67a3590ab6ead1fc2eef56b914e73a2a87ddf3d00468e37fb4cc08cb"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/same-size-corruption.json",
+      "sha256": "ebee0fbaf81666f38d7641a18aba745bb38b41b64128c506e23338527b84d8fe"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/same-size-corruption.log",
+      "sha256": "d2169e05c4685dd34ea34f08cb6a012cb1166c82cae4a3c47afa57e02722c52b"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/scenarios.json",
+      "sha256": "cef3041caebe3a4e363dc10b2f82b7efab139ed81b789522149aa520b5211ecb"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/valid.json",
+      "sha256": "28a0ef93a1eb0d9f2ae14fb07b66618d46a9645e42556fa59ec3796b8fc2bef6"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/valid.log",
+      "sha256": "b7abd9e87255e9998d382f27d425640195be2f520ce4c1b1e668f8b0feec74e4"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/wrong-size-mime.json",
+      "sha256": "2131171a78ebbe4cfef575beb62a03b6adb4374fc1cf060c7a09d61f5afb1252"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/native-runs/linji-storage-recovery-1vCsnB/wrong-size-mime.log",
+      "sha256": "3ea37281963dc3524736cbf5a11bd2d9394fbfcf933b64f54eada3ee0a61e76e"
+    }
+  ],
+  "paidProviderCallsThisStage": 0,
+  "kafkaIntegrationRerun": false,
+  "fullBusinessDatabaseSuiteRerun": false,
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Cross-system write freeze cannot be proved by CLI; no atomic DB/S3 snapshot",
+    "No bucket orphan cleanup, history/version recovery, CSV or legacy URL coverage; no rescan",
+    "Production joint backup/restore, Kafka offsets, capacity, RPO/RTO, TLS/S3 policies, containers and remote CI",
+    "Target browsers/Expo Web/native devices/signed packages",
+    "Earlier real-provider 500 root cause unknown; no new paid model calls",
+    "D-49/D-50/D-09 and prior denied cleanup/service starts unchanged"
+  ],
+  "repo": "backend",
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1418,
+    "sourceTools": 20,
+    "httpFrameworkTests": 177,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "realRecoveryValidation": 0
+  },
+  "deliveryVerification": {
+    "snapshots": [
+      {
+        "repo": "backend",
+        "cwd": "D:/linji-storage-recovery/20261104/delivery/backend",
+        "sourceSha256": "ada9e5c58a605f3fe698d6167e813b17f21856a03a666a4f9dc0ac08e10eb81c",
+        "files": 859,
+        "productChangesSinceEngineeringBaseline": [
+          "scripts/storage-recovery-scenarios.ts",
+          "scripts/verify-storage-recovery.spec.ts",
+          "scripts/verify-storage-recovery.ts"
+        ]
+      },
+      {
+        "repo": "web",
+        "cwd": "D:/linji-storage-recovery/20261104/delivery/web",
+        "sourceSha256": "54b1b84a3431f0011429c768b5d4ee2b3eeb40c4187e6f6d94bb7cc3255050b8",
+        "files": 724,
+        "productChangesSinceEngineeringBaseline": []
+      },
+      {
+        "repo": "app",
+        "cwd": "D:/linji-storage-recovery/20261104/delivery/app",
+        "sourceSha256": "1359b6a9dc1f7fef43d13a97f2a0e2a8450858f4db37faea0eec8ae4d2b24c05",
+        "files": 328,
+        "productChangesSinceEngineeringBaseline": []
+      }
+    ],
+    "native": {
+      "output": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq",
+      "completed": true,
+      "checks": [
+        { "label": "read-only-account-denies-update", "passed": true },
+        {
+          "label": "valid",
+          "exitCode": 0,
+          "expectedExitCode": 0,
+          "databaseUnchanged": true,
+          "objectsUnchanged": true
+        },
+        {
+          "label": "no-overwrite",
+          "exitCode": 1,
+          "expectedExitCode": 1,
+          "databaseUnchanged": true,
+          "objectsUnchanged": true
+        },
+        {
+          "label": "missing-unreferenced",
+          "exitCode": 1,
+          "expectedExitCode": 1,
+          "databaseUnchanged": true,
+          "objectsUnchanged": true
+        },
+        {
+          "label": "same-size-corruption",
+          "exitCode": 1,
+          "expectedExitCode": 1,
+          "databaseUnchanged": true,
+          "objectsUnchanged": true
+        },
+        {
+          "label": "wrong-size-mime",
+          "exitCode": 1,
+          "expectedExitCode": 1,
+          "databaseUnchanged": true,
+          "objectsUnchanged": true
+        },
+        {
+          "label": "non-ready-references",
+          "exitCode": 1,
+          "expectedExitCode": 1,
+          "databaseUnchanged": true,
+          "objectsUnchanged": true
+        },
+        {
+          "label": "s3-access-denied",
+          "exitCode": 1,
+          "expectedExitCode": 1,
+          "databaseUnchanged": true,
+          "objectsUnchanged": true
+        },
+        {
+          "label": "mismatched-target",
+          "exitCode": 1,
+          "expectedExitCode": 1,
+          "databaseUnchanged": true,
+          "objectsUnchanged": true
+        },
+        {
+          "label": "repaired",
+          "exitCode": 0,
+          "expectedExitCode": 0,
+          "databaseUnchanged": true,
+          "objectsUnchanged": true
+        }
+      ],
+      "servicesStopped": true,
+      "portsClosed": true
+    },
+    "supplementCommands": 14,
+    "additionalPaidProviderCalls": 0,
+    "productChangesFromFirstValidatedSnapshot": [
+      "scripts/verify-storage-recovery.ts: complete positional report writes before success",
+      "scripts/verify-storage-recovery.spec.ts: platform-neutral test path and independent fingerprint assertions",
+      "scripts/storage-recovery-scenarios.ts: explicit synthetic opt-in and safe fixture failure reporting"
+    ],
+    "checksReusedOnlyForUnchangedFiles": true,
+    "evidence": [
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/create-database.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/initialize.log",
+        "sha256": "06a278112365a8679a3af7ae15747ea496d8114a6557795c2e15ebe9cdff6752"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/migrate-deploy.log",
+        "sha256": "993ac41a21fbdaff367cc7c9d5398ae53aef79f70f8be37ae62917f1ab7b1c4e"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/minio-version.log",
+        "sha256": "fa74355260cf82c63b182910e30ecf2167bf691f4c80549ba4c4f811bbed9ef5"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/minio.log",
+        "sha256": "892df79582b23767ebf52a088dd9ed2d2fe956653e522f1550c52ec76ed58874"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/mismatched-target.log",
+        "sha256": "689127a89003e65e1325ea9e73197e818b3b7fad379682527d681787d99cdab3"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/missing-unreferenced.json",
+        "sha256": "380e461363a00048991d7033f822b4958ceed87d9ca18e33fe6e904d4ba4071a"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/missing-unreferenced.log",
+        "sha256": "d2169e05c4685dd34ea34f08cb6a012cb1166c82cae4a3c47afa57e02722c52b"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/no-overwrite.log",
+        "sha256": "689127a89003e65e1325ea9e73197e818b3b7fad379682527d681787d99cdab3"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/non-ready-references.json",
+        "sha256": "807acde8d684784e0a0b42e8e6ba20ffd81b361c1a37d97e3e949828ab69ba3d"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/non-ready-references.log",
+        "sha256": "8bdcbd7eebc6ccd2139f2abeccd4ff4a5c46f570fb76fcae5a9d09040520a3f1"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/recovery-scenarios.log",
+        "sha256": "b723ee98113c2187361e396cba7667426e20699df04d092ffc3c33f32e55d071"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/repaired.json",
+        "sha256": "25b38e0d1d0f34624985be22586e7214ec536960d0487aaad67be5c02b519a3d"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/repaired.log",
+        "sha256": "b7abd9e87255e9998d382f27d425640195be2f520ce4c1b1e668f8b0feec74e4"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/report.json",
+        "sha256": "d20b1c5da2be6e7131a7f3bb8fc8426a8be1b28e1215f9a7455a5227573d6df7"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/s3-access-denied.json",
+        "sha256": "7e9642b7cce98dcbfc51035b52b7539bcdd4cb5c281e5c317052347aacaebfc0"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/s3-access-denied.log",
+        "sha256": "3d34236b67a3590ab6ead1fc2eef56b914e73a2a87ddf3d00468e37fb4cc08cb"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/same-size-corruption.json",
+        "sha256": "45979bbff195bdf7960d6ffc77f2d2d6c159815da1e1c73fbfde8df2df39a095"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/same-size-corruption.log",
+        "sha256": "d2169e05c4685dd34ea34f08cb6a012cb1166c82cae4a3c47afa57e02722c52b"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/scenarios.json",
+        "sha256": "cef3041caebe3a4e363dc10b2f82b7efab139ed81b789522149aa520b5211ecb"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/valid.json",
+        "sha256": "7bd594b0527f346f3793784d752bf5398df32a49837dcc41cdbbf4ade37e1878"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/valid.log",
+        "sha256": "b7abd9e87255e9998d382f27d425640195be2f520ce4c1b1e668f8b0feec74e4"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/wrong-size-mime.json",
+        "sha256": "6e48c022a6bd2657afb4857af5b36b6eb709f159d46040315edb14edf7022633"
+      },
+      {
+        "path": "D:/linji-storage-recovery/20261104/delivery-native-runs/linji-storage-recovery-KxR4Lq/wrong-size-mime.log",
+        "sha256": "3ea37281963dc3524736cbf5a11bd2d9394fbfcf933b64f54eada3ee0a61e76e"
+      }
+    ]
+  }
+}

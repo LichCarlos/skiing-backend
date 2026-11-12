@@ -1,0 +1,183 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "Community dynamic/comment full VO/page/receipt parsing; local/end identity verification; visibility lifecycle; shared-ledger arbitration; configurable moderation grants; actual publish/re-review/hide/restore/comment/delete/read-time revocation HTTP and persisted events/audits",
+  "http": {
+    "tests": 67,
+    "newTests": 4,
+    "output": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T",
+    "checks": {
+      "dynamicId": 1,
+      "commentId": 1,
+      "published": true,
+      "reapproved": true,
+      "commentsModerated": true,
+      "revocationRejected": true,
+      "deleted": true
+    },
+    "persistence": {
+      "physicalDynamics": 1,
+      "softDeletedDynamics": 1,
+      "dynamicFinalContent": "HTTP社区复审后内容",
+      "dynamicFinalStatus": "published",
+      "dynamicFinalReason": "恢复公开",
+      "physicalComments": 1,
+      "softDeletedComments": 1,
+      "commentFinalContent": "HTTP评论审核内容",
+      "commentFinalStatus": "visible",
+      "commentFinalReason": "评论恢复",
+      "dynamicPendingOutbox": 7,
+      "communitySuccessAudits": 8,
+      "totalOutbox": 43
+    },
+    "references": [
+      {
+        "path": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T/report.json",
+        "sha256": "fc0f2190c5870a419a787dfd78e05a3910bea4b6b80f0d99ce1a0fe08029b2d1"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T/client-result.json",
+        "sha256": "f94f144c3c5dde74d61faebd277efa6b2df1d62fa6529104f080396124828a77"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T/ready.json",
+        "sha256": "1ca5607898c4bbad9ec2dfec06fb64910dd09eead1d78d5b16c30a08f29fcf07"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T/migrate-deploy.log",
+        "sha256": "fccae8bd80d0a4f8716396afc1df10b836fc8c31fd539e7c78e904731b90e880"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T/fixture-verify.log",
+        "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/final/admin-runtime/linji-admin-http-oWQi2T/verify-after.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      }
+    ],
+    "cleanup": {
+      "path": "D:/linji-community-reads/20261103/cleanup.json",
+      "sha256": "f0e710bb043f2c25571da40fea59317a2257b00417c7e498b90862c077e36dc7"
+    }
+  },
+  "regression": {
+    "newTests": 40,
+    "communityCombinedTests": 132
+  },
+  "failures": {
+    "regression": "Initial29 boundary tests all failed against old implementation. First repaired combined114 passed/7 existing fixture failures (pagination/end identity/complete moderation receipts); corrected fixtures then127 passed. Final132 adds identity association, comment page and shared-ledger concurrency regressions.",
+    "references": [
+      {
+        "path": "D:/linji-community-reads/20261103/boundaries-before.log",
+        "sha256": "425730dbaad9fabed6746c02a20af8ec95168370f534f8f444d300d0a1d8eaaf"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/targeted-first.log",
+        "sha256": "efeccb7230950081e44ec1edcc0facbbab674074be34ff0b6cfb180cbf013b5d"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/targeted-second.log",
+        "sha256": "5aaf4b02ba8abc7766411723b7ef789a95937b2ed7f542f7595ef72d64ae12cc"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/targeted.log",
+        "sha256": "db369ebb66bb39464da9d3d7b462df9c4810eee83f80334e748c565738e08535"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/admin-types.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-community-reads/20261103/admin-types-final.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "commandLedger": {
+    "path": "D:/linji-community-reads/20261103/commands.json",
+    "sha256": "8dc2c71cd41ec82f1a3f9cd291d776e213cf1a7c47feaea201c6a808a9fdfc7d"
+  },
+  "limitations": [
+    "Node Cookie adapter and simulated Hooks/EventTarget do not prove actual browser/React/BFCache/device behavior",
+    "Read-end identity verification is not a cross-request atomic permission snapshot; existing moderation commands have no client version precondition or idempotency key",
+    "No current full database suite, real Kafka/Inbox/timers/providers/storage/container or remote CI acceptance",
+    "Existing Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 143,
+    "unitTests": 1240,
+    "sourceExportNode": 8,
+    "httpFrameworkFiles": 9,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "productionBusinessCodeChanged": false,
+    "httpFixtureChanged": true,
+    "postFixtureLint": 0,
+    "postFixtureTypes": 0
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "41822035231ce1e968777a8ab4afa445009a2ef3ad801658a4e3722977ca42d9"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-community-reads/20261103/backend-install.log",
+      "sha256": "d5eace00168656900427c14620cfcb7ef9d712c1f21d1f2ec1f1552bb066b8ff"
+    },
+    {
+      "path": "D:/linji-community-reads/20261103/backend-check.log",
+      "sha256": "deaccd1aaa31d454b0db1e2e846708840b5b0dc25402100d63ba831c1eaf20fd"
+    },
+    {
+      "path": "D:/linji-community-reads/20261103/backend-e2e.log",
+      "sha256": "36043fbbc5b6cdd5efc3c73bbf72b807f9f901d7ff162b84399cc596edea5c38"
+    },
+    {
+      "path": "D:/linji-community-reads/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-community-reads/20261103/backend-fixture-format.log",
+      "sha256": "73cb423cafc78de19bfe36e45dc1da8b61594657e590d1f8b6b6a852389f09ca"
+    },
+    {
+      "path": "D:/linji-community-reads/20261103/backend-fixture-lint.log",
+      "sha256": "05622f115b43513d6fdd1e50a3bf36c55ae45f652d6c4f4090b26de3a4062bcd"
+    },
+    {
+      "path": "D:/linji-community-reads/20261103/backend-fixture-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-community-reads/20261103/admin-runtime.log",
+      "sha256": "1ce6f29774a416ac13ae17a39e38a6c9bd8631bd90a9fb6e678f170787872874"
+    }
+  ]
+}

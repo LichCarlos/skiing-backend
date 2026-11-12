@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-03",
+  "snapshot": "D:/linji-source-export/20261103/run-01/backend",
+  "files": 675,
+  "sourceSha256": "a7d88d3258b20ead09587766d9fc78165983aaeaa4d9bf1e880e45c0f8737f56",
+  "manifestSha256": "04ad5bec250718e680b1191d10d9198fdf84144de9556f8d89d82a83d1723b36",
+  "openapi": {
+    "version": "1.50.2",
+    "sha256": "710ef0cad15dcfb363f77a9fd1463413ca0290946dda9d1c9a7fbea8e77088e0"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "node": "v22.16.0",
+  "store": "D:/linji-source-export/20261103/run-01/stores/backend",
+  "freshStore": true,
+  "originalDependenciesCopied": false,
+  "nodePathAbsent": true,
+  "moduleProof": {
+    "node": "v22.16.0",
+    "nodePathAbsent": true,
+    "modules": [
+      {
+        "name": "@nestjs/core",
+        "path": "D:\\linji-source-export\\20261103\\run-01\\backend\\node_modules\\.pnpm\\@nestjs+core@11.2.8_@nestjs_95fd9e9c46b5da089e26b594c4ae89c0\\node_modules\\@nestjs\\core\\package.json",
+        "version": "11.2.8"
+      },
+      {
+        "name": "@prisma/client",
+        "path": "D:\\linji-source-export\\20261103\\run-01\\backend\\node_modules\\.pnpm\\@prisma+client@6.19.0_prism_c6daea942b150819ec2e6cc13daee65e\\node_modules\\@prisma\\client\\package.json",
+        "version": "6.19.0"
+      },
+      {
+        "name": "typescript",
+        "path": "D:\\linji-source-export\\20261103\\run-01\\backend\\node_modules\\.pnpm\\typescript@6.0.3\\node_modules\\typescript\\package.json",
+        "version": "6.0.3"
+      },
+      {
+        "name": "vitest",
+        "path": "D:\\linji-source-export\\20261103\\run-01\\backend\\node_modules\\.pnpm\\vitest@4.1.12_@types+node@2_fddd20b95e211dda3c119c3b91e954f6\\node_modules\\vitest\\package.json",
+        "version": "4.1.12"
+      }
+    ]
+  },
+  "sourceProof": {
+    "files": 675,
+    "sourceSha256": "a7d88d3258b20ead09587766d9fc78165983aaeaa4d9bf1e880e45c0f8737f56",
+    "sourceUnchanged": true,
+    "gitAbsent": true,
+    "envAbsent": true
+  },
+  "engineProof": {
+    "engineRoot": "D:\\linji-source-export\\20261103\\run-01\\backend\\node_modules\\.pnpm\\@prisma+engines@6.19.0\\node_modules\\@prisma\\engines",
+    "expected": "2ba551f319ab1df4bc874a89965d8b3641056773",
+    "queryCommit": "2ba551f319ab1df4bc874a89965d8b3641056773",
+    "schemaVersion": "schema-engine-cli 2ba551f319ab1df4bc874a89965d8b3641056773",
+    "querySha256": "5064f5f630d46a0849e323cce69c5f46c5ea3c0c6ff284deb46560f740897c13",
+    "schemaSha256": "be6b1ca4ac3b74f6714ba455ff6835744da8ad334c228e8cee1d15149b8ec182"
+  },
+  "results": {
+    "install": 0,
+    "generateWithSnapshotEngines": 0,
+    "check": 0,
+    "unitTests": 1192,
+    "sourceExportTests": 8,
+    "httpFrameworkTests": 158,
+    "build": 0,
+    "openapiExport": 0
+  },
+  "initialAttempt": {
+    "command": "pnpm db:generate",
+    "outcome": "Owned generation process interrupted after verifying its identity, external HTTPS wait, and installed engine versions",
+    "exitCode": -1
+  },
+  "notValidated": [
+    "database suite",
+    "HTTP service startup",
+    "container",
+    "Kafka cluster",
+    "real model providers"
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-source-export/20261103/run-01/backend/source-export-cold-install.log",
+      "sha256": "62737033aa430d90a83efe648995a6321dcdbef4fe63ea7307e88ed3fff66ab1"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/backend/source-export-module-proof.log",
+      "sha256": "dcc4c8300c69578293d04caddf3a4cadefccc8909f15ef70358deaac1c607368"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/backend/source-export-engine-proof.log",
+      "sha256": "4deee80742859b98f9d872bcc21ad178e7d418280f603c79fbe97ebda699d92b"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/backend/source-export-generate.log",
+      "sha256": "5fb08ec6d3312e13fc47199b5a66c6fda397cfcdbed2283f0c2f407b40ac5b12"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/backend/source-export-generate-local.log",
+      "sha256": "2d595244853a794a86893931c5ec9f1100f1e7dfa2defa13b07a1176415cdd71"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/backend/source-export-check.log",
+      "sha256": "dd1aef5b3f69f6ca92d706517cc4d070b61647f7963ff8bc9b89497ef0635fbb"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/backend/source-export-http-framework.log",
+      "sha256": "0385cbc86103ba38240743d05377a546b50025b72f024a09093b07a114767fb6"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/backend/source-export-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/backend/source-export-openapi.log",
+      "sha256": "122b0573d69138e374286a20009012574238fe77126ecf96b4fcdf2fac4655ce"
+    }
+  ]
+}

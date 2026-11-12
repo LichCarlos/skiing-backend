@@ -1,0 +1,2516 @@
+{
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "integrationTests": 10,
+  "integrationSkipped": 0,
+  "integrationDurationSeconds": 233.3,
+  "newFixtureRegressionTests": 14,
+  "productionBusinessChanged": false,
+  "contractChanged": false,
+  "schemaChanged": false,
+  "dependenciesChanged": false,
+  "environment": {
+    "kafka": "4.1.1",
+    "java": "21.0.11",
+    "postgres": "17.11",
+    "pgvector": "0.8.1",
+    "qemu": "11.1.0",
+    "alpine": "3.22.7",
+    "acceleration": "tcg",
+    "guestMemoryMiB": 768,
+    "javaHeapMiB": 320
+  },
+  "attempts": [
+    {
+      "run": "probe",
+      "passed": false,
+      "reason": "Serial input pacing"
+    },
+    {
+      "run": "probe2",
+      "passed": true
+    },
+    {
+      "run": "run-030215",
+      "passed": false,
+      "reason": "Guest NIC initially down"
+    },
+    {
+      "run": "run-030427",
+      "passed": false,
+      "reason": "Alpine JDK requires community repository"
+    },
+    {
+      "run": "run-030614",
+      "passed": false,
+      "testsPassed": 6,
+      "testsFailed": 4,
+      "reason": "Topic metadata propagation before tests"
+    },
+    {
+      "run": "run-095038",
+      "passed": false,
+      "testsPassed": 8,
+      "testsFailed": 2,
+      "reason": "Offset observer aborted during coordinator transition; cleanup timed out"
+    },
+    {
+      "run": "run-100658",
+      "passed": true,
+      "testsPassed": 10,
+      "testsFailed": 0
+    }
+  ],
+  "finalCounts": {
+    "users": 1,
+    "projects": 0,
+    "documents": 0,
+    "outbox": 0,
+    "inbox": 0
+  },
+  "finalTopics": [],
+  "finalGroups": [],
+  "cleanup": {
+    "passed": true,
+    "ports": [
+      {
+        "port": 55636,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 61925,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 55639,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 54526,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      }
+    ],
+    "passwordFileAbsent": true,
+    "postgresPidFileAbsent": true,
+    "guestPid": 2636,
+    "guestExited": true,
+    "productionAndSchemaUnchangedFromPriorFieldStage": true,
+    "unchangedFiles": 498,
+    "files": [
+      {
+        "path": "package.json",
+        "sha256": "e7283f1e6c8d3e3707d3ef13db6ec7577df8b0892b085b1cc6ed4a88ccf7a3fe"
+      },
+      {
+        "path": "pnpm-lock.yaml",
+        "sha256": "08acab88e8de3501cb07a16e92fe7d38879302e608aadab6cf0fcf3685249144"
+      },
+      {
+        "path": "prisma/migrations/20261027000100_identity_access_foundation/migration.sql",
+        "sha256": "0f6d0fe5eb35cd71a9437a2bd181e6ec866e5192b99dfa672e091860eec0226f"
+      },
+      {
+        "path": "prisma/migrations/20261027000200_rag_conversation_storage/migration.sql",
+        "sha256": "6a5a642fd8c7593955d48287755d7694ab14f5bc0e596b400285e2df9fe4103a"
+      },
+      {
+        "path": "prisma/migrations/20261027000300_ski_resort_catalog/migration.sql",
+        "sha256": "c6837685094ba3289a1798cc5817a7862f597aa285e6f3beb1c208dc328cf279"
+      },
+      {
+        "path": "prisma/migrations/20261027000400_resort_revenue/migration.sql",
+        "sha256": "518a9b2507f2b9a3ba8870dbd828248b88c2ff39e6375a31694ed6daf7ab5aa0"
+      },
+      {
+        "path": "prisma/migrations/20261027000500_integration_events/migration.sql",
+        "sha256": "ef5f85463bcab7e140cdfa2f78c7d4c2703328656865c5b9406f8b7f455085e3"
+      },
+      {
+        "path": "prisma/migrations/20261027000600_auth_sessions/migration.sql",
+        "sha256": "3ab5223a36f992799dba184e418f8bffd716113b77f34775f4239152290fbde8"
+      },
+      {
+        "path": "prisma/migrations/20261027000700_normalized_user_account/migration.sql",
+        "sha256": "771683bce6550be7cacb36c63627a437164eacac4dda74ed6b292e16c11e28aa"
+      },
+      {
+        "path": "prisma/migrations/20261027000800_resort_assets_dictionaries_lifecycle/migration.sql",
+        "sha256": "301a703f7b29895f13b0ee726252f37cfdcd9b57d1a8a6fb631cdfa4befb2205"
+      },
+      {
+        "path": "prisma/migrations/20261027000900_custom_fields_and_scope_policies/migration.sql",
+        "sha256": "0d1df4f9dffbe6627a9f01ff39fe46bc3432c924a13859efdb08268534643f5b"
+      },
+      {
+        "path": "prisma/migrations/20261027001000_content_community_and_audit/migration.sql",
+        "sha256": "3363c2ddd766d7323aedc1f50e1bbe331b4c2a2ee501c3fbcad8d8915cc7bef8"
+      },
+      {
+        "path": "prisma/migrations/20261027001100_role_management/migration.sql",
+        "sha256": "4cdd09815873da133f9c32bfdc4d54b6a99df34c8d3dfa289309559f14ba0a94"
+      },
+      {
+        "path": "prisma/migrations/20261027001200_public_resort_catalog/migration.sql",
+        "sha256": "7fdd19a23659d37b696392212bd80db240ac55eed87cd923d42324688d365fd5"
+      },
+      {
+        "path": "prisma/migrations/20261027001300_inbox_claim_lease/migration.sql",
+        "sha256": "2a604e964220407557c0e119e429d654542f4aac906e26b0471c45fc7615a44d"
+      },
+      {
+        "path": "prisma/migrations/20261028000100_project_knowledge/migration.sql",
+        "sha256": "cc89264a5ce31daf4475dd419a78e3117e8314e12dddfe69a7a72c4e5570eb8b"
+      },
+      {
+        "path": "prisma/migrations/20261028000200_community_moderation/migration.sql",
+        "sha256": "d28ac7f125cd7665b18ab8323632a63fa0f6014d5076b065f621f0ecc24131b9"
+      },
+      {
+        "path": "prisma/migrations/20261028000300_ai_conversation_soft_delete/migration.sql",
+        "sha256": "3046399fa5eb9cd68ab4b5805fb6adac5cdc02dd6e03a7179608aa5576b0b3f2"
+      },
+      {
+        "path": "prisma/migrations/20261028000400_ai_message_idempotency/migration.sql",
+        "sha256": "873d5adf84fe7ae889b39ffb40ebf29c85124ab8c591db49f0b3d00122ca8b29"
+      },
+      {
+        "path": "prisma/migrations/20261028000500_ai_message_replies/migration.sql",
+        "sha256": "c74c8d56370d3b287a614158111d7993a7bc6b455db686b67ef889e028b72ec1"
+      },
+      {
+        "path": "prisma/migrations/20261028000600_ai_generation_lease/migration.sql",
+        "sha256": "8e42ebe651e451a8fe80a179715c4c1924824d80caff57d7314ea1c156da25de"
+      },
+      {
+        "path": "prisma/migrations/20261030000100_user_avatar_asset/migration.sql",
+        "sha256": "9526ab950ab75a7f872eb62c1473b7ea09832c46c96588051c1c6702fe3c75b7"
+      },
+      {
+        "path": "prisma/migrations/20261101000100_revenue_write_requests/migration.sql",
+        "sha256": "b3693f90843979af34161fbcde6f0677827fc54e5d7f5dafb4e3a67e72a986db"
+      },
+      {
+        "path": "prisma/migrations/20261101000200_revenue_import_jobs/migration.sql",
+        "sha256": "40ddffc7cd460547b5fddc1577fee60724fe118eceb6a2861fd7eea2f8fa6399"
+      },
+      {
+        "path": "prisma/migrations/20261101000300_rag_source_controls/migration.sql",
+        "sha256": "1caa4deaf729687c72d445d6304d12c1fed03a30de17c2f103c7c28762a9de58"
+      },
+      {
+        "path": "prisma/migrations/20261103000100_login_attempt_buckets/migration.sql",
+        "sha256": "bf28d5ac30fdff1be81ee4ae86bf3efd868390fea6234e5b654a335d184c7359"
+      },
+      {
+        "path": "prisma/migrations/migration_lock.toml",
+        "sha256": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210"
+      },
+      {
+        "path": "prisma/schema.prisma",
+        "sha256": "0e1b09fed38dfcc97e1383f496ad0ddb9d21d56c195c265b5f423fab05885398"
+      },
+      {
+        "path": "prisma/seed.ts",
+        "sha256": "941f856f151c686baf59ab02723453c164c6437d70992a58261b2e183e7a454f"
+      },
+      {
+        "path": "src/app.module.ts",
+        "sha256": "9892102c5fd9f7f884221f6a8d757d1f4db9dcbbb373f1863edf13338342331d"
+      },
+      {
+        "path": "src/main.ts",
+        "sha256": "3117d2e2ba20525d6b13b5bd743b6d65e3541f374be5c4044316c1ecb0240abc"
+      },
+      {
+        "path": "src/modules/README.md",
+        "sha256": "78c192d08afc4bd7529f1354a6ef378426153513ac2c1fe24df75964cefaf416"
+      },
+      {
+        "path": "src/modules/ai-assistant/ai-assistant.module.ts",
+        "sha256": "5e96fbb61848a0123b1febc7daa435b3779802f37b5363556d7c3f059d44d80d"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ai-conversation.service.spec.ts",
+        "sha256": "4bf796f24e70d88f84f11fa6890202a500aa22ac4f67883da7b778a04d332849"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ai-conversation.service.ts",
+        "sha256": "edfa7e5e351a526a2905045dca099ca8754e8b04ee04e6ebc6783b8648e209c0"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/article-rag-event-handler.ts",
+        "sha256": "96397049cdba87b0a3beb36a78b54711618df20efe3b04f7a7d5ed820481b05e"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/audit-ai-conversations.ts",
+        "sha256": "dd524cd5da527451c038b0f6cad96e2a1d87b27d26671f20b5dee618cd1d089d"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/claim-rag-event.ts",
+        "sha256": "5d25191b7c37fe8dac2e9e63ba2cfcbd31ae1c6b6bb60d6ccf4188488537b7a3"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/dictionary-rag-event-handler.ts",
+        "sha256": "6f074756631b33512ce4949932e14c7159126c75b8acc774f691d20c194bb1a0"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/dynamic-rag-event-handler.ts",
+        "sha256": "6e8f3e7790cdedab1948973ddf8c914582f3c33993c82db2055c9e19045f9d89"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/manage-rag-sources.ts",
+        "sha256": "d8207f205cce217817a6e392906cca3c551ff827ffc96e736faa9a46b6e845ce"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/ai-conversation-audit.repository.ts",
+        "sha256": "06597224691ac164c59118e4acd77ccbb3faf1d9e1552559d22e5dbdb975fefb"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/ai-conversation.repository.ts",
+        "sha256": "73fbffcd5ccf41198f07d3fe4eff1d9631c986134e7f1c3eb77f6cbf0c67ee14"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/ai-stream-authorization.ts",
+        "sha256": "f2166846a61a3197487dec6af642f563b355f267e851963f6fb234bfe293a604"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/chat-model-provider.ts",
+        "sha256": "d4abe1ef55d113b0c89ed2651f74a2e1e12abf09132be0fcb39279cc78ca8ed9"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/embedding-provider.ts",
+        "sha256": "4ebb88f2afe4d3d825b27ca8add9d029520f67f12c62d098547bcbc8872f2da1"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/rag-candidate-retriever.ts",
+        "sha256": "3520741bbc64fb413b8951956ea55ab6fdd1064ee74342b6f55735651c37d865"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/rag-document-writer.ts",
+        "sha256": "a59df574777fa54a7fcfa58afd18eb8482f750821972edfc470290643114f9aa"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/rag-evidence-validator.ts",
+        "sha256": "e1f8739f742e367c9594dc1d7d3381dd65e239b28e0570f2bda9d591b20ae910"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/rag-source-management.repository.ts",
+        "sha256": "5f08fc8dc917a842b4a0dbb39c9aa91a3a572ed22d6405564cca9667d2295a4f"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/ports/rag-source-reader.ts",
+        "sha256": "05724554b98d9cb0ddc5a5c58f64fc9094e58b09caccf05f5edd672124e9ad28"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/project-knowledge-rag-event-handler.ts",
+        "sha256": "18153be3c3aff7c808859dd97a3fe0de0079da550ddae5e513012d6feab2b775"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-answer.service.spec.ts",
+        "sha256": "e71808a18d1b6bc7c55e4cb943a2c1b8e91a36be68f80cba8cce94d59733ebf9"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-answer.service.ts",
+        "sha256": "fdc35b31331c6e19cd3021a3246bc1a9e6f995e2df4cf3f1337d68caa8caa575"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-backfill.spec.ts",
+        "sha256": "b29e33678c5440ed1de86a6f413cd47460a50293b1f9e563659b7ddd5b55c488"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-backfill.ts",
+        "sha256": "ffef252ef9b4f3bc4458c5bc586d67c84c3635f726794d67d0f78be2b7c65ca0"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-document-indexing.service.spec.ts",
+        "sha256": "decbd342b0964f92e3747a1d7dbfe380de619645ea458c1b13288a653a8e8aa8"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-document-indexing.service.ts",
+        "sha256": "83c028532aa3da63194ae3ba7e8d71cb3ff89da611b20b2f46c330ba53192409"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-event-handlers.spec.ts",
+        "sha256": "3ca53b9b0a78a210dd9f43f568b60964e5530ef4f12b77a457a01b49efaa3de4"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-retrieval.service.spec.ts",
+        "sha256": "bc5e9655ec8484e44562eea393e026a8f08e7f0e3919b8284ee83cb24c30583e"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-retrieval.service.ts",
+        "sha256": "9da89f16cd73432c37e89b1656bca7a304b2bc29d45c93b6916691e5c24cfe09"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-source-reindex-event-handler.spec.ts",
+        "sha256": "5a940a9864b9657145bea764bec6b0fa275df0c158c1181372c15fdf97c7f3e5"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/rag-source-reindex-event-handler.ts",
+        "sha256": "895f35c5647d1541d0aa1fdbb4022fb3085e3af5699a1c584ae4a25f21e83879"
+      },
+      {
+        "path": "src/modules/ai-assistant/application/resort-rag-event-handler.ts",
+        "sha256": "6b9afd125c0efc6eee01e638b1323c7fbcf99adfe09ed347cf22d3bc2eb482f0"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/ai-message-rules.spec.ts",
+        "sha256": "2393cdaf41ef8dd99015091749aa03b313ecd93809d5ec95851894424f18388d"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/ai-message-rules.ts",
+        "sha256": "f518b2e8bb757e736277a99b549a7ea649581b69240234a89ab76a2e38a841c9"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/conversation-context.spec.ts",
+        "sha256": "e450474850be515e2de15fa81d7b0c9723ca6559b0498d1a2a185e2235228f23"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/conversation-context.ts",
+        "sha256": "449c0aa65384c34fb315809fbcb64d40192bc00fb4e8c4c03dd33422773cdef7"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/rag-access.spec.ts",
+        "sha256": "2bb5dcfdd0a7339d300cd862d63805871f9cc1a485bf246f84c117e09669d082"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/rag-access.ts",
+        "sha256": "a71f32deb84762daee66359946959585e67a64e850b52c6f9a66e65d9444b50e"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/rag-source-eligibility.ts",
+        "sha256": "9ce70e89d9ffe2e92dfc19aff270bb9683f6130f176fd5a207e269449ebdc8cc"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/rag-source-state.spec.ts",
+        "sha256": "d7f678af50b1372d789cfd84f668dae059225c3589ebdd2215b777ee21bc2e30"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/rag-source-state.ts",
+        "sha256": "2a0107aaf47dee49f2687b59e1079c0de5be1fb45c7ead4226c49391642734cd"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/split-rag-text.spec.ts",
+        "sha256": "c868f67e30b17183dceea50f254eea1f829aa8ac7ae7bff208c923c7247c13e6"
+      },
+      {
+        "path": "src/modules/ai-assistant/domain/split-rag-text.ts",
+        "sha256": "8e79de0f4a4cf8fdeeff41e5311d409d60254abb17d98cd4341300b4e1159ae8"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/current-ai-stream-authorization.spec.ts",
+        "sha256": "f891d0413b90715116c85c0926894f71883290a3c5761003ce6c1de11c0a2dff"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/current-ai-stream-authorization.ts",
+        "sha256": "d741512b52a0a43bec4b82160ce408bd358b156b14cda330f239fc067231219b"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/model-provider-http.spec.ts",
+        "sha256": "fcdcdc49f0f22a4a6df91cc5014ccc3726533fef7d942d88d31a2e86fae51fa0"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/openai-compatible-chat-model.provider.spec.ts",
+        "sha256": "becf426291c97e25a9c07698644d22f3ad56944aa822aec18b6b262b5ebe444e"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/openai-compatible-chat-model.provider.ts",
+        "sha256": "136a5f962db240400153e911fc3438097a9db90c769fd2df2bc8dba275684de0"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/openai-compatible-embedding.provider.spec.ts",
+        "sha256": "a626fafa9077eb427078de4d4ba4c1d6092179609a48cd5b37d1355cd427e3aa"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/openai-compatible-embedding.provider.ts",
+        "sha256": "da5b1de275d901ead0f12b0dfd762efcff7cbf961a580969831b6ccbed636d8e"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/openai-compatible-http.ts",
+        "sha256": "3deb4732a971feb9c7916817bbbae68daae40890c19f4180d482090621a5eee9"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-ai-conversation-audit.repository.spec.ts",
+        "sha256": "49877e89963595b3b515bf98dad0ee9e83e5cd9e3e3b568172bb96974386b59c"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-ai-conversation-audit.repository.ts",
+        "sha256": "72acdb00211c234a59466a26be9a668a23187fe468c6b2307748fd10794c0744"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-ai-conversation.repository.spec.ts",
+        "sha256": "c4073bbafed2baf4638f07db4dbfca607a8ca6257dbbb4cc22da2813c04f893b"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-ai-conversation.repository.ts",
+        "sha256": "5084864029786d6c1ceff284f8b14245cf9796ed38d830875a1952b32a7b3a5e"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-article-rag-source.spec.ts",
+        "sha256": "ec42c5901759135dc4c04c665e26f33c6f7ce8357a98d84a13c9e4914451e562"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-dictionary-rag-source.spec.ts",
+        "sha256": "74ca3af20726f32925a60cc243286073ba8a7fab87b55c1e17c43a62f2ffb499"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-dynamic-rag-source.spec.ts",
+        "sha256": "835cfd810915c322810ce5044ceed51c74fedb4a3680c443831cf9c87663f151"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-project-knowledge-rag-source.spec.ts",
+        "sha256": "e2e53275297a2f7515de11f061c2d60c714cffd39a35e99047d1e43e43b2212b"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-backfill-reader.ts",
+        "sha256": "4fba77ee2e45cfd5ab95e5afe47fcbb433afa6426986d3bd5b086109faa8325b"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-candidate-retriever.spec.ts",
+        "sha256": "cf711ce4a45d14a8ce14764551bb2c63198e73641a84a413a59a5bf35dfd06f4"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-candidate-retriever.ts",
+        "sha256": "fc44b9078fe45c9d635517f2f33af97b75f66cffc790d2c8b7339150a93a6b13"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-document-writer.spec.ts",
+        "sha256": "06cc72cedc2f384671ebbe7c263225e4078282bdf69689e915447ee2bab90aae"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-document-writer.ts",
+        "sha256": "43015d38f9ac26106607eb1c51668c5b1f78e409f5f4b93c6852b4fb1f07518a"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-evidence-validator.spec.ts",
+        "sha256": "68c8f762097bcb84281327955c8c807c56b59f75ae0cacd1961e09392abcda9f"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-evidence-validator.ts",
+        "sha256": "8b5c9da859e54a40b0d0f4489189fb7c3279f77ee7386029600e77345e348642"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-source-management.repository.spec.ts",
+        "sha256": "0a071f541c5411a6033f707c436d6ca484b480e1d97d3b095e255e4607a93e8a"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-source-management.repository.ts",
+        "sha256": "933ecad50f429d4ea562d9a523a28249464aaaabbb25a5cbc37400a9a1857c22"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-rag-source.reader.ts",
+        "sha256": "f22ae8f1ae07748954a6e681c9c90ccf3b8817f6a6ede620237edf21226975a8"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/prisma-resort-rag-source.spec.ts",
+        "sha256": "0bfc278378d8bea557254b57f73a91a907678d554441bb5b41a262e0f3c27622"
+      },
+      {
+        "path": "src/modules/ai-assistant/infrastructure/rag-source-visibility.sql.ts",
+        "sha256": "8863f8bfbf34d1e77b1fd406462c43cda747a09307b34ee4aa9a5ff13e3b0167"
+      },
+      {
+        "path": "src/modules/ai-assistant/presentation/http/ai-conversation-audit.controller.ts",
+        "sha256": "654e5e9cf862c9d74ac47a22781ca9a2bfc9913f8845d52d9fae321fa6c55c15"
+      },
+      {
+        "path": "src/modules/ai-assistant/presentation/http/ai-conversation.dto.ts",
+        "sha256": "810f7a86d4a2eaf90f7c08d7a3853b54f3eae8fc33a6d04bfa475575416ec6e2"
+      },
+      {
+        "path": "src/modules/ai-assistant/presentation/http/ai-conversations.controller.ts",
+        "sha256": "5bc1d050e9b2cdc6a000f7ee692a07fe2826a7c5bd34272cd3561945e0f66213"
+      },
+      {
+        "path": "src/modules/ai-assistant/presentation/http/rag-source-management.dto.ts",
+        "sha256": "64918f57ad53d640559bf5bc1af62ed9d03fb3293f0fc6f5357f2d30494f90cd"
+      },
+      {
+        "path": "src/modules/ai-assistant/presentation/http/rag-sources.controller.ts",
+        "sha256": "1c19042c64547c52cd682377738c11242257884502761985bae73d9493c9d004"
+      },
+      {
+        "path": "src/modules/assets/application/avatar-url.spec.ts",
+        "sha256": "ef5e6d6c09546278d0ef587501940a122b9d89be08653d47b815df479ed7cf3e"
+      },
+      {
+        "path": "src/modules/assets/application/avatar-url.ts",
+        "sha256": "8fbe6b738f9d463b69dfe864b49da068479ba9c42490e36d501f4a88fe9efadf"
+      },
+      {
+        "path": "src/modules/assets/application/manage-admin-assets.spec.ts",
+        "sha256": "f8a3e6341e998160cb03298f779734e21aa652a736653de4b2e9d0e4b13e1520"
+      },
+      {
+        "path": "src/modules/assets/application/manage-admin-assets.ts",
+        "sha256": "6428711f2ba2f38dc0f9f67eb469e379a3c7da56b0eb02510129d7de7d153f5b"
+      },
+      {
+        "path": "src/modules/assets/application/manage-assets.spec.ts",
+        "sha256": "60eb8d06e9fd618d9cccaca8b880bf58727fece4e9582c33e956fde61571bcbb"
+      },
+      {
+        "path": "src/modules/assets/application/manage-assets.ts",
+        "sha256": "7cf1a3e28bb5348d48527a1f86e87c3f5a389991db0f818eebfaed64c747d52a"
+      },
+      {
+        "path": "src/modules/assets/application/ports/admin-asset-repository.ts",
+        "sha256": "f762bd864919ee4fc64e9ba19ba23a166e19d48eef6e81fc0c9a926a3668e8d9"
+      },
+      {
+        "path": "src/modules/assets/application/ports/asset-repository.ts",
+        "sha256": "cc4d68e12ec3b7a52c07f91efb4b6f4eac7c9198f44ed1710d18768837b2586a"
+      },
+      {
+        "path": "src/modules/assets/application/ports/asset-scanner.ts",
+        "sha256": "4f1265c85d899faeff575b412dda0c20823e5081e476c55ff26320ae285d1858"
+      },
+      {
+        "path": "src/modules/assets/application/ports/asset-storage.ts",
+        "sha256": "b695f02c1243409b985921d96ed2ea81983604955fdd97a4beac092eb7d8b622"
+      },
+      {
+        "path": "src/modules/assets/assets.module.ts",
+        "sha256": "2dc1521005ede461411797c49106c63127ee5dce269260bd190e612c5eb79098"
+      },
+      {
+        "path": "src/modules/assets/domain/admin-asset-access.ts",
+        "sha256": "1a7f3bf41ac45feadf1061b71898570569df7a766b003da3778eaad81d82e318"
+      },
+      {
+        "path": "src/modules/assets/domain/asset-rules.spec.ts",
+        "sha256": "86df9e3a6092b9b9c73946233b03ae185966d6bdb51fb2d360ef039b7afb5049"
+      },
+      {
+        "path": "src/modules/assets/domain/asset-rules.ts",
+        "sha256": "252abbd93e1ae637fefe25b1feec314921a9ce865a555258c21ecbc929893287"
+      },
+      {
+        "path": "src/modules/assets/infrastructure/admin-asset-authorization.spec.ts",
+        "sha256": "ea57933d0e19353e3c5c4605fdc16c0664cecba4983d1b42cacc336a9883e06e"
+      },
+      {
+        "path": "src/modules/assets/infrastructure/admin-asset-authorization.ts",
+        "sha256": "b8fd99812ea7b760f17590cf030f84e18acc1fd2d3e04bd3eb3f32dbb43ba32e"
+      },
+      {
+        "path": "src/modules/assets/infrastructure/clamav-asset-scanner.spec.ts",
+        "sha256": "95f7c7b1c6b72d626860b68c2810ebab71af269f4ec936ea59f7f4acf1458f02"
+      },
+      {
+        "path": "src/modules/assets/infrastructure/clamav-asset-scanner.ts",
+        "sha256": "2f7471b98432a828b0b7b0b9ea6e7f6f0da3bdf31a8a302d206686681338d1d2"
+      },
+      {
+        "path": "src/modules/assets/infrastructure/prisma-admin-asset-deletion.spec.ts",
+        "sha256": "0eadbd21f733eb3489883de1482a83b46e1f9da90599f1068806af18fbb8fd6b"
+      },
+      {
+        "path": "src/modules/assets/infrastructure/prisma-asset.repository.ts",
+        "sha256": "5a5432b3753bbbf496d3ac917c0b5b0c34f51676d287d50dbe291651169034b5"
+      },
+      {
+        "path": "src/modules/assets/infrastructure/s3-asset-storage.spec.ts",
+        "sha256": "d837874cb098b76536523d57de7dae925d56eb2ecb889364b064374ec4eddd8d"
+      },
+      {
+        "path": "src/modules/assets/infrastructure/s3-asset-storage.ts",
+        "sha256": "65ce4603cd4f4827afa5019f72888d0f696250c443594170126ce25290991bda"
+      },
+      {
+        "path": "src/modules/assets/presentation/http/admin-assets.controller.spec.ts",
+        "sha256": "8f4382f0a1f367764b422a2f2dc5a1f01a87563168f8391015da77afbb51d222"
+      },
+      {
+        "path": "src/modules/assets/presentation/http/admin-assets.controller.ts",
+        "sha256": "b85077642afe016c5af662526525aff9a32422ac6b7c505d7dce3f90537dd118"
+      },
+      {
+        "path": "src/modules/assets/presentation/http/assets.controller.ts",
+        "sha256": "9e87e3ec891a2c197982a404e26d015a13f82b49ad3ff1bb9e27b6af40618174"
+      },
+      {
+        "path": "src/modules/community/application/admin-community-service.spec.ts",
+        "sha256": "26b92538456b839e18d42fc1cf2a1bb9de589587d6e15aebce672a203d1b5d09"
+      },
+      {
+        "path": "src/modules/community/application/admin-community-service.ts",
+        "sha256": "d7a02ca91b3b3b3e3b15696f1ac13d643e2f29d841dd5161af3d98d96b48b84f"
+      },
+      {
+        "path": "src/modules/community/application/community-models.ts",
+        "sha256": "0831b27631c828f8a53bf1a115ee266d0fa307c72e52804a04c1991443b61a66"
+      },
+      {
+        "path": "src/modules/community/application/community-transaction.ts",
+        "sha256": "be4552ad18a4e6ebab67dc50e829b93e7ee9770de90e0d9e47694d332a6a8b12"
+      },
+      {
+        "path": "src/modules/community/application/community-writes.spec.ts",
+        "sha256": "82d0d1245580dc5d5bdb6f5921b3ed43db246ee867236396a3668db2af9625eb"
+      },
+      {
+        "path": "src/modules/community/application/community-writes.ts",
+        "sha256": "4f099df6cc0a1db581fac920ea86edaa8dd4b7c9b003d00b9e64d247c94493b3"
+      },
+      {
+        "path": "src/modules/community/application/own-community-queries.ts",
+        "sha256": "0e9d8c7353c5d08f6e53761f73b00342a62c150ec13cfd0c8bbbb549d6082122"
+      },
+      {
+        "path": "src/modules/community/application/ports/admin-community-reader.ts",
+        "sha256": "0ce2f1395aecb1a9f8107f2c79e75c9f08967b725422ee87d5ea507749da5b99"
+      },
+      {
+        "path": "src/modules/community/application/ports/community-unit-of-work.ts",
+        "sha256": "db756dd56d4d1b5896c54f4da1463ac05b7e13321cacefc151871ae8f73b1cf0"
+      },
+      {
+        "path": "src/modules/community/application/ports/own-dynamics-reader.ts",
+        "sha256": "75bee84f89d34a0ed8464a078ed47d3cc1a97b0016e642a7b942c3f937f7ebbe"
+      },
+      {
+        "path": "src/modules/community/application/ports/public-community-reader.ts",
+        "sha256": "c8a915f48abe864cff340a7c1a01595da7f54248ac1f09399eee46b65d1f316a"
+      },
+      {
+        "path": "src/modules/community/application/public-community-queries.spec.ts",
+        "sha256": "8a4efb0dce64f3146b095898cc0313042d3f86070f1dcbd8debfca2b1aa5cac1"
+      },
+      {
+        "path": "src/modules/community/application/public-community-queries.ts",
+        "sha256": "18017ba6663fa37941831d6355a7c8bd8ceef3b8aef7ba85493f043dd8bb0b95"
+      },
+      {
+        "path": "src/modules/community/community.module.ts",
+        "sha256": "01940b3544e56853f0572cb0b684f6cb1e3f932ac5bae04145e5c6078c65b544"
+      },
+      {
+        "path": "src/modules/community/domain/community-rules.spec.ts",
+        "sha256": "b3c97946988f594614c8b613309b130b26fb6e09cbc0a2a567a4913d904962a8"
+      },
+      {
+        "path": "src/modules/community/domain/community-rules.ts",
+        "sha256": "b4988c52e913625f4fd129df1d60ba7e52b353f489725f76a8764d90553d0806"
+      },
+      {
+        "path": "src/modules/community/infrastructure/community-authorization.spec.ts",
+        "sha256": "309e1033372888a7281f62a8cb17766b527af5d3e50f61fbcf5aca8f2a9304f8"
+      },
+      {
+        "path": "src/modules/community/infrastructure/community-authorization.ts",
+        "sha256": "f5b048c3580af3aaf38e569b0cf4014dcd42096bf2be46065faff2677479b4fb"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-admin-community-commands.spec.ts",
+        "sha256": "15a521e20432ffe69b10b3096590bf9875220403ec4a815e742fcc61ea91ea95"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-admin-community.reader.spec.ts",
+        "sha256": "275ef8390b749f58292b25db0c0913ef37ba2cfd7e077d8d80272a92047b1515"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-admin-community.reader.ts",
+        "sha256": "95a9a0245bf66ab4365af42d948e05a04faf814cc60665b11d30a411a49cbee8"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-community-commands.spec.ts",
+        "sha256": "97f9e7d9a15eec95d7dd57e8ad7d17a0e38074ca83a0c725a05fbd2bfc8c08a6"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-community-unit-of-work.spec.ts",
+        "sha256": "374401553c4ea4643dbe6abaa0f580bf95e78222901b6234e626a0a177c19129"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-community-unit-of-work.ts",
+        "sha256": "3018a9045ed30291ffd087b41453e144bd67838c6c9c100fab959f6bb06ee018"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-own-dynamics.reader.spec.ts",
+        "sha256": "994705f284c7eb3f37f961840d75e10e31dc2e0e095cb5bcb04e605a32407d9c"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-own-dynamics.reader.ts",
+        "sha256": "ff000eb0a0b62862d8cdb9dec73c49c8651f13f11e4fa1eceea03c942e871503"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-public-community.reader.spec.ts",
+        "sha256": "783a57f5fdd7e81dd8f1aca2b83201d47b991cfc3f333687e014f9e48e323c62"
+      },
+      {
+        "path": "src/modules/community/infrastructure/prisma-public-community.reader.ts",
+        "sha256": "abf414dadd4870d09890c211c87ef0b17c88118bde7233c31bade3966992d95c"
+      },
+      {
+        "path": "src/modules/community/presentation/http/admin-community.controller.ts",
+        "sha256": "9fb875b0e63dffee8f00358d76d9d6c35f7ffc2103a8e810b46195461ffdcccc"
+      },
+      {
+        "path": "src/modules/community/presentation/http/community.dto.ts",
+        "sha256": "3bd69c5a10c3787492bc1cabf22cde262276ba3abdab160a84756e1c0dca66e6"
+      },
+      {
+        "path": "src/modules/community/presentation/http/community.vo.ts",
+        "sha256": "03d2f3e8116b4ddf07b4e2c9d3384807d434f4b26a2373977ba41ab6e2f1aa11"
+      },
+      {
+        "path": "src/modules/community/presentation/http/own-community.controller.ts",
+        "sha256": "35986526f4b93c835b96259742c435e896f0a13b3bc4d9f27cb51d8d2d29d31c"
+      },
+      {
+        "path": "src/modules/community/presentation/http/public-community.controller.ts",
+        "sha256": "a7044fdd3421ba3f9da794be74e376efcd1299e8f4378de4c39f2e8dfeb33f91"
+      },
+      {
+        "path": "src/modules/health/health.controller.ts",
+        "sha256": "aea04922c310e7dfb7f77d251352cde484454cc44d2a14f4d2685d2935c4d19a"
+      },
+      {
+        "path": "src/modules/health/health.module.ts",
+        "sha256": "82c097b438ffac4d7943986fdd8eb3cf61a60e77d3b29b4b871f335802ea9f72"
+      },
+      {
+        "path": "src/modules/identity-access/application/auth-session.spec.ts",
+        "sha256": "168d470aea9ea92c228677dbff470cc813c6a005ade2cc3dc7b903d4e7b3969c"
+      },
+      {
+        "path": "src/modules/identity-access/application/change-own-password.spec.ts",
+        "sha256": "0eef54dc53dd0d65610de765891d052394912542bc3702e2284f305dd23782dd"
+      },
+      {
+        "path": "src/modules/identity-access/application/change-own-password.ts",
+        "sha256": "ac4265a765e874b2d4a912d80867d4cf7fd7aafc4567f06d2bd486531e7d3a24"
+      },
+      {
+        "path": "src/modules/identity-access/application/check-login-attempt.ts",
+        "sha256": "20b7f39c2945a6bd0183201b9cd11c4744b0b49618f4ed41ea2342020e7cf0ad"
+      },
+      {
+        "path": "src/modules/identity-access/application/ensure-initial-system-admin.spec.ts",
+        "sha256": "5d107427d07c679c9aee0902bbafb9fdff1108e903b15c71fd1e1dc30889be4e"
+      },
+      {
+        "path": "src/modules/identity-access/application/ensure-initial-system-admin.ts",
+        "sha256": "120cb1c592bffc936c4976d1b3f6bfac2a39da906e8441213ec6570ccb27d04f"
+      },
+      {
+        "path": "src/modules/identity-access/application/get-current-user.ts",
+        "sha256": "6ea3f65eedc2a3733f5f74d4780810fef13400965f2271345d30d8c1b451f272"
+      },
+      {
+        "path": "src/modules/identity-access/application/get-permission-tree.spec.ts",
+        "sha256": "5e1e790a6ac6aab1b412d54538f1a1da26aa5962b4a60bcf2d9925fe7c691697"
+      },
+      {
+        "path": "src/modules/identity-access/application/get-permission-tree.ts",
+        "sha256": "2c16858eb8474ed9dd18dbf2a3c08ecb445d9c8c173460ac52b54e9ac4b93ff7"
+      },
+      {
+        "path": "src/modules/identity-access/application/initial-admin-credentials.spec.ts",
+        "sha256": "817303a723f691e3cc4edadac861c08c89eb2f49eb195939ccfb782d1f253565"
+      },
+      {
+        "path": "src/modules/identity-access/application/initial-admin-credentials.ts",
+        "sha256": "36c3423f01cc513818099908897b580ce6456a6cbbdfade81d593ffa2dcbace8"
+      },
+      {
+        "path": "src/modules/identity-access/application/list-authorization-resources.ts",
+        "sha256": "3cf904c89fffecfad7142915ec9fe203d95540e63ef09e7d6ba6e27c5d264a41"
+      },
+      {
+        "path": "src/modules/identity-access/application/login-user.ts",
+        "sha256": "255e35a1a51c50e2efda2f761431b8b4ce05e1b9998664086550cc74bd94e2f0"
+      },
+      {
+        "path": "src/modules/identity-access/application/logout-auth-session.ts",
+        "sha256": "674b579073c0e7d17a04d5d3e544c51946b3815e6ae493697b63b00b7268680b"
+      },
+      {
+        "path": "src/modules/identity-access/application/manage-permission-catalog.spec.ts",
+        "sha256": "71101da54d61bb1b3d066c0c107aac42b046181efe7ebef7a59116bccac9e062"
+      },
+      {
+        "path": "src/modules/identity-access/application/manage-permission-catalog.ts",
+        "sha256": "2cbc2780da71d63de7c5d1097d18dbc1c71262906efe70a9410e525b85d02686"
+      },
+      {
+        "path": "src/modules/identity-access/application/manage-users.spec.ts",
+        "sha256": "bea8f285a15b3d781b03bb4679d20817e097b4b3a8fd1d052438dffb43ed60e6"
+      },
+      {
+        "path": "src/modules/identity-access/application/manage-users.ts",
+        "sha256": "b9bf3159813d4a78ae22b2fb4e065bf4215b33a48a0683ddcf9fa8ae447326ea"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/admin-password-reset-repository.ts",
+        "sha256": "2882b1c697f37aa2aef8369f36c36241c13b5b2a722509d98e8ac221a4147421"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/auth-session-repository.ts",
+        "sha256": "18d97b2ff3798ab0d6024fca23378a3b87323545e1034874a01c71e7e52a74cf"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/auth-token-service.ts",
+        "sha256": "2c8031a72b23fed52985cd378d0a0fd45c6f1cb75514095211fc71e77ff7b7b8"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/authentication-repository.ts",
+        "sha256": "da07c325d3c22b02ef2af4b29d3bd33cb2af9cb494020558f631baeb34f750fa"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/authorization-principal-reader.ts",
+        "sha256": "cde081ba9784bc1526a0016848b06c895e66546f0c203a64aba8507028046c07"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/login-attempt-store.ts",
+        "sha256": "027b4f711d5b796c75fe648dbf9873e0b7f9bc48a531060252e28f73b62f18ea"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/managed-user-repository.ts",
+        "sha256": "f3d5e72069b4ae3029f9fd6cfe6df4d7350c677e7eebd0930ad12f5d6aa07375"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/password-hasher.ts",
+        "sha256": "aa5a2ae0985443fadf81c570cab09579f0651125e23005f104bde0da2f9cfb59"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/permission-catalog-repository.ts",
+        "sha256": "34048eaf23aba1c38919b26232b32ac6c467992310bb636284199f752a87ccb4"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/permission-tree-reader.ts",
+        "sha256": "60a98d6774e9e909eec68ceec92cbda41a20b7637a5735dd74cba409c6bffb20"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/self-password-change-repository.ts",
+        "sha256": "4c68f43a38404c7fb102a0ec2878a76e67343b1c0bac71320a10a506c7e57b42"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/user-profile-repository.ts",
+        "sha256": "a15695d20ecaad64c1b75a22abc4f69e436d6505e60c2a0f0be7a7294fbaee51"
+      },
+      {
+        "path": "src/modules/identity-access/application/ports/user-registration-repository.ts",
+        "sha256": "ec49b47d1a36db22e303b476ba68a14b1e1bfe025e9f001211b4c1973233f0be"
+      },
+      {
+        "path": "src/modules/identity-access/application/refresh-auth-session.ts",
+        "sha256": "979cf7d616d2ec85149ff7c78f71bbd688b600dfe3c18fcbe699771737794a30"
+      },
+      {
+        "path": "src/modules/identity-access/application/register-user.spec.ts",
+        "sha256": "cf9479ac9d1c394c0321a586a5b792c41375e4a11dafc3884dafcda0cf0f831f"
+      },
+      {
+        "path": "src/modules/identity-access/application/register-user.ts",
+        "sha256": "54f6adf0ab47e46f31d54ce326043b72fb5bf4f6d4f104c0a0ecac24e858bab9"
+      },
+      {
+        "path": "src/modules/identity-access/application/reset-managed-password.spec.ts",
+        "sha256": "530a2ab94a41c1127888775d54423d6a26e427c36ddfb7d026b2a07eb5cb52ef"
+      },
+      {
+        "path": "src/modules/identity-access/application/reset-managed-password.ts",
+        "sha256": "bf5bee253476b604e9b00244fd75cc11df7b91055f67c83f59ac33fca7c658ee"
+      },
+      {
+        "path": "src/modules/identity-access/application/resolve-authorization-principal.spec.ts",
+        "sha256": "74ccdbc63cc16abec4cce2dedb37486602757981c69f24594b429ee1ca52b54a"
+      },
+      {
+        "path": "src/modules/identity-access/application/resolve-authorization-principal.ts",
+        "sha256": "b032633a37d9ac10755332da19533c544d0567cf9bbf90bf01c4e886f2e5e5b1"
+      },
+      {
+        "path": "src/modules/identity-access/application/update-own-profile.spec.ts",
+        "sha256": "d00f4a9656352fbd67e48c7b4f056b811d313ea7b14bfb464c55e01ced2ef9f6"
+      },
+      {
+        "path": "src/modules/identity-access/application/update-own-profile.ts",
+        "sha256": "55f7f5b33ad5b356d57be863c659cba5b1201d459428c6a20a32b835af841393"
+      },
+      {
+        "path": "src/modules/identity-access/domain/authorization-resources.ts",
+        "sha256": "7bd596af30b9dca2658280145f2719b2b6726bf6bc57bd7538c354a28175fb6b"
+      },
+      {
+        "path": "src/modules/identity-access/domain/authorization.spec.ts",
+        "sha256": "ff18cec0f8cf8ea873bbd0da9b9a1c009e9ee86b430f48851059a520777c76a2"
+      },
+      {
+        "path": "src/modules/identity-access/domain/authorization.ts",
+        "sha256": "0e1e267849dccdf6990c83730ecce63f23833e38758b34289e4a830873225e77"
+      },
+      {
+        "path": "src/modules/identity-access/domain/data-scope.ts",
+        "sha256": "9879eff2ee4caccdf0f05d2d9711486c861891262c85e3fd4dee68fb9912194b"
+      },
+      {
+        "path": "src/modules/identity-access/domain/field-access.spec.ts",
+        "sha256": "66e41de5db7dbfcb757c77afa48b6387c352ea5a0bdc56d57299af9a9ea7765b"
+      },
+      {
+        "path": "src/modules/identity-access/domain/field-access.ts",
+        "sha256": "324903042ca0e2a1dbda46cba4184c07d751bda790a0f89c5905892a45ab9fb0"
+      },
+      {
+        "path": "src/modules/identity-access/domain/login-limit.spec.ts",
+        "sha256": "45c739b6eb2093449d0d2dc0b3f4ed2de18ce45b685412d1b91c49f488230736"
+      },
+      {
+        "path": "src/modules/identity-access/domain/login-limit.ts",
+        "sha256": "bc877f4edc1d963e270bf63d80e4c981acc0f48d0fabf857d0c1993d155297f0"
+      },
+      {
+        "path": "src/modules/identity-access/domain/managed-user.spec.ts",
+        "sha256": "6c490b06aa83246dc595805d99b02d5fdfa84f466e9b7c30b58233861a3108e1"
+      },
+      {
+        "path": "src/modules/identity-access/domain/managed-user.ts",
+        "sha256": "6aa085e01f739506e4a2c02de51d583115fa2c8063b3eb4d13b1dbb5e7be199d"
+      },
+      {
+        "path": "src/modules/identity-access/domain/management-write-authorization.ts",
+        "sha256": "8a1c6bbe45f5c97029e040b3ff914d901c7609f06e09ed5da37594fb38852dd1"
+      },
+      {
+        "path": "src/modules/identity-access/domain/password-reset.ts",
+        "sha256": "8a46bf7aed64df7860cb5af762fab55635ecb0a1b8653b059b43f0fbf95f1028"
+      },
+      {
+        "path": "src/modules/identity-access/domain/permission-catalog.spec.ts",
+        "sha256": "111e8339facc201b494dcc527b8bf327d02bfbdd47c5ea00843e22427c611015"
+      },
+      {
+        "path": "src/modules/identity-access/domain/permission-catalog.ts",
+        "sha256": "af038bf68f01787c4bcf2209e97aca2d5f6b97fb70675aa75189989502a56525"
+      },
+      {
+        "path": "src/modules/identity-access/domain/permission-tree.spec.ts",
+        "sha256": "335a74646362e07072b3847ef489608851581dc535e04ae4c36ff425a39b81c5"
+      },
+      {
+        "path": "src/modules/identity-access/domain/permission-tree.ts",
+        "sha256": "5b1885c0200323fe7c7336a38b4948820a3ab78d73f77cb9c2c59eaaabeedd78"
+      },
+      {
+        "path": "src/modules/identity-access/domain/permissions.spec.ts",
+        "sha256": "f27f7fed76bc692f430c3cfd7c90ae58ff267a2fd86ead2e7ea5f0203025af09"
+      },
+      {
+        "path": "src/modules/identity-access/domain/permissions.ts",
+        "sha256": "f3af6239e817b4f2c48a8ccdb5808a891561f5f4db793aebcf0ef96b5febd6f9"
+      },
+      {
+        "path": "src/modules/identity-access/domain/registration-rules.ts",
+        "sha256": "7faffbbd894fd16febb0bddb9e5f50be8975006adc936b5f101633a74aeb7a3f"
+      },
+      {
+        "path": "src/modules/identity-access/identity-access.module.ts",
+        "sha256": "01414428801b345555ec4095c2ce017151d40c8237255eb00fd515b428c56d0d"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/bcrypt-password-hasher.spec.ts",
+        "sha256": "705f8648ad3d23b00bacf9ac7f8011359251ff4e56f9bbc3708626eaba0f6bb1"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/bcrypt-password-hasher.ts",
+        "sha256": "7858aee7ec258b189d0741f12e4c9eb0977fed58c1d6d7e36d4ced4d4cd004cd"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/hmac-auth-token.service.spec.ts",
+        "sha256": "86cd854590ef3c40185ba0df44cfa26889087d0fd82549d190cc0d3cd9dd88ba"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/hmac-auth-token.service.ts",
+        "sha256": "e96f04e0fe78fe16a1bc086ac92190cb56fdf22431d0c0dc0656bb9ef99e2571"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/login-bucket-keys.spec.ts",
+        "sha256": "2bc57115e0b4ffb708ca67c466490d2311ed7558d3afef6a65abbd69b234a5df"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/login-bucket-keys.ts",
+        "sha256": "31231e47702ac5fd5983c1015e00291c0c5efd03fd27ff7110e94f31a3350564"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/login-limit-retention.worker.spec.ts",
+        "sha256": "dae9957b60fc12a066bb5888b519ac60cbd791278d913ba985868bc1639c04a2"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/login-limit-retention.worker.ts",
+        "sha256": "b91e3bb69b2ffc5e4afc9c38755fa5d3a2055af92a65d47b51d94a5530390d84"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-admin-password-reset.repository.spec.ts",
+        "sha256": "e048f7136d12ad31336c200b57cce4d141eaf5d5df7842c641a91190fcdd6359"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-admin-password-reset.repository.ts",
+        "sha256": "8e5146eb5f61df55cb80ee5761ac7585c8422bc69ba039d6a2ed8d6031870041"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-authentication.repository.spec.ts",
+        "sha256": "6c2834d6eb8156896fcc7a6449c534b97d70a02f39ce1331a4f71fd60ac05ca8"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-authentication.repository.ts",
+        "sha256": "9ec528c686e18cc6b9128de30e70afdcc5c2a4cd95ff7822bf7f5da4ebe04339"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-authorization-principal-reader.spec.ts",
+        "sha256": "459838668ea437a81e2a041c71ffab85379d3011d4e81e878ad0f2692eba966e"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-authorization-principal-reader.ts",
+        "sha256": "fa6f20256431f73fad44e6d2fdba0796b8bb05856f7e494219a5c6ab7aee482b"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-login-attempt.store.ts",
+        "sha256": "a7b79140171e2ff9612d4d6b41e904a33d4092d09dc4e5ccb586d498361faba7"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-managed-user.repository.ts",
+        "sha256": "2714f6e5dad1943b96acafde78da13089cbfc5f772f6337758030c736100605c"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-permission-catalog.repository.spec.ts",
+        "sha256": "36bdf0cb997ef629e85f5fdd3d5f541e241de4c421ff939c679cf3b3df5098e8"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-permission-catalog.repository.ts",
+        "sha256": "99dacbb1f9b2f6b05a18c90bc638c9efc73b48a82d8b51148834ed3ed434c4e9"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-permission-tree.reader.spec.ts",
+        "sha256": "cab6b93743d118262fd412fe498f7d76cdfe461c556295db4ca41aa977875a3b"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-permission-tree.reader.ts",
+        "sha256": "fe26815d9d3d9e520f4e258f5386f06e6127558dca4228f7ee69b716a89a3bdb"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-self-password-change.repository.ts",
+        "sha256": "cbca921fdb4242de8331f2426b8e94f92423ef2f9ed375a518352194ac706d1b"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-user-profile.repository.ts",
+        "sha256": "a2d2e0a313a4dfd27633069458ce6cb61286f21049b31a85f4631b30a51fff83"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-user-registration.repository.spec.ts",
+        "sha256": "065bb65259b4cabbd7f6a7815094cd73f89e0cc5b76cdeff5118286d39edcd02"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/prisma-user-registration.repository.ts",
+        "sha256": "4eea16895b808a42e053c91bb4fc62ceeafb1e05be7d4d4dce43e4c4352d4695"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/read-management-write-actor.ts",
+        "sha256": "0da60eb716202b49d21bfde76f84d455f9adfcdd4ef0452443f6004a5ef638ea"
+      },
+      {
+        "path": "src/modules/identity-access/infrastructure/user-write-authorization.ts",
+        "sha256": "8c6cb003a6cf114e6c67c1a5c9aabe7294a771d39f5db441443f2627521b0ce5"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/access-token.guard.ts",
+        "sha256": "7f042f59a30486c2aa0b0bea78a992ad2843a62a5333d835b4de092933034d06"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/account.controller.ts",
+        "sha256": "47f2c265c7a5f339dfa7dbaefab0d65bb634e110357542b9e0f225cac21dd6f7"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/admin-password.controller.ts",
+        "sha256": "8b9eea488f4215053f7a175a5a88b25e3c485f4b64eadcd206a3f4a0e911009f"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/auth.controller.ts",
+        "sha256": "fe8f2e35d6ae7380f7daf46aaaf05ad266b7ff2010db56a0e83ac442fc526157"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/auth.dto.ts",
+        "sha256": "ff06b49d5c8330f325d594b4fabf2b24e510bd94bf0b6432a5bd81b71ce6dd2c"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/authorization-resources.controller.ts",
+        "sha256": "390e89a3e0b226be9aeb5312a9eb4ed57b3cd799c99e5ac817330b5d9de288c2"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/authorization.decorators.ts",
+        "sha256": "7ddff388a7de7dc23fb44a0ab706f8547eff7a99bf99b59ba534923cbc66b18d"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/authorization.guard.spec.ts",
+        "sha256": "1e5af031514b77194763328e575147546fe92e4eae6eb3d00cd35a88a53d6873"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/authorization.guard.ts",
+        "sha256": "36c5a7cd28f8ca53346b81e68faa4217dee135e74017a663f1cbe2b7a1c21297"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/managed-user.dto.ts",
+        "sha256": "5da11c9af599c39debfab4a89617915d39147ab9c5bf7400ace8bfab5531762e"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/managed-users.controller.ts",
+        "sha256": "c753c721f711249397bfd0d445e09b44afc166c1c70b9ed4f2fa435a16eac692"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/permission-catalog.controller.ts",
+        "sha256": "2f2a67c7ad54737265a931469594c171d8d49db61509ccf5693bcb26eb4ae6ae"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/permission-catalog.dto.ts",
+        "sha256": "3ee1d33d30b9cbadbe3505574be3060a613a8f3d8b12490e039ab34d1eac0b89"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/permission-tree.controller.ts",
+        "sha256": "78d2bde05a29558892504e52499b0c124274eea4a4300b3383491db534db5efb"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/user-profile.dto.ts",
+        "sha256": "187bd7f11714fb131a77649cf789e17b03c8e7347653a5ee1d5a621874e2f4e9"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/web-csrf.guard.spec.ts",
+        "sha256": "4889f8df251f79489c29261a4db550b90f0aae8d3618e49ac3f51fe2261cbb6f"
+      },
+      {
+        "path": "src/modules/identity-access/presentation/http/web-csrf.guard.ts",
+        "sha256": "53283c311292464b8191381c83a445322b5ba74618e9c583f78d8cd3e199cd2c"
+      },
+      {
+        "path": "src/modules/integration-events/application/manage-outbox-events.spec.ts",
+        "sha256": "0e7d2452a431ae6ceb0b35d2ccdede2c18eb7b4f224184a88b43fb24890f9c38"
+      },
+      {
+        "path": "src/modules/integration-events/application/manage-outbox-events.ts",
+        "sha256": "70dec24a7b3cadda0a2ae91f158fcc8d0777e94c90168a5e96b6f0956659205a"
+      },
+      {
+        "path": "src/modules/integration-events/application/outbox-delivery.service.spec.ts",
+        "sha256": "ccd77241eebeb69344d6dd97ebf6f67b43a8761551d6872c22faa5c8c4801243"
+      },
+      {
+        "path": "src/modules/integration-events/application/outbox-delivery.service.ts",
+        "sha256": "4d552ed06c9f24fdc55014410ef9ee503f68fa24fc7dbd0b1f73b0335b1493ad"
+      },
+      {
+        "path": "src/modules/integration-events/application/ports/event-publisher.ts",
+        "sha256": "00dd67e251c05e56ed15bb8b1441817781cb45ef0ab74b4ff6302fb76ce7686e"
+      },
+      {
+        "path": "src/modules/integration-events/application/ports/inbox-lease.ts",
+        "sha256": "b9fec42052e3803fc10c92f9d92c526e2eed58dc88611004b53db03e2f109c20"
+      },
+      {
+        "path": "src/modules/integration-events/application/ports/outbox-management-repository.ts",
+        "sha256": "6a85b446dd633b50c193ead87008aee43b7cc9a5dfc39904a594551ccf0decfd"
+      },
+      {
+        "path": "src/modules/integration-events/application/ports/outbox-store.ts",
+        "sha256": "f7ea40cd256f2ab1588ded91437559af0e9063e8a68b58e7ac2878ddb545903c"
+      },
+      {
+        "path": "src/modules/integration-events/application/ports/unit-of-work.ts",
+        "sha256": "048f4e87303f2668732503f2c6d7581ca4c319d2dba9dace5bfbc448dea89486"
+      },
+      {
+        "path": "src/modules/integration-events/domain/integration-event.ts",
+        "sha256": "c6b892cc7ad24a7ef2a614b34b586eeb08cc7e3970487eac29db111962fe732d"
+      },
+      {
+        "path": "src/modules/integration-events/domain/outbox-management.ts",
+        "sha256": "e9d22224c3e8bd2b56afce51526fdb92298a9175aae25fa5996f14ee9d4e3926"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/append-outbox-event.ts",
+        "sha256": "36b4c7db651ba5c39ed2ff40de6a76ce53b87d984dff42f6b50b0d81b0c568cf"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/kafka-client-config.spec.ts",
+        "sha256": "7006d9ff49ea3e5907ad9de3a3b7483d7d360bda70d82ffd18f6a8b433cc7484"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/kafka-client-config.ts",
+        "sha256": "d8b55cdc8c9a362f96549e2dcb23e13bc49ae036d67252b04385ac1e65569063"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/kafka-event.consumer.spec.ts",
+        "sha256": "6591ed9ef34f2a82174c98051d1312a291ff86e06e3c5cd24ae6a7369e25e8ec"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/kafka-event.consumer.ts",
+        "sha256": "5dec66eb83358608b1374ecb8b780714752f81736da69de9aea3b786d648c94d"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/kafka-event.publisher.spec.ts",
+        "sha256": "7b3ea809c80672255d26c2d6bef442ee284e9919505e17e4881a73085db56843"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/kafka-event.publisher.ts",
+        "sha256": "5d6b28d180ab9299b8691b1ed005a1732cc43eea15395f4c4c20db7baa1da0df"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/kafka-tls-transport.spec.ts",
+        "sha256": "b07c7b040b9bd48f458ac2f1d36f8e1accc92981c0bf3dceff4899837f8e4192"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/outbox-polling.worker.spec.ts",
+        "sha256": "106966396886f9ac42ed89c897c5594980323e1cf993a95dca56c79fe8b6d915"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/outbox-polling.worker.ts",
+        "sha256": "9ba5979b51746296b7d0077fe671c0209b2878d10e7ef946bce526e03091cf0f"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/prisma-inbox.executor.spec.ts",
+        "sha256": "145047e5264996a74004b9c533f17faeffd8a5e8cd816166b9567225fa4aaee4"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/prisma-inbox.executor.ts",
+        "sha256": "15189ddb47c29cc2277915744eb9acc8813c7823a5f9447b7818fc68fe656198"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/prisma-outbox-management.repository.spec.ts",
+        "sha256": "5777b8947cb4679f5dcfd113a337c1b155f7adc9fc87fc3c02846ae55a033c34"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/prisma-outbox-management.repository.ts",
+        "sha256": "fb92192dced80e0665f519fcf1cd92fd2fe4cc9fa95a58c4ed5297f805ad2039"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/prisma-outbox.store.spec.ts",
+        "sha256": "cd7062f364a5c035cf8fc81c2fed6838e8f1518396875ac34d671a5670323c17"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/prisma-outbox.store.ts",
+        "sha256": "9eef1ba384669b9ee542041108a44284219804f806c688bb4660ffb74f9f65f7"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/prisma-unit-of-work.spec.ts",
+        "sha256": "567bb7202850e75a1a89a2704145e33fb9aabcdbd89ac0faa4f352c726912c68"
+      },
+      {
+        "path": "src/modules/integration-events/infrastructure/prisma-unit-of-work.ts",
+        "sha256": "1d4ab46ec0f914bbcaacc6178e8b432f7c2a5b6c6b139dbfe8c1ed2414b5b4f3"
+      },
+      {
+        "path": "src/modules/integration-events/integration-events.module.ts",
+        "sha256": "8d17cb97182423e21e1740431333f9701c003d62a8a7afcf8d0129e482cececd"
+      },
+      {
+        "path": "src/modules/integration-events/presentation/http/outbox-events.controller.ts",
+        "sha256": "ad09ed65e7804b534c93c0eab79fbe114237762182cffe33c5bea453be366d6d"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/admin-article-service.spec.ts",
+        "sha256": "c5490e7f6a4b4e1307cf8fb034acce9e68d08b73230b00942a88f7f886b07528"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/admin-article-service.ts",
+        "sha256": "6a8a384dfa05f119f95831b758b786ade71f7999db69d912d957ede713234c7b"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/content-models.ts",
+        "sha256": "83a28401e092ded2c2f3587a6734125addd629a204730c204924cbb9f53a2061"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/ports/article-repository.ts",
+        "sha256": "8aca6cef8ec9ca8efeb720e36b777296149a30bf9501eb484c0f4c81f824be5d"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/ports/project-knowledge-repository.ts",
+        "sha256": "67facfa53ce8fcdbcc590a79c3846fd7f1df16b683b3db7407e0a9e8df2259dc"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/ports/public-article-reader.ts",
+        "sha256": "05ad0c9477f2750f7a8bb5d96937ec911f3e8d8ce85e9661ac56e4999422d79a"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/ports/public-project-knowledge-policy.ts",
+        "sha256": "33982f7d4288a031796e3a6ccc80e224c1b0911b25cbf3db67b8619309ebb4a7"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/project-knowledge.service.spec.ts",
+        "sha256": "773f12c0c1fc906c6bb3b290e179196680a67407410208c91ec320090f0ea37f"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/project-knowledge.service.ts",
+        "sha256": "c1a54bfc96c69cdbffe184c3f98d76a63ffe1f26323d0e946621718f06c39f90"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/public-article-queries.spec.ts",
+        "sha256": "52648486a1ac7c1c333e1d78f45044c13e02ebeeb1bf26f7754feed57180559b"
+      },
+      {
+        "path": "src/modules/knowledge-content/application/public-article-queries.ts",
+        "sha256": "2bc39fcbc31307c384dc2a26a2cb426ef516b4ceef129c0915916b438bb7f3fc"
+      },
+      {
+        "path": "src/modules/knowledge-content/domain/article-field-access.ts",
+        "sha256": "3b56df1b08d06f7d112cc7d16b2582d684641329cd4b7badc0e3a08d6b97a272"
+      },
+      {
+        "path": "src/modules/knowledge-content/domain/article-scope.spec.ts",
+        "sha256": "dcdd8a731f7f2be2ae6cf3af4b0083c333ba11737cbe7f5b1afacf852962ca31"
+      },
+      {
+        "path": "src/modules/knowledge-content/domain/article-scope.ts",
+        "sha256": "ad311cbf221079281da05467787f77b5ab7eb72dfb2e606fca1cc760d97a8bf8"
+      },
+      {
+        "path": "src/modules/knowledge-content/domain/content-rules.spec.ts",
+        "sha256": "94fd852c921c431e13c9d6073be46bafd6cf2a90d223bc4a7817ea0595cb22fc"
+      },
+      {
+        "path": "src/modules/knowledge-content/domain/content-rules.ts",
+        "sha256": "047341f6eddf61028796c209362998ad17494fae74fbadf02c10d187ea3557ec"
+      },
+      {
+        "path": "src/modules/knowledge-content/domain/project-knowledge-validation.ts",
+        "sha256": "39de4ec9528eb3bd0d0add70cbada1cffa08fe127fcedbcd9241e01dbbe5ff9e"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/article-authorization.spec.ts",
+        "sha256": "f74f7a392b12e0367f20f3abdd143fa25a4a33cdcb430da1ca331340da77c1c7"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/article-authorization.ts",
+        "sha256": "851800383e13adcd815d65c59024292e0ceb7fece5f3192cb6a1387c40aa4024"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/article-scope.ts",
+        "sha256": "5ffadec54801bee37b9de1dc711f25506d54888302c6a4298079b470af355702"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/content-persistence.ts",
+        "sha256": "8bd2ef1c833054d89ac0c4f8dbf0bda37343cf316ff190aea05f4b7a49b01cb2"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/prisma-article-scope.spec.ts",
+        "sha256": "4a7ead269511481af0fee76c868b9f6207bd7ed4af3741de7f6c1f2d5031e9fb"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/prisma-article.repository.spec.ts",
+        "sha256": "b0ef260dea2cdf6b3a8d28ca7c359a786d20066dfca0753134374a3ddf6b79d6"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/prisma-article.repository.ts",
+        "sha256": "c03e445e19810d1eda987a04e532ef2f3e128cf63f42c3fe6aab36cfd2948658"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/prisma-project-knowledge.repository.spec.ts",
+        "sha256": "73ab7a47b9c3329eff10562e589f6d1b479c547aad42475d5c282940f1714053"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/prisma-project-knowledge.repository.ts",
+        "sha256": "f7f35a438e589e44fbabc961c27eecf7262ffa7e7bdd89fe9fa4ac7ad738e77d"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/prisma-public-article.reader.spec.ts",
+        "sha256": "29a6ca0bf1af6a426128e97b69af25510dd991feabf284db8f7f5c4394fab57a"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/prisma-public-article.reader.ts",
+        "sha256": "699e3c71a0acb55a021c8b3fa78ae87faabc9af0211c871e6d440d2ab51064d5"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/project-knowledge-authorization.spec.ts",
+        "sha256": "3549cb233458fcb9aa723b9e6c04d85d75b99229f87d4740908ea33c926cabf0"
+      },
+      {
+        "path": "src/modules/knowledge-content/infrastructure/project-knowledge-authorization.ts",
+        "sha256": "823fa72038a81a3d429e7515b99aaa9d877120327d4d7c760342ed64201df8a9"
+      },
+      {
+        "path": "src/modules/knowledge-content/knowledge-content.module.ts",
+        "sha256": "365f81fe3b06541cbf3c010bdd70dc9d887a1ff81e234ef236b21ea59932a27e"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/admin-article.dto.ts",
+        "sha256": "c9e039ce2d99f5610ece789716ac79061e8c19710716c3340607d01fb7150eeb"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/admin-article.vo.ts",
+        "sha256": "df50a385e8244748252764018a0260df695cdcb788231c302ed249f763fa6e0f"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/admin-articles.controller.ts",
+        "sha256": "fbb38d600bd9be9fae91b7a8deab6694c973e6cafa355ab0a8425d86c459d7a4"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/article-field-schema.vo.ts",
+        "sha256": "82b1e257f6eb73d46a5e6b3784a0fb1c8f9da690a07b8c41827ac49057df767d"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/project-knowledge.controller.ts",
+        "sha256": "12ed606f8d7adb7f06378f10518f76702f876acdfe854742bdce36474dd85c32"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/project-knowledge.dto.ts",
+        "sha256": "e767e890db5c1d73c68f6c569b531d375d681c7c18901456d36c9a75845e237a"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/project-knowledge.vo.ts",
+        "sha256": "98f495431e4f0b7685ac8f6703aa687e7043db4f9731e043b2fd63c22a4f18b7"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/public-article.dto.ts",
+        "sha256": "844a4eed163b2bfd8329c3372a7c1aa47fe376b9be2bb11c3974249624a812cb"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/public-article.vo.ts",
+        "sha256": "c59661e1532b45d343241b4b5c47dffa8b1b691dd2ca167239c9104f7548a6dc"
+      },
+      {
+        "path": "src/modules/knowledge-content/presentation/http/public-articles.controller.ts",
+        "sha256": "f0dfb5fe285b2994b45ff74c9322fead1822446235726c0445a3575bb0d7d8ea"
+      },
+      {
+        "path": "src/modules/member-engagement/application/member-favorites-service.spec.ts",
+        "sha256": "1c3d54d4d1325f4a064115f1f6b709bc1766eae204f3d3405319c9f602a3567e"
+      },
+      {
+        "path": "src/modules/member-engagement/application/member-favorites-service.ts",
+        "sha256": "99f41fbf7c5da19462f031852ea02d86a9fe0d1079ee7d8243c3cba6c998e05e"
+      },
+      {
+        "path": "src/modules/member-engagement/application/ports/favorite-repository.ts",
+        "sha256": "36a1979174f1009fb674d8ed1a4aad361801b86a246cf69fbe0decc786cf0fbc"
+      },
+      {
+        "path": "src/modules/member-engagement/domain/favorite-rules.ts",
+        "sha256": "6a3ccfdb1c53a05066b071bbfaae3f167ff0842f104df13cd2f35c4bb1263a18"
+      },
+      {
+        "path": "src/modules/member-engagement/infrastructure/prisma-favorite.repository.spec.ts",
+        "sha256": "9983173ce763b4dcae365ee39af108a0c3b534730c3c4472ac57665ce1f020f2"
+      },
+      {
+        "path": "src/modules/member-engagement/infrastructure/prisma-favorite.repository.ts",
+        "sha256": "6525031bf97d37d8058591e745ca315e702228019fced8d2470e8253a1e8a87b"
+      },
+      {
+        "path": "src/modules/member-engagement/member-engagement.module.ts",
+        "sha256": "a85fe875d8e4220132a5976184ccbb3e5dace1a5596b2b07d077a2b0ec83675d"
+      },
+      {
+        "path": "src/modules/member-engagement/presentation/http/member-favorites.controller.ts",
+        "sha256": "69fb44cfe4dec14924cf1ba6d5c26cb44ff681730f0b8570526b030aee9529e0"
+      },
+      {
+        "path": "src/modules/member-engagement/presentation/http/member-favorites.dto.ts",
+        "sha256": "b85fe12758120238f4392a581f83898b3b31e012de7b75041818e8fa2e57be97"
+      },
+      {
+        "path": "src/modules/member-engagement/presentation/http/member-favorites.vo.ts",
+        "sha256": "1d1a015a330a795b438ecbbbba5b8aff46dcd1621bc0f42440f57b5b1265232d"
+      },
+      {
+        "path": "src/modules/platform-administration/application/dictionary-management-errors.ts",
+        "sha256": "69a6168bbcdfb37a992fd44d309154ce020b5f8bc63363066025c09004ba0129"
+      },
+      {
+        "path": "src/modules/platform-administration/application/get-dashboard-summary.ts",
+        "sha256": "966c859038cdc342d4db598f11b1a707ba333c685329b2a5c39746c855fec961"
+      },
+      {
+        "path": "src/modules/platform-administration/application/list-operation-logs.spec.ts",
+        "sha256": "20a899e32f0fb6ac6b12c6ca781e009504e15383a2197222dae2ef830ff14485"
+      },
+      {
+        "path": "src/modules/platform-administration/application/list-operation-logs.ts",
+        "sha256": "6bbeeb1beef2490a3da05b234b4c7573797277ea088fbd30792b3b4456ec155b"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-custom-fields.spec.ts",
+        "sha256": "b79c013f239069a9073290a3171db095e271a0dba9aebf5c94e11b83a2387523"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-custom-fields.ts",
+        "sha256": "cd66c98a929bea49c1ddff31e65eab8b2cab34560df1eed6b7e509f71e51b7ca"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-dictionaries.spec.ts",
+        "sha256": "145e6e74832cafc3eb8fe226fc9fe343849c7a2f8f0e1b1bb7e77d5ea395030a"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-dictionaries.ts",
+        "sha256": "6065018eaf59604a69352823be89670b1e8413d05e03deabe9ad7bdfbd3e8710"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-role-authorization.spec.ts",
+        "sha256": "445a0e6d8fb0aed505697daa6aca4a98292b28dbb197acacba27a4ecf9f55142"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-role-authorization.ts",
+        "sha256": "0b92314c80c00d7b244f8ab4dc2fcea52df506ce861743a9313b5bc35a502382"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-roles.spec.ts",
+        "sha256": "3275fac9d0dc9117c234cdfb382208a203046e89b4a28a1fd3b6f63a468792f2"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-roles.ts",
+        "sha256": "de1c39306f9332cae64215851927538d3a01d7ff03ea02614a2bfe3aa65bd00f"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-system-config.spec.ts",
+        "sha256": "46c06d8bb0a8b22bd3e376dd85a7f750d55db47cc752b52594e37115135f664d"
+      },
+      {
+        "path": "src/modules/platform-administration/application/manage-system-config.ts",
+        "sha256": "a9677781f815ad6a019bc32162b0d5c03b971dea3b258f718bfa70a94337d36d"
+      },
+      {
+        "path": "src/modules/platform-administration/application/ports/contact-email-validator.ts",
+        "sha256": "4e6dff1a12f935a1cb22e99e54e0fd84bd24e5b41e27701dd60beea9967f8dff"
+      },
+      {
+        "path": "src/modules/platform-administration/application/ports/custom-field-repository.ts",
+        "sha256": "7081aa522c83cec281f78908042b4de9d81f346b2a1cb271554821b9aef299f4"
+      },
+      {
+        "path": "src/modules/platform-administration/application/ports/dashboard-reader.ts",
+        "sha256": "3afe8c450908e464421f905fcdc375e0b458af49a1980a141b1c2651c1845d08"
+      },
+      {
+        "path": "src/modules/platform-administration/application/ports/managed-dictionary-repository.ts",
+        "sha256": "bd1e0259c9234692a7a8c5aaf3587df7709166318fc607c089388a71c9127b01"
+      },
+      {
+        "path": "src/modules/platform-administration/application/ports/managed-role-repository.ts",
+        "sha256": "d64085c7d796eec0c036d05590aab8b28cc3810677f7233398af6fa1675d16c6"
+      },
+      {
+        "path": "src/modules/platform-administration/application/ports/operation-log-reader.ts",
+        "sha256": "14369b14a89fe8a233e11c958fa25e63259c9d6fe3f4effbd4dea3c199fe6d7b"
+      },
+      {
+        "path": "src/modules/platform-administration/application/ports/role-authorization-repository.ts",
+        "sha256": "0c602f65a61e8fe769ea9461e4be62f0ca5249e3fc1a7adcf91a4257e1736f85"
+      },
+      {
+        "path": "src/modules/platform-administration/application/ports/system-config-repository.ts",
+        "sha256": "c0fb97d70986a33751ef270119d974017876576853abfc43ab8ad479cb55efc6"
+      },
+      {
+        "path": "src/modules/platform-administration/application/role-authorization-errors.ts",
+        "sha256": "f974c6a13c2f2a817820306f21885224f6503f856198fbc87eb8df7bdfb02bc5"
+      },
+      {
+        "path": "src/modules/platform-administration/application/role-management-errors.ts",
+        "sha256": "f11117841ea7a1c5595ac01b4d4a72a9209fe97a27d2afd0cf413a8decb6542c"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/custom-field-audit.ts",
+        "sha256": "f75fbf6470ccbd3dce990e6e90a9ae87a8e521891bba956e139ee9e2735af0d7"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/custom-field-definition.spec.ts",
+        "sha256": "980528b0f709818a302d22fb19c814c69f14e8db83a93aab51b3376e212bb7dd"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/custom-field-definition.ts",
+        "sha256": "ee50332d8b0b2a6f0a8fd73ce1c81449383888585bdb6bd618262219f310287a"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/custom-field-validation.spec.ts",
+        "sha256": "55d30dbf1a559bc5205e4460f03c011c18c0855fd76a50689d81d84803c5cadc"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/custom-field-validation.ts",
+        "sha256": "e49f9d608e1043895fdf65b891385a3fb7ce3063b1a4579995e71e92149d7b8f"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/dictionary-tree.spec.ts",
+        "sha256": "21fcb32db39a6435e0b3819b09cb160624d66a5666ba6389e057be4e4291ace9"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/dictionary-tree.ts",
+        "sha256": "c88acc5e49699f26baa24ef4148c514739f1dc945e6d9cff24fa0d1dfc2d82c8"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/managed-dictionary.spec.ts",
+        "sha256": "28220c112d963cea626778b13619e6a9e89a9d474911d8fc9f3abef5ab18e6b7"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/managed-dictionary.ts",
+        "sha256": "43cb89afb8f7600a573dcada684eef85565aee9b3dc83f9760db1b6d6a7f9785"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/managed-role.spec.ts",
+        "sha256": "b07bc824a6e28370c967a9fb9d7b50fd65957d4ec1925290fef4ab31536d9e1d"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/managed-role.ts",
+        "sha256": "9025a114064a69fe6169355986363085c0eeb2726f130cf73718dbe5efae326e"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/operation-log.ts",
+        "sha256": "0b3c70a8d5b5d8c1d53d0e9a4b5a11ffb6637fa503f893625788176d994d352b"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/role-authorization.spec.ts",
+        "sha256": "11e95c1db6751cdfa1a7330e34d4c827796915508df3dd08cc0e237f6c5b02cd"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/role-authorization.ts",
+        "sha256": "833d80b809d7d68703db6d7844989aebe92f8637d15c6857259a4f73eb0ce131"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/system-config.spec.ts",
+        "sha256": "d1dc5373903ebd6a3748dd587ed09d45fe2b908f39d218cfec030ddb48b979dc"
+      },
+      {
+        "path": "src/modules/platform-administration/domain/system-config.ts",
+        "sha256": "9b007ccd26354279462216b58332ed269764ff360c7bd3845ff8c6b836121ecf"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/contact-email-validator.adapter.spec.ts",
+        "sha256": "49d18bf4d9cf725670c7660b23c06404df275987c1d2f209ab5086d715c1f5ed"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/contact-email-validator.adapter.ts",
+        "sha256": "6003f4032ae1f001543090e65654365baff86a83f99f0936982a67a3ed7e4325"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-custom-field.repository.ts",
+        "sha256": "0198c3a4764533a96b66c98fd6632e7b69eb74e584cb40ca9a4b8c20450729fe"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-dashboard.reader.spec.ts",
+        "sha256": "fa7a72e5a1fcc5cf41c5bca5f51b4586baa13ec2b42dc10a4715086d9b52c94a"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-dashboard.reader.ts",
+        "sha256": "68f180c03b834158ecf309cd7fa6818b09f8246d61b6f68bfc4a3fafa7c05609"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-managed-dictionary.repository.spec.ts",
+        "sha256": "d2ff7e2cc0a527412e5cdc50f672df2973661308fdbbc61b2f9072af750f0b01"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-managed-dictionary.repository.ts",
+        "sha256": "aa96079e53a9c90832eb7d646e46882bb9510a4858847996f9287c72db6087e3"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-managed-role.repository.spec.ts",
+        "sha256": "04fc6f025cbe303c0ed02ff06f75cba1efdfdccf37993f841a771ce12adcd1a6"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-managed-role.repository.ts",
+        "sha256": "c7af4546f49d853969dc38b34b1d1ad2df092f11d22300037d01ba18372c4c9b"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-operation-log.reader.ts",
+        "sha256": "efc8740a62b38c79272bc511228ab0bed0f5ea6db66ba1a3cf1d7d51898d9263"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-role-authorization.repository.spec.ts",
+        "sha256": "309b2d57505ac734a5f3713f792832734cf433359e2b6c84c78997f4308ae44a"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-role-authorization.repository.ts",
+        "sha256": "01e291441eef96e41fd02abb5d6f415a3d687c275052526971105b711124740b"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/prisma-system-config.repository.ts",
+        "sha256": "d3685228dc6d72c74eed4b00ee94a253d9829fcd2571d991e02c62f57d621c7b"
+      },
+      {
+        "path": "src/modules/platform-administration/infrastructure/role-write-authorization.ts",
+        "sha256": "7be8bf7f790e572f46906ad5cc45ff117677d4a0820bd1814452dec8197d60f2"
+      },
+      {
+        "path": "src/modules/platform-administration/platform-administration.module.ts",
+        "sha256": "9dab653ba191953ef542e6e88462bea50b9030ed1797fa629f8f3dccfe2f85ff"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/custom-field.dto.ts",
+        "sha256": "47512a4e17ea574895822073c0ed04da21b3d7e65eb7813174fc49565e825c44"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/custom-field.vo.ts",
+        "sha256": "05ec94020438c0ff32aa0e6b1160daba215b11651bd07f186169a3b6fd226a9c"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/custom-fields.controller.spec.ts",
+        "sha256": "87aaa29b6f23e5d1d2d67a24b50af1a733794db63453f8c601935a58c02100ec"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/custom-fields.controller.ts",
+        "sha256": "091ddef8d852df6b321a290267bbfe96741bb51514dc27b5cf8dfb16bdc017e7"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/dashboard.controller.ts",
+        "sha256": "933542c6ad1bba6518838614576b5bd64f3363b2794542ea5f535a50131f9473"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/dashboard.vo.ts",
+        "sha256": "182c26f0c55974d03c425c8b933d6ecace61d8198d6ff3b5290a851347eb7515"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/managed-dictionaries.controller.ts",
+        "sha256": "a0cd7cb5d1890a690c0df94d6f6fdfdb69a3bf9669f3825a34f36af0ff673763"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/managed-dictionary.dto.ts",
+        "sha256": "3a7aa8732d3057a81a332457ee9311f515e2651136b47e0eb550bc766a4157dd"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/managed-role.dto.ts",
+        "sha256": "1edd7b904dceb7bce327187a33fd654cd701394160e15afc3ae72c628e057370"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/managed-roles.controller.ts",
+        "sha256": "0aadc41ec04c6a6d8511903e24f629884696ae53d2626eb38fc24f92f7769f54"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/operation-logs.controller.ts",
+        "sha256": "259dc8fa09ad361e36a96e400e74fb4f62d03583a4b78b10a2881e5c3877cd2c"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/role-authorization.controller.ts",
+        "sha256": "f8d0486f59fec8c39e0588118f476952ce1da84f2e15a5eaf481d556204fd73b"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/role-authorization.dto.ts",
+        "sha256": "cce82d10a17b4eccb3fe1d53761b82461cc8b9dfdff3b0c0acf8980325058061"
+      },
+      {
+        "path": "src/modules/platform-administration/presentation/http/system-config.controller.ts",
+        "sha256": "e071d64395bdd5cd41946f35b8994b9f72af3f3e68b87eb67d975bf95d12a8f2"
+      },
+      {
+        "path": "src/modules/resort-management/application/admin-resort-models.ts",
+        "sha256": "d093267891aa1754f5a4b8ebce5928b4924327f6346197cd9cd4d10874323ca2"
+      },
+      {
+        "path": "src/modules/resort-management/application/admin-resort-service.spec.ts",
+        "sha256": "d11786adb1b874067673588a1bb641209a6efb9c402781f986f0bd45406c43fc"
+      },
+      {
+        "path": "src/modules/resort-management/application/admin-resort-service.ts",
+        "sha256": "39cf20f877332d95562a52138d27800f3075c1738f9f4186371315d20c715cac"
+      },
+      {
+        "path": "src/modules/resort-management/application/merchant-resort-models.ts",
+        "sha256": "623216e17806aedfcba57afe240fad81f48b3ab89f98538b400480acdcb51539"
+      },
+      {
+        "path": "src/modules/resort-management/application/merchant-resort-service.spec.ts",
+        "sha256": "69174f706ea4661d896edab14b75fa2612e72e5e89a3391d32b2899e0882ff2c"
+      },
+      {
+        "path": "src/modules/resort-management/application/merchant-resort-service.ts",
+        "sha256": "66a581bef8dfb2f21f08c552482bb0bc6eae0b027aab80662411a3240c69d1c6"
+      },
+      {
+        "path": "src/modules/resort-management/application/ports/admin-resort-repository.ts",
+        "sha256": "2809c2545dd0becb25c701003cca77daab7f25a9f58cbf52566cd22fa4562f46"
+      },
+      {
+        "path": "src/modules/resort-management/application/ports/merchant-resort-repository.ts",
+        "sha256": "00487ce84246ae636bde7c0c018ed88828839be49992b3f7971a360b6b848231"
+      },
+      {
+        "path": "src/modules/resort-management/application/ports/public-resort-reader.ts",
+        "sha256": "c8d7767999b20f0c43135cd37ee3d9941f4748a805896b81d92dde139e8cece1"
+      },
+      {
+        "path": "src/modules/resort-management/application/ports/revenue-import-repository.ts",
+        "sha256": "e1d8803321054079bc9ba12108fba69afc4e16c2aa21f7628558ce4d22504368"
+      },
+      {
+        "path": "src/modules/resort-management/application/ports/revenue-repository.ts",
+        "sha256": "af804141ff756bc55699c7ef2c5aaeb88fcf08a9c88a98dd85e0e5fc39059a14"
+      },
+      {
+        "path": "src/modules/resort-management/application/prepare-revenue-csv.ts",
+        "sha256": "377d84d36e16f31f908ad27af89f567763abb979b83b584e81edee1d6cab02cb"
+      },
+      {
+        "path": "src/modules/resort-management/application/public-resort-models.ts",
+        "sha256": "a9c440dd8efbe95d2d737c143432bc6f73c6251560d9df3d4f35cca7019434e1"
+      },
+      {
+        "path": "src/modules/resort-management/application/public-resort-service.spec.ts",
+        "sha256": "dcc1af6ec1d23da981c9af88bb4f9a2bca5fbfed37ce25a51ea27799e6f298fa"
+      },
+      {
+        "path": "src/modules/resort-management/application/public-resort-service.ts",
+        "sha256": "88e40c1fb01855945318bb040fec1b5d0414e82692f43507424af285066e1dea"
+      },
+      {
+        "path": "src/modules/resort-management/application/revenue-errors.ts",
+        "sha256": "0abbe4160463db885d5c76b1445187866b7baca1eea4da03863fbf7f3fde9f34"
+      },
+      {
+        "path": "src/modules/resort-management/application/revenue-import-event-handler.ts",
+        "sha256": "d8a275266e86986f9644d75df4ec45b0af730e0fd2d8519334e4240012087ae2"
+      },
+      {
+        "path": "src/modules/resort-management/application/revenue-import.service.spec.ts",
+        "sha256": "bc9c68ef2cb03d4e1b52188a3473b009c451823e4066bfd4b7dce4c6c30e2988"
+      },
+      {
+        "path": "src/modules/resort-management/application/revenue-import.service.ts",
+        "sha256": "25a04054f1c1a5ad797118f9530a5e4127b534c177c7401b7c5ed85b04be88be"
+      },
+      {
+        "path": "src/modules/resort-management/application/revenue-models.ts",
+        "sha256": "162532a3dda1cb510f0e150b8d8d212db72383e597804f3f80ec9c88b7df1e6c"
+      },
+      {
+        "path": "src/modules/resort-management/application/revenue-service.spec.ts",
+        "sha256": "0d325fd722171f478d19839623a3d7271c4df58cfd94b11fd47bacc3b0203c0f"
+      },
+      {
+        "path": "src/modules/resort-management/application/revenue-service.ts",
+        "sha256": "bf305d4e9c10c0aa6322607785289f70a7f2632fa4be3564d82efd9de3e40744"
+      },
+      {
+        "path": "src/modules/resort-management/domain/merchant-resort.spec.ts",
+        "sha256": "e1020edfa7bb72bee6d31409f6dd3ce58a9bac56dc47075681b61c9571bfac11"
+      },
+      {
+        "path": "src/modules/resort-management/domain/merchant-resort.ts",
+        "sha256": "9989c56e71ff232b94692e43fab3662d96c4dab9713d35f69033a096d759572d"
+      },
+      {
+        "path": "src/modules/resort-management/domain/public-resort-query.spec.ts",
+        "sha256": "a80f776930ddbb10b9ab33ab5529243d57cade97cfcd0185f4da6cdb39f3f8a5"
+      },
+      {
+        "path": "src/modules/resort-management/domain/public-resort-query.ts",
+        "sha256": "801fc4b0a8c7106cc8c26b2617c9de51ab047a45f8e497fdd433705c255ad312"
+      },
+      {
+        "path": "src/modules/resort-management/domain/resort-lifecycle.ts",
+        "sha256": "30d58c511afe4f570192d532c6ba171f620d4d27767966fa2e09aa8f19732502"
+      },
+      {
+        "path": "src/modules/resort-management/domain/resort-management-scope.ts",
+        "sha256": "38548915a70f6c61fc0606816836cf4c1efd4e17aece2452afebb786505745df"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/admin-resort-authorization.ts",
+        "sha256": "9c313243e27634d9b2fc4f7dd27a63d24fe88886c66e13f160f1812312aa83dc"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/merchant-resort-authorization.ts",
+        "sha256": "b5c565abeab7e10a56c0e30460fbb34fc1425488de9b45575d9b41e3a5a0b7d9"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/merchant-resort-scope.ts",
+        "sha256": "863f6118b0d4337519e471e63ec0d2e1a8c0984e418bc60cbe79fd4eb439b160"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/prisma-admin-resort.repository.spec.ts",
+        "sha256": "3e788f018513e18da98af78cde11147f23e6b67dc221d779d454062e90f95c6e"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/prisma-admin-resort.repository.ts",
+        "sha256": "84477dfe1edb23f44a27b911087d6fc114c70bdd34373e836c7d0d1ce63c6e11"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/prisma-merchant-resort.repository.spec.ts",
+        "sha256": "54e9154405f51e5fdab5855393045f40929a46e0c2b9152810e838bec1ab2dfd"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/prisma-merchant-resort.repository.ts",
+        "sha256": "c38d8dd4ce770a9e96506ca8bfad655ccd88a94f6f560951689e5c2e20a45432"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/prisma-public-resort.reader.spec.ts",
+        "sha256": "63b1b746a101d221aee973a4e0ff231ab03099c1f1b717d382ebc2c4af014259"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/prisma-public-resort.reader.ts",
+        "sha256": "2db8e2e3a796c0abaf71b831c47bbaf3b751a32506c2b8cabd6433bb24bf0915"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/prisma-revenue-import.repository.ts",
+        "sha256": "9a1911eb6564e59535b979e029d00773525874180ab9a6aadfdb2af9c0222294"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/prisma-revenue.repository.spec.ts",
+        "sha256": "0da78176e12fa31d67ec489a1271c571e5a0f62f8cea0e6242d08ac8d84a237a"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/prisma-revenue.repository.ts",
+        "sha256": "bb9f4b6b01bfcea934de1813af7dea4bc37016faa554867acdd63cf87c3a13eb"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/revenue-import.worker.spec.ts",
+        "sha256": "df18f693271ef26661692a714d7b89ccac0f604ccbe9762bec1a27e75cd30780"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/revenue-import.worker.ts",
+        "sha256": "1b9e3ce87499d11ea6850dc9c4e91df25dacf54b4dfd1a304aa268a443c84626"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/revenue-retention.worker.spec.ts",
+        "sha256": "bbd90cbfddd5847bfa1ef56c3d29ea974cf61fd2dfcb345a0ffe95366cac97b2"
+      },
+      {
+        "path": "src/modules/resort-management/infrastructure/revenue-retention.worker.ts",
+        "sha256": "f2ca4440d2701a197de127da41a2149daa0cae1426933b11f5c627e13f05436e"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/admin-resort.dto.ts",
+        "sha256": "6477529219b764681162e14ca474e130441bf24cd11d34826c18725fc8911fd3"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/admin-resort.vo.ts",
+        "sha256": "2b6163012c8445a7ca697c1e8426dfc2a46016ad22d96cfad3a35fcc32cf9024"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/admin-resorts.controller.ts",
+        "sha256": "f03601a2461c5e1725844ac933df454c6f1bb6c140e1de841f95f1109c1ed739"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/merchant-resort.dto.ts",
+        "sha256": "e2e448b149060701ec724454212865b988f5104709ca5e89e4785b88315e8110"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/merchant-resort.vo.ts",
+        "sha256": "09069fbc976ca38ee8da642d3586c2d6a65ffcba212fede9e446b54ca2f7d0ae"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/merchant-resorts.controller.ts",
+        "sha256": "039857562f6bd60dfb9368c408ace67182a81af2144c622b0e0e92ce9046ec26"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/public-resort.dto.ts",
+        "sha256": "6b78826613caf3287eece65d660c759ae8350f03f4c8de218853065e3dbd3879"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/public-resort.vo.ts",
+        "sha256": "527315dc6dbabfc7d881db076c021e4756cb3ca04d3d93672fabe5378ae3eff4"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/public-resorts.controller.ts",
+        "sha256": "fe830bba96db5cfc1f84bd4fd6da5664c2f0ffed7a2623d0fb17da6d448c6c73"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/resort-field-schema.openapi.ts",
+        "sha256": "5dbc9088ef5c26cc53fd7ea96e61347d8e1a7921841592c213c3f52b757aec89"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/revenue.controller.ts",
+        "sha256": "2c412dab59b9a602cb01f38df69675330d8fbe25611b334838d28ff6731442cc"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/revenue.dto.ts",
+        "sha256": "2752c4d3418f79ba0b0aaef1293cfc72269a5832bbc7273c3d2f641f3a59c251"
+      },
+      {
+        "path": "src/modules/resort-management/presentation/http/revenue.vo.ts",
+        "sha256": "fb06f51b0340e0ebdc915fc9fc2bbd34d8bebe556c79008169a64ec4a1193ac0"
+      },
+      {
+        "path": "src/modules/resort-management/resort-management.module.ts",
+        "sha256": "01bf588b5682ff2812654c26a990a7e447db5160a723d4addc7c9fb00404d53e"
+      },
+      {
+        "path": "src/modules/resort-management/revenue-imports.module.ts",
+        "sha256": "075a5b850713cbf228e80388754b7ebdfae9016878ff73259a4914e5e594c328"
+      },
+      {
+        "path": "src/openapi-export.ts",
+        "sha256": "8eeeac36393bcd036928d627683b9aab80a82c72cebaa5cfd65b51bc5d55af55"
+      },
+      {
+        "path": "src/shared/http/api-error-response.vo.ts",
+        "sha256": "17df1e2c92a7c1cfc401a151cdaa664c4f1af180ea7515b1269840d78ae3e3b9"
+      },
+      {
+        "path": "src/shared/http/api-exception.filter.spec.ts",
+        "sha256": "209b76080cf002f3be2b845a37df1a45e064d3248b8022feafbf55fecd8d97f3"
+      },
+      {
+        "path": "src/shared/http/api-exception.filter.ts",
+        "sha256": "86e011b360e78f50fe1676e6d57fe882d4f244b66258aa80fa643bed165c8a41"
+      },
+      {
+        "path": "src/shared/http/api-response.interceptor.spec.ts",
+        "sha256": "cb53cce2d7a58e3d55123df3087ed661ac61d44d01efa265f2e707104d9e8bae"
+      },
+      {
+        "path": "src/shared/http/api-response.interceptor.ts",
+        "sha256": "9112a9dfbf99adf62ebcaf3f621a8e7e485b1e219d6b5732b825b372984a4ba9"
+      },
+      {
+        "path": "src/shared/http/api-response.ts",
+        "sha256": "8cbbe46825470eb3da4f95d9258f43d1c4957a71ea3b9c5cb0fb02298e57f1bc"
+      },
+      {
+        "path": "src/shared/http/configure-http.ts",
+        "sha256": "a94cad5559ab5ce4e7fa5910cd73c7230ad1eec231d8d52ee761b80628ec893c"
+      },
+      {
+        "path": "src/shared/http/openapi-document.ts",
+        "sha256": "9f0a00a4592596adebc986e30520b162cb61b7c1bfa395deef18ca03944d662d"
+      },
+      {
+        "path": "src/shared/http/request-trace.middleware.ts",
+        "sha256": "2b229f6fb1b9edc8ce25673d80377cdf81c4126d9085616eb790c8ab59f82bb6"
+      },
+      {
+        "path": "src/shared/http/trusted-proxies.spec.ts",
+        "sha256": "ea500ede58332cbf2f79ea8e61528abd34d91e3bad868a937275786b8a2148a8"
+      },
+      {
+        "path": "src/shared/http/trusted-proxies.ts",
+        "sha256": "d8d832e3f3a2cd7c8a43522d66bee0827a37578cbe5309bc5ca0ae38941de974"
+      },
+      {
+        "path": "src/shared/http/validation-error-details.spec.ts",
+        "sha256": "e802bebac03de97e65af996df13abaeb3cbb0bbaee6c1e8ca2a8125613169ab2"
+      },
+      {
+        "path": "src/shared/http/validation-error-details.ts",
+        "sha256": "faa8761ca143ee1ff8fce0d33cc6ca663c8bc2959d95c382b614d3b8e6a1e25c"
+      },
+      {
+        "path": "src/shared/http/web-origins.ts",
+        "sha256": "11800f32f9b199c9dbb0a96479bf2ca790106e26d678c4b23037ab2d91bbf331"
+      },
+      {
+        "path": "src/shared/persistence/database.module.ts",
+        "sha256": "2b43ca893ddac7f8e022696856b51cca80aa60fb58c82309b25db20d13b7834b"
+      },
+      {
+        "path": "src/shared/persistence/prisma.service.ts",
+        "sha256": "c1d6fdbeab5d210f26a420ad05ff94a23bc6a9fd814408813acb0f99e73f3651"
+      }
+    ],
+    "databaseCounts": {
+      "users": 1,
+      "projects": 0,
+      "documents": 0,
+      "outbox": 0,
+      "inbox": 0
+    },
+    "finalTopics": [],
+    "finalGroups": []
+  },
+  "fullDatabaseSuiteRerun": false,
+  "previousFullDatabaseEvidence": "field-workflow-20261104.json (858 tests)",
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-linux-kafka/20261104/final/validated/backend",
+      "sourceSha256": "b63c9fb3eacbc11faa12566ae22569580941dd8caf08f63a5995f4d894de66d8",
+      "files": 811,
+      "store": "D:/linji-source-verify/20261104/stores/backend",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-linux-kafka/20261104/final/validated/web",
+      "sourceSha256": "23773981f2829d652c937d625c4e837ba785108dcbb7062ff98783347b63250e",
+      "files": 715,
+      "store": "D:/linji-source-verify/20261104/stores/web",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-linux-kafka/20261104/final/validated/app",
+      "sourceSha256": "e53ba87817973c21d09a8f525521faba81907101f2e9ff9ff41474a094dee2cf",
+      "files": 319,
+      "store": "D:/linji-source-verify/20261104/stores/app",
+      "reusedOwnStore": true
+    }
+  ],
+  "evidence": [
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/backend-source.log",
+      "sha256": "cb01a2f2d403212fcd1bead78d108139c90e6ceea120bedb07c518141e28854e"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/backend-source-verify.log",
+      "sha256": "db075f18c1739f610830bbfe5a4823fdb325f96d8ceba58e5ecd5344dfd5142d"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/backend-install.log",
+      "sha256": "0ce3fb376952582a1903714097aa0a036fe47c52e3c5e10b2b81bf87400921cd"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/backend-generate.log",
+      "sha256": "a9ada380598eeb7d9b66cc53e85f98dab43bfe93c6af7050b89375ee7c2ddb23"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/backend-check.log",
+      "sha256": "015cdc706d07370111c284b2fe77dc18e47f68836aa435c0d7fd34c37cb35957"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/backend-e2e.log",
+      "sha256": "6d22552d0f91f669387ef2fc44e730bc5002b9898c4aa9d67615bd70652f5be4"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/backend-openapi.log",
+      "sha256": "db10d4a659954fa13c123fbd09715f0acb01d779f9f8fc6b59a7717597bd053b"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/backend-linux-integration.log",
+      "sha256": "2f8fefb11c3cbb8806ce258288e701751315d72c5a76e77dd5a460caa47c2309"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/web-source.log",
+      "sha256": "ac24ecff413f3deadb123cba4b9fe9929323abeb4b403b86e2cf74ebeb7320d0"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/web-source-verify.log",
+      "sha256": "0e0ee3999f007605e468df04b6db458ea15575ae89b62bcd10333be784920213"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/web-install.log",
+      "sha256": "52a6f3c5de72552ac4fd7234048d9d4ff5e4d2741b8eec97c75fe7eab5ae231a"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/web-check.log",
+      "sha256": "4f354fa0d84fcd418e9fb61e902eca92069c3e63a2416052b42be0b5658da417"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/web-build.log",
+      "sha256": "f31019c77d7be7f471d676b2f3b03aefbdcd8a3e9e9a71ebb5915bea9f87fe98"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/web-web-release.log",
+      "sha256": "f271d09154671abbf3c5b147276ec66b9c46e280cd075ae6d7dee3be6ac1954f"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/web-admin-release.log",
+      "sha256": "7b66f4fd2b5c65cb08a4867e679762b26e8047083a3213739518c2b36ac8223c"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-source.log",
+      "sha256": "b472cb8f72b3a8089d17d78f610d2e36ec8c5db9100fec2112979f0541627f20"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-source-verify.log",
+      "sha256": "99ca2983d3328d74ab532e281063d16097a10b0f234947128c45fc033827e594"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-install.log",
+      "sha256": "74968f5215382b1ececde5484c1b746a6a0f36856235b05574491534b34c41a7"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-check.log",
+      "sha256": "b32b0ee0a562f50c2c73a6e56344e180558ca011f7e4c97a85ab70fe8374554d"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-export.log",
+      "sha256": "e41d716bbecfcc77611726227300a3c6ec5f723881afda963ae61ab397c91b23"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-seal.log",
+      "sha256": "c2d1c5ff1d7d3fef151de7b5948396701f18f083914120ad78bf9d0e1071a7fe"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-verify.log",
+      "sha256": "07381a5471adcf13c9ff8f9929fee87e3df6c0ef15b58fb2449e1272531945b6"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/app-relocated-verify.log",
+      "sha256": "6d19cceaea1a10b4893b5ed1fcdc232246816de6e420dbba86ffa4415a65e1fd"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/commands.json",
+      "sha256": "659f81d70e5fe557c60c21fe86b39a0a525104d5886e630838b381cd94bce867"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/snapshots.json",
+      "sha256": "73df1e3e172825c66991073c21263543402198799fa0fc06c10a1429b85e697a"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/validated/backend/.source-export.json",
+      "sha256": "053c0a345c440223af404481ba0cf4efb07e989b6475b9c43fc30b77f6663a57"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/validated/web/.source-export.json",
+      "sha256": "fb848951488f44b2f8bcdd9d3ee11edadbe87148c65d42ff05db0b017acf1063"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/final/validated/app/.source-export.json",
+      "sha256": "91cac18e8e384c694647a1ce8bdc1f05b404bb32c357f0b8ea5c99ef3c14e073"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/cleanup-proof.json",
+      "sha256": "93aea095da248daf2f836af1df0b94769fa2437dfd3e8b1d3724bb6a547addd0"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/cleanup-proof.mjs",
+      "sha256": "7aacdf7d5aa2db1829642395b1ee8fd572ddf082cd5c1dfbc5e86bff0d328427"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/prior-snapshot-restored.json",
+      "sha256": "b73c712d1759ed314d7450ab95fa8ef5fc4f7f06da3663c2c236dcde98bf6b3a"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/restore-prior-snapshot.mjs",
+      "sha256": "b0ffed4af6c32893bcb3629723d9fb4e544565715676a533ae33eef6816b3a99"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/validate-linux-broker-local.mjs",
+      "sha256": "fb72c0185b9026ce201e039505afebaae606036291d1dde0299d50dafd05f438"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/validate-final.mjs",
+      "sha256": "247bc3d5517eac5acd75baf6e365308d0ff76c00bf0591390e77fb0d322a8bfa"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/observer-unit.log",
+      "sha256": "f7e24539e32ac15e5cef2fbf5f437bfeff93fcad2873c7cea803593b1da189f7"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/readiness-unit.log",
+      "sha256": "4845a7c3b645958e07dc2c546158b75e253a2da368e9e30cd3208640e5d9edab"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/readiness-typecheck.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/readiness-lint.log",
+      "sha256": "dc2a90bc9c298b8c56cdf35b21a7bd23214786bca1b4a0812d6cefa875b6cef9"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/runtime-provenance.json",
+      "sha256": "9faccdbbf83a39f009868f21fdf8b127d41d064656b9999e9cd6453a34c63761"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/runtime-provenance.mjs",
+      "sha256": "96b24ed2dfdc573c07f94c454e9807d2425cc42b5faea90392bfca40169830a9"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030215/report.json",
+      "sha256": "52f2eceab71ad157023086aaecb9ed3c6fc109baf55c0b63623a9640e1639ad6"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030215/serial.log",
+      "sha256": "054fe1040a586f35413bac7c46e4ec01b4348d170bfa5929650d382a982515bf"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030427/report.json",
+      "sha256": "466e10487979437a5b2f666af732f905dbb834784e8c59d184075cdd38ff14f6"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030427/serial.log",
+      "sha256": "f05f2d7868daa137eb32155b37a2abd4fc80a08149ce54c6ad79ad04e06e0388"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030614/report.json",
+      "sha256": "e7c6d606c1e6a3a6ffdf76d35f223a12aa53baba3ad172a0c3e544c9c1abf4e1"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030614/serial.log",
+      "sha256": "0280b485db25f2918cdeb879fb5715f121a0c41ae92aa08de54374d3e239727d"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030614/linux-broker.py",
+      "sha256": "84cc567be350e5699833778175e0dd028ec6a197feccdbf80f5c7a97aa65b2f9"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030614/bootstrap.sh",
+      "sha256": "59a71d233e226d208a7a42a1fff2b3ae8eac162db139af83aea520fd181c5749"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030614/database/report.json",
+      "sha256": "8e9b560c44d1320f83f360569c540b679caeec1bfa2df961ead3ab35c2e4bd90"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030614/database/integration-suite.log",
+      "sha256": "ae658e953fbea9e6009179b8265c041ac3aa0c2a858d156b2b90644fc608caf4"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030614/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030614/database/migrate-deploy.log",
+      "sha256": "c28144b74155a478a47dbbaac1d380e63e1114798b80825cc93bd5a612f643c3"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-030614/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-095038/report.json",
+      "sha256": "9701502aa0e7a6658cd7f06411f3357c25c5ad446a113ee3ab6f3d45bdfe312f"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-095038/serial.log",
+      "sha256": "4c7bd2e57f0f99483b0e7952fe6dc14ea0c4a896db834ab596e801edcf4477a8"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-095038/linux-broker.py",
+      "sha256": "84cc567be350e5699833778175e0dd028ec6a197feccdbf80f5c7a97aa65b2f9"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-095038/bootstrap.sh",
+      "sha256": "59a71d233e226d208a7a42a1fff2b3ae8eac162db139af83aea520fd181c5749"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-095038/database/report.json",
+      "sha256": "bbbb21933fdceb69e8e3ded30e1175e25db954a3e1e383dc099d0bb6f8075e40"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-095038/database/integration-suite.log",
+      "sha256": "98d2810c63e6b06e9cfc78a70d921ac40bf51f43f757b2a0ce9f51fc1d288c76"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-095038/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-095038/database/migrate-deploy.log",
+      "sha256": "93d15de60686c1adb9a0478ec521aeac822507455fb9b1929b69481460d879c2"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-095038/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/report.json",
+      "sha256": "19ecdcae6fd7c8996f32501375241ae5c5fa270303c1eb292ceecf4aee81a052"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/serial.log",
+      "sha256": "06fba59a6677f49351814e765d7d039991347851cf0b10be7c2cb901f0018b5f"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/linux-broker.py",
+      "sha256": "a7a0b631dc004a0ecef962f0a258fd5139c1bab14ef26f0c2d5e5c70e228da36"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/bootstrap.sh",
+      "sha256": "eb07022f7c3e94834667453b6b87ef40ced0e3dc905360f6bed7d57cb3af0bec"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/database/report.json",
+      "sha256": "b414f20ded92ca6d138c0ba21abd906ca07d22cbc181913204f6c52a5c6ded14"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/database/integration-suite.log",
+      "sha256": "cd3257099d72f2a94526bf6e6fa9c93fe0b8ccd9a30c3febf74d066cfc1ce020"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/database/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/database/migrate-deploy.log",
+      "sha256": "49d78c9cbc140bfc250fb041f1bcf74d059903cac3dbfaebeb92c3e136a2c025"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/run-100658/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/probe-result.json",
+      "sha256": "26da052f004b5386d1ea2e51efc2908d1148876cb006542c4d14ebc8166b4228"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/probe-serial.log",
+      "sha256": "6bd8f70b9571662738c08a0fcc9fc566cbe429a3161980ab4ad12838930fa4fd"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/probe2-result.json",
+      "sha256": "ba87620fc7f4b8b4770b7451edcf2039dcd3d6b8d26ba3bc036ed2aa8df37ead"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/probe2-serial.log",
+      "sha256": "bedde62fc22007a14cf004cf2d6df1ef150724f3d9c58a181f7326bae5bce8c4"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/qemu-w64-setup-20260811.sha512",
+      "sha256": "a160b60c5a6a782e6405651968ac932c60b8c4576503979ec259fb35fb7e9b46"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/alpine-releases.yaml",
+      "sha256": "a25669f07d637285e3a1e21f9d679f09d9a2c3bc3fe23174b223c981956db628"
+    },
+    {
+      "path": "D:/linji-linux-kafka/20261104/qemu-extract.log",
+      "sha256": "a126c699f7d3c5904e273a444dd05ac47c7e08557b4b40cbd34e398f3d92a886"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/kafka-rag.integration-spec.ts",
+      "sha256": "32ce7aac02037ee277bf90564aceed8af594b6ded2f24f4c5a45d74e9fe3da2e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/worker-shutdown.integration-spec.ts",
+      "sha256": "8e361be90e4c628c1eff38247322a9e1c3413aa1a757fddd2c81b31ed828e18c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/helpers/kafka-topic-readiness.ts",
+      "sha256": "df96597ae209999916e98a99d5b722450e5bbb98db74ecca0ffbf78db9217e99"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/helpers/kafka-topic-readiness.spec.ts",
+      "sha256": "627d140cc77ef0e0b5bc8c324d579af299fda1f5ac7dadefbd5b251ae3b1f2bd"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/helpers/kafka-offset-observer.ts",
+      "sha256": "d2e36619fe74d65a15cedd8ccf6fcaf5472bbdcb2ae138560ededf859d2af5ec"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/helpers/kafka-offset-observer.spec.ts",
+      "sha256": "e640019d79b455a2107e784ab9b827114e824abb8b910745adf6c0c0268304f8"
+    }
+  ],
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Actual browser/BFCache/Cookie-CSRF target environment and devices/SecureStore/signed native builds",
+    "Production model providers/quotas, S3/TLS/full virus database, multi-broker recovery/ACL/production network",
+    "D-49/D-50/D-09 decisions",
+    "Container acceptance and remote CI",
+    "Previously denied cleanup/server starts not retried"
+  ],
+  "repo": "backend",
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1285,
+    "sourceTools": 20,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "integrationTests": 10
+  }
+}

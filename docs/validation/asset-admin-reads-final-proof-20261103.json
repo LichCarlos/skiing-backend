@@ -1,0 +1,361 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/asset-admin-reads-20261103.json",
+      "sha256": "44be43818fcf1cb8d2a805b9d8358dfbcb4a8d97af76b83eb139bc54c3977487",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitFiles": 143,
+        "unitTests": 1240,
+        "sourceExportNode": 8,
+        "httpFrameworkFiles": 9,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "productionBusinessCodeChanged": false,
+        "httpFixtureChanged": true,
+        "postFixtureLint": 0,
+        "postFixtureTypes": 0
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/asset-admin-reads-20261103.json",
+      "sha256": "e5ecd2b4ddedacdc650f1a1e2c2d2b0db8f6f62f4cd27f994cb7977dbcd68ead",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 2887,
+        "newTests": 41,
+        "assetCombinedTests": 176,
+        "releaseNode": 20,
+        "sourceExportNode": 8,
+        "forcedNextBuilds": 2,
+        "standaloneVerify": 2
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/asset-admin-reads-20261103.json",
+      "sha256": "dab38d3c6f2c6ff38f9c756d39de9a50456c1f46c7b796dc7736e7e494776290",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessFiles": 66,
+        "businessTests": 1163,
+        "sourceExportNode": 8,
+        "artifactNode": 10,
+        "doctor": "20/20",
+        "exportPlatforms": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "postExportTypes": 0,
+        "seal": 0,
+        "verify": 0,
+        "relocatedVerify": 0,
+        "businessCodeChanged": false
+      }
+    }
+  ],
+  "audit": {
+    "markdownFiles": 243,
+    "checkedLinks": 2120,
+    "broken": []
+  },
+  "verifiedUniqueReferences": 71,
+  "references": [
+    {
+      "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/commands.json",
+      "sha256": "f7f103e5b24088991fb52c6328fe9077db7b4612977072d313bc416e27d44fdf"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "a54c2f6c483367eb831e3c7e4c6eecd5beeb4cd504a6117bf48af495603a3573"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-install.log",
+      "sha256": "08ca5a8e57e7f701c5b42eac7792a0da38d03604d28e36570fb6820a1403954b"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-check.log",
+      "sha256": "ea48a0e8a67c4d6817eaf0d4fd3a97612dc5ecd39ba8a1534d78dbd2486bb2de"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-e2e.log",
+      "sha256": "39e354434e0f23d48ea44f1ccab6cc48cde6936a06c8b75c6c80a8149a37b029"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-fixture-format.log",
+      "sha256": "b38b08fab8db47e3639fbda498dc7ec2df8c7f216f56e9838ccf0cd6cd7d2d57"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-fixture-lint.log",
+      "sha256": "6cafd7ca2eb5da402eeb90a5c76a9afe148a1b3b23bea424e9a9f715dd283bd9"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-fixture-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/admin-runtime.log",
+      "sha256": "d83d9e0d624ac242332e59c7435216ded60e1be475d4486ff21b2a059ff3f233"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/boundaries-before.log",
+      "sha256": "9900e5ea955cacfc74f48ef8e1ae0d3b4f0c99ba267e0b76d5d441c7da409b51"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/targeted-first.log",
+      "sha256": "9f7d36ff8585f72487dfaa88e849be3856003e7c961d342cccb98dcbe8e72ff5"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/targeted.log",
+      "sha256": "eea24f149c8e33c573c908b35f8fecf900c39d8395836e4efa2ec9ecb568bff3"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/admin-types.log",
+      "sha256": "3dd115a54d9decc15d9b6f1babec63f20d21966a914759ea6530c5b714007d15"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/report.json",
+      "sha256": "43a802c92fcc141f1ab989c039be23b713c80d4cd6b10eedb658023d3e4dc150"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/client-result.json",
+      "sha256": "56d40a7e0631126eac5002cef1d27f80b01e22b356b87e77261af2c51f4617a5"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/ready.json",
+      "sha256": "5c8eae34871f148a81c40f76b9823cd78606960b79edd54507db190f7b2e0fae"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/migrate-deploy.log",
+      "sha256": "4fd1c0d3b1fa6ea6039a37dfa8454441f4311814342e3220e514d42f2bf74e25"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/fixture-verify.log",
+      "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/cleanup.json",
+      "sha256": "94bca56d1b446bbf8208cddc2b35f83fd3105a55a063f8d292bb68b203f2f5ca"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-responses.ts",
+      "sha256": "0c524d8faa9b09850cd147ada7bfb09c5ee4f2168a2ea6f8168d84a634be36fc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-library-model.ts",
+      "sha256": "6353727fa7486cc707c7cd9b3b1349fc68a49768b51f06471aa0ac10faa32cd4"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-model.ts",
+      "sha256": "c99101c0ba22f17e5a154802405b13bae448cb47175f9d120153c267e90eb441"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-queries.ts",
+      "sha256": "da73641ec942c499ffa44c47e678651a8ebf617ddd758a11d3a4adec11be815c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-workflow.ts",
+      "sha256": "48fd13743640beebd710bc438953aec51e2ef1cedd098893913cea8731e75557"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-session.tsx",
+      "sha256": "0c483ee6dd84c56cae88ea76d7d982ee4abde1b25c8f1c4287ab9edaf1659cb9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-console.tsx",
+      "sha256": "586a46eb7b26e234dfd74b88f625c0fa473c945a49a15d25feaa2b98ba75f102"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-detail.tsx",
+      "sha256": "9e24bbd39a80a3d3de0499062784c7fd4cb1b7fde67cb603dbcbafaf601436d3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-controls.tsx",
+      "sha256": "9bf5b17f710fed9f37f92f7093279c06749bd6f0db396ec6b8aef66b9ed0e131"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-read-boundaries.test.ts",
+      "sha256": "07c5cc5bf1b81936f989893eae5081f7c851ef58062c3e05aef2251f370019f2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-page-lifecycle.test.tsx",
+      "sha256": "7a646fd2c27fdd6f46471ead8084666f413c5bdb462dcc83c5080acede65dbe8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-workflow.test.ts",
+      "sha256": "66992681005e183f669310a9163cda78f6030c221e97bda48f46501fbc132bf3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/assets/asset-admin-queries.test.ts",
+      "sha256": "782133ebdfc37c6a1b9e0cfa7cecdad06cc1e4fbeb29f59e49e37caac14f5e08"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/test/authorization.http-spec.ts",
+      "sha256": "f953789d36e5e9e636ba93e6946453da27ff8b35e1e9205d6e1eb5f2d60419d7"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/web-install.log",
+      "sha256": "1a3bcfb72b5e9d353c7a68e3d53a9dd60e48345b38df4fbfe551310ce806791e"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/web-check.log",
+      "sha256": "a7b04c0e3c8fbb1bd52f395657179c964c6c237186a212471887c1bac01e387d"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/web-build.log",
+      "sha256": "d4c145dd9058d1c51d0d622f29e07667d25aa35608a098a172d6c2ddd06817f5"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/admin-http.log",
+      "sha256": "1877aef9e4b4b3fc98f2048178b1dc301fa871ea64cfae3347a29ca8bf164d9d"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/doc-format.log",
+      "sha256": "cb0b285b878146a38512a36c72c097d648a369a80572feb5b29d0f68eb17cf4c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/web/.next/release/release-manifest.json",
+      "sha256": "23907b767be30cfdbab6ab0febf16cb0f01c3c1aa71a6fd2f63d820fc1e11144"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/.next/release/release-manifest.json",
+      "sha256": "6fe25cc614a8c6155fb2aad6b3886efb44ab222c7bb1751455009a485213d06b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/app-install.log",
+      "sha256": "ca29d094327b8647d31bf0887c7c64f9a800825deed527bc4a68c947a95ebdcc"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/app-check.log",
+      "sha256": "59e5888760322f888d149dbd6410838b5663e957469d9d1b62754c4214e57a7e"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/app-export.log",
+      "sha256": "be4dcd93aa71f03ab4add182ffd1f80e709ce6445f8605a86c0014ca5af0deb4"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/app-seal.log",
+      "sha256": "c0236356813bd0cd60313aff2106cf74f630528f35d9db4a311923cc50b12f4f"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/app-verify.log",
+      "sha256": "0cd6ee97fb44ba31de022321848140ace4c27977bf887c09132d841de2eeeebb"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/app-relocated-verify.log",
+      "sha256": "de8d1beeb62be5cf91bd9a7d64cb63609213335d7b2f17dc984340c3c438290e"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/app-export/linji-export-manifest.json",
+      "sha256": "ca2acb4940d9e7de36f9f1d8a8dc5adab08298f4457253b79078bb354e0a28a0"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final-audit.log",
+      "sha256": "52dad2d58e1215b2c37ef5a266854ace0ff1ab00a0f093c1e8e76140ad192d9c"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/web-final-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/validate.mjs",
+      "sha256": "1ee6b6557236ddf278306e81d9a6071846147542d819f38b8724c978a04ebe8c"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/fixture-commands.json",
+      "sha256": "364939edb89fd8b59ef3d52e47974be3788609975be58c0ee741d9b92a49627c"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/post-validate.mjs",
+      "sha256": "e5bcc419d7e24d19d7fdbbb09d2c78ee8538f02e4cb77058096ad7bbc8ec9060"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/run-http.mjs",
+      "sha256": "a14f7372bc794ea8a3ef3b882e582d268564c41018c13a64aa613524a1b425bf"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/evidence.mjs",
+      "sha256": "40975ae650867076dfa8e5594d141a8062f1dcb28e83e144d8f61ac0646f15e2"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/update-docs.mjs",
+      "sha256": "ff96a9287e8454b87bd9bf41a2d2d8357fd6015f9c47d98ecfbda97e46aa96fb"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/final-proof.mjs",
+      "sha256": "e792c4dddbef04de098f4881a895060e75b2f3cbec8cf4e13a5d079552c10a46"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/engineering/asset-admin-read-validation.md",
+      "sha256": "e5191bda1d411c4beac88b718d5f09628235260b58c18b715797a8b7af1922c8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/asset-admin-http-validation.md",
+      "sha256": "c4600d5065a0427e1955b809ba53983a24f46e1b1ca89a51e69884c88a436a33"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "6861a19633a6e0e193f6c00336221974047563bb2b812606a09a366ce654272a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "d59013cdf9aaab0a97099d6393d38904010032c61444691b09eec9003d1bb7d2"
+    }
+  ],
+  "overallGoalComplete": false,
+  "pending": [
+    "D-49 merchant lifecycle / D-50 resort lifecycle reasons / D-09 account deletion",
+    "Actual browser/visibility/BFCache/device acceptance",
+    "Kafka/Inbox/timer acceptance; existing Windows AccessDenied unresolved",
+    "Real providers/storage, containers, signed native packages and remote CI"
+  ]
+}

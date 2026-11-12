@@ -1,0 +1,674 @@
+{
+  "date": "2026-11-04",
+  "stage": "multi-source-management-http-outbox-secure-kafka-real-model-rag",
+  "evidenceVerified": true,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "livePipelineTests": 17,
+  "skippedTests": 0,
+  "testDurationSeconds": 404.29,
+  "embeddingCalls": 20,
+  "chatCalls": 4,
+  "resultEntries": 18,
+  "scope": "Single-broker, one-partition project-knowledge/article/resort synthetic business flows with production modules and automatic workers",
+  "kafkaTransportInThisRun": true,
+  "productionWorkerBootstrap": true,
+  "handlerDirectInvocation": false,
+  "tested": [
+    "User denied without write",
+    "HTTP draft event handled without embedding",
+    "HTTP publication -> Outbox -> TLS/SCRAM Kafka -> Inbox -> real 1024-dimension pgvector",
+    "Cited DeepSeek SSE answer and persistence",
+    "Committed duplicate EventId without repeat embedding",
+    "Owned broker SIGKILL/restart with HTTP update backlog, immediate stale-vector exclusion and automatic real reindex",
+    "New answer changes 18:00 to 19:00",
+    "Withdrawn source yields deterministic no-evidence response without Chat",
+    "Soft deletion, final event, five audit records and scoped cleanup",
+    "Article/resort HTTP drafts and publication to real vectors",
+    "Separate cited DeepSeek SSE answers for article and resort",
+    "Published updates excluded before Kafka reindex",
+    "Disabled category immediately excludes article but preserves resort",
+    "Category re-enable, withdrawal/offline and soft deletion with exact five audits per source"
+  ],
+  "security": {
+    "transport": "SASL_SSL",
+    "mechanism": "SCRAM-SHA-512",
+    "applicationPrincipalSuperuser": false,
+    "aclEntries": 3,
+    "prefix": "linji-real-rag-",
+    "guest": "Alpine 3.22.7",
+    "kafka": "4.1.1",
+    "memoryMiB": 768,
+    "javaHeapMiB": 320,
+    "transitions": [
+      {
+        "action": "start",
+        "elapsedSeconds": 105.4
+      },
+      {
+        "action": "stop",
+        "elapsedSeconds": 143.6
+      },
+      {
+        "action": "start",
+        "elapsedSeconds": 196.1
+      },
+      {
+        "action": "stop",
+        "elapsedSeconds": 239.1
+      },
+      {
+        "action": "start",
+        "elapsedSeconds": 291.4
+      },
+      {
+        "action": "stop",
+        "elapsedSeconds": 328.3
+      },
+      {
+        "action": "start",
+        "elapsedSeconds": 382.6
+      },
+      {
+        "action": "stop",
+        "elapsedSeconds": 424.2
+      },
+      {
+        "action": "start",
+        "elapsedSeconds": 481.7
+      },
+      {
+        "action": "stop",
+        "elapsedSeconds": 530.7
+      }
+    ]
+  },
+  "runtime": {
+    "version": "llama.cpp b12097 (b97627967)",
+    "zipSha256": "2a48f973521cb76fdf8123b12c62a89ad59b01372b98405123dd4e7114e1ae27",
+    "model": "bge-m3-q8-950f4a8e5e19",
+    "modelSha256": "950f4a8e5e19477a6d3c26d2f162233c20002c601f75e4b002e3239997821167",
+    "pooling": "cls",
+    "normalization": "L2",
+    "contextTokens": 2048,
+    "cpuThreads": 2,
+    "chatModel": "deepseek-flash",
+    "postgres": "postgres (PostgreSQL) 17.11",
+    "pgvector": "0.8.1"
+  },
+  "productionSourceSchemaLockFilesUnchanged": 497,
+  "apiOrSchemaChanged": false,
+  "dependenciesChanged": false,
+  "fullDatabaseSuiteRerun": false,
+  "previousRecoveryEvidence": "database-recovery-repro-20261104.json: 24 native recovery command checks (not rerun)",
+  "previousCombinedEvidence": "kafka-real-rag-20261104.json: 9 project-source tests (not added to current 17)",
+  "previousRealRagEvidence": "real-rag-20261104.json: 28 tests / 20 labelled questions (not rerun)",
+  "previousKafkaEvidence": "kafka-secure-broker-20261104.json: 12 security + 10 integration (not rerun)",
+  "previousFullDatabaseEvidence": "field-workflow-20261104.json: 858 tests (not rerun)",
+  "diagnostics": {
+    "firstRun": "run-140514",
+    "firstRunPassed": 14,
+    "firstRunFailed": 3,
+    "firstFailure": "K07/K13 returned HTTP 500 and K17 cumulative call assertion failed; source lifecycle cases passed; services stopped; original snapshot and logs retained",
+    "firstHttp500RootCause": "Not established; did not recur in observed second suite; no claim of production network fix",
+    "errorObservation": "Allowlisted exception type/provider HTTP/cause code added; original filter and providers still execute without retry or substitution",
+    "secondBusinessSuite": "17/17; 18 records; 20 embedding and 4 Chat calls; only expected ForbiddenException observations",
+    "secondWrapperFailure": "Expected zero dictionary types, but two built-in types are inserted by committed migrations; raw reports and failed command retained; corrected baseline verified separately without repeating model calls",
+    "baselineCorrection": {
+      "path": "D:/linji-multi-source-rag/20261104/baseline-correction-proof.json",
+      "sha256": "d2e6b0f430747af88256c595aeb5173cdeb9aa32b95054bf4e9604fa6fa4bda3"
+    },
+    "engineeringCommandFailures": [
+      {
+        "label": "backend-live-rag",
+        "exitCode": 1,
+        "reason": "External cleanup baseline assertion; business suite passed"
+      }
+    ],
+    "finalGlobalTopicGroupEnumeration": false,
+    "topicAndGroupCleanup": "afterAll awaited deleteTopics/deleteGroups; hook passed; final global enumeration skipped by external baseline assertion",
+    "executedRunner": {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/backend/scripts/validate-live-local.mjs",
+      "sha256": "23542b8c1c6e144f385e7011165839ba11475035d1f25b836553e6b5cf554687"
+    },
+    "futureRunnerCorrection": {
+      "path": "D:/linji-multi-source-rag/20261104/validate-live-local.mjs",
+      "sha256": "6ad059b5100d289ff30b351bb3e503c58ac2092276a04ddcf6dd2beb7dfd3543",
+      "expectedDictionaryTypes": 2,
+      "rerun": false
+    }
+  },
+  "cleanup": {
+    "passed": true,
+    "run": "run-142415",
+    "modelRun": "run-20261104062411686",
+    "ports": [
+      {
+        "port": 53708,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 53711,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 59235,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 58350,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 62638,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      }
+    ],
+    "passwordFileAbsent": true,
+    "postgresPidFileAbsent": true,
+    "temporarySecurityFilesRemoved": true,
+    "runtimeStopped": true,
+    "databaseStopped": true,
+    "guestStopped": true,
+    "runtimeBaseUnchanged": true,
+    "finalCounts": {
+      "users": 1,
+      "resorts": 0,
+      "articles": 0,
+      "projects": 0,
+      "documents": 0,
+      "chunks": 0,
+      "conversations": 0,
+      "messages": 0,
+      "outbox": 0,
+      "inbox": 0,
+      "authSessions": 0,
+      "refreshTokens": 0,
+      "loginBuckets": 0,
+      "operationLogs": 0,
+      "dictionaryItems": 0,
+      "dictionaryTypes": 2
+    },
+    "finalGlobalTopicGroupEnumeration": false,
+    "topicAndGroupCleanup": "afterAll awaited deleteTopics/deleteGroups; hook passed; final global enumeration skipped by external baseline assertion",
+    "wrapperExitCode": 1,
+    "baselineCorrection": {
+      "path": "D:/linji-multi-source-rag/20261104/baseline-correction-proof.json",
+      "sha256": "d2e6b0f430747af88256c595aeb5173cdeb9aa32b95054bf4e9604fa6fa4bda3"
+    },
+    "sourceMatches": true,
+    "unchangedProductionSchemaLockFiles": 497,
+    "baseline": {
+      "path": "D:/linji-recovery-repro/20261104/verified/validated/backend/.source-export.json",
+      "sha256": "238e886791e0e1c8aecdc9261cbb8ffba8b60474888ed1b5791fb7ca7a853d0b"
+    },
+    "zipSha256": "2a48f973521cb76fdf8123b12c62a89ad59b01372b98405123dd4e7114e1ae27",
+    "modelSha256": "950f4a8e5e19477a6d3c26d2f162233c20002c601f75e4b002e3239997821167"
+  },
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-multi-source-rag/20261104/verified/validated/backend",
+      "sourceSha256": "6b61fdeb347598b66088211fbd1cdbec93c81285b75d58906dd0352f9166b973",
+      "files": 846,
+      "store": "D:/linji-source-verify/20261104/stores/backend",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-multi-source-rag/20261104/verified/validated/web",
+      "sourceSha256": "25caddb9f4d71d6db59d615271467e38c61bf86c8d08a43f65710296d41090ef",
+      "files": 721,
+      "store": "D:/linji-source-verify/20261104/stores/web",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-multi-source-rag/20261104/verified/validated/app",
+      "sourceSha256": "621f77726a9f4e2bd13b74858b51c434bcd73a895403ccf1a5ddd2f76e375b67",
+      "files": 325,
+      "store": "D:/linji-source-verify/20261104/stores/app",
+      "reusedOwnStore": true
+    }
+  ],
+  "frontendUnchanged": {
+    "web": {
+      "files": 581,
+      "baseline": {
+        "path": "D:/linji-recovery-repro/20261104/verified/validated/web/.source-export.json",
+        "sha256": "0de2cfb9ecd917988b30289dff073b2a18c670dbe7628ead3ff5dc85a887dcc0"
+      }
+    },
+    "app": {
+      "files": 238,
+      "baseline": {
+        "path": "D:/linji-recovery-repro/20261104/verified/validated/app/.source-export.json",
+        "sha256": "c14f2319b08f1c5f993cceb62b60f633f489aec224dd7cb792e3cfa326230451"
+      }
+    }
+  },
+  "artifact": {
+    "artifactKind": "expo-bundle-export",
+    "files": 88,
+    "contentSha256": "f1506dce28b471ce881acd5df4be7cd9bd4c03ef00dd636fa989941d6619a2a3",
+    "openapiVersion": "1.51.1",
+    "openapiSha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8",
+    "nativeInstallable": false
+  },
+  "evidence": [
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-source.log",
+      "sha256": "f5df18fda7da2c067196621274d83d495c0512c7ae4f4bddf93512bab774eadd"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-source-verify.log",
+      "sha256": "29d51d2f2e03e99f93c9e0938e841f96b14f399827472bd8eea42da842a564ee"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-install.log",
+      "sha256": "f409297965da138a28d66856f724a296cc61b6284c9b149e7eea9407a67a20b2"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-generate.log",
+      "sha256": "0aa9b502f0468a344d48641cd91560982f0a7f8d770b19cd77f6aa2ee450a134"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-check.log",
+      "sha256": "8b4d98b7872f93c87a40ed1258ed946a33ef45ea984315fb3bd02448ffab7f4e"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-e2e.log",
+      "sha256": "080294374800fd5290d932a1680b541100a68394dfbebc6cb624eb6601035d8c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-openapi.log",
+      "sha256": "28870f5533258dae59c65196afa6976ed7d797ba7d83db72103f2c4d12f3aef4"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-live-runner-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-live-rag.log",
+      "sha256": "416d7e4bf0b56e8721210f3acd3e4bdea2687e31c022dd292ffefc955729c0bb"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-baseline-verification.log",
+      "sha256": "bfee5b65cc1f0143035a7b8f68c24b604bcbb94a02f3db66fcaad373b564f11b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-source.log",
+      "sha256": "68f6f9c96759f03b17f5cb72df2b6968449c707a1521fb13c2ca1741850522d0"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-source-verify.log",
+      "sha256": "5fcbb5072442ccc2ec905256615285456577b6d16208b8018bb9eb614f360b91"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-install.log",
+      "sha256": "e9f76ed888c3655a02578c328245f1a17c44a8ba1a3039ed62485efe2c6c112a"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-check.log",
+      "sha256": "82ef268d0fc80bb8aaa50a40e85518e922fbbfb5ccce4a58c751adb9085dc54f"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-build.log",
+      "sha256": "e1511f0142b3fced021c6986b4af2cf6350c5e33c7fc8ea7e4cee6fd2bb8d1eb"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-web-release.log",
+      "sha256": "a0e3281de9ee41487cf3e55914f92d0ce8e4104338ac3a2278473410566eaafa"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-admin-release.log",
+      "sha256": "1ecf94fb19491c1760d36182f144a84bc2b63b11dd139f6cbfe0be542e30af9a"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-source.log",
+      "sha256": "008479dd98d21c099aca48b06edb045fc86b1001bc47beef71fed56ae9e5384c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-source-verify.log",
+      "sha256": "4a923a27d7a6ec4a62465841fea8bdbf36938a239c5878b88ba8ae77acec0c3a"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-install.log",
+      "sha256": "f0179ba5b99cd8708ea2b286f78ff7f95cf780a90e53c24eb0fec5d45c8a6994"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-check.log",
+      "sha256": "f1f25311f547e16caefb32d2eaf6081e55a4abb1fcf7dcc54f8d1abce5c6399b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-export.log",
+      "sha256": "879f1d4d80c2315391d6d1f9523def8c144a324f8dac5f0ea744dbf38afaf90c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-seal.log",
+      "sha256": "f32f28daf3c94df7042c78c96bac90e940b4494af877e1a14ff36b3d6b22af6c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-verify.log",
+      "sha256": "a3a6bedb3531166a12df7ad7a02154bed2d00c108823ca7481883985ebb166a6"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-relocated-verify.log",
+      "sha256": "ee8a4771b558dfd218cfe80319e456659ed9e5f44bc7b6a8da90b3a816734008"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/commands.json",
+      "sha256": "be50784a4fa8623572b12d295efbe4114872452d40572c776a76496cd43c49a9"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/snapshots.json",
+      "sha256": "277f2b956715a696493f1130048ee7cb26b79f2812f95bde9d83a4ffe0f71551"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/integration-source.json",
+      "sha256": "4c1dff8c65b02cf8b9a12d5cbbb7166ffe8936b69f0cb6d655a40f0a4f2029c6"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-module-paths.json",
+      "sha256": "325a001bebb4d88b9398fc9f793d63b2d8b5609cd666bd8b98cad015f015611d"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-module-paths.json",
+      "sha256": "0fa1765a61f4ff82fb1b41e8518e68022cd863944a049d26ffcd93827eb087c3"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-module-paths.json",
+      "sha256": "7a2eefa195762f92414587eb80c52d358f7795148bfba630e1e1ce934d4f4ba2"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/backend/.source-export.json",
+      "sha256": "e8638bd8032c9671fab2e5210d8d2c9b977e9478b4d6bd034cfea1793b798336"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/web/.source-export.json",
+      "sha256": "47734cadce2be255e44363f70cb9e00526ac161614fc9582ccd01c0bafa72f73"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/app/.source-export.json",
+      "sha256": "deba702101a0c3f514d96082c2a150880f611788c99f30aee4004cd4ed1ba2e9"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/cleanup-proof.json",
+      "sha256": "974843f65ac5e6f8ba7d9005fd9e2b96764f93fa72b4f9216ec37d16d65f3b35"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/cleanup-proof.log",
+      "sha256": "14832e8127d6ad1b07418443ffb963aa75acd8d2572b5999306e771f621db968"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/cleanup-proof.mjs",
+      "sha256": "29de40d6df9161395a6a793b2f96f8566f62fc0da8db1aca720d2bce8601b207"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/embedding-runtime.mjs",
+      "sha256": "bbf451d217a6bd8715743459a1f1f3ff9b395d1515f5d7760e6641979d84f1f3"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/secure-broker.py",
+      "sha256": "35849b28ce7576483111fb9043927e4916208b0d7014b494a92d581fa1a617d8"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/validate-live-local.mjs",
+      "sha256": "6ad059b5100d289ff30b351bb3e503c58ac2092276a04ddcf6dd2beb7dfd3543"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final-check.mjs",
+      "sha256": "b1c3c4f423c3e2c8d87dd4dbb60ed7c0f3066d364a17bc3e6138f65ea76e98cd"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified-check.mjs",
+      "sha256": "c3735e6f4361fc7bfcc4bc0efe7661f23760fd20c0e9e9e9dda4e1318a0d6b21"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/evidence.mjs",
+      "sha256": "8e8b75efb18fe1382b212488755746cef2fb95e1d226f387a00cbfaa98a84354"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/report.json",
+      "sha256": "0d812c87ef28e0e80621018762a9aa4a2c1df3067720fc98079718824f1b152a"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/runner.log",
+      "sha256": "00dcac0fb47d90063e6cbf93add481c00ae575ab39b9fb1bd681802ff1b0a62f"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/serial.log",
+      "sha256": "f45ccfc40d17025eaf5436d0d5de0e567a07058245a5072fc72e79cdf71f8967"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/report.json",
+      "sha256": "9248fab7caa836ce71eae393c63ceaf8e1c336567906273ed4867084d7129c22"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/live-tests.json",
+      "sha256": "6bc5a67583f37f555d60fe221c2f45e3eb2dc3154d0eca948e580285e82e491b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/live-rag-suite.log",
+      "sha256": "40a7927058b1473bb14ade04f12ac2d0822395b05677f0e1feaf1fdbaf764b7e"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/migrate-deploy.log",
+      "sha256": "82071f4772781fa1e1128080ab86e208daaeb82a3cc4bbb13dd784d8d49f20f0"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/live-kafka-rag-results.json",
+      "sha256": "294e4c27d010a9ffefeca17ded5db05a4db5eb3d1f10a0d3d812d68727267c31"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-20261104062411686/report.json",
+      "sha256": "226500e4b8f6175ef4de62a3f3a2ff35e255c5128090318ac99ed7e52ea5521c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-20261104062411686/embedding-server.log",
+      "sha256": "55f9cbaa8c2ce7411bc8033cfdfbaa538d482fba7429737ed6fe5f8f2673ac33"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final-check.log",
+      "sha256": "a6231146e04a58505b0ae3e27e78a4014c9aaf915a1093faff884e0fd17a7344"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final/commands.json",
+      "sha256": "66e69870acfafa878ed75c383cd2f023c50f28abea1046eb6af27bbe9f3b408c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final/backend-live-rag.log",
+      "sha256": "1ae732cf710fe0b660f60f9c9db1246cc691c7d79d7b8446bb64bb55ea412c4d"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/database/live-tests.json",
+      "sha256": "0e5993db5668f544aa011aa0ff501f4d0a7d58e229cd0141f901faa579ace1de"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/database/report.json",
+      "sha256": "5a074636c7c1a4f5ac35e1a10d3e646333d5774d2145c22e535595b68d175d4d"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/database/live-rag-suite.log",
+      "sha256": "a24de16e6817ae6ac0e479b4b9ec3ae263fcd0083b7f14e3893cef86fc33a092"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/report.json",
+      "sha256": "e94b123e9bef67856a8592ab7df424599cb8eeb6fe2d5927a93e3f94246c78eb"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/live-kafka-rag-results.json",
+      "sha256": "556dfdd7ee45c6c1c2c9ed89ec0ce2f0dac19259241618375fde910b8e95fd6c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-20261104060508680/report.json",
+      "sha256": "be1ff3737e60e5eedb34ed315883eb6397677fee46ad2f2ac710b560db6e24f3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/rag-kafka-real-providers.live-spec.ts",
+      "sha256": "d670800cfbe70f36f78a4a0708351e836159783aba3d71b5ba2385427ac92e28"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/vitest.config.kafka-rag-live.ts",
+      "sha256": "44d52bcf49667c9c236d2d31217f005a158241f2f3efb1fd1ce8ea3347f3412a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/kafka-event.consumer.ts",
+      "sha256": "5dec66eb83358608b1374ecb8b780714752f81736da69de9aea3b786d648c94d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/outbox-polling.worker.ts",
+      "sha256": "9ba5979b51746296b7d0077fe671c0209b2878d10e7ef946bce526e03091cf0f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/knowledge-content/infrastructure/prisma-project-knowledge.repository.ts",
+      "sha256": "f7f35a438e589e44fbabc961c27eecf7262ffa7e7bdd89fe9fa4ac7ad738e77d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/resort-management/application/admin-resort-service.ts",
+      "sha256": "39cf20f877332d95562a52138d27800f3075c1738f9f4186371315d20c715cac"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/knowledge-content/infrastructure/prisma-article.repository.ts",
+      "sha256": "c03e445e19810d1eda987a04e532ef2f3e128cf63f42c3fe6aab36cfd2948658"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/article-rag-event-handler.ts",
+      "sha256": "96397049cdba87b0a3beb36a78b54711618df20efe3b04f7a7d5ed820481b05e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/resort-rag-event-handler.ts",
+      "sha256": "6b9afd125c0efc6eee01e638b1323c7fbcf99adfe09ed347cf22d3bc2eb482f0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/dictionary-rag-event-handler.ts",
+      "sha256": "6f074756631b33512ce4949932e14c7159126c75b8acc774f691d20c194bb1a0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/rag-answer.service.ts",
+      "sha256": "fdc35b31331c6e19cd3021a3246bc1a9e6f995e2df4cf3f1337d68caa8caa575"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/rag-document-indexing.service.ts",
+      "sha256": "83c028532aa3da63194ae3ba7e8d71cb3ff89da611b20b2f46c330ba53192409"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-embedding.provider.ts",
+      "sha256": "da5b1de275d901ead0f12b0dfd762efcff7cbf961a580969831b6ccbed636d8e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-chat-model.provider.ts",
+      "sha256": "cb03b274fd957892922888ee3fae2160de14f9d07c93f1efcb0813a6056735c6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "da3ac8af074d642b79f25c44fbbae43660c69409d3b94abe4aebe6daa86bc716"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/baseline-correction-proof.json",
+      "sha256": "d2e6b0f430747af88256c595aeb5173cdeb9aa32b95054bf4e9604fa6fa4bda3"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/baseline-correction.log",
+      "sha256": "bfee5b65cc1f0143035a7b8f68c24b604bcbb94a02f3db66fcaad373b564f11b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/validate-baseline-and-resume.mjs",
+      "sha256": "45d37df2765d292d8de306f9c7515a86a1026d229c14fb3611bcf9ab9818d217"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/resume-frontends.mjs",
+      "sha256": "9b6fecd523971a51637bad7d6b9004775e9a9c7bbbdf3e3ba1a35fd0facaeb17"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/resume-frontends.log",
+      "sha256": "1a4945d33e9afdd7ea706de2d63202a48a9319077ee9d4acff9019790bc9922b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified-check.log",
+      "sha256": "6637a11d782a005503c3aaaf467d0d39cb225dc6fada452de49240ed7cf5742d"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/backend/scripts/validate-live-local.mjs",
+      "sha256": "23542b8c1c6e144f385e7011165839ba11475035d1f25b836553e6b5cf554687"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/validate-live-local.initial.mjs",
+      "sha256": "23542b8c1c6e144f385e7011165839ba11475035d1f25b836553e6b5cf554687"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/correct-future-runner.mjs",
+      "sha256": "9f4249499186e9fb25bdda60628b9769a86ca22dc4c775ea77d4ddea3d4a0f0d"
+    }
+  ],
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "permanentModelServiceDeployed": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "First-run model HTTP500 cause not established; did not recur in observed second suite",
+    "Target browsers/Cookie-CSRF/BFCache, Expo Web/native devices/SecureStore and signed packages",
+    "Production model hosting/capacity, real-business corpus/manual quality and long-running indexing across all source types",
+    "Production S3/TLS/full virus definitions/proxy/backups; multi-broker replication/recovery",
+    "Containers and remote CI",
+    "D-49/D-50/D-09; prior denied cleanup/service starts remain unchanged"
+  ],
+  "repo": "backend",
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1357,
+    "sourceTools": 20,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "livePipelineTests": 17,
+    "liveWrapperExitCode": 1,
+    "baselineSupplementalVerification": 0
+  }
+}

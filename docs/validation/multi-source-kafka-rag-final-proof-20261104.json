@@ -1,0 +1,559 @@
+{
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "livePipelineTests": 17,
+  "kafkaTransportInThisRun": true,
+  "skippedTests": 0,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/multi-source-kafka-rag-20261104.json",
+      "sha256": "eac189936b42f137e9f8977c445f7b974dc56ac1d4e5e9b53d78dc8755a61865",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitTests": 1357,
+        "sourceTools": 20,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "compiledOpenapi": 0,
+        "livePipelineTests": 17,
+        "liveWrapperExitCode": 1,
+        "baselineSupplementalVerification": 0
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/multi-source-kafka-rag-20261104.json",
+      "sha256": "ecdfae5b81c2311d495dd6d7cef54644a9ed930381233901db2c0844610e9667",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 3045,
+        "sourceTools": 20,
+        "releaseTools": 20,
+        "uncachedBuilds": 2,
+        "standaloneChecks": 2,
+        "productCodeChanged": false
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/multi-source-kafka-rag-20261104.json",
+      "sha256": "d8f6f1120a6c13a3ac4d7e97ad7451a1053a5a48e3e51c1827101a50fac269d9",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 1217,
+        "sourceTools": 20,
+        "artifactTools": 10,
+        "expoDoctor": "20/20",
+        "platformExports": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "artifactSeal": 0,
+        "relocatedArtifactVerify": 0,
+        "productCodeChanged": false
+      }
+    }
+  ],
+  "commands": 28,
+  "preservedWrapperFailures": 1,
+  "finalizationCommands": 7,
+  "audit": {
+    "markdownFiles": 275,
+    "checkedLinks": 2576,
+    "broken": []
+  },
+  "verifiedReferences": 122,
+  "references": [
+    {
+      "path": "D:/linji-multi-source-rag/20261104/baseline-correction-proof.json",
+      "sha256": "d2e6b0f430747af88256c595aeb5173cdeb9aa32b95054bf4e9604fa6fa4bda3"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/backend/scripts/validate-live-local.mjs",
+      "sha256": "23542b8c1c6e144f385e7011165839ba11475035d1f25b836553e6b5cf554687"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/validate-live-local.mjs",
+      "sha256": "6ad059b5100d289ff30b351bb3e503c58ac2092276a04ddcf6dd2beb7dfd3543"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/validated/backend/.source-export.json",
+      "sha256": "238e886791e0e1c8aecdc9261cbb8ffba8b60474888ed1b5791fb7ca7a853d0b"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/validated/web/.source-export.json",
+      "sha256": "0de2cfb9ecd917988b30289dff073b2a18c670dbe7628ead3ff5dc85a887dcc0"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/validated/app/.source-export.json",
+      "sha256": "c14f2319b08f1c5f993cceb62b60f633f489aec224dd7cb792e3cfa326230451"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-source.log",
+      "sha256": "f5df18fda7da2c067196621274d83d495c0512c7ae4f4bddf93512bab774eadd"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-source-verify.log",
+      "sha256": "29d51d2f2e03e99f93c9e0938e841f96b14f399827472bd8eea42da842a564ee"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-install.log",
+      "sha256": "f409297965da138a28d66856f724a296cc61b6284c9b149e7eea9407a67a20b2"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-generate.log",
+      "sha256": "0aa9b502f0468a344d48641cd91560982f0a7f8d770b19cd77f6aa2ee450a134"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-check.log",
+      "sha256": "8b4d98b7872f93c87a40ed1258ed946a33ef45ea984315fb3bd02448ffab7f4e"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-e2e.log",
+      "sha256": "080294374800fd5290d932a1680b541100a68394dfbebc6cb624eb6601035d8c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-openapi.log",
+      "sha256": "28870f5533258dae59c65196afa6976ed7d797ba7d83db72103f2c4d12f3aef4"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-live-runner-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-live-rag.log",
+      "sha256": "416d7e4bf0b56e8721210f3acd3e4bdea2687e31c022dd292ffefc955729c0bb"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-baseline-verification.log",
+      "sha256": "bfee5b65cc1f0143035a7b8f68c24b604bcbb94a02f3db66fcaad373b564f11b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-source.log",
+      "sha256": "68f6f9c96759f03b17f5cb72df2b6968449c707a1521fb13c2ca1741850522d0"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-source-verify.log",
+      "sha256": "5fcbb5072442ccc2ec905256615285456577b6d16208b8018bb9eb614f360b91"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-install.log",
+      "sha256": "e9f76ed888c3655a02578c328245f1a17c44a8ba1a3039ed62485efe2c6c112a"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-check.log",
+      "sha256": "82ef268d0fc80bb8aaa50a40e85518e922fbbfb5ccce4a58c751adb9085dc54f"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-build.log",
+      "sha256": "e1511f0142b3fced021c6986b4af2cf6350c5e33c7fc8ea7e4cee6fd2bb8d1eb"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-web-release.log",
+      "sha256": "a0e3281de9ee41487cf3e55914f92d0ce8e4104338ac3a2278473410566eaafa"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-admin-release.log",
+      "sha256": "1ecf94fb19491c1760d36182f144a84bc2b63b11dd139f6cbfe0be542e30af9a"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-source.log",
+      "sha256": "008479dd98d21c099aca48b06edb045fc86b1001bc47beef71fed56ae9e5384c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-source-verify.log",
+      "sha256": "4a923a27d7a6ec4a62465841fea8bdbf36938a239c5878b88ba8ae77acec0c3a"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-install.log",
+      "sha256": "f0179ba5b99cd8708ea2b286f78ff7f95cf780a90e53c24eb0fec5d45c8a6994"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-check.log",
+      "sha256": "f1f25311f547e16caefb32d2eaf6081e55a4abb1fcf7dcc54f8d1abce5c6399b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-export.log",
+      "sha256": "879f1d4d80c2315391d6d1f9523def8c144a324f8dac5f0ea744dbf38afaf90c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-seal.log",
+      "sha256": "f32f28daf3c94df7042c78c96bac90e940b4494af877e1a14ff36b3d6b22af6c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-verify.log",
+      "sha256": "a3a6bedb3531166a12df7ad7a02154bed2d00c108823ca7481883985ebb166a6"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-relocated-verify.log",
+      "sha256": "ee8a4771b558dfd218cfe80319e456659ed9e5f44bc7b6a8da90b3a816734008"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/commands.json",
+      "sha256": "be50784a4fa8623572b12d295efbe4114872452d40572c776a76496cd43c49a9"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/snapshots.json",
+      "sha256": "277f2b956715a696493f1130048ee7cb26b79f2812f95bde9d83a4ffe0f71551"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/integration-source.json",
+      "sha256": "4c1dff8c65b02cf8b9a12d5cbbb7166ffe8936b69f0cb6d655a40f0a4f2029c6"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/backend-module-paths.json",
+      "sha256": "325a001bebb4d88b9398fc9f793d63b2d8b5609cd666bd8b98cad015f015611d"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/web-module-paths.json",
+      "sha256": "0fa1765a61f4ff82fb1b41e8518e68022cd863944a049d26ffcd93827eb087c3"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/app-module-paths.json",
+      "sha256": "7a2eefa195762f92414587eb80c52d358f7795148bfba630e1e1ce934d4f4ba2"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/backend/.source-export.json",
+      "sha256": "e8638bd8032c9671fab2e5210d8d2c9b977e9478b4d6bd034cfea1793b798336"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/web/.source-export.json",
+      "sha256": "47734cadce2be255e44363f70cb9e00526ac161614fc9582ccd01c0bafa72f73"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/app/.source-export.json",
+      "sha256": "deba702101a0c3f514d96082c2a150880f611788c99f30aee4004cd4ed1ba2e9"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/cleanup-proof.json",
+      "sha256": "974843f65ac5e6f8ba7d9005fd9e2b96764f93fa72b4f9216ec37d16d65f3b35"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/cleanup-proof.log",
+      "sha256": "14832e8127d6ad1b07418443ffb963aa75acd8d2572b5999306e771f621db968"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/cleanup-proof.mjs",
+      "sha256": "29de40d6df9161395a6a793b2f96f8566f62fc0da8db1aca720d2bce8601b207"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/embedding-runtime.mjs",
+      "sha256": "bbf451d217a6bd8715743459a1f1f3ff9b395d1515f5d7760e6641979d84f1f3"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/secure-broker.py",
+      "sha256": "35849b28ce7576483111fb9043927e4916208b0d7014b494a92d581fa1a617d8"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final-check.mjs",
+      "sha256": "b1c3c4f423c3e2c8d87dd4dbb60ed7c0f3066d364a17bc3e6138f65ea76e98cd"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified-check.mjs",
+      "sha256": "c3735e6f4361fc7bfcc4bc0efe7661f23760fd20c0e9e9e9dda4e1318a0d6b21"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/evidence.mjs",
+      "sha256": "8e8b75efb18fe1382b212488755746cef2fb95e1d226f387a00cbfaa98a84354"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/report.json",
+      "sha256": "0d812c87ef28e0e80621018762a9aa4a2c1df3067720fc98079718824f1b152a"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/runner.log",
+      "sha256": "00dcac0fb47d90063e6cbf93add481c00ae575ab39b9fb1bd681802ff1b0a62f"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/serial.log",
+      "sha256": "f45ccfc40d17025eaf5436d0d5de0e567a07058245a5072fc72e79cdf71f8967"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/report.json",
+      "sha256": "9248fab7caa836ce71eae393c63ceaf8e1c336567906273ed4867084d7129c22"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/live-tests.json",
+      "sha256": "6bc5a67583f37f555d60fe221c2f45e3eb2dc3154d0eca948e580285e82e491b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/live-rag-suite.log",
+      "sha256": "40a7927058b1473bb14ade04f12ac2d0822395b05677f0e1feaf1fdbaf764b7e"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/migrate-deploy.log",
+      "sha256": "82071f4772781fa1e1128080ab86e208daaeb82a3cc4bbb13dd784d8d49f20f0"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-142415/live-kafka-rag-results.json",
+      "sha256": "294e4c27d010a9ffefeca17ded5db05a4db5eb3d1f10a0d3d812d68727267c31"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-20261104062411686/report.json",
+      "sha256": "226500e4b8f6175ef4de62a3f3a2ff35e255c5128090318ac99ed7e52ea5521c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-20261104062411686/embedding-server.log",
+      "sha256": "55f9cbaa8c2ce7411bc8033cfdfbaa538d482fba7429737ed6fe5f8f2673ac33"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final-check.log",
+      "sha256": "a6231146e04a58505b0ae3e27e78a4014c9aaf915a1093faff884e0fd17a7344"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final/commands.json",
+      "sha256": "66e69870acfafa878ed75c383cd2f023c50f28abea1046eb6af27bbe9f3b408c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final/backend-live-rag.log",
+      "sha256": "1ae732cf710fe0b660f60f9c9db1246cc691c7d79d7b8446bb64bb55ea412c4d"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/database/live-tests.json",
+      "sha256": "0e5993db5668f544aa011aa0ff501f4d0a7d58e229cd0141f901faa579ace1de"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/database/report.json",
+      "sha256": "5a074636c7c1a4f5ac35e1a10d3e646333d5774d2145c22e535595b68d175d4d"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/database/live-rag-suite.log",
+      "sha256": "a24de16e6817ae6ac0e479b4b9ec3ae263fcd0083b7f14e3893cef86fc33a092"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/report.json",
+      "sha256": "e94b123e9bef67856a8592ab7df424599cb8eeb6fe2d5927a93e3f94246c78eb"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-140514/live-kafka-rag-results.json",
+      "sha256": "556dfdd7ee45c6c1c2c9ed89ec0ce2f0dac19259241618375fde910b8e95fd6c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/run-20261104060508680/report.json",
+      "sha256": "be1ff3737e60e5eedb34ed315883eb6397677fee46ad2f2ac710b560db6e24f3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/rag-kafka-real-providers.live-spec.ts",
+      "sha256": "d670800cfbe70f36f78a4a0708351e836159783aba3d71b5ba2385427ac92e28"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/vitest.config.kafka-rag-live.ts",
+      "sha256": "44d52bcf49667c9c236d2d31217f005a158241f2f3efb1fd1ce8ea3347f3412a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/kafka-event.consumer.ts",
+      "sha256": "5dec66eb83358608b1374ecb8b780714752f81736da69de9aea3b786d648c94d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/outbox-polling.worker.ts",
+      "sha256": "9ba5979b51746296b7d0077fe671c0209b2878d10e7ef946bce526e03091cf0f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/knowledge-content/infrastructure/prisma-project-knowledge.repository.ts",
+      "sha256": "f7f35a438e589e44fbabc961c27eecf7262ffa7e7bdd89fe9fa4ac7ad738e77d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/resort-management/application/admin-resort-service.ts",
+      "sha256": "39cf20f877332d95562a52138d27800f3075c1738f9f4186371315d20c715cac"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/knowledge-content/infrastructure/prisma-article.repository.ts",
+      "sha256": "c03e445e19810d1eda987a04e532ef2f3e128cf63f42c3fe6aab36cfd2948658"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/article-rag-event-handler.ts",
+      "sha256": "96397049cdba87b0a3beb36a78b54711618df20efe3b04f7a7d5ed820481b05e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/resort-rag-event-handler.ts",
+      "sha256": "6b9afd125c0efc6eee01e638b1323c7fbcf99adfe09ed347cf22d3bc2eb482f0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/dictionary-rag-event-handler.ts",
+      "sha256": "6f074756631b33512ce4949932e14c7159126c75b8acc774f691d20c194bb1a0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/rag-answer.service.ts",
+      "sha256": "fdc35b31331c6e19cd3021a3246bc1a9e6f995e2df4cf3f1337d68caa8caa575"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/rag-document-indexing.service.ts",
+      "sha256": "83c028532aa3da63194ae3ba7e8d71cb3ff89da611b20b2f46c330ba53192409"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-embedding.provider.ts",
+      "sha256": "da5b1de275d901ead0f12b0dfd762efcff7cbf961a580969831b6ccbed636d8e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-chat-model.provider.ts",
+      "sha256": "cb03b274fd957892922888ee3fae2160de14f9d07c93f1efcb0813a6056735c6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "da3ac8af074d642b79f25c44fbbae43660c69409d3b94abe4aebe6daa86bc716"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/baseline-correction.log",
+      "sha256": "bfee5b65cc1f0143035a7b8f68c24b604bcbb94a02f3db66fcaad373b564f11b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/validate-baseline-and-resume.mjs",
+      "sha256": "45d37df2765d292d8de306f9c7515a86a1026d229c14fb3611bcf9ab9818d217"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/resume-frontends.mjs",
+      "sha256": "9b6fecd523971a51637bad7d6b9004775e9a9c7bbbdf3e3ba1a35fd0facaeb17"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/resume-frontends.log",
+      "sha256": "1a4945d33e9afdd7ea706de2d63202a48a9319077ee9d4acff9019790bc9922b"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified-check.log",
+      "sha256": "6637a11d782a005503c3aaaf467d0d39cb225dc6fada452de49240ed7cf5742d"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/validate-live-local.initial.mjs",
+      "sha256": "23542b8c1c6e144f385e7011165839ba11475035d1f25b836553e6b5cf554687"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/correct-future-runner.mjs",
+      "sha256": "9f4249499186e9fb25bdda60628b9769a86ca22dc4c775ea77d4ddea3d4a0f0d"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/result-totals.json",
+      "sha256": "937bee5d9670c4f73279cd1952641413677aafe5715d885e897a2207a41e7512"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/update-docs.mjs",
+      "sha256": "534b737ebe58cbedf764c650206b7f54a0484ea2ef006fc696de1ffa6acf1193"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/finalize.mjs",
+      "sha256": "fa7d83af3f516cebf47c8eed19f2e253d820470f72b1467ec75f859322d98f9c"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final-proof.mjs",
+      "sha256": "e8f2f4120b5ebbdc25aa2407df2d149101f65f4a1cc6f27dae5d6ee95f332360"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final-commands.json",
+      "sha256": "b71f5dd801b31830603d2856136df9e6e20fe95a3339249575e3df37a5d6a641"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/backend-format.log",
+      "sha256": "ee0bd36742b8700ee3c3df7dfd551d42164be0c20335e53d126a91e301e86d98"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/web-format.log",
+      "sha256": "ffd957ff8aaf946d5a326982fed9d120a6c1c82c185781d61beb79b3e25440c1"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/app-format.log",
+      "sha256": "510ff01c753f9ff19b7e5289f13a3937d6fd5aa118daaa282a352fd51898c7ee"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/backend-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/web-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/app-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/final-audit.log",
+      "sha256": "529935c778d25c09f73e448fde5e87cdc46cc721588ce1403386e5676fdbdc08"
+    },
+    {
+      "path": "E:/desktop/lishiqi/README.md",
+      "sha256": "06c3d85b5c8cd793705e6cb755fec1630893058f26136496419520764a2cda69"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/README.md",
+      "sha256": "cc53359a9596e9a5f4fe73eddb32f7aa8652a4fef95eb4e9dc7c3b05daccf6cd"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/00-项目治理/阶段与验收规则.md",
+      "sha256": "d1ffc67eac1b6ff5009854d6d8ab37d38d36657de0fbc25bcc97eb67a2fcab65"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "6d3756e4174e7708322085e6bd9694fab8599c96a42d69560aa91e3f3430bbac"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/05-测试质量/测试覆盖与现状.md",
+      "sha256": "7dabf34e4343b737aef530878306c64434bb587c50efde86ec48a03f29f5b4b3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/本地运行与部署现状.md",
+      "sha256": "33d46400074248187dfaa1f89cbac03965f6b858ab418a2e4da8e6837d51c25a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/AI真实供应商接入计划.md",
+      "sha256": "19996db5f8a866050ca8332a29e41feb3436499fbb58d0ea79a83cce588996f1"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "b33202145f131e242b7fa20c473dde7c5de475427c5549beb19362d261c3bcce"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "ba598177f73a5cab97437183564e00c4ef2046e96fff7bf56afd325a49078c05"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "8cf1e2eeea84b805520af4d770a49186433acc551a23100c4278a5d284ccb457"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "20f7ac9ceb842aa9342b0838dc5ac3c8ed4250a31035b3255c2f04b0a8b0580e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/multi-source-kafka-rag.md",
+      "sha256": "6a8e135fe3fefe1727f4051d19e6ad7963ff3467d52cf81a2e217a2e77f964b3"
+    }
+  ],
+  "overallGoalComplete": false
+}

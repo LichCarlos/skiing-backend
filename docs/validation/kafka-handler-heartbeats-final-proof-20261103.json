@@ -1,0 +1,298 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/kafka-handler-heartbeats-20261103.json",
+      "sha256": "424d585279736003b052220e36e9e88988d43abf52fb79f435c6bc8d6909f502",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitTests": 1248,
+        "newUnitTests": 8,
+        "toolTests": 8,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "realKafkaIntegration": "not executed; environment unavailable",
+        "newIntegrationCases": 1,
+        "productionBusinessCodeChanged": true,
+        "ciChanged": true
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/kafka-handler-heartbeats-20261103.json",
+      "sha256": "27cfa57f3146beb19e09e7803136f03099ea113ef5d62a4496673d46b0889623",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 3045,
+        "toolTests": 28,
+        "forcedNextBuilds": 2,
+        "standaloneVerify": 2,
+        "businessCodeChanged": false
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/kafka-handler-heartbeats-20261103.json",
+      "sha256": "4892a5d73d7d5ebb8d78141360a0a0cb5bade7389f1fd8c3d897aeec08359474",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 1217,
+        "toolTests": 18,
+        "doctor": "20/20",
+        "doctorWarning": "Could not fetch bundled native modules; logged warning despite 20/20 checks",
+        "exportPlatforms": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "postExportTypes": 0,
+        "seal": 0,
+        "verify": 0,
+        "relocatedVerify": 0,
+        "businessCodeChanged": false
+      }
+    }
+  ],
+  "audit": {
+    "markdownFiles": 260,
+    "checkedLinks": 2281,
+    "broken": []
+  },
+  "verifiedUniqueReferences": 56,
+  "references": [
+    {
+      "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/commands.json",
+      "sha256": "acdd103caffbef87ef31aec6d522af6bf72a5ac9d9dc3914bc4bde94b1e0afee"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/kafka-event.consumer.ts",
+      "sha256": "5dec66eb83358608b1374ecb8b780714752f81736da69de9aea3b786d648c94d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/kafka-event.consumer.spec.ts",
+      "sha256": "6591ed9ef34f2a82174c98051d1312a291ff86e06e3c5cd24ae6a7369e25e8ec"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/kafka-rag.integration-spec.ts",
+      "sha256": "af1e730a360cf11f4d1e3667908380871adce60c037b98296b3f59a0832c3aa7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/.github/workflows/ci.yml",
+      "sha256": "dc914abcd970a49b0194da77a23be96ab68061c8f89d2fca4ad6eaa326b3c9f3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/node_modules/kafkajs/src/consumer/runner.js",
+      "sha256": "fad3247df2e3ba483b94e014e5c5916fd72d7bdfc3b3dfccc5232b60da18306d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/node_modules/kafkajs/src/consumer/index.js",
+      "sha256": "cdf5b3d7c67364b2b55a5c491225c08318054b515e079fa3aa7b7d9f4d8d19dd"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-install.log",
+      "sha256": "625a6173e4159818f2d2b74bb6172dd03c3823c270dc46992ac8356a917ad96c"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-check.log",
+      "sha256": "97b0e1523bfd23de8f1e30958042a49e72887eed9270d84111a57a1197baa2c7"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-e2e.log",
+      "sha256": "4cf68c10b535a72e786054e2dea09599ee300900e81f8577de67d976976d780a"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-final-lint.log",
+      "sha256": "dc2a90bc9c298b8c56cdf35b21a7bd23214786bca1b4a0812d6cefa875b6cef9"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-preflight-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/targeted.log",
+      "sha256": "ad564c5c8bcdc23b3e448ef68f3e64a0dd676d97074fc07168efe7cfd2024e6b"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/docker-probe.json",
+      "sha256": "e6952285053b5be2899a71e659f6f66ce5f8d0b0e8c8b25b375919ff5a411d65"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/report.json",
+      "sha256": "34520a4b76df82055b8c9acd04181389747d2514ed24115757a3875ddbd58de4"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/broker.log",
+      "sha256": "ab8d6cd49782f8ec57b0e73c118dde5bfba740348ab18a307014f63d91d8c4b2"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/targeted-before.log",
+      "sha256": "59feabc3531fe2096ee2b8712b1f41d93431dfe23062acc591a17628cda7dd5a"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-check-first.log",
+      "sha256": "9d3abda1aad8e5fb409c9f40332c500dc906abb8183e39be88d59caa80bc9de1"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/commands-first.json",
+      "sha256": "d630c462b3bcadb711cf8f26b42f21bc4c7b7b076b88a13d492a7e72a130df7d"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/backend-check-second.log",
+      "sha256": "0d880a77c2cb65df20a63ff3e50ee850505bbc01cd5be26864dbc1185e4e63e4"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/commands-second.json",
+      "sha256": "9bc548cc555da6e0acf0566c6c858492e49df3c43b68a65a490b53becaae96b0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "09cebe0f1bedc2cf09e793b73bd7231edd8b2c86add13e120963a116634c50cd"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/package.json",
+      "sha256": "7b09afd9af9e838858cff2ad65af6a3fed6ad31ac88cdd3ddf9099711a1c5ae6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/pnpm-lock.yaml",
+      "sha256": "3f753c8efdc4edbebed8dadeedebc638113d71147fdda39ab946479ce4ebacf3"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/web-install.log",
+      "sha256": "10e2a109e8169fdfcab46ed87d779e7b97508631c8d0ffe703071c0bc00d4b5c"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/web-check.log",
+      "sha256": "a5262b6b6ba53e0bca9cf1ab15ce038946087c5a12040f77bda08690a4dced1d"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/web-build.log",
+      "sha256": "7ff4d708c3bd584c3c4aef4f3b95d256acb07d4dea34a207bc1f47d75b8e3840"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/web/.next/release/release-manifest.json",
+      "sha256": "e633cdd82dcbc7c2199e6405efaa6101da5cacec369ffa3fc381189a7eb89f98"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/.next/release/release-manifest.json",
+      "sha256": "bcdac1fb6ed401992c40efb91753ed1f5b7b8d03f3488006331f547bb001435f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "18bfced5cfd6e21966ed2225a8417703e367496095742c39612b6fe1e6376cd5"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/pnpm-lock.yaml",
+      "sha256": "d661901b9aa0e5a2e6cc4a7894c3ffdec70249a440d5deec583a51b8854718f3"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/app-install.log",
+      "sha256": "c8e0a50e95471e9298186114fbb2391b7dbd1a6a95f7a950bb8c55e4aabc8beb"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/app-check.log",
+      "sha256": "d111842dfa8af0f98dd5709377c8fce035118992f57aa7f9de700ff12ea79c3a"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/app-export.log",
+      "sha256": "7db4c4dd50fb4ab618c229874cdf216994865eafe4618a670b4aa79b5fad587d"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/app-seal.log",
+      "sha256": "8a3848ca077dbd1b413366ded5c0a24360e88d80b02aa3f5acc39cd1cc47b048"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/app-verify.log",
+      "sha256": "ac83f1d419029263df1841e6964058d65292181206f9d4de3c6637c950da7e94"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/app-relocated-verify.log",
+      "sha256": "fbeaee43c7e381a565540bf964f172cca1c091c38ec8e4cccbc44fbfe2441131"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/app-export/linji-export-manifest.json",
+      "sha256": "c88cf5bb0ae14a7388609b0900701a4217f83176fc23b28100c17ad4d3ca1894"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "0e7881bebd96aa45541072743376078dcd28bc1447c448198d0805a9d044a96e"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/final-audit.log",
+      "sha256": "ec092102526a698f709935c5e66d70c4235db6e87d3c814fed62e80c438a50be"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/web-final-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/validate.mjs",
+      "sha256": "b3fa174a7fdfb09a7384ac0aa9531f92f0706dd76e16cf62c3576cf71139f0d6"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/evidence.mjs",
+      "sha256": "9d40d1134439dc6a7ee962d2ba662ccdebfbf41e4fe8b4769600c888cd1e2f6c"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/update-docs.mjs",
+      "sha256": "5b366dce7ad0decf41cc791bf70469edede7be155e26a3b22530238aabcf9013"
+    },
+    {
+      "path": "D:/linji-kafka-heartbeat/20261103/final-proof.mjs",
+      "sha256": "4a0a9321d995f8ddef2d51c89ab1895e5f6d3a0bfe030ab7341fc18508f8217a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/kafka-handler-heartbeats.md",
+      "sha256": "a20ca4802c4eee2803286b3df53cadd5581d441a1d1dbf20a658516188c02639"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/native-kafka-validation.md",
+      "sha256": "768e8235e7370af1c554614e40509b972d011f9c99bf81a125900b27e6a8c4be"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "cc28e87bdc198ddf2ec684a69e9e16ced3ef580262a83075cf3cebffbee8dcc0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "a810e7d9bdbf1073ee4dc6b3f4c80944ceaf0b7147dbd019ffbd2badde90b073"
+    }
+  ],
+  "overallGoalComplete": false,
+  "realKafkaIntegrationAccepted": false,
+  "pending": [
+    "New 35-second long Kafka handler scenario and full 10-case suite need supported broker runtime; Windows AccessDenied unresolved; Docker engine pipe absent; CI not executed",
+    "D-49 merchant lifecycle / D-50 resort lifecycle reasons / D-09 account deletion",
+    "Actual React navigation/browser/device/SecureStore acceptance and persistent client recovery across process/reload/device",
+    "Real providers/storage, containers, signed native packages and remote CI"
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "livePipelineTests": 9,
+  "kafkaTransportInThisRun": true,
+  "skippedTests": 0,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/kafka-real-rag-20261104.json",
+      "sha256": "d63be145ec587395c85b9f5d9f27017fec06d4ba94c24d6e6924b939be1841e0",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitTests": 1323,
+        "sourceTools": 20,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "compiledOpenapi": 0,
+        "livePipelineTests": 9
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/kafka-real-rag-20261104.json",
+      "sha256": "c1ecddecc912edd2a8658f1224aed24f8cae67c4df3f8a80fe791165785f3d1f",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 3045,
+        "sourceTools": 20,
+        "releaseTools": 20,
+        "uncachedBuilds": 2,
+        "standaloneChecks": 2,
+        "productCodeChanged": false
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/kafka-real-rag-20261104.json",
+      "sha256": "18787655085e40189888625f4815652cbb29655cc31563d387ce690c68206e03",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 1217,
+        "sourceTools": 20,
+        "artifactTools": 10,
+        "expoDoctor": "20/20",
+        "platformExports": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "artifactSeal": 0,
+        "relocatedArtifactVerify": 0,
+        "productCodeChanged": false
+      }
+    }
+  ],
+  "commands": 27,
+  "finalizationCommands": 7,
+  "audit": {
+    "markdownFiles": 272,
+    "checkedLinks": 2507,
+    "broken": []
+  },
+  "verifiedReferences": 102,
+  "references": [
+    {
+      "path": "D:/linji-real-rag/20261104/final/validated/backend/.source-export.json",
+      "sha256": "247e10d2f8a905a2e05ff0af056ed2a981df6cd11d844940b02044f96bd23804"
+    },
+    {
+      "path": "D:/linji-real-rag/20261104/final/validated/web/.source-export.json",
+      "sha256": "e226d3093d0a3f7e16fd89bdc1c9e40b3d4635db80ce7945bf32e34510685a13"
+    },
+    {
+      "path": "D:/linji-real-rag/20261104/final/validated/app/.source-export.json",
+      "sha256": "f35a1314c6974238cd628baf68257a7a3d73049671a0dbf64d24915f98ac7fb1"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-source.log",
+      "sha256": "597ed7473454bfc641687858e4d71881e8a55df5d522a714b98cc5c2a8c21d90"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-source-verify.log",
+      "sha256": "4e82a29f64544ebb2cf48ad5ebf6095061f9cab3da3da5a1523746d997dfa534"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-install.log",
+      "sha256": "ea816c0db395b7f4cb3c557e5f1f84c95ff536a17acf96844bfa2d6c091dccf7"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-generate.log",
+      "sha256": "0aa9b502f0468a344d48641cd91560982f0a7f8d770b19cd77f6aa2ee450a134"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-check.log",
+      "sha256": "c439cc031002c776debc58e25eda460eecc31d0096168088c88b30226b68a864"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-e2e.log",
+      "sha256": "af67afe956a29f435a315948de617e2ad68c0c1eb2b096b6a11e45f8a6e80ae6"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-openapi.log",
+      "sha256": "a6b77c9a950e4d03df72fc88ae3952cc2447ce73990ded7b5f1091fe16451182"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-live-runner-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-live-rag.log",
+      "sha256": "f2c4ed2755101c3ae68df303a20a0e303914061ce91eee76cfbd27f0f447f0e9"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-source.log",
+      "sha256": "fb1e64991fa96059c4fe68e788b0c383621ee048463cf307cfca60fccf83f02c"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-source-verify.log",
+      "sha256": "95b8872456b199933472f3a8bd189873e05be81c8aeef3ca118092f2dd37d76b"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-install.log",
+      "sha256": "b224a8ac48c6615974695dc677f20de9da4a74f6aee854dba49aa1face9a4959"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-check.log",
+      "sha256": "9e3b9fadbaf0ffc6f217b3737f6358700e8aabec2b6fa89af488e5ffe3773fcd"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-build.log",
+      "sha256": "fc930f5772583c9429e6b2cdd4997fec28065f6845ef21d16c36bc1110a878e9"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-web-release.log",
+      "sha256": "90f07e32c899fb79e084e68889f35e280377bac4f7be127d8485f4d41b198ddc"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-admin-release.log",
+      "sha256": "e590fdb86cbe0438cf6f2e4b279c665119511e195d0417105b82275cf1390a97"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-source.log",
+      "sha256": "d35b66da3dc865659529895c3454a056fa9eb1b91c39dce0680efcab986bd080"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-source-verify.log",
+      "sha256": "e8021195b981e17b70e0a3c0376744b5ef4eb57e183a847ad763aede5f0a313d"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-install.log",
+      "sha256": "e3f2e1f2ed9d069a530f090f9c5f9bb6ab85a08c373aaab3624683c9108769ce"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-check.log",
+      "sha256": "7eefd1401862de473135e1a2d9d90a8af5b80632adf7b9ec08bbe72933bfb909"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-export.log",
+      "sha256": "3b8470b1908762420e7b88aeefb9e4838b5aed17c8007aa5c0dfe478c6b7a14d"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-seal.log",
+      "sha256": "4a6e97083a2279c268457006a4907e1e750bab6bb6ab6b4d73c354d7acc3a8ed"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-verify.log",
+      "sha256": "986dea7486ce2903959a1fbdb98d5a0608af56ffaac97e726f98b333abc86bd0"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-relocated-verify.log",
+      "sha256": "cc37343b68a7a30f969534cd22880db5bc38c9c88a990ce5a7a3507049ed7e70"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/commands.json",
+      "sha256": "4b14ef43853966e9a5c86c22f11c806a23214ce8b04e4ee2cda8f87017f3641e"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/snapshots.json",
+      "sha256": "13f8e4ceed7a0488b6aa497b0c9351d5746582ca29211c2731f64b2de0c68c16"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/integration-source.json",
+      "sha256": "f4c09b0c3c5061eff6bfdbc23477456b22d8ccd358c56fc1c9199102ccee8e9b"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-module-paths.json",
+      "sha256": "0d8ea1c80c00433ee00203d503c5557cda8de5245d05699a98195e8054ecc528"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-module-paths.json",
+      "sha256": "7c368b442df3233f569957edcb05db0987d590c1bc4454f9cdf7a7cbbdac0693"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-module-paths.json",
+      "sha256": "a2d80204ad53e44a2c7efed0b138c575a88440396bd7a22692bb8d9d3dee6e0b"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/validated/backend/.source-export.json",
+      "sha256": "57b354c649e1fb56b29da7556855d25fc7512c4982bcebb65b83969c5c7049ed"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/validated/web/.source-export.json",
+      "sha256": "19e80a23bb8ca43dff1511bb1e7ae8921556ed85471983ee9dc6c8c560a43995"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/validated/app/.source-export.json",
+      "sha256": "3b7995118b8e8a231f342a240ec7820b4b5911a48d8250642b1fb460cc8f2f5f"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/cleanup-proof.json",
+      "sha256": "bb962c24cb407ef0067e530c868d1a280b839993f313423e4cd87dabb830c8df"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/cleanup-proof.log",
+      "sha256": "39fc6fccebfd9e3dc4adf4f1d6979e06e6ddef7abaee78fa5d77b365ec63b343"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/cleanup-proof.mjs",
+      "sha256": "f1f99c97f91d11c5c02df9fe13a2199ec0ddc9c6b003e6154b061dc6230d2abc"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/embedding-runtime.mjs",
+      "sha256": "b83fae063a93fec0a8f388eb3cab2b046f683ee75763a66b7bc300be4a31e6a8"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/secure-broker.py",
+      "sha256": "35849b28ce7576483111fb9043927e4916208b0d7014b494a92d581fa1a617d8"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/validate-live-local.mjs",
+      "sha256": "727a6c148e58f821397bcc4040603e6c393eb801fd6e7690faa4d4583d40769c"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final-check.mjs",
+      "sha256": "9abe119aa7b336c134f5bf348bd04b33c061b10f979ea6ac95fef39fee86c6e1"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/evidence.mjs",
+      "sha256": "443de34b465afe1ebe975e57076002b44e4b0bdace6bbaad93d7190bd2278e3f"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/diagnostic-typecheck.log",
+      "sha256": "11bee69904d9242c680b32bbad0ff1057c3e5ba147cfdbf96ccc303d4418bed2"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/diagnostic-typecheck-fixed.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/diagnostic-live.log",
+      "sha256": "8908b9993d7c9b596e1ad8f8e377cdd78cad2ee0580a806e2c01b7519ab8026a"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/report.json",
+      "sha256": "fff8d5b40e3982eeb3980ad372c041e89371b57568455502f2d503a1257ea5dc"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/runner.log",
+      "sha256": "9f2c75ff5b7e748cd0265caf9864599ce7556b65fa2734ed5371a754d4741a9f"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/serial.log",
+      "sha256": "d686b8f8b5576cfc6df80a2d5b9f8b13984a45a4eec3dbf89d98dc37629e9243"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/report.json",
+      "sha256": "ee1078666d99483c906289ea4a4dd92a8d6fb9ca7405998e3640109ac33d8e11"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/live-tests.json",
+      "sha256": "734bb8b5f700c2ba9f4acd93775a17e0ccc375d6e117c7003262ce3ab3e0a1d5"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/live-rag-suite.log",
+      "sha256": "84ff24b326d0c61ccf0e39ade89ed926639f995623503d51fc18ead6a65095d2"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/migrate-deploy.log",
+      "sha256": "fe456ed705e46b97545e74697f8abacd9ab2676f5414cb5a07f9c487611a4fbe"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/live-kafka-rag-results.json",
+      "sha256": "8a99930403d2db739b4c68fc7d457b958e6dcecf988e0fb6875410c61f1ceb09"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-20261104043624627/report.json",
+      "sha256": "9f1501e8191faa452fa49b71a85c8147e052cb8aca3be6a017fef2271b5b6a18"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-20261104043624627/embedding-server.log",
+      "sha256": "ca9e776e1fffa0d07cac84afe59eb8562dd33a9384894809650d207c2b6aa2fc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/rag-kafka-real-providers.live-spec.ts",
+      "sha256": "ab37f6dd0f58df6f7d49cf83656460699c0caa2ddfaf192e6a27ca73b8accd45"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/vitest.config.kafka-rag-live.ts",
+      "sha256": "44d52bcf49667c9c236d2d31217f005a158241f2f3efb1fd1ce8ea3347f3412a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/kafka-event.consumer.ts",
+      "sha256": "5dec66eb83358608b1374ecb8b780714752f81736da69de9aea3b786d648c94d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/outbox-polling.worker.ts",
+      "sha256": "9ba5979b51746296b7d0077fe671c0209b2878d10e7ef946bce526e03091cf0f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/knowledge-content/infrastructure/prisma-project-knowledge.repository.ts",
+      "sha256": "f7f35a438e589e44fbabc961c27eecf7262ffa7e7bdd89fe9fa4ac7ad738e77d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/rag-answer.service.ts",
+      "sha256": "fdc35b31331c6e19cd3021a3246bc1a9e6f995e2df4cf3f1337d68caa8caa575"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/rag-document-indexing.service.ts",
+      "sha256": "83c028532aa3da63194ae3ba7e8d71cb3ff89da611b20b2f46c330ba53192409"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-embedding.provider.ts",
+      "sha256": "da5b1de275d901ead0f12b0dfd762efcff7cbf961a580969831b6ccbed636d8e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-chat-model.provider.ts",
+      "sha256": "cb03b274fd957892922888ee3fae2160de14f9d07c93f1efcb0813a6056735c6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "2b38a43f352e24cbef435a43f6d3dd8c3d30e1151b8c1b39b2ace1dd206567c7"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/result-totals.json",
+      "sha256": "c6313cbae315ca12f858116e444e0384d4670429985d5eb499dacaba57bd7389"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/update-docs.mjs",
+      "sha256": "abbec9a5ccc49d2bd8457974537582d7c7283791a314206aa121b745626a9e28"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/finalize.mjs",
+      "sha256": "838db361070aa150d18bc77b933d49eb1a2ff3bf639b45d8edd1687438517926"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final-proof.mjs",
+      "sha256": "ee5f17438284648b8150e250bbe207b39c77f74e3811e7ee946d6acdae1af0ab"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final-commands.json",
+      "sha256": "4bf2c9772351bb88b808eaedaaf2c1fb68e4f1c6d3f44c825661f590282dd05e"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/backend-format.log",
+      "sha256": "25f8f14ad404246eec644a67afde35ba1f473685730bb649735017c8d07dbbd7"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/web-format.log",
+      "sha256": "d80fc16a43b43fce8e21b395c8f267feff42b4f16e3e8409c440e6a57a3c610e"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/app-format.log",
+      "sha256": "a5b2f555e8cce4fc446b9b6625b8b7bb69d915257725e751c7c9f66cde54fe4e"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/backend-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/web-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/app-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final-audit.log",
+      "sha256": "0243ecfbb0656bcb7d77a6e61480ac64f8e1219627f5a2618796441e061cd9fa"
+    },
+    {
+      "path": "E:/desktop/lishiqi/README.md",
+      "sha256": "462a8ccda70d97c9e5cc4f2b91037b136da86a145154f2c157031fb68fda69eb"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/README.md",
+      "sha256": "727637235b73d49418664d64f8b361021ea825932200f31828a64b63b7fe0f5d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/00-项目治理/阶段与验收规则.md",
+      "sha256": "4259fb78831ad6896749e5d9dd0bbf06a7bc2db4a61b23653f4073e7f3cf29ae"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "adbe320f9e4d1686045fe5294c3724a953732e596879a3910326bc8945264b78"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/05-测试质量/测试覆盖与现状.md",
+      "sha256": "77b6e5bc2274e2d8cfad83630bbde3458a0198d981a2ad01a4059c3b438014d9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/本地运行与部署现状.md",
+      "sha256": "fe5871f57b6bc52b28f803d23adebdfb63bbf320955a427b0a625f7fd014c2f9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/AI真实供应商接入计划.md",
+      "sha256": "19c31cefc7c1e965b962275607946310adf609f3b75b243d0ea31c77bbdcfd10"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "bd14123c565a669c5a12ffa5ccc6aac764317112ee9a94ddd9df9e6aa8e5b2e3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "89303f9e372f1d98d012f4e757e202962d538ec9d04cdf1f3b10559daa2d9fc7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "cbb78e33285bc839944fcb3d846902bdbdc845d455b894b361d87c428cb748ba"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "b85225803571cd6d66eac50390ec2024fe5dffa7735b26d0aa0282d40adf4b17"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/kafka-real-rag-validation.md",
+      "sha256": "725752cf2556912df554ceb4ad6ae4e5c217609f51a48c1eca469fc31f5c20e8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/real-rag-validation.md",
+      "sha256": "875237e27c1c1b184c352fae9bcb2f4fa4465e8638891f529939e9b49d85d441"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/real-ai-provider-integration.md",
+      "sha256": "cdf0548290cd787fd2e9c23511843b60110960afa1f09edc3bd511a57f817b83"
+    }
+  ],
+  "overallGoalComplete": false
+}

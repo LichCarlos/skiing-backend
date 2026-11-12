@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04T03:11:28.816Z",
+  "scope": "real-provider-smoke-only",
+  "target": "all",
+  "passed": false,
+  "checks": [
+    {
+      "provider": "chat",
+      "status": "passed",
+      "model": "deepseek-flash",
+      "streamChunks": 5,
+      "outputCharacters": 11,
+      "elapsedMs": 1684
+    },
+    {
+      "provider": "embedding",
+      "status": "not_configured",
+      "code": "missing_configuration",
+      "elapsedMs": 1
+    }
+  ],
+  "processExitCode": 1,
+  "engineeringValidation": {
+    "newRegressionTests": 26,
+    "targetedTestFiles": 4,
+    "targetedTestsPassed": 78,
+    "changedFilesTypeAwareLint": "passed",
+    "backendTypecheck": "passed",
+    "backendNestBuild": "passed",
+    "openapiVersion": "1.51.1",
+    "threeRepositoryOpenapiSha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "notes": [
+    "Synthetic public probe through production provider adapters. No database, RAG backfill, browser or device validation.",
+    "Embedding configuration is absent. Full provider/RAG acceptance is incomplete."
+  ]
+}

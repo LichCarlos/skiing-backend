@@ -1,0 +1,370 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/app-favorite-recovery-20261103.json",
+      "sha256": "1040cb97840a1bbb8bad44064a7afe05ca8919105fdf5e8b25a90aad6ee842f3",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitTests": 1240,
+        "toolTests": 8,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "productionBusinessCodeChanged": false,
+        "nativeRuntimeFixtureChanged": true
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/app-favorite-recovery-20261103.json",
+      "sha256": "4ba25acf56d73e0e30a99833dd4010d5426c1387a637bd2898b7a98a20b3606c",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 3045,
+        "toolTests": 28,
+        "forcedNextBuilds": 2,
+        "standaloneVerify": 2,
+        "businessCodeChanged": false
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/app-favorite-recovery-20261103.json",
+      "sha256": "25866abcd70f01377d9f2ced5bff85848aaa7127d73389ad3fe0971737c0576a",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 1180,
+        "newTests": 17,
+        "toolTests": 18,
+        "doctor": "20/20",
+        "exportPlatforms": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "postExportTypes": 0,
+        "seal": 0,
+        "verify": 0,
+        "relocatedVerify": 0,
+        "businessCodeChanged": true
+      }
+    }
+  ],
+  "audit": {
+    "markdownFiles": 256,
+    "checkedLinks": 2233,
+    "broken": []
+  },
+  "verifiedUniqueReferences": 75,
+  "references": [
+    {
+      "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/commands.json",
+      "sha256": "54108e9d1f11a328e28925d59cedca8456539ad8a7ccda25509105bc29c17df2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/native-http-runtime.ts",
+      "sha256": "a082013e6dc6fe1c6b74afbed768d7b0a48b936cc801dbc9685f30aab870c08d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/resort-list-http-fixture.ts",
+      "sha256": "abc7d8162f535862c6efe28319a13edd70897a1457f9c03eb9ec21d8b154ad45"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/validate-native-resort-http.ts",
+      "sha256": "71e3ca9c2aff456fdc620b7bc059c39f6cbc3da02b93f6c81b94441fb408585f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "8a24f0452f9a94dbd0cbca78b00eba2e9c3c645113a4efbec1e8d10fac809130"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/backend-install.log",
+      "sha256": "88ee164a81aa857501162dce30655e3ce106eb8d49a528a26df2f290169ea3f4"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/backend-check.log",
+      "sha256": "575fd033b66f466a5d42d7c94c6e23128462e0317471c86ba4df772119094124"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/backend-e2e.log",
+      "sha256": "a05068cf98221f6dedd9562749b9b6e8c8d8b0ff9c7f8b2f84f1a75cc36854fe"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime.log",
+      "sha256": "4bca60cea823cd920dfa1544f2499df958833445d06c7d2324af224a4654820d"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime.log",
+      "sha256": "02ca8145b498800dc80ebfada837564789f3a8ff880e0316eb2344042d05b3ea"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/targeted.log",
+      "sha256": "c73c8d821d49e0ba7357c50603bfb4abfc4ccdc7f24c69f9d502a0b970a530f2"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/report.json",
+      "sha256": "5589d76abb03e9f026c625b2f2387ae2ab5b6cedd68f6e3e80a307e9d048eeb6"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/client-result.json",
+      "sha256": "954aebd5b838b783fc6de1b892dac2a3eff6c92d6925468bd6cd0952d400f887"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/ready.json",
+      "sha256": "864630a5ac886581ffa0c2dae0557ced03ef7a62acaa1c0cf3e28251e0e4cfaf"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/migrate-deploy.log",
+      "sha256": "649a16bcb8816ecbb8943557200c2cf4fe96f2162ce11c545008ad917d835203"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/fixture-prepare.log",
+      "sha256": "e567afc388616a3b64c626ea34a39ec9d8f1e67dacbe77b2840ad5ed6db65403"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/fixture-verify.log",
+      "sha256": "27e021fc0da09ca6f8d859b77c1f4bb81181d81d28f7f9da3110fac8d654bfa7"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-cleanup.json",
+      "sha256": "1128f0fe1b1799a4358b52f37a0cf19534db5dc14fc3b2453440566bfbfe0ae3"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/report.json",
+      "sha256": "175654f7928c440394faacfe9dcc1f0b0e8ac83f135718448ffbc0e1a3cedced"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/client-result.json",
+      "sha256": "ec76d667d403869946777daad30bc0fbe4f8c914cb7f82190074710480dd09b8"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/ready.json",
+      "sha256": "a7c3a82af68c8ee27d17b79c6977bf9f3c6065922ff9649ef2e67cdc40f8dc6d"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/migrate-deploy.log",
+      "sha256": "58373c414d8d70580785d19f27f1dca5630cc47bd58c06acd07de530ca57a9af"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/fixture-prepare.log",
+      "sha256": "7bf60279f856d9b2caad909c6527a08a11f52bef20e99baab8bdc3d5f00f9e56"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/fixture-verify.log",
+      "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-cleanup.json",
+      "sha256": "a261e1af116334a706ca21bce4120d1dcb4898f76771219c4318d0e0fa7f000d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "0957753b02c877a13f655a9b7be0df7782e586ae4ae2a3e24fc665f9f1bbcdc0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/package.json",
+      "sha256": "7b09afd9af9e838858cff2ad65af6a3fed6ad31ac88cdd3ddf9099711a1c5ae6"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/web-install.log",
+      "sha256": "70dfa28448e2adf999f00862162ba220494042ee9678a10a0ae437e8d08e985f"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/web-check.log",
+      "sha256": "cd3a488425fe9ba8126a4835be0d6e5752048a9a25bf97217954da1248bcbee0"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/web-build.log",
+      "sha256": "a92be474a016ae2d401259a189ece9dbec7f6dce48243b91206e01111a2fe187"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/admin-http.log",
+      "sha256": "4657a63ae9a69185abe38124c0027f6c54d028ed88a06af4723db7dfa2b10203"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/web/.next/release/release-manifest.json",
+      "sha256": "1b46ba071ea6fcd73be9e65af19dd9f1dcf2557dace288aff50e9e3749a3e40d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/.next/release/release-manifest.json",
+      "sha256": "b7267d1cb8831d271012246a59f52a9735d6bf848a58002b0e9a221d433b6b1f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "b004d5b853a85569d44d7c195056fd38c16b1eda6272957f1836f00023b7ea8e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/favorite-recovery.ts",
+      "sha256": "ffb1b9a67bdfbca26f2847572a45de78bf7674a9ea99ace26df65aec0abf93c2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/favorite-run.ts",
+      "sha256": "ddc37a50a4464c0c5ce03f8c6ecfd590d083e452a905eb50d745529be3858033"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/use-favorite-run.ts",
+      "sha256": "a9a2f6739b698e93022bfd767135dc0adf7315bd74e2016532ac1deb83279c22"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/favorite-recovery.test.ts",
+      "sha256": "fc27fe1f4ae8217938c73d37a2c67a188312920978aa9705d86d2c96179d0111"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/favorite-run.test.ts",
+      "sha256": "8e072069bfb26e5b4edea53fdd6e7dd06572a2c9f9bc81475394474f88a03ed9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/test/resort-list.http-spec.ts",
+      "sha256": "8eb68c5f7b07aca8a47d5b9e7c3123c0e9818f3b62a0a6370923dfbadc264400"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/vitest.config.resort-list-http.mts",
+      "sha256": "9eab4124dbd13b1e944820050fd1d4a641b3309b6eecb9dee485995dd4920610"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-install.log",
+      "sha256": "2fbb4263e0f96fcd574f7ba89e017c4971dc4cf5986f4b68c561239daa9ecab2"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-check.log",
+      "sha256": "b94eb0f8919364ddf68b2dcc135d6f071ec3b8b2b8202eddc90b9265d3ab8ce2"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-export.log",
+      "sha256": "a547e524f6ed9f7c13312eabc3584f7b99656512c43e35d437a4b47388b63f53"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-seal.log",
+      "sha256": "2990264e6c44a35e9ad9ba6e4b0adbfef771877f709e30a8fc9be32f549078e6"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-verify.log",
+      "sha256": "71fb63e020941067268274cc058fe9c136a728623d4989bd990fb5b4baddf714"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-relocated-verify.log",
+      "sha256": "19d165b8f26f32998b2ee63f79ea78f0aa079a1b1b3ba1f80cefcff8511ada71"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-http.log",
+      "sha256": "d866561abf2eb42e61c0ddac0ebcebf0691554fea396b9d1bce63188eb6b0439"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-export/linji-export-manifest.json",
+      "sha256": "b98b5b3c851f338e24fb631ff92ca96146bccb625a75b3234a9211bf9bce6f13"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "98bb67e18245479b31d7488df8e4bbff86cc71eeab854a3babb3eea16276f6c5"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/final-audit.log",
+      "sha256": "d0ba20e262a5b1cc0b9db4cbfefff34f9980ef1aaaad15f06a6eafcddd582612"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/web-final-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/validate.mjs",
+      "sha256": "8fbc9103b6c34ede38554f70027ab8a82aaa4b701f925e616c4a16468b47faf2"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/run-http.mjs",
+      "sha256": "cc8f18fbad58d65b8021099f433976fba70458a7096d24411535c8f5abefaa21"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/evidence.mjs",
+      "sha256": "f24680094018c258f4856517e9ee35802cf643b3f26684fc05b78007486cb36c"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/update-docs.mjs",
+      "sha256": "21ec763d7e882fab32330e5fee0f59acbe59f56811da1605b6a8942be27797f2"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/final-proof.mjs",
+      "sha256": "aad5ca0b3a9c2d67a8f071cb377b2a0ba198f11dd39aa5df23fa97a7e53501e1"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/engineering/favorite-runtime-recovery.md",
+      "sha256": "7980d32370b75a98450708b9b31e841fd588078fa6f495a61f18247ad126fb02"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/app-favorite-recovery-http.md",
+      "sha256": "e5c1ac3fea380a106309c477987f0dbae4974e256853557eb30ba18cce334f96"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "c9bca244cfb0fc66d2eda437d7f1dc609d39b63e398e74f15c1a73ba930ba1ce"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "da64ff889d13719116f73f673adeadd738f16780338f1e2aaf69ac24bb032f35"
+    }
+  ],
+  "overallGoalComplete": false,
+  "pending": [
+    "D-49 merchant lifecycle / D-50 resort lifecycle reasons / D-09 account deletion",
+    "Actual React navigation/browser/device/SecureStore acceptance and persistent favorite recovery across process/reload/device",
+    "Kafka/Inbox/timer acceptance; Windows AccessDenied unresolved",
+    "Real providers/storage, containers, signed native packages and remote CI"
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "date": "2026-11-04",
+  "stage": "asset-upload-transactional-authorization",
+  "evidenceVerified": true,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "newUnitTests": 17,
+  "newRealStorageTests": 7,
+  "scope": "Rebuild effective asset:upload authorization in pending creation and ready commit transactions after real scan and S3 I/O; preserve403 and best-effort rejection/deletion compensation",
+  "native": {
+    "output": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ",
+    "checks": [
+      { "name": "minio-version", "passed": true },
+      { "name": "postgres-version", "passed": true },
+      { "name": "clamav-version", "passed": true },
+      { "name": "clamd-ready", "passed": true },
+      { "name": "minio-ready", "passed": true },
+      { "name": "initialize", "passed": true },
+      { "name": "create-database", "passed": true },
+      { "name": "migrate-deploy", "passed": true },
+      { "name": "seed-first", "passed": true },
+      { "name": "seed-second", "passed": true },
+      { "name": "verify-before", "passed": true },
+      { "name": "bucket-first", "passed": true },
+      { "name": "bucket-second", "passed": true },
+      { "name": "asset-database-suite", "passed": true },
+      { "name": "storage-suite", "passed": true },
+      { "name": "verify-after", "passed": true }
+    ],
+    "migrations": 24,
+    "totals": { "assetDatabase": 28, "realStorage": 24 },
+    "authorizationCounts": {
+      "before": {
+        "roles": 3,
+        "permissions": 101,
+        "userRoles": 1,
+        "rolePermissions": 130,
+        "scopes": 0,
+        "merchants": 0
+      },
+      "after": {
+        "roles": 3,
+        "permissions": 101,
+        "userRoles": 1,
+        "rolePermissions": 130,
+        "scopes": 0,
+        "merchants": 0
+      }
+    },
+    "finalCounts": {
+      "users": 1,
+      "assets": 0,
+      "sessions": 0,
+      "logs": 0,
+      "events": 0
+    },
+    "bucketEmpty": true,
+    "auditInjectionRemoved": true,
+    "databaseStopped": true,
+    "servicesStopped": true,
+    "portsClosed": true
+  },
+  "tested": [
+    "Custom active role grants and multi-role union without management or merchant identity",
+    "Guard passed but membership revoked before pending creation:403, no asset/scanner/PUT",
+    "Actual clamd scan completes then account or permission catalog is disabled:403/rejected/S3HEAD404",
+    "Actual MinIO PUT completes then role is disabled, member unbound or grant deleted:403/rejected/S3HEAD404",
+    "Actual scanner and SDK methods retained under deterministic post-operation database change observers",
+    "No signed URL or ready response; PUT and compensation DELETE exactly once, no automatic retry",
+    "Normal configurable multi-role upload downloads exact signed bytes",
+    "Existing asset PostgreSQL/reference/management/audit regression; real private storage17 prior scenarios retained",
+    "Unit tests cover cleanup failure without masking403; no guarantee of successful physical cleanup during outages"
+  ],
+  "clientProtocolChanged": false,
+  "apiOrSchemaChanged": false,
+  "dependenciesChanged": false,
+  "backendChanged": [
+    "scripts/validate-native-storage.ts",
+    "src/modules/assets/application/manage-assets.spec.ts",
+    "src/modules/assets/application/manage-assets.ts",
+    "src/modules/assets/infrastructure/owned-asset-authorization.spec.ts",
+    "src/modules/assets/infrastructure/owned-asset-authorization.ts",
+    "src/modules/assets/infrastructure/prisma-asset.repository.ts",
+    "test/assets.scanner-integration-spec.ts",
+    "test/assets.storage-integration-spec.ts"
+  ],
+  "frontendUnchanged": {
+    "web": {
+      "files": 581,
+      "baseline": {
+        "path": "D:/linji-storage-recovery/20261104/delivery/web/.source-export.json",
+        "sha256": "a027cba33d69fbac1077b98a966aadb1ed9af10ceb6e6040693bcc0094434b53"
+      }
+    },
+    "app": {
+      "files": 238,
+      "baseline": {
+        "path": "D:/linji-storage-recovery/20261104/delivery/app/.source-export.json",
+        "sha256": "65dddc7bdedbc0c68a68daac2c8b80c29b8c103f2e7b73cec109fa2abbb54dba"
+      }
+    }
+  },
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-upload-authorization/20261104/final/validated/backend",
+      "sourceSha256": "bb4e623a9048bd2e3221c7c0633894f3bea37d342b9d3a333af74b7972178846",
+      "files": 863,
+      "store": "D:/linji-source-verify/20261104/stores/backend",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-upload-authorization/20261104/final/validated/web",
+      "sourceSha256": "d0b4157463b5c881ffdf4f8d5412d7e4b19df2db437cf8e4419f67123b6ee51b",
+      "files": 724,
+      "store": "D:/linji-source-verify/20261104/stores/web",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-upload-authorization/20261104/final/validated/app",
+      "sourceSha256": "3c2fd0aea19361b0c07a36e954e3e7c734a8298d69f39e9cb11fadf09599f7d0",
+      "files": 328,
+      "store": "D:/linji-source-verify/20261104/stores/app",
+      "reusedOwnStore": true
+    }
+  ],
+  "artifact": {
+    "artifactKind": "expo-bundle-export",
+    "files": 88,
+    "contentSha256": "6c17dc02b659ee8fcde1f95ca1111a96bf2be57063d66299dd754096a855e100",
+    "openapiVersion": "1.51.1",
+    "openapiSha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8",
+    "nativeInstallable": false
+  },
+  "evidence": [
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-source.log",
+      "sha256": "1caac6523235e3ee59c4c4279cdd446169b32b2a7983061de8896563fa119f67"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-source-verify.log",
+      "sha256": "ed429615f1ab84be78eb325e09a39f2dcb5f6ac7a356c78e3fe0aac14bdac6fd"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-install.log",
+      "sha256": "e4e1f7370dbd99202d60c7517ca9497563f4163cc36507743288f6960bed8e28"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-generate.log",
+      "sha256": "a64cec61978acc81793f33275cc62ef2f89e40b43da846923d2cc2e46f996ebf"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-check.log",
+      "sha256": "bc1cb18a2e9bbe5123a45d16898ae515991c3869ea9fccb9b727d5aafc16c11d"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-e2e.log",
+      "sha256": "0ea962afdb3a8d503e02c117d5a9a1c02a38ed915709e17dbf97ef0ff01ea63f"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-openapi.log",
+      "sha256": "cae457b40b8995345fdd1769a678321181638712d074a72eaa981afce0c2fd97"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-native-storage.log",
+      "sha256": "39c42208dd208774c35a8b7e704b8133d95f324d0182621ef7355a8b6ff82026"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/web-source.log",
+      "sha256": "5ad2c551e7eb2184c3e5a3728c457c709dd7899fe193ea413957c352eba3d544"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/web-source-verify.log",
+      "sha256": "e25cdd71c3b6fc72ae1133160d8a1331b23a3d37f18ffc581296eed601dfdc73"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/web-install.log",
+      "sha256": "0716a60886a1eda8a8eec58ad3140f3c1c473449cbecb95902ca7b605dff6869"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/web-check.log",
+      "sha256": "f09b44165233c817c23d3e1ebf46049bb14ca56fbf1cbd80114ddd92cc15dd60"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/web-build.log",
+      "sha256": "b741066d38bbddb7227ad882a745b591bd02f90c8cea36fd9ea8583238291aa0"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/web-web-release.log",
+      "sha256": "377fe03adcd803f5c5dc5b606424b68095e08ac498ffd6b14b4963c35dfbbf49"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/web-admin-release.log",
+      "sha256": "936f5f4404edd98e62b9835bd0ef787682d590b2091d558396a4b8a4b93ff0d3"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-source.log",
+      "sha256": "bf9d7032dd43fccc9a54662f9df837bdffafe07a07b324e73fb53b212def2fd3"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-source-verify.log",
+      "sha256": "a1752ef8f7557d0f6d8ccf04e8d6f7bd58dc5ac78ac69d2b8729ebe6ab471f67"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-install.log",
+      "sha256": "47c531ac3977f4fd8953a5100a8566d77c9fa6329efa74ac0215aaa40c549efe"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-check.log",
+      "sha256": "116c6165d522945e4dc135ab1f16721ac902b398e4baa407897fb6f4680d1508"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-export.log",
+      "sha256": "54ef4912be5006ff148dd56aef71ba2de8103840b36e38a553608933e3eebdf5"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-seal.log",
+      "sha256": "84dc9784be932b8009ba3c3f9f3c358af2fa305c69f68f4b5a81aabb0f3a4ad9"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-verify.log",
+      "sha256": "75652dbc566ebc8df8802688b35e77974bcdd7da05890b62d48763d6acf2b782"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-relocated-verify.log",
+      "sha256": "6c1db9fab661db2a63422ab76e545e83afa86702a30cf4b7714146a09e93c24b"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/commands.json",
+      "sha256": "5b028ea898bb13575ad627e2fe5309c61337a9c0ce376f947a38d6ebf8290f63"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/snapshots.json",
+      "sha256": "ac76cdb09be557a4e3ba88bc48cd69e426f1cea25359fa39a61f4f3eebc773d4"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/backend-module-paths.json",
+      "sha256": "cb4367fcbab2c695c451af37cc41b19268e45adb3bddd4b35e4db2f5b613ee2f"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/web-module-paths.json",
+      "sha256": "05cea34fe372052923af1e0e3543f4a526635d9981a81e87e438146b80dc21a6"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/app-module-paths.json",
+      "sha256": "6b5c357db0b3c5acebb29ef73e95fff39c54f211324fdd529a0691a781a94a52"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/validated/backend/.source-export.json",
+      "sha256": "5ffa05a3695d6035c6a5a34d850374105a84c60981d90c7e8a76688595ff1f4a"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/validated/web/.source-export.json",
+      "sha256": "0cc3e2818b03b9a8b88b5d8bb808a2d27447501497b633817f64c2aa48156ab1"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final/validated/app/.source-export.json",
+      "sha256": "53522f23b416f16314dc2560bab5ac8e83e3c022bdd474b831b5ee886f0dc69e"
+    },
+    {
+      "path": "D:/linji-storage-recovery/20261104/delivery/backend/.source-export.json",
+      "sha256": "0d39dd8d0d90ecd6a1038ef41742525369a1ad87d1bdadd1a2a2724e7ad50a39"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/final-check.mjs",
+      "sha256": "9cbaee56678c3459a02b7c768b431da14c25bc5bf82bfba74d3d502751f4af29"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/evidence.mjs",
+      "sha256": "966d744b3eab1ebc0df33a9a2820a385f8949d12b18742ba26a3f1f77493cc90"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/asset-database-suite.log",
+      "sha256": "97a8bb8054518ec5aa49a5433ea449ce350f52a0c1b17d5efb074868b54fcb0e"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/bucket-first.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/bucket-second.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/clamav-version.log",
+      "sha256": "6e216b71ce01ff83380e38674ecd36d96526615544b3adeb9dc4de7dea345fed"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/clamd.log",
+      "sha256": "f52395f45bce320d8dd0cf2f99c2be1298d4164a6c40c2fd44555ec509cace9c"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/initialize.log",
+      "sha256": "a33912a4d8df1226f0b00c2c0ae4c9c678b67a4b72e287768b17ed755c78e52e"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/migrate-deploy.log",
+      "sha256": "16af8b2207df3367eda514a35ba568c6add3e55d5992ced7df7f820a59fd9136"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/minio-version.log",
+      "sha256": "fa74355260cf82c63b182910e30ecf2167bf691f4c80549ba4c4f811bbed9ef5"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/minio.log",
+      "sha256": "edbbc825ce477deebbfb712b43bdfd59a5667a043e62001eccf51727f659f13f"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/report.json",
+      "sha256": "abe3bf48ca47330955ec82ce3dab391c8ba1abbb894ae8d54835fd68d4cba5c1"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/storage-suite.log",
+      "sha256": "5e15f1000fa4be50a221688e8d6d2196476b266605103a6f570392eccef8566c"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-upload-authorization/20261104/native-runs/linji-storage-hAwjaQ/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    }
+  ],
+  "paidProviderCallsThisStage": 0,
+  "kafkaIntegrationRerun": false,
+  "fullBusinessDatabaseSuiteRerun": false,
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Serializable transaction snapshot authorization does not claim every possible commit/revocation race is prevented",
+    "Best-effort cleanup can fail;403 alone does not prove object deletion",
+    "Previously issued signed URLs remain capability URLs until expiration or object deletion",
+    "Prior scanner-only EICAR suite fixture now binds existing registered_user role; that separate EICAR environment suite was not rerun",
+    "Target browsers/Expo Web/native devices/signed packages, production TLS/storage/monitoring/capacity/joint recovery, containers and remote CI",
+    "Earlier real-provider500 root cause unknown; no new paid model calls",
+    "D-49/D-50/D-09 and prior denied cleanup/service starts unchanged"
+  ],
+  "repo": "backend",
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1435,
+    "sourceTools": 20,
+    "httpFrameworkTests": 177,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "realStorageValidation": 0,
+    "assetDatabaseTests": 28,
+    "realStorageTests": 24
+  },
+  "deliveryVerification": {
+    "snapshots": [
+      {
+        "repo": "backend",
+        "cwd": "D:/linji-upload-authorization/20261104/delivery/backend",
+        "sourceSha256": "0fa5a83b4b5b332c1253e8765fe5439b6b93510bdc3d30a7d8eb2d1df35eee7c",
+        "files": 864,
+        "productIdenticalToValidatedSnapshot": true
+      },
+      {
+        "repo": "web",
+        "cwd": "D:/linji-upload-authorization/20261104/delivery/web",
+        "sourceSha256": "36a8d797e6f73df830a783f93321019c0c9b5f50a26e966efc83cf70b1fc13c9",
+        "files": 725,
+        "productIdenticalToValidatedSnapshot": true
+      },
+      {
+        "repo": "app",
+        "cwd": "D:/linji-upload-authorization/20261104/delivery/app",
+        "sourceSha256": "dead7ff373911afd4026b854eb87838f84fdc79f257dd4fd663857e968e0222d",
+        "files": 329,
+        "productIdenticalToValidatedSnapshot": true
+      }
+    ],
+    "deliveryCommands": 7,
+    "productIdenticalToValidatedSnapshot": true,
+    "productCodeChecksReusedOnlyForIdenticalFiles": true
+  }
+}

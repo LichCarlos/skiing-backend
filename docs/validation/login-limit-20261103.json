@@ -1,0 +1,281 @@
+{
+  "date": "2026-11-03",
+  "passed": true,
+  "decision": "D-51 user confirmed",
+  "openapi": {
+    "version": "1.51.0",
+    "operations": 143,
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "4fa8529fe48872254651a095f20ce04cd7c94fe349d00e4149824bcdebfa03f8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 142,
+    "unitTests": 1220,
+    "sourceExportNode": 8,
+    "e2eFiles": 9,
+    "e2eTests": 166,
+    "buildAndOpenapi": 0,
+    "lint": "0 errors; 1 pre-existing no-unsafe-finally warning"
+  },
+  "database": {
+    "output": "D:\\linji-login-limit\\20261103\\runs\\linji-native-4Jc7uN",
+    "checks": [
+      {
+        "name": "postgres-version",
+        "passed": true
+      },
+      {
+        "name": "initialize",
+        "passed": true
+      },
+      {
+        "name": "start",
+        "passed": true
+      },
+      {
+        "name": "create-database",
+        "passed": true
+      },
+      {
+        "name": "migrate-deploy",
+        "passed": true
+      },
+      {
+        "name": "seed-first",
+        "passed": true
+      },
+      {
+        "name": "seed-second",
+        "passed": true
+      },
+      {
+        "name": "verify-before",
+        "passed": true
+      },
+      {
+        "name": "database-suite",
+        "passed": true
+      },
+      {
+        "name": "verify-after",
+        "passed": true
+      },
+      {
+        "name": "stop",
+        "passed": true
+      }
+    ],
+    "completed": true,
+    "stopped": true,
+    "postgresVersion": "postgres (PostgreSQL) 17.11",
+    "port": 61916,
+    "database": "linji_password_validation",
+    "pgvectorVersion": "0.8.1",
+    "migrations": 24,
+    "files": 35,
+    "tests": 839,
+    "newLoginLimitTests": 9,
+    "firstRun": {
+      "output": "D:/linji-login-limit/20261103/runs/linji-native-GLlrYV",
+      "passed": false,
+      "reason": "Two old suites repeatedly logged in during one fixed window; corrected only their synthetic bucket fixture resets",
+      "stopped": true
+    },
+    "postmasterPidExists": false,
+    "initialPasswordExists": false
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/identity-access/domain/login-limit.ts",
+      "sha256": "bc877f4edc1d963e270bf63d80e4c981acc0f48d0fabf857d0c1993d155297f0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/identity-access/application/check-login-attempt.ts",
+      "sha256": "20b7f39c2945a6bd0183201b9cd11c4744b0b49618f4ed41ea2342020e7cf0ad"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/identity-access/application/ports/login-attempt-store.ts",
+      "sha256": "027b4f711d5b796c75fe648dbf9873e0b7f9bc48a531060252e28f73b62f18ea"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/identity-access/application/login-user.ts",
+      "sha256": "255e35a1a51c50e2efda2f761431b8b4ce05e1b9998664086550cc74bd94e2f0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/identity-access/infrastructure/login-bucket-keys.ts",
+      "sha256": "31231e47702ac5fd5983c1015e00291c0c5efd03fd27ff7110e94f31a3350564"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/identity-access/infrastructure/prisma-login-attempt.store.ts",
+      "sha256": "a7b79140171e2ff9612d4d6b41e904a33d4092d09dc4e5ccb586d498361faba7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/identity-access/infrastructure/login-limit-retention.worker.ts",
+      "sha256": "b91e3bb69b2ffc5e4afc9c38755fa5d3a2055af92a65d47b51d94a5530390d84"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/identity-access/identity-access.module.ts",
+      "sha256": "01414428801b345555ec4095c2ce017151d40c8237255eb00fd515b428c56d0d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/identity-access/presentation/http/auth.controller.ts",
+      "sha256": "fe8f2e35d6ae7380f7daf46aaaf05ad266b7ff2010db56a0e83ac442fc526157"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/shared/http/trusted-proxies.ts",
+      "sha256": "d8d832e3f3a2cd7c8a43522d66bee0827a37578cbe5309bc5ca0ae38941de974"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/shared/http/configure-http.ts",
+      "sha256": "a94cad5559ab5ce4e7fa5910cd73c7230ad1eec231d8d52ee761b80628ec893c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/main.ts",
+      "sha256": "3117d2e2ba20525d6b13b5bd743b6d65e3541f374be5c4044316c1ecb0240abc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/openapi-export.ts",
+      "sha256": "8eeeac36393bcd036928d627683b9aab80a82c72cebaa5cfd65b51bc5d55af55"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/prisma/schema.prisma",
+      "sha256": "0e1b09fed38dfcc97e1383f496ad0ddb9d21d56c195c265b5f423fab05885398"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/prisma/migrations/20261103000100_login_attempt_buckets/migration.sql",
+      "sha256": "bf28d5ac30fdff1be81ee4ae86bf3efd868390fea6234e5b654a335d184c7359"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/login-limit.db-spec.ts",
+      "sha256": "f6e9b69d73ab7901d1fee88939c6b55bee26f1585f3c6dfd8a49549c200ef355"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/login-limit.e2e-spec.ts",
+      "sha256": "3fcc96263c70c083bcb87b0aa6358a9fb7f88024fe37c52adb068d9321fad92a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/login-limit-process-probe.ts",
+      "sha256": "0999accb493690b2ed7a3396f84a38060b2dabc0c5e8ceabad9ed0b957c9aa9a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/verify-database.ts",
+      "sha256": "27076cca443d29aac3c33b9601e8aa29f5dca0bcbe805eab7cc0f8f06ef69229"
+    }
+  ],
+  "logs": [
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-app-doc-format.log",
+      "sha256": "256377796b89e120339e258ac7d35b870af6ee7fb954f08c5c3fc4460fe4c4d0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-check.log",
+      "sha256": "0552875c1204f5629bc1971718d6d59b7d1740d1aaec07dfda3d4a37bda1a94a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-doc-format-2.log",
+      "sha256": "c50012137a05a1d1967331e7e8950c2a5e0a03c4336a7d407edbbede5c17c2cb"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-doc-format.log",
+      "sha256": "97a9030c5625681a68c796b4afaf01d1f52c9474796338d339d535bf7fb67c91"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-e2e.log",
+      "sha256": "e6753d5ffde09e0b11439d32a504d5270119836c3b14a5ca2a692d6407d4df9b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-final-openapi.log",
+      "sha256": "b85f8f57c6cbd915c66073bb60e64b317976a4233d7c6fd7286046fb715d593a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-fixture-format.log",
+      "sha256": "809ed8be97996f641329d627724fdfc79a6416dda0367b85c19639fc0ad1ff3e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-focused.log",
+      "sha256": "105b3b2810dce83c5b323dec554e1ae9afda0058f9ab8e869b7bdca3056db25f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-format-db.log",
+      "sha256": "dccfaf11f1d08e335e968fb8cd43c2ba2fed30daf71f49d0d613579cc8940134"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-format-final.log",
+      "sha256": "d873b3b85cfdf50e0953a74a7cb09b3b545e9970b58d5d193440e9c430819473"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-format-tests.log",
+      "sha256": "af3ba6d46307d40f13aeb23d4803d3fb4f1c37f3c97b2b822a5ab025261b24ab"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-format.log",
+      "sha256": "d644a98b3fd1b191e5fcf63bac39c50170ae9b44915f3f8b3aba908515d0a951"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-generate.log",
+      "sha256": "e051cf0eae8eaff38b03e39bd09652f7210289e501c9f7c870068fdf91fe203b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-http-format.log",
+      "sha256": "b3911eeb5fe9dc7265e8e82cbe7ece3e35b4f91e1e9f7b41d5c37e9606fa0d9d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-http.log",
+      "sha256": "1d40f9719434176350c8606156af44cce8ce8ffa1b2c573de9b4d261bdec16f5"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-install.log",
+      "sha256": "0c6de7b35ed6702bb65f28defd52536a0957a8bee30761f753f6e5466e72a8f1"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-lint.log",
+      "sha256": "f3f3025dd5cdcfbccfaf1f1be842d0bd5252bc018c74e9c79d9a9d50537c0e8f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-native-db-first.log",
+      "sha256": "2d0120b86a8f18498e0e0b509dc4b522d4b0df2cc90403c6f01ef02605eb2df0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-native-db.log",
+      "sha256": "6e3b8b411817f6cbaa6afc424ad4d160fbe0fcaad5dbe68bf4ffac6498550ba5"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-openapi.log",
+      "sha256": "4076e45ed81c80bf858e61f70dca678aed38b0490a94ff9f960d0d445b246d82"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/login-limit-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-login-limit/20261103/runs/linji-native-4Jc7uN/report.json",
+      "sha256": "ef803f0b063fdffeaf945b50d71faa921799c0f058d65fbca71248daa29a67ee"
+    },
+    {
+      "path": "D:/linji-login-limit/20261103/runs/linji-native-4Jc7uN/database-suite.log",
+      "sha256": "7a9d52679ff8c32c0280e48476582bb33906e88859788d29cace5595c27501e6"
+    },
+    {
+      "path": "D:/linji-login-limit/20261103/runs/linji-native-4Jc7uN/migrate-deploy.log",
+      "sha256": "2b9718bd07ed1716040240f3a0bbd39ec8a3fdc7e56c924894b0964cd8205b7a"
+    },
+    {
+      "path": "D:/linji-login-limit/20261103/runs/linji-native-4Jc7uN/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-login-limit/20261103/runs/linji-native-4Jc7uN/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-login-limit/20261103/runs/linji-native-4Jc7uN/stop.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    }
+  ],
+  "limitations": [
+    "Native PostgreSQL on Windows; no Docker restart or container acceptance",
+    "No deployment, remote CI, production proxy, browser/device or model-provider acceptance"
+  ]
+}

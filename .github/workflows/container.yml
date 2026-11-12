@@ -1,0 +1,41 @@
+name: Backend container
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      CONTAINER_RUNTIME_IMAGE: linji/backend:validation
+      CONTAINER_TOOLS_IMAGE: linji/backend-tools:validation
+      LINJI_CONTAINER_VALIDATION_DIR: ${{ runner.temp }}/backend-container-validation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm db:generate
+        env:
+          DATABASE_URL: postgresql://unused:unused@127.0.0.1:1/generate_only
+      - run: docker build --target runtime -t "$CONTAINER_RUNTIME_IMAGE" .
+      - run: docker build --target tools -t "$CONTAINER_TOOLS_IMAGE" .
+      - run: pnpm test:container
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: backend-container-validation
+          path: ${{ runner.temp }}/backend-container-validation/**/report.json
+          if-no-files-found: ignore

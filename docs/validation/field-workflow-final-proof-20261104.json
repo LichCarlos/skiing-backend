@@ -1,0 +1,384 @@
+{
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "workflowTests": 13,
+  "databaseTests": 858,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/field-workflow-20261104.json",
+      "sha256": "a2a95031e8888e54329d64bd033fa52e9793c94f04f3bc51845f1922b7b2b7cc",
+      "results": {
+        "unitTests": 1271,
+        "sourceToolTests": 20,
+        "httpFrameworkTests": 173,
+        "databaseTests": 858,
+        "newFieldWorkflowTests": 13,
+        "build": 0
+      },
+      "gitRoot": "E:/desktop/lishiqi/backend",
+      "dirty": true
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/field-workflow-20261104.json",
+      "sha256": "bd9a17cfefae289a6784ea10dfe774e5869ec8adb742432d99a699da945791b1",
+      "results": {
+        "businessTests": 3045,
+        "sourceToolTests": 20,
+        "releaseToolTests": 20,
+        "nextBuilds": 2,
+        "standaloneVerified": 2
+      },
+      "gitRoot": "E:/desktop/lishiqi/web",
+      "dirty": true
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/field-workflow-20261104.json",
+      "sha256": "e3aaba9220358f46c496aa5e0bffc4b6638e2b17b9c7d5d6fec3a1e267a3881e",
+      "results": {
+        "businessTests": 1217,
+        "sourceToolTests": 20,
+        "exportToolTests": 10,
+        "doctor": "20/20",
+        "platforms": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "exportFiles": 88,
+        "nativeInstallable": false
+      },
+      "gitRoot": "E:/desktop/lishiqi/app",
+      "dirty": true
+    }
+  ],
+  "verifiedReferences": 78,
+  "references": [
+    {
+      "path": "D:/linji-field-workflow/20261104/stage-attempt0.log",
+      "sha256": "410001b2927df6653d48bf0a13fed314d4533d4c79b362789322173ca14b5022"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/backend-source.log",
+      "sha256": "935d98d75241869658d5edfeb1ea5dbe0acd030bfd884a1902afd68815fdad95"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/stage-console.log",
+      "sha256": "21518f655a269d2e615ad28b2f449627c73692de863712d2946e45e91fb87602"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/database-runs/linji-native-ldS4EN/report.json",
+      "sha256": "20e0421d5ea6250fb8a75b68cd80ee034d4557f0583112b191c5fa02cee47cf3"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/database-runs/linji-native-ldS4EN/database-suite.log",
+      "sha256": "c51c6f08b45f85b25836a9523b147c5071bd41d84c527e7408c39c784f4b5f17"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/diagnostic-console.log",
+      "sha256": "b409402deb71c3d2adca5934ad8de263e5bc885e6f7c1473f401f3d5a5ae71f5"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/diagnostic-runs/linji-native-q8gQFb/report.json",
+      "sha256": "ee2f79b822a9ab1e704953b1b4e264a75f985fa1296436c5ef6c630f9cc10b61"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/diagnostic-runs/linji-native-q8gQFb/database-suite.log",
+      "sha256": "61a1510017424a712f3f0cb7d20ea56318ebb9878d0000ac2355f5c98683a29b"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/diagnostic2-console.log",
+      "sha256": "4c0a19c9ea0c1249954a90e2f16d5e12bf48c2eb510f7e3ba6fd722962e19820"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/commands.json",
+      "sha256": "3fe2f0d52b00301378fbae03a1884c2e2e55d7e05b1ee7e6209f31ede1e3974f"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/validate-stage.mjs",
+      "sha256": "7cdc8d661c61dac5952ab7986f8ed79d3530cd9090f040426c6367270032a134"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/candidate-comparison.json",
+      "sha256": "13bc5037c1d82ea0a66562121fb8ce9792c8cfe3ae4c73e32cae5192cc2afe52"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/custom-field-workflow.db-spec.ts",
+      "sha256": "93b7604a810f191e14265f2ee7df9f0875765c409f2b972b6183c2f197f97b89"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/report.json",
+      "sha256": "63d13d0deabb2eb65b8e12b71a8be8a1fd94933d9143c11144fca095adda0201"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/database-suite.log",
+      "sha256": "e50ee977091c09c2254d9c5b7f424ee22e1853f38be3689e2a375c7c89fc1c9a"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/initialize.log",
+      "sha256": "8123ae3d8b44c53beccd59b74017db105f018b4c2186f29aafad73e6c941cdf4"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/migrate-deploy.log",
+      "sha256": "3b272eb3e4655cdf546daf4399faa53bfb76f09660d996df44fbbd2a755628f5"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/server.log",
+      "sha256": "fe12a5ed81d50a43026ba1e98a8980d413ac773c2b3fefe9aede0e3376042326"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/start.log",
+      "sha256": "83468a58b9366155730bfcd24e4f618de9349e20a511b54255cb11627a0138eb"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/stop.log",
+      "sha256": "3a6747065de8c2dbc66a6baa73d5ab09c2c03eb8851704f973ac4b886e6805f2"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/validated/backend/.source-export.json",
+      "sha256": "753f4ab74471e08bfc34682dd127e6dee926f183672966f1b52e0e35befc48c2"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-module-paths.json",
+      "sha256": "99f481aade200451e16ea9b99b45fcd712b6bcc9d131a3fecfdf1c2e647273d5"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-source.log",
+      "sha256": "8470a31bfc6784a25a6824b7ac675c50d3a136a64a7dbf59988fbba5dc526fad"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-source-verify.log",
+      "sha256": "37f9f2f51648cab651c04a124b050f8bbcfe01512f80d7e3e33b48f1341ec1b9"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-install.log",
+      "sha256": "a68496cf1f88390f556ca0ec87fe0b8b895f7a7405b11cebf3910e17496021f3"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-generate.log",
+      "sha256": "84de69301fbeedee8dd69b60b404e45d5c95b1ef3a21f108174b7746be0f7415"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-check.log",
+      "sha256": "b2b50aa4646d5d9119aae2adce7a7ee307a5900e8a12524a84cacddb1c819adc"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-e2e.log",
+      "sha256": "16b82960d998b236559456302bd6ade773afc74dadacfa1e7d9fd45e47bef54e"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-openapi.log",
+      "sha256": "07cbe12a379c0c587bb44b331cf5d47f7976bdb50924f7810dae1181fcb66b80"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-database.log",
+      "sha256": "379398e362efd24b256fc089b4742f02978e454dd2bb945fe1041ecd9ca6185c"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/validated/web/.source-export.json",
+      "sha256": "a9d60a8d82f0ef79155d5d678e5001c7b4d2df003cd87e60d8eeb5469ae370e3"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/web-module-paths.json",
+      "sha256": "4cb7a8cffea9427c0059f6e0e9e2ec6cf604710479421a4c2530197764774ee7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/web-source.log",
+      "sha256": "0da0419717d74a4c5e46ba5a8f691fe8568dfaa8572bb385002d6b16c01ef885"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/web-source-verify.log",
+      "sha256": "ea83ebb0471c21e5f4c831da88517b10b21a285fb99e9e611c6a9c7d23384259"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/web-install.log",
+      "sha256": "6b016f5206d8e6d4f008615f8e54f9ddce6dc2f59c433e9dff97d12f4981bf89"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/web-check.log",
+      "sha256": "cd530b42e8574fda1e9562d1caf71f27179eb85eef11ca35e2422d8fb955e724"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/web-build.log",
+      "sha256": "daf931b6a1e91508f0b2cad657a6602ae7579724fca476ce3eb449056643cc93"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/web-web-release.log",
+      "sha256": "f8102b074e42322a7019b0456a4395b9fd91f31c5e8dae2d926646fc4d0b5b14"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/web-admin-release.log",
+      "sha256": "978119929b3ee5fb8fe5cc97f3b55169a97727014edbd6a67f858d09480185cf"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/validated/app/.source-export.json",
+      "sha256": "99654943d4e2f31fadf0de1a93c0a4530944fc450dc7a81a0500c2b34d6c9c6f"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-module-paths.json",
+      "sha256": "103cb3076fe639cef4229a89566319c841f16f1304ca981c7f0493e9b3f2e057"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-source.log",
+      "sha256": "1a10b11df622c2388ac66aa2c71871ef354752b8b758c4fca9f41bef8f1f1cfa"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-source-verify.log",
+      "sha256": "377b9c0e0dbe4875dc41e49bbe6ee23705588f09e0670033b6f51f761f164e6b"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-install.log",
+      "sha256": "db8e4261aaef14b48571736b19e92e2477fab27d4460b00ad38ce91fbde655c7"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-check.log",
+      "sha256": "16341a85c46cfb4ba346f023f063e6432d3db9d856980310dd9afce0b32ca8c8"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-export.log",
+      "sha256": "d7056120d16087ff0c64c04313c31140732d758952dcccfca5d10fde7b75553e"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-seal.log",
+      "sha256": "68b271fb2df1b7c8e8d548b0219d88f2ec1ce1f1812ed54b835d88eab0cb57fb"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-verify.log",
+      "sha256": "c8c1bde02006aa82083f1f9a20ddbbfea84ddcc2dc3a90d1d3b02f9ed5a1a2a1"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-relocated-verify.log",
+      "sha256": "8445e3fbeb0e4965809d5f2e8d0d36492e0c569f01dd238bca3abfe05ab9cb18"
+    },
+    {
+      "path": "E:/desktop/lishiqi/README.md",
+      "sha256": "f23dba7ccfeb3c5c66e1bc097e2d046f39b11bc8596477bcfb86b55ec3bbf4f3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/README.md",
+      "sha256": "4d5c8a9aaed915a7dab159d2b22f1902634287303519759071c85af8a566cb80"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "09b86f5a403153e24761288a2b80d4a6add9481be4b952f9b554efa6088a1de8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/05-测试质量/测试覆盖与现状.md",
+      "sha256": "c683ebf53b767b08702a26619d1e0849c82580ca13d03ff8278ebb160757f996"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/本地运行与部署现状.md",
+      "sha256": "19cae8e9e808cf598fb0128ed82140a60f1f2993c47c993930216d36f67b49a7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "0eb069a01fd467b627c42780f3c7fa926709836762c7b18e05a8ec0271608b48"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/custom-field-workflow-http.md",
+      "sha256": "0bb78419b10effd78797d145774d146535904165097f35e2b77b7cb90d21ca9d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "cdcbd446f6c70961000da6142bb4fa88340f609056594ab232f0329e44d35bdc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "c143d824d4ab542256679a4c0b038793748456187d38ceac934fa5a5e6ca0dc0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "de1afa32ff53de07f5ca787e70130af5cb326cf8f669d98921cd6d4e3706ebf4"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/evidence.mjs",
+      "sha256": "c3f86ab15880b8ce04696a7d2536dd395d3b2e7ea0d099264e2a536816b52cc8"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/update-docs.mjs",
+      "sha256": "9eb0c8ede8ba6f06c81454af9a91adcce40c53ebc4a6b913b2582e547a1824ba"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/final-proof.mjs",
+      "sha256": "11cc8de825a3d82bdc2cd18ba7364a54ef795b2e1e34b2be5edb63b84f5f18be"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/final-audit.log",
+      "sha256": "2d1091bc4ef16f7af45ca19e65ec0f35dd5f9adc72edc885fb6b8e4ab8c97c36"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/backend-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/web-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    }
+  ],
+  "audit": {
+    "markdownFiles": 266,
+    "checkedLinks": 2389,
+    "broken": []
+  },
+  "overallGoalComplete": false,
+  "pending": [
+    "Windows Kafka AccessDenied and real 35-second handler integration",
+    "Actual browser/BFCache/target Cookie-CSRF environment and devices/SecureStore/native signed packages",
+    "Production model accounts/IDs/quotas/network, S3/TLS/full virus definitions/backups",
+    "D-49/D-50/D-09 contract decisions",
+    "Previously denied parent cleanup/server starts not retried; container/remote CI acceptance"
+  ],
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false
+}

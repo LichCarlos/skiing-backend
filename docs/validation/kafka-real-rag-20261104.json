@@ -1,0 +1,517 @@
+{
+  "date": "2026-11-04",
+  "stage": "management-http-outbox-secure-kafka-real-model-rag",
+  "evidenceVerified": true,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "livePipelineTests": 9,
+  "skippedTests": 0,
+  "testDurationSeconds": 109.39,
+  "embeddingCalls": 6,
+  "chatCalls": 2,
+  "scope": "Single-broker, one-partition project-knowledge synthetic business flow with production modules and automatic workers",
+  "kafkaTransportInThisRun": true,
+  "productionWorkerBootstrap": true,
+  "handlerDirectInvocation": false,
+  "tested": [
+    "User denied without write",
+    "HTTP draft event handled without embedding",
+    "HTTP publication -> Outbox -> TLS/SCRAM Kafka -> Inbox -> real 1024-dimension pgvector",
+    "Cited DeepSeek SSE answer and persistence",
+    "Committed duplicate EventId without repeat embedding",
+    "Owned broker SIGKILL/restart with HTTP update backlog, immediate stale-vector exclusion and automatic real reindex",
+    "New answer changes 18:00 to 19:00",
+    "Withdrawn source yields deterministic no-evidence response without Chat",
+    "Soft deletion, final event, five audit records and scoped cleanup"
+  ],
+  "security": {
+    "transport": "SASL_SSL",
+    "mechanism": "SCRAM-SHA-512",
+    "applicationPrincipalSuperuser": false,
+    "aclEntries": 3,
+    "prefix": "linji-real-rag-",
+    "guest": "Alpine 3.22.7",
+    "kafka": "4.1.1",
+    "memoryMiB": 768,
+    "javaHeapMiB": 320,
+    "transitions": [
+      {
+        "action": "start",
+        "elapsedSeconds": 92.5
+      },
+      {
+        "action": "stop",
+        "elapsedSeconds": 125.3
+      },
+      {
+        "action": "start",
+        "elapsedSeconds": 179.8
+      },
+      {
+        "action": "stop",
+        "elapsedSeconds": 221.6
+      }
+    ]
+  },
+  "runtime": {
+    "version": "llama.cpp b12097 (b97627967)",
+    "zipSha256": "2a48f973521cb76fdf8123b12c62a89ad59b01372b98405123dd4e7114e1ae27",
+    "model": "bge-m3-q8-950f4a8e5e19",
+    "modelSha256": "950f4a8e5e19477a6d3c26d2f162233c20002c601f75e4b002e3239997821167",
+    "pooling": "cls",
+    "normalization": "L2",
+    "contextTokens": 2048,
+    "cpuThreads": 2,
+    "chatModel": "deepseek-flash",
+    "postgres": "postgres (PostgreSQL) 17.11",
+    "pgvector": "0.8.1"
+  },
+  "productionSourceSchemaLockFilesUnchanged": 497,
+  "apiOrSchemaChanged": false,
+  "dependenciesChanged": false,
+  "fullDatabaseSuiteRerun": false,
+  "previousRealRagEvidence": "real-rag-20261104.json: 28 tests / 20 labelled questions (not rerun)",
+  "previousKafkaEvidence": "kafka-secure-broker-20261104.json: 12 security + 10 integration (not rerun)",
+  "previousFullDatabaseEvidence": "field-workflow-20261104.json: 858 tests (not rerun)",
+  "diagnostics": {
+    "firstTypecheckFailed": "IntegrationEvent JSON payload type; corrected before live execution",
+    "firstLiveRun": "run-122753",
+    "firstLiveTests": 9,
+    "finalCleanupExpanded": "Remove captured seed-admin session and login-limit keys; assert auth/refresh/limit/audit baseline zero"
+  },
+  "cleanup": {
+    "passed": true,
+    "run": "run-123628",
+    "modelRun": "run-20261104043624627",
+    "ports": [
+      {
+        "port": 62084,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 60826,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 53406,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 52938,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      },
+      {
+        "port": 50678,
+        "closed": true,
+        "code": "ECONNREFUSED"
+      }
+    ],
+    "passwordFileAbsent": true,
+    "postgresPidFileAbsent": true,
+    "temporarySecurityFilesRemoved": true,
+    "runtimeStopped": true,
+    "databaseStopped": true,
+    "guestStopped": true,
+    "runtimeBaseUnchanged": true,
+    "finalCounts": {
+      "users": 1,
+      "resorts": 0,
+      "articles": 0,
+      "projects": 0,
+      "documents": 0,
+      "chunks": 0,
+      "conversations": 0,
+      "messages": 0,
+      "outbox": 0,
+      "inbox": 0,
+      "authSessions": 0,
+      "refreshTokens": 0,
+      "loginBuckets": 0,
+      "operationLogs": 0
+    },
+    "finalTopics": [],
+    "finalGroups": [],
+    "sourceMatches": true,
+    "unchangedProductionSchemaLockFiles": 497,
+    "baseline": {
+      "path": "D:/linji-real-rag/20261104/final/validated/backend/.source-export.json",
+      "sha256": "247e10d2f8a905a2e05ff0af056ed2a981df6cd11d844940b02044f96bd23804"
+    },
+    "zipSha256": "2a48f973521cb76fdf8123b12c62a89ad59b01372b98405123dd4e7114e1ae27",
+    "modelSha256": "950f4a8e5e19477a6d3c26d2f162233c20002c601f75e4b002e3239997821167"
+  },
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-kafka-real-rag/20261104/final/validated/backend",
+      "sourceSha256": "b2d830fe220e0300293c3f8530c54869b437c726c517bd8b05538a9db66da5aa",
+      "files": 834,
+      "store": "D:/linji-source-verify/20261104/stores/backend",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-kafka-real-rag/20261104/final/validated/web",
+      "sourceSha256": "8c8bb9fbf3756391ecf0d007e6c0cea94d91df59e0f5ca8af01dbc568c968376",
+      "files": 718,
+      "store": "D:/linji-source-verify/20261104/stores/web",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-kafka-real-rag/20261104/final/validated/app",
+      "sourceSha256": "ba194e9766d62503f158f63b62f0033e227b45ee06b6da419ea312fba7c60c70",
+      "files": 322,
+      "store": "D:/linji-source-verify/20261104/stores/app",
+      "reusedOwnStore": true
+    }
+  ],
+  "frontendUnchanged": {
+    "web": {
+      "files": 581,
+      "baseline": {
+        "path": "D:/linji-real-rag/20261104/final/validated/web/.source-export.json",
+        "sha256": "e226d3093d0a3f7e16fd89bdc1c9e40b3d4635db80ce7945bf32e34510685a13"
+      }
+    },
+    "app": {
+      "files": 238,
+      "baseline": {
+        "path": "D:/linji-real-rag/20261104/final/validated/app/.source-export.json",
+        "sha256": "f35a1314c6974238cd628baf68257a7a3d73049671a0dbf64d24915f98ac7fb1"
+      }
+    }
+  },
+  "artifact": {
+    "artifactKind": "expo-bundle-export",
+    "files": 88,
+    "contentSha256": "1d6fecae5e4f393a0c9324ff7d7b0e3746ff84bc66a40579c2da309f4067fe43",
+    "openapiVersion": "1.51.1",
+    "openapiSha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8",
+    "nativeInstallable": false
+  },
+  "evidence": [
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-source.log",
+      "sha256": "597ed7473454bfc641687858e4d71881e8a55df5d522a714b98cc5c2a8c21d90"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-source-verify.log",
+      "sha256": "4e82a29f64544ebb2cf48ad5ebf6095061f9cab3da3da5a1523746d997dfa534"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-install.log",
+      "sha256": "ea816c0db395b7f4cb3c557e5f1f84c95ff536a17acf96844bfa2d6c091dccf7"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-generate.log",
+      "sha256": "0aa9b502f0468a344d48641cd91560982f0a7f8d770b19cd77f6aa2ee450a134"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-check.log",
+      "sha256": "c439cc031002c776debc58e25eda460eecc31d0096168088c88b30226b68a864"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-e2e.log",
+      "sha256": "af67afe956a29f435a315948de617e2ad68c0c1eb2b096b6a11e45f8a6e80ae6"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-openapi.log",
+      "sha256": "a6b77c9a950e4d03df72fc88ae3952cc2447ce73990ded7b5f1091fe16451182"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-live-runner-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-live-rag.log",
+      "sha256": "f2c4ed2755101c3ae68df303a20a0e303914061ce91eee76cfbd27f0f447f0e9"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-source.log",
+      "sha256": "fb1e64991fa96059c4fe68e788b0c383621ee048463cf307cfca60fccf83f02c"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-source-verify.log",
+      "sha256": "95b8872456b199933472f3a8bd189873e05be81c8aeef3ca118092f2dd37d76b"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-install.log",
+      "sha256": "b224a8ac48c6615974695dc677f20de9da4a74f6aee854dba49aa1face9a4959"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-check.log",
+      "sha256": "9e3b9fadbaf0ffc6f217b3737f6358700e8aabec2b6fa89af488e5ffe3773fcd"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-build.log",
+      "sha256": "fc930f5772583c9429e6b2cdd4997fec28065f6845ef21d16c36bc1110a878e9"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-web-release.log",
+      "sha256": "90f07e32c899fb79e084e68889f35e280377bac4f7be127d8485f4d41b198ddc"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-admin-release.log",
+      "sha256": "e590fdb86cbe0438cf6f2e4b279c665119511e195d0417105b82275cf1390a97"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-source.log",
+      "sha256": "d35b66da3dc865659529895c3454a056fa9eb1b91c39dce0680efcab986bd080"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-source-verify.log",
+      "sha256": "e8021195b981e17b70e0a3c0376744b5ef4eb57e183a847ad763aede5f0a313d"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-install.log",
+      "sha256": "e3f2e1f2ed9d069a530f090f9c5f9bb6ab85a08c373aaab3624683c9108769ce"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-check.log",
+      "sha256": "7eefd1401862de473135e1a2d9d90a8af5b80632adf7b9ec08bbe72933bfb909"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-export.log",
+      "sha256": "3b8470b1908762420e7b88aeefb9e4838b5aed17c8007aa5c0dfe478c6b7a14d"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-seal.log",
+      "sha256": "4a6e97083a2279c268457006a4907e1e750bab6bb6ab6b4d73c354d7acc3a8ed"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-verify.log",
+      "sha256": "986dea7486ce2903959a1fbdb98d5a0608af56ffaac97e726f98b333abc86bd0"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-relocated-verify.log",
+      "sha256": "cc37343b68a7a30f969534cd22880db5bc38c9c88a990ce5a7a3507049ed7e70"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/commands.json",
+      "sha256": "4b14ef43853966e9a5c86c22f11c806a23214ce8b04e4ee2cda8f87017f3641e"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/snapshots.json",
+      "sha256": "13f8e4ceed7a0488b6aa497b0c9351d5746582ca29211c2731f64b2de0c68c16"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/integration-source.json",
+      "sha256": "f4c09b0c3c5061eff6bfdbc23477456b22d8ccd358c56fc1c9199102ccee8e9b"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/backend-module-paths.json",
+      "sha256": "0d8ea1c80c00433ee00203d503c5557cda8de5245d05699a98195e8054ecc528"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/web-module-paths.json",
+      "sha256": "7c368b442df3233f569957edcb05db0987d590c1bc4454f9cdf7a7cbbdac0693"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/app-module-paths.json",
+      "sha256": "a2d80204ad53e44a2c7efed0b138c575a88440396bd7a22692bb8d9d3dee6e0b"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/validated/backend/.source-export.json",
+      "sha256": "57b354c649e1fb56b29da7556855d25fc7512c4982bcebb65b83969c5c7049ed"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/validated/web/.source-export.json",
+      "sha256": "19e80a23bb8ca43dff1511bb1e7ae8921556ed85471983ee9dc6c8c560a43995"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final/validated/app/.source-export.json",
+      "sha256": "3b7995118b8e8a231f342a240ec7820b4b5911a48d8250642b1fb460cc8f2f5f"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/cleanup-proof.json",
+      "sha256": "bb962c24cb407ef0067e530c868d1a280b839993f313423e4cd87dabb830c8df"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/cleanup-proof.log",
+      "sha256": "39fc6fccebfd9e3dc4adf4f1d6979e06e6ddef7abaee78fa5d77b365ec63b343"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/cleanup-proof.mjs",
+      "sha256": "f1f99c97f91d11c5c02df9fe13a2199ec0ddc9c6b003e6154b061dc6230d2abc"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/embedding-runtime.mjs",
+      "sha256": "b83fae063a93fec0a8f388eb3cab2b046f683ee75763a66b7bc300be4a31e6a8"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/secure-broker.py",
+      "sha256": "35849b28ce7576483111fb9043927e4916208b0d7014b494a92d581fa1a617d8"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/validate-live-local.mjs",
+      "sha256": "727a6c148e58f821397bcc4040603e6c393eb801fd6e7690faa4d4583d40769c"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/final-check.mjs",
+      "sha256": "9abe119aa7b336c134f5bf348bd04b33c061b10f979ea6ac95fef39fee86c6e1"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/evidence.mjs",
+      "sha256": "443de34b465afe1ebe975e57076002b44e4b0bdace6bbaad93d7190bd2278e3f"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/diagnostic-typecheck.log",
+      "sha256": "11bee69904d9242c680b32bbad0ff1057c3e5ba147cfdbf96ccc303d4418bed2"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/diagnostic-typecheck-fixed.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/diagnostic-live.log",
+      "sha256": "8908b9993d7c9b596e1ad8f8e377cdd78cad2ee0580a806e2c01b7519ab8026a"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/report.json",
+      "sha256": "fff8d5b40e3982eeb3980ad372c041e89371b57568455502f2d503a1257ea5dc"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/runner.log",
+      "sha256": "9f2c75ff5b7e748cd0265caf9864599ce7556b65fa2734ed5371a754d4741a9f"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/serial.log",
+      "sha256": "d686b8f8b5576cfc6df80a2d5b9f8b13984a45a4eec3dbf89d98dc37629e9243"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/report.json",
+      "sha256": "ee1078666d99483c906289ea4a4dd92a8d6fb9ca7405998e3640109ac33d8e11"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/live-tests.json",
+      "sha256": "734bb8b5f700c2ba9f4acd93775a17e0ccc375d6e117c7003262ce3ab3e0a1d5"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/live-rag-suite.log",
+      "sha256": "84ff24b326d0c61ccf0e39ade89ed926639f995623503d51fc18ead6a65095d2"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/migrate-deploy.log",
+      "sha256": "fe456ed705e46b97545e74697f8abacd9ab2676f5414cb5a07f9c487611a4fbe"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-123628/live-kafka-rag-results.json",
+      "sha256": "8a99930403d2db739b4c68fc7d457b958e6dcecf988e0fb6875410c61f1ceb09"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-20261104043624627/report.json",
+      "sha256": "9f1501e8191faa452fa49b71a85c8147e052cb8aca3be6a017fef2271b5b6a18"
+    },
+    {
+      "path": "D:/linji-kafka-real-rag/20261104/run-20261104043624627/embedding-server.log",
+      "sha256": "ca9e776e1fffa0d07cac84afe59eb8562dd33a9384894809650d207c2b6aa2fc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/rag-kafka-real-providers.live-spec.ts",
+      "sha256": "ab37f6dd0f58df6f7d49cf83656460699c0caa2ddfaf192e6a27ca73b8accd45"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/vitest.config.kafka-rag-live.ts",
+      "sha256": "44d52bcf49667c9c236d2d31217f005a158241f2f3efb1fd1ce8ea3347f3412a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/kafka-event.consumer.ts",
+      "sha256": "5dec66eb83358608b1374ecb8b780714752f81736da69de9aea3b786d648c94d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/outbox-polling.worker.ts",
+      "sha256": "9ba5979b51746296b7d0077fe671c0209b2878d10e7ef946bce526e03091cf0f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/knowledge-content/infrastructure/prisma-project-knowledge.repository.ts",
+      "sha256": "f7f35a438e589e44fbabc961c27eecf7262ffa7e7bdd89fe9fa4ac7ad738e77d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/rag-answer.service.ts",
+      "sha256": "fdc35b31331c6e19cd3021a3246bc1a9e6f995e2df4cf3f1337d68caa8caa575"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/application/rag-document-indexing.service.ts",
+      "sha256": "83c028532aa3da63194ae3ba7e8d71cb3ff89da611b20b2f46c330ba53192409"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-embedding.provider.ts",
+      "sha256": "da5b1de275d901ead0f12b0dfd762efcff7cbf961a580969831b6ccbed636d8e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-chat-model.provider.ts",
+      "sha256": "cb03b274fd957892922888ee3fae2160de14f9d07c93f1efcb0813a6056735c6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "2b38a43f352e24cbef435a43f6d3dd8c3d30e1151b8c1b39b2ace1dd206567c7"
+    }
+  ],
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "permanentModelServiceDeployed": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Target browsers/Cookie-CSRF/BFCache, Expo Web/native devices/SecureStore and signed packages",
+    "Production model hosting/capacity, real-business corpus/manual quality and long-running indexing across all source types",
+    "Production S3/TLS/full virus definitions/proxy/backups; multi-broker replication/recovery",
+    "Containers and remote CI",
+    "D-49/D-50/D-09; prior denied cleanup/service starts remain unchanged"
+  ],
+  "repo": "backend",
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1323,
+    "sourceTools": 20,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "livePipelineTests": 9
+  }
+}

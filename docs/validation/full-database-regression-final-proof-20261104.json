@@ -1,0 +1,311 @@
+{
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/full-database-regression-20261104.json",
+      "sha256": "e2e8b1c00cb995c5aee85ec3c32830d508052a8d16382b52381316249b9d62d3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/full-database-regression-20261104.json",
+      "sha256": "18e8d2df5eec1b18ea864401e8b97c725ee5160c064403028d8c984d9f7505bb"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/full-database-regression-20261104.json",
+      "sha256": "8c8e0340e2840cc655dc806127761a76b3dc80f3af7d63f1e1c0d56a3b9a2daa"
+    }
+  ],
+  "fullDatabaseFiles": 36,
+  "fullDatabaseTests": 859,
+  "skipped": 0,
+  "productCodeChanged": false,
+  "engineeringChecksReusedOnlyForIdenticalProductFiles": true,
+  "delivery": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-full-database/20261104/delivery/backend",
+      "sourceSha256": "e47dc76202d0bc58a71c240d075b65989d29d1e7bc2691011808497ca6a1a069",
+      "files": 870,
+      "productIdenticalToValidatedSnapshot": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-full-database/20261104/delivery/web",
+      "sourceSha256": "11de1cac74d0798da3982684e8e513f0c7c89ad802f69518b59656f4119ffd2d",
+      "files": 727,
+      "productIdenticalToValidatedSnapshot": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-full-database/20261104/delivery/app",
+      "sourceSha256": "59961d9a9a9ec2708fb6f9f9e48d45674e98c7c0b31e61045be1d914b2dce906",
+      "files": 331,
+      "productIdenticalToValidatedSnapshot": true
+    }
+  ],
+  "verifiedReferences": 65,
+  "references": [
+    {
+      "path": "D:/linji-full-database/20261104/delivery/backend/.source-export.json",
+      "sha256": "33c2b2dda67a794e3957a964b9d8e8508f658d0f395747073a1f1f0886c3a1d2"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery/web/.source-export.json",
+      "sha256": "ae32abca7c43f3398d6994e37cfea6092849a61f3ef7d987456478bb354bf925"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery/app/.source-export.json",
+      "sha256": "07d62929e45051a3062b66bc1c4fe527482187b78d1a7b847be2a60db773b130"
+    },
+    {
+      "path": "D:/linji-owned-asset-access/20261104/final/validated/backend/.source-export.json",
+      "sha256": "59f2cd9fe0a4fdd59c40d4f32b99706ba0b2d2002d7cc3eb649ec52f65b6fe34"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/owned-asset-access-20261104.json",
+      "sha256": "e0b82788fa296a50f4b95aad4c30c3a0d73bd6eeffde7ce72aa4c47f230f952b"
+    },
+    {
+      "path": "D:/linji-owned-asset-access/20261104/final/validated/web/.source-export.json",
+      "sha256": "53a3cf73be27f2b9a80afcf4a1eaf2a661526aca1e08482b487bfff1811e9613"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/owned-asset-access-20261104.json",
+      "sha256": "23ec2bdb307f13eba0d98bf4420ab94bb01b7568cb63c36c603b4e081fe53fdf"
+    },
+    {
+      "path": "D:/linji-owned-asset-access/20261104/final/validated/app/.source-export.json",
+      "sha256": "45ed747a02d7c0044499bacb172cdb1b9ea6b01dfb40e57cbaf35a7ab3285f12"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/owned-asset-access-20261104.json",
+      "sha256": "7c113d3a81ed97d551ef8ef835f24e5a1751c63a263002bb3a1193c69e70a380"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/run.mjs",
+      "sha256": "fd39b771af1168cc21b472e16108a7b39336debbd9e32ab9cc15f9f1d56ba9b6"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/command.json",
+      "sha256": "9d34d82eb557fa8d45df61ee377a3be3f9afc9804473ab196b8c091f56295124"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/full-database.log",
+      "sha256": "12aae566d3eef3c3b26fde3dd7758d5850f610f54fbe9d34851a7e538d4629d2"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/database-suite.log",
+      "sha256": "fd585952417ed4fcc5a9c6bb901addb8a73dc77648847ea2e6b972f3c26958c6"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/initialize.log",
+      "sha256": "d1c60a588d78239d7d823aa6e0f1015f3e709dfb45c2584f2595c4eccd87d8b6"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/migrate-deploy.log",
+      "sha256": "4e1701715c6744ba2cb8d3374f58bc2d2ee210bbe93c711f3de2c0e0f865aa32"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/report.json",
+      "sha256": "ef31cc49fc4983643919caed1137c2ff257adafb2b6ffb4d241a4f5806491a87"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/server.log",
+      "sha256": "f60c3c53a97fd773f094c643cccc41f3d05219b83f6ebd047b93659d6e6f253a"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/start.log",
+      "sha256": "83468a58b9366155730bfcd24e4f618de9349e20a511b54255cb11627a0138eb"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/stop.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/evidence.mjs",
+      "sha256": "4a93ab382eb01908b1a16e1da4086ad691702fb3682763e1372127ef0c96da47"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/update-practices.mjs",
+      "sha256": "f18f1ab4c0824f0337e08fc5584c6d8c845b871ae153936fcdbc5288b6be7c50"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/update-docs.mjs",
+      "sha256": "d66ba62c87bb89e67c6441f9297eb0155b2cd75bbed98b869c83bcd0b7cb6d05"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/finalize.mjs",
+      "sha256": "3c14b53f1f7fc73b2a4791ba050cda06e1218b8a74872ec077557841dffe9a28"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery.mjs",
+      "sha256": "229347a08c4582d9630803feba80c89d111d3d25993406276e7390d3154a88e8"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/final-proof.mjs",
+      "sha256": "2f86d6e5e53a04951fdd4562298121335ac6c0eb15c4fb38b9b4a515a15b73bc"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/totals.json",
+      "sha256": "986cdabb9be0a126c59a1048442c6c8384a5aa4ac423f519a2f94b9796b108ad"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/final-commands.json",
+      "sha256": "1617cc46adda66d4702117c0cb05b3ed7f296b7be2c93f1e4b5e51cfc02522fd"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery-commands.json",
+      "sha256": "2fc142d4d59e5cc1c152c90c8aac2fce6eaf3980f557759409336b3242552db4"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery-snapshots.json",
+      "sha256": "7218aecaca95dc99f15f62a94d7eef271ad14471030369ba515ea28a61dece74"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/backend-format.log",
+      "sha256": "696334e0b13f7280c400532be27e3927370dc02b4d5ccadf64979f9645eff14f"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/web-format.log",
+      "sha256": "f0a206e9b2ad6c70dcebcbe3a946c53a84fc6094ce1a4d76ccec0dcdfecba675"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/app-format.log",
+      "sha256": "9359f704dff2ea6502eba8af67e82215b52c605f805158f73356330c9bf94a26"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/backend-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/web-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/app-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/final-audit.log",
+      "sha256": "91b5f25ccd5bc54f7a938c086a2e68bcea83f92477810f11507819a54575900b"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery-backend-source.log",
+      "sha256": "184ce33e0361ebb2faf825bcf8a76905d010ff3f91f6bb9699af5c4b3ec43e3d"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery-backend-source-verify.log",
+      "sha256": "4565ec536f05ba52a9006bc6064daa6aa63061bfc001c5e7b45e929119a537e3"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery-web-source.log",
+      "sha256": "eb53d9f77aeba2aef6eb85134d5149a0ca92ba7a4a9ad570ca473c0cecab63d1"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery-web-source-verify.log",
+      "sha256": "9e19ee58a79487e09cec41383ca8cd61c018c29476701cbe0d47e6fc79f4ca17"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery-app-source.log",
+      "sha256": "324d64b0bf8ca9915e9e09cff163f4faa5b20296e315cc6d47a85ed300474cac"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery-app-source-verify.log",
+      "sha256": "89618e9718be7e07ef79e124ad32ffaa39859b92abc296b8702ecbd05d80693a"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery-audit.log",
+      "sha256": "91b5f25ccd5bc54f7a938c086a2e68bcea83f92477810f11507819a54575900b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/README.md",
+      "sha256": "def92f1731a082ef72262f49d7326b6e662cfe5f754ce404271f6418cd9a8f2d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/README.md",
+      "sha256": "70e4f0fa583da821a3885e0e926f62510ea79dee95703c858285b329f19b2922"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/00-项目治理/阶段与验收规则.md",
+      "sha256": "0e6b455545f2ba8c7c0362dc183cb2b9350ec767a5078eb3c2d4d6326f0328cf"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "7882e43c3b91b5b582e3c1527f66d014337568325e78d328d8b959c37f9533d9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/05-测试质量/测试覆盖与现状.md",
+      "sha256": "fa5b508b5acc1e126a2cbc23dad25135872a6c76906716b563b05f794a8e69d7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/本地运行与部署现状.md",
+      "sha256": "58e871307ba363ba1bfce71b83d8362a91e50c383f065fc641dc0525b67560f6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "4ca9c2f7a5e455849dde9a0e0ede181e9015c464e08e354362f593b66b737838"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "885056792a48ecc27c3d9c006c165a5956ca5c1cacf8375c7654fc3825b85afa"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/skills-practices.md",
+      "sha256": "48673edda8cc482127710d51e20dfbe818784762a47acd523536fb9206fcce32"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "2a86de93ac72947e429ea176255af45bc4f2ec1e6103921bc91573e882834f5f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/engineering/skills-practices.md",
+      "sha256": "9d24c378e49ff483ffcf524c3e158cd21975d1894d127094ba9514c3c1f4bb86"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "a5f255dec828d451760946583502e9ce5c2baa25cbc1c63c974ae5032b9514b5"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/engineering/skills-practices.md",
+      "sha256": "af160f97c74d4a296fe556df81d59e273a818d51f399d40db0f02ae1d83c205b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/full-database-regression.md",
+      "sha256": "caa680bf816080e36a775d1b47a1fcc138dfa0157ad6dc9f641bc01d6e1650f0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/native-postgres-validation.md",
+      "sha256": "893e870f5477ea6d0cfe0dbad49b60f2c6bd1cfdaa8277a24f9a45c0e5e2fc76"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/database-validation.md",
+      "sha256": "b5b9e05053a8bf936002a9325eb1c94ae235060de1315ea20fa8e5824c720d84"
+    }
+  ],
+  "audit": { "markdownFiles": 280, "checkedLinks": 2724, "broken": [] },
+  "overallGoalComplete": false
+}

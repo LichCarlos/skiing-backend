@@ -1,0 +1,529 @@
+{
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/native-storage-20261104.json",
+      "sha256": "b53acb285c4166d6094800d3bcf370f57ac10f2c2a7ce00c5d0ad09396ed1a71",
+      "repository": "backend",
+      "results": {
+        "unitTests": 1271,
+        "sourceToolTests": 20,
+        "httpFrameworkTests": 173,
+        "nativeStorageTests": 10,
+        "check": 0,
+        "build": 0,
+        "compiledOpenapi": 0
+      },
+      "git": {
+        "root": "E:\\desktop\\lishiqi\\backend",
+        "dirty": true,
+        "statusEntries": 30,
+        "remotes": []
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/native-storage-20261104.json",
+      "sha256": "4845013a8363c10baf6433b7f725fd0143b93e391a6caef19024f02327c025d3",
+      "repository": "web",
+      "results": {
+        "businessTests": 3045,
+        "sourceToolTests": 20,
+        "releaseToolTests": 20,
+        "check": 0,
+        "forcedNextBuilds": 2,
+        "standaloneVerified": 2,
+        "browserVerified": false
+      },
+      "git": {
+        "root": "E:\\desktop\\lishiqi\\web",
+        "dirty": true,
+        "statusEntries": 193,
+        "remotes": [
+          "upstream"
+        ]
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/native-storage-20261104.json",
+      "sha256": "9d1527c3dac5d108032ef520ef7849319c6a034199409b97163ba381a67946d7",
+      "repository": "app",
+      "results": {
+        "businessTests": 1217,
+        "sourceToolTests": 20,
+        "exportToolTests": 10,
+        "doctor": "20/20",
+        "check": 0,
+        "platforms": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "nativeInstallable": false,
+        "files": 88
+      },
+      "git": {
+        "root": "E:\\desktop\\lishiqi\\app",
+        "dirty": true,
+        "statusEntries": 52,
+        "remotes": []
+      }
+    }
+  ],
+  "verifiedReferences": 109,
+  "references": [
+    {
+      "path": "D:/linji-native-storage/20261104/commands.json",
+      "sha256": "7c77e25fd869421d7d9aaacdec94697c0c7ea9d1787ae5c8e611e55ae5c76f6d"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/candidate-comparison.json",
+      "sha256": "031040bd37167e0a1a93a156b4cfe6cd0ecfad42b5f7cdc26bd8d6dd31af681f"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/validate-stage.mjs",
+      "sha256": "edbce0a4c0114422852c92bd7dfdbe8b3a26959b439b52cb547947cf29b536fd"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/resume-app-sdk.mjs",
+      "sha256": "d9c6b25be490b94e9ebb05c1ac56b83486e83ab8327b1d0cdd28e9b25753d22f"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/resume-app-sdk-official.mjs",
+      "sha256": "21f79b6ced5f508d367506f8a781036df37599283db6d02f680ee15307cd131d"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-sdk-versions.json",
+      "sha256": "79a8af5b413c37967a8ff17a5f4c533fc8e714ac64b942c1b15df1155b507c7b"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-sdk-source-delta.json",
+      "sha256": "0f6dc9b05824ec7382e14abebfef4eac48263f06cecdbdce6b5d665a8217851c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "e3f18340546cb021e3e4ca7a51850858328e49d158637ff7856aca3fd293233d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/pnpm-lock.yaml",
+      "sha256": "7d687f26a259016f25a01759e8956faa192174433a31b2e32ff32581188d44c6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/pnpm-workspace.yaml",
+      "sha256": "1daa51e5f8c43e50247f800b677f8cb231c3e684d72ad617abc3a485a5b2b4a5"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/report.json",
+      "sha256": "5fd81289597d995170567c934d1338825385f5c848796ab6d558a07107efa36b"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/runs/linji-storage-IOjbat/report.json",
+      "sha256": "05fd81f239b52e9c30911a146167680cda4e70aaa6642251cd71b7f5f34f6db4"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/runs/linji-storage-8X33Yn/report.json",
+      "sha256": "4b38463f71a873c177f574ebb6c9ab21ee3b9fec0b14b2b309133df5640027fe"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/minio-build-metadata.json",
+      "sha256": "63222dfe89aff4a234d763a4c32d6ac3b7f6cd547b14b1ddef3d31cc83eaadec"
+    },
+    {
+      "path": "D:/linji-minio-build/20261102/minio-source.tar.gz",
+      "sha256": "45521908307306e925c98d629e1c17d78c8b72b6ee242b1bfb1409f7d8ee5841"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/clamav-1.4.3.win.x64.zip",
+      "sha256": "5c86a6ed17e45e5c14c9c7c7b58cfaabcdee55a195991439bb6b6c6618827e6c"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/clamav-release.json",
+      "sha256": "bc00da812dc8e0aa39cd49a5271f60a2d11ae6cf0333543fc955edb117304852"
+    },
+    {
+      "path": "D:\\linji-native-storage\\20261104\\minio.exe",
+      "sha256": "b42fdca9797a61c3f3181e1aa4c9b0eca0e7d65a40b9460a40e910f6d108f53a"
+    },
+    {
+      "path": "D:\\linji-native-storage\\20261104\\clamav\\clamav-1.4.3.win.x64\\clamd.exe",
+      "sha256": "55d13b26fb4208b5667d59c6e5de0fcd2f9289c658a611bf22ba738eadd5e84a"
+    },
+    {
+      "path": "D:\\linji-native-postgres\\20261103\\runtime\\pgsql\\bin\\postgres.exe",
+      "sha256": "f5dbfd059f8088b9511a02fc014e659369996fc7d3e88e47658b1cfa2fbb02d2"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/bucket-first.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/bucket-second.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/clamav-version.log",
+      "sha256": "6e216b71ce01ff83380e38674ecd36d96526615544b3adeb9dc4de7dea345fed"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/clamd.log",
+      "sha256": "82485694a1340c64ec107d015aad5810047a7b109289cc30d2dc64a61fb28df5"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/initialize.log",
+      "sha256": "af108bfb97f81d4a5e2d440a57ddbd9fda647dfd2bd17530c7824a14fcede086"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/migrate-deploy.log",
+      "sha256": "66ce70ad5ef67f23e4357c962e1719dea512931eafaaff447827bf5771e3331f"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/minio-version.log",
+      "sha256": "fa74355260cf82c63b182910e30ecf2167bf691f4c80549ba4c4f811bbed9ef5"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/minio.log",
+      "sha256": "d804a06ddc0ef44ecf103db9e96696e4ec6a254aa7c670ace32fc8eee77b3f1e"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/postgres.log",
+      "sha256": "4ea579b64be178fa7dc94b61973fe721fc2f28063ba71ccab8e6b0dce22ce910"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/storage-suite.log",
+      "sha256": "00574ad971fd424ecd90280a96a40b94e3ade816b2036e33805884e7238ce05f"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/cold-runs/linji-storage-ZUG4LJ/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-sdk-install.log",
+      "sha256": "3224dba95f2af668dba6e51fa8f742e30a5eace56d167a77dd2ba46b00374bec"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-sdk-install-official.log",
+      "sha256": "1005586d1a45537ee94070f639038e077c509762106340040627140471cfd5b7"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-peers.log",
+      "sha256": "18f278ae9b31e0b113200e2a4f9d82805590e63548dc78b38e3db2924eae664b"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-check.log",
+      "sha256": "3a453dbd8d0a7a29d5fa9830e06e001851d832c129f493a2e28d12183381ab6a"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-sdk-align.log",
+      "sha256": "9b30c5d04d1e232b4bd293af8c1c1c3a5217cbcb67a96032d1c09de64264575e"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/expo-sdk58.html",
+      "sha256": "2a9f2349c940b4c44bedbab6baf26ed01633f2227279266d4168390c0646bbcc"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/expo-llms.txt",
+      "sha256": "9715dd85963e20e1e5b61b761b9ef996f832deedbae11baceb1734b2fd7e17b1"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/expo-upgrade.md",
+      "sha256": "898360a4151577104a91ee31297ae0a0e27432dbc901fb7b5452f557a9955c76"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/preflight-types.log",
+      "sha256": "d948513ee5c19ec793e63336f57755a8d102c3541d5a21e99da696da110639c4"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/native-storage-first.log",
+      "sha256": "68d2868b3349283a74f0308db9076cc0b92caf221a168f65e09e74112b163bde"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/clamav-download.log",
+      "sha256": "b417b3d22b1d902f790c8477a6a25d6f78ce291f85a0d0fc5a681b2e4fa6fe35"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/clamav-download-system.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/validate-native-storage.ts",
+      "sha256": "02d4c63df3a4d8ecb3deb555cd61bcaa5f4c170057636b7e543ea1488f02271e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "e7283f1e6c8d3e3707d3ef13db6ec7577df8b0892b085b1cc6ed4a88ccf7a3fe"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/assets.storage-integration-spec.ts",
+      "sha256": "eb2b58cd59171b86314e19bb80a978d2d7c2870cbdfdb9baef04f8484e22337e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/fixtures/linji-test-only.ndb",
+      "sha256": "f36f2172cc0e5b8c1bebd7704c1728a6e54e94bc0644d9442b5e7b8b2dd10903"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/assets/infrastructure/s3-asset-storage.ts",
+      "sha256": "65ce4603cd4f4827afa5019f72888d0f696250c443594170126ce25290991bda"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/assets/infrastructure/clamav-asset-scanner.ts",
+      "sha256": "2f7471b98432a828b0b7b0b9ea6e7f6f0da3bdf31a8a302d206686681338d1d2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/work/backend/.source-export.json",
+      "sha256": "ff6bcb3caef97baa8e217b140f8bf02a31e26f2e3a79e81997213a60ab04e8fc"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-module-paths.json",
+      "sha256": "2559526e39e671d6f8691c35dd076633ead0bdd79c38d61df5497462fd7d412f"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-source.log",
+      "sha256": "2697481a3beafefb624b86be0452b1405333804caf0de15dc1345d959d324caf"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-source-verify.log",
+      "sha256": "5bc13f67f4b3621c1a7d5f71577b19a05e731479af07a4c07c43dba1dd8d4162"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-install.log",
+      "sha256": "dfed9bdad147a3bc5fae6cb9483e927d2410be03acf3aa5f70d820d0bdb661e2"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-generate.log",
+      "sha256": "814e8323ef74633eb369169c0b544aea9f8794e4962bc9df60bbeb86ef1b25c1"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-check.log",
+      "sha256": "ed8360c2f0a21d2fe846b7c61a08d8067185d6aee5645f327df7cef07a2a5d69"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-e2e.log",
+      "sha256": "f293ee5c0d7b3d5dcb84e995ff82d27425a0054b6135cf05c8e53061fc4a3361"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-openapi.log",
+      "sha256": "da62a5d26d36da2f7b8d73abb388921093216833a447825160808e14bdb7c22b"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/backend-native-storage.log",
+      "sha256": "8ed58bff223292865d8ec5168605efd64b13a1338866e3ee94d903802056ef04"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/work/web/.source-export.json",
+      "sha256": "ddaf1dbef70019848cd20e714ab09f37eb276cd986e2909be9a209a24e36b0f9"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/web-module-paths.json",
+      "sha256": "0bb5402ea6314afd1a40454a401bd592f8205372443a5a1d06747788f439eb18"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/web-source.log",
+      "sha256": "50ab0329882b15abc2045081885b7a3c72c4df464c413bbd709e095957e11373"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/web-source-verify.log",
+      "sha256": "ce7c8e22d42ee1a127521056f838a88ac277e3058f9ef6a373b5ff4cb2f35347"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/web-install.log",
+      "sha256": "860b22cf424493ff255e9af803ef57f8f2d3be073fef3ca049371d6e3b5ce0f1"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/web-check.log",
+      "sha256": "972a46838ce5adf31e1a6a205d3e3f54af12a9a8769fbde85b593527cc783864"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/web-build.log",
+      "sha256": "f6b2dbe22bdc6421bd3d5f44b952c9d77da94554c7edc9b61a2c7fe097bbe712"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/web-web-release.log",
+      "sha256": "c9212af8f507e95e6a4a2c700efe212cc5aafe737d8cc4b86e3c670f4d1e5534"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/web-admin-release.log",
+      "sha256": "9025803bcc772d8f8d921c6a944263d2ba05e9609f29a2559e21a2bf37c477c8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/work/app-sdk58.0.23/.source-export.json",
+      "sha256": "7fd74458fc94488cb83126380429664ddc6c2648bb7b41c0feac4392f1cb4dcf"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-module-paths.json",
+      "sha256": "d89d95af5bcd54f7d8905aed344eb84b052fd452eca358c9cce066081eb98e06"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-source.log",
+      "sha256": "d4af0466f0cbc5c01b602212a05b1834b83bddb09a5948385fda27fa49462bf8"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-source-verify.log",
+      "sha256": "cd29d1edbe3ccbd07328819b875fc4bf0794d9e881f9453e2b0dde03141057da"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-install.log",
+      "sha256": "e53c1d4d9ef5347509e2e13c71bf8da91396cc77f3d8995df37dd9aa0b11f0a6"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-sdk-source.log",
+      "sha256": "8359e3fede4706131b3f4a1070010aa2808a570aa9c929338009a5390894a0c2"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-sdk-source-verify.log",
+      "sha256": "ea32ce02c2df8b36197e953b1b1b329374872878311065920e93e9feccb86d09"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-check-sdk.log",
+      "sha256": "c6335599e97d76103df517bcd8232f5f508837878d823c26efe7ddbbc934bdf1"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-export.log",
+      "sha256": "b53ab2d25370463e95db1579a5ad305ab15d0e8b98245bdf5d79a6c246b2ffe8"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-seal.log",
+      "sha256": "42d11d68f509928887227aa226b0a6153e88021902d5bd387fe68e2422b4bb31"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-verify.log",
+      "sha256": "a132edf9c859e0aab7f4cb5eda81f7ffccbe55ff037a7ad00caaeeb9b87bd334"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-relocated-verify.log",
+      "sha256": "324616529e5f6fa33c6eef4491fca20615153846fa80cf0817ebb1ce6b081794"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/app-export/linji-export-manifest.json",
+      "sha256": "2fb2288e06bf401c8add06459ba2fc26e17f7cb9d4542ca75c8a3a47247cba24"
+    },
+    {
+      "path": "E:/desktop/lishiqi/README.md",
+      "sha256": "72e1341a58f84a4efb8c40c2d1773d87e32ad24f1d41866395f8267f39764825"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/README.md",
+      "sha256": "fe3f0df59cc8f738b0bcc4b0de1d177f89a6dc5f910492c2ba6bd1398117d8c9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "8fa548a8156a3a228f943517eedc6ba72aae6ff0fee6d394c535082885a65ba6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/05-测试质量/测试覆盖与现状.md",
+      "sha256": "4ecc929b71a72f0a218de10ab8878c77e9ef81e9926ef5c454c8200efeaab984"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/本地运行与部署现状.md",
+      "sha256": "82610fc117e8be106e4ea8d9b585d5dc9cda5cce2f7b9b58cc795b54dff76dfb"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "430a2ec8fafaebf732037e5a78120a00fb6319f03a1d481ff42872b8f569ce39"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/native-storage-validation.md",
+      "sha256": "34712150b8041ac7ca4a750d6eff4f156a17af4a552e35bcf7086926143f0189"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "4df442cfc0450bd483656ebfde15b355cedd1443218e03def40400e1775d2a9a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "9f3e28424aa0f9df5cd156e42d6a77120467f5bbc45ac6ebc28f91ef1b145b9c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "95eb6c0af383d31e94408acd702dd7681000ffc63a97da038bf61da406d5593b"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/evidence.mjs",
+      "sha256": "0018b8d0cd28d4ec91a763f40480f4224424430e6e67d950de86b713da843c11"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/update-docs.mjs",
+      "sha256": "21c4be6ad2fab0fcf9eb86cfcbcb067fe3325ce7b62d2fbc30b5eb5372d6f4fa"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/final-proof.mjs",
+      "sha256": "d628bc8e470001f7179a9a41e0306693559cbef444bb546241709df824f21ac6"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/matrix-final-audit.log",
+      "sha256": "4104059a150e6b6775af1cb2e657960683499ce1df25ac33d76c13838d55807b"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/final-backend-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/final-web-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-native-storage/20261104/final-app-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    }
+  ],
+  "audit": {
+    "markdownFiles": 264,
+    "checkedLinks": 2355,
+    "broken": []
+  },
+  "independentNativeStorageVerified": true,
+  "realFrontendRuntimeAcceptance": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Windows Kafka AccessDenied / 35-second handler current integration",
+    "Actual browser, devices, SecureStore, native signed packages and client cross-process recovery",
+    "Provider accounts/model IDs/network, production S3/TLS/AV database updates/backups",
+    "D-49 merchant business lifecycle / D-50 resort reasons / D-09 optional account deletion",
+    "Prior denied parent cleanup/server starts not retried; container/remote CI acceptance"
+  ],
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false
+}

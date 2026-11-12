@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "Permission catalog tree/detail/receipt projection, identity/visibility and interrupted-write protection; configurable non-admin hierarchy management and sync denial via real HTTP",
+  "http": {
+    "tests": 49,
+    "newTests": 4,
+    "output": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u",
+    "checks": {
+      "rawProjection": true,
+      "customHierarchy": true,
+      "syncDenied": true,
+      "revocationRejected": true,
+      "ids": [
+        203,
+        204,
+        205
+      ]
+    },
+    "references": [
+      {
+        "path": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u/report.json",
+        "sha256": "a02c3495c234a25338b12736c8572ab1c0fc0dc4c0b9b9d1f7807ee6ba31821e"
+      },
+      {
+        "path": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u/client-result.json",
+        "sha256": "195d6dc9a433e45ce74d0b8411ea601433b5095552d08586e94bede0e621ad9c"
+      },
+      {
+        "path": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u/ready.json",
+        "sha256": "2192a56062a9d28a955b5d6fdd36ac76ccf7d711ac8ae1d38996151faeea5ff7"
+      },
+      {
+        "path": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u/migrate-deploy.log",
+        "sha256": "8f316dc03d3ca53a5244cfc0f3620bbfae43969cc7a824c47bbcc4e895385f2d"
+      },
+      {
+        "path": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u/fixture-verify.log",
+        "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+      },
+      {
+        "path": "D:/linji-catalog-reads/20261103/admin-runtime/linji-admin-http-EeUD3u/verify-after.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      }
+    ],
+    "cleanup": {
+      "path": "D:/linji-catalog-reads/20261103/cleanup.json",
+      "sha256": "845eb03337c6b841597e06d4639697bd9eedad8b267c3a5e9773ea61bc0e856e"
+    }
+  },
+  "regression": {
+    "newTests": 45,
+    "catalogTests": 117,
+    "initialTests": 113,
+    "initialFailure": {
+      "path": "D:/linji-catalog-reads/20261103/targeted-first.log",
+      "sha256": "2ba26f8775a7074eb53e4cc843128a059ab083abeaa2d1a171f0d62dfe940f99"
+    }
+  },
+  "limitations": [
+    "49 HTTP tests use actual Nest/PostgreSQL and a Node Cookie adapter; lifecycle tests simulate Hooks/EventTarget and do not prove actual browser/React/BFCache/device behavior",
+    "Read-end identity verification is not a cross-request atomic data/permission snapshot; backend authorization remains authoritative",
+    "No current full database suite, real Kafka/Inbox/timers/providers/storage/container or remote CI acceptance",
+    "Existing Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 143,
+    "unitTests": 1240,
+    "sourceExportNode": 8,
+    "httpFrameworkFiles": 9,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "productionBusinessCodeChanged": false,
+    "httpFixtureChanged": true
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "5a81a967e0e2ea85d74bbf2580b583523222b687ebda0dc2b9721f420ea30397"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-catalog-reads/20261103/backend-install.log",
+      "sha256": "d1112425918d29fe566d99391fd51a86ff4a7ded10b2d0fd61d2f03681751241"
+    },
+    {
+      "path": "D:/linji-catalog-reads/20261103/backend-check.log",
+      "sha256": "af4a449ed6ff68e0759026d25fa6b3af38277b6cb96ee0a18b4d2363eb6be5cf"
+    },
+    {
+      "path": "D:/linji-catalog-reads/20261103/backend-e2e.log",
+      "sha256": "d216e13a215fb5a71b5bcffb8f2ab57363562ed2968bd323c60f6c8b44830a7e"
+    },
+    {
+      "path": "D:/linji-catalog-reads/20261103/backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-catalog-reads/20261103/admin-runtime.log",
+      "sha256": "dafdeeb52510ca3ef74c3d5206041e79a01077d5eb9d50fd94b5f4cb140726f9"
+    }
+  ]
+}

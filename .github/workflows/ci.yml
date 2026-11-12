@@ -1,0 +1,295 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/linji_snow
+      INITIAL_ADMIN_ACCOUNT: ci-system-admin
+      INITIAL_ADMIN_PASSWORD: ci-only-database-seed-password
+      LINJI_DATABASE_TEST_DISPOSABLE: 'true'
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: linji_snow
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d linji_snow"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec prisma validate
+      - run: pnpm db:generate
+      - run: pnpm db:deploy
+      - run: pnpm db:seed
+      - run: pnpm db:seed
+      - run: pnpm db:verify
+      - run: pnpm test:db
+      - run: pnpm db:verify
+      - run: pnpm check
+      - run: pnpm build
+      - run: pnpm test:e2e
+      - run: pnpm openapi:generate
+      - run: git ls-files --error-unmatch contracts/openapi.json
+      - run: git diff --exit-code -- contracts/openapi.json
+      - name: Export and verify pristine independent source (no services started)
+        run: |
+          node --experimental-strip-types scripts/export-source.ts "$RUNNER_TEMP/linji-backend-source" > "$RUNNER_TEMP/linji-backend-source-metadata.json"
+          SOURCE_DIGEST=$(node -p "JSON.parse(require('node:fs').readFileSync(process.env.RUNNER_TEMP + '/linji-backend-source-metadata.json', 'utf8')).sourceSha256")
+          pnpm source:verify "$RUNNER_TEMP/linji-backend-source" "$SOURCE_DIGEST"
+          tar -C "$RUNNER_TEMP/linji-backend-source" -czf "$RUNNER_TEMP/linji-backend-source.tar.gz" .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linji-backend-source
+          path: |
+            ${{ runner.temp }}/linji-backend-source.tar.gz
+            ${{ runner.temp }}/linji-backend-source-metadata.json
+          if-no-files-found: error
+          retention-days: 7
+
+  kafka-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/linji_kafka_validation
+      KAFKA_INTEGRATION_BROKERS: localhost:9092
+      LINJI_DATABASE_TEST_DISPOSABLE: 'true'
+      INITIAL_ADMIN_ACCOUNT: ci-kafka-admin
+      INITIAL_ADMIN_PASSWORD: ci-only-kafka-seed-password
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: linji_kafka_validation
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d linji_kafka_validation"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+      kafka:
+        image: apache/kafka:4.1.1
+        env:
+          KAFKA_NODE_ID: 1
+          KAFKA_PROCESS_ROLES: broker,controller
+          KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+          KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+          KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+          KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+          KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9093
+          KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+          KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+          KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+          KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+        ports:
+          - 9092:9092
+        options: >-
+          --label linji.validation=kafka-recovery
+          --health-cmd "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092"
+          --health-interval 5s
+          --health-timeout 10s
+          --health-retries 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm db:generate
+      - run: pnpm db:deploy
+      - run: pnpm db:seed
+      - run: pnpm db:seed
+      - run: pnpm db:verify
+      - run: >-
+          pnpm test:integration
+          --reporter=default
+          --reporter=json
+          --reporter=junit
+          --outputFile.json=validation/kafka-integration.json
+          --outputFile.junit=validation/kafka-integration.xml
+        env:
+          KAFKA_RECOVERY_CONTAINER_ID: ${{ job.services.kafka.id }}
+      - run: pnpm db:verify
+      - name: Collect dedicated Kafka diagnostics
+        if: always()
+        continue-on-error: true
+        env:
+          VALIDATION_KAFKA_CONTAINER: ${{ job.services.kafka.id }}
+        run: |
+          mkdir -p validation
+          docker logs "$VALIDATION_KAFKA_CONTAINER" > validation/kafka-broker.log 2>&1
+      - name: Upload Kafka integration evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kafka-integration-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            validation/kafka-integration.json
+            validation/kafka-integration.xml
+            validation/kafka-broker.log
+          if-no-files-found: warn
+          retention-days: 14
+
+  asset-scanner-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/linji_asset_validation
+      ASSET_INTEGRATION_CLAMAV_HOST: localhost
+      ASSET_INTEGRATION_CLAMAV_PORT: 3310
+      INITIAL_ADMIN_ACCOUNT: ci-assets-admin
+      INITIAL_ADMIN_PASSWORD: ci-only-assets-seed-password
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: linji_asset_validation
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d linji_asset_validation"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+      clamav:
+        image: clamav/clamav:1.4.3
+        env:
+          # Bundled definitions make the protocol/EICAR test reproducible offline.
+          # Production must retain signature updates; this is a dedicated test service.
+          CLAMAV_NO_FRESHCLAMD: 'true'
+        ports:
+          - 3310:3310
+        options: >-
+          --health-cmd "clamdscan --ping=1"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm db:generate
+      - run: pnpm db:deploy
+      - run: pnpm db:seed
+      - run: pnpm db:verify
+      - run: pnpm test:assets-integration
+      - run: pnpm db:verify
+
+  asset-storage-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/linji_asset_storage_validation
+      ASSET_STORAGE_INTEGRATION_CONFIRM: linji_asset_storage_validation
+      INITIAL_ADMIN_ACCOUNT: ci-storage-admin
+      INITIAL_ADMIN_PASSWORD: ci-only-storage-seed-password
+      JWT_ACCESS_SECRET: ci-storage-http-secret-at-least-32-characters
+      S3_ENDPOINT: http://127.0.0.1:9000
+      S3_PUBLIC_ENDPOINT: http://127.0.0.1:9000
+      S3_BUCKET: linji-asset-storage-validation
+      S3_REGION: us-east-1
+      S3_ACCESS_KEY_ID: ci-storage-local
+      S3_SECRET_ACCESS_KEY: ci-only-storage-local-password
+      S3_SERVER_SIDE_ENCRYPTION: 'false'
+      CLAMAV_HOST: 127.0.0.1
+      CLAMAV_PORT: 3310
+      CLAMAV_TIMEOUT_MS: 15000
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: linji_asset_storage_validation
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d linji_asset_storage_validation"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+      clamav:
+        image: clamav/clamav:1.4.3
+        env:
+          CLAMAV_NO_FRESHCLAMD: 'true'
+        ports:
+          - 3310:3310
+        options: >-
+          --health-cmd "clamdscan --ping=1"
+          --health-interval 5s --health-timeout 5s --health-retries 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: docker build -t linji/minio:source-9e49d5e7a648 infra/minio
+      - name: Start dedicated private storage
+        run: >-
+          docker run -d --name linji-ci-minio -p 127.0.0.1:9000:9000
+          -e MINIO_ROOT_USER="$S3_ACCESS_KEY_ID"
+          -e MINIO_ROOT_PASSWORD="$S3_SECRET_ACCESS_KEY"
+          linji/minio:source-9e49d5e7a648
+      - run: pnpm storage:init
+      - run: pnpm storage:init
+      - name: Load harmless test-only antivirus definition
+        run: |
+          docker cp test/fixtures/linji-test-only.ndb "${{ job.services.clamav.id }}:/var/lib/clamav/linji-test-only.ndb"
+          docker exec "${{ job.services.clamav.id }}" clamdscan --reload
+      - run: pnpm db:generate
+      - run: pnpm db:deploy
+      - run: pnpm db:seed
+      - run: pnpm db:seed
+      - run: pnpm db:verify
+      - run: pnpm test:storage-integration
+      - run: pnpm db:verify
+      - name: Stop dedicated storage
+        if: always()
+        run: docker rm -f -v linji-ci-minio

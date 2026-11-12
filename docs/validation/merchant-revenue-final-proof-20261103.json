@@ -1,0 +1,303 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/merchant-revenue-20261103.json",
+      "sha256": "b3153216b6f6403581af50d19939a2c653ce97bec0dff542537c5f6027f62917",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitFiles": 143,
+        "unitTests": 1240,
+        "sourceExportNode": 8,
+        "httpFrameworkFiles": 9,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "businessCodeChanged": false,
+        "httpFixtureChanged": true
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/merchant-revenue-20261103.json",
+      "sha256": "aa3dc148021a82b54f3c423c7e63f4498bf88eef6446764334b942ccc4648c99",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 2436,
+        "newRevenueTests": 44,
+        "revenueAndDashboardTests": 332,
+        "releaseNode": 20,
+        "sourceExportNode": 8,
+        "forcedNextBuilds": 2,
+        "standaloneVerify": 2
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/merchant-revenue-20261103.json",
+      "sha256": "3924a640e0745d39046a8fdf887506bead3045f08bb7c97ca87059275d1a46e7",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessFiles": 66,
+        "businessTests": 1163,
+        "sourceExportNode": 8,
+        "artifactNode": 10,
+        "doctor": "20/20",
+        "exportPlatforms": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "postExportTypes": 0,
+        "seal": 0,
+        "verify": 0,
+        "relocatedVerify": 0,
+        "businessCodeChanged": false
+      }
+    }
+  ],
+  "audit": {
+    "markdownFiles": 224,
+    "checkedLinks": 1912,
+    "broken": []
+  },
+  "verifiedUniqueReferences": 57,
+  "references": [
+    {
+      "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "3cdb53d68c1785cdb9e42dc08dee31aed2bdbfa949f6188490b7208c811307a3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/native-http-runtime.ts",
+      "sha256": "3c7a153df237ecedfee557315bb0eee63dbd6ed196e31a8bf057cc0310610473"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/backend-install.log",
+      "sha256": "62495d2f136c31037c2d9fe805cc9552f78b638de6a595f5bd2dc029a81f0ad4"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/backend-check.log",
+      "sha256": "0c6752cf5316932cac98682c44723464f070ade7cc85538aac3c0f9c29d2c9db"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/backend-e2e.log",
+      "sha256": "f2a80eb9c1da244640995c07ce65cc8c22a48fe52dab14eefba09747829726d4"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/native-http-final.log",
+      "sha256": "76796c9673e1bc8d3ce9b96b533b17bb50646ccc63809790c01d378a00dc5102"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/report.json",
+      "sha256": "c580265ccfb02839e719133eee2983573db99a962a3115183f13e951630686a1"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/client-result.json",
+      "sha256": "62a117f4e310c5a8e199730e3f19996a305b62335e05d45f5cfcd182e9571a7f"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/ready.json",
+      "sha256": "6b37c3803dce1c22f459319253c5b9cfe54752f264e5a695bfcde21e25a322f5"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/migrate-deploy.log",
+      "sha256": "70f3a5507b6dee0fda78dd4db4d218fcf8f569b76a8319772a98df46ff8b25cf"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/fixture-verify.log",
+      "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/cleanup.json",
+      "sha256": "76c4fab7d9473b9eec8e80e59373f16c8f7f0224445fd9c7a789a865123b69bc"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/repro.log",
+      "sha256": "4b0dd4584cfa91cdc3501888b322f1d466344ae49da77183461da5e978b00823"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/web-types-first.log",
+      "sha256": "0afdbbe43ee40c5e7a7e2d9bf43608cd8c13fe73def70aed6bcf0f370148f7be"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/revenue/revenue-response.ts",
+      "sha256": "834e99de35a2b73e36f845677c4fd70e962e3d2c9ac98ee10618d4f7830aee37"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/revenue/merchant-revenue-model.ts",
+      "sha256": "a723604538a36d2590ba419ee83c11c7768b9aa673897af16b65098a1b39eb72"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/revenue/merchant-revenue-queries.ts",
+      "sha256": "ab03880956d282ee699ea4c236e469c2da87ebcea68180beb4a12ca961d5e97d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/revenue/merchant-revenue-run.ts",
+      "sha256": "593d8d2b041e90a9982540c97a27c933724a88f3c94efac8b4b24ed217c939cc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/revenue/merchant-revenue-page.tsx",
+      "sha256": "eb979ccd361a44ac44bcb809dd2afe9596f430703c3f0a59207f620a9a03c9f2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/revenue/merchant-revenue-boundaries.test.ts",
+      "sha256": "568c798ec0e2de14885a85c0193b26d2c1ede04b83ce1a74669c2cc9a8800d71"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/revenue/merchant-revenue-run.test.ts",
+      "sha256": "08ad0f252013f0abc15ba57cd1ecddb70e856bdd340d72d9f731e9d0ce8ad54f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/revenue/merchant-revenue-pages.test.tsx",
+      "sha256": "2cb86e3874041e0e40fcd83327bc613c5b6c7d22a3b70d9fc70b5b70373c01ab"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/merchant-dashboard/dashboard-response.ts",
+      "sha256": "cdd2d5debfc28a948e72e3cd3052b86621dc8a164e66d1eab2c5cb90158adb42"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/test/authorization.http-spec.ts",
+      "sha256": "914f7217ce64e9fd46a4e391971ddef693e6c3957b32226be1dfe5561783f405"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/web-install.log",
+      "sha256": "bf532c2c87299c7cff77e95385484dcb7a647830dd65e1908b4f6ecf971b210b"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/web-check.log",
+      "sha256": "28745ad3211b75853521e19ca1302064049fa21352a2c06edde212d9dd514a8b"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/web-build.log",
+      "sha256": "b51ad50ec7998190138241f029e3f14fda2b1aef470ed808feebee6bf4590b0c"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/targeted.log",
+      "sha256": "cd6573111061223f89a0533831f0e40ef53ef9f77777abe040453a8ed3fef686"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/web-http.log",
+      "sha256": "c6162c59d0912023591cd90aa02ba47fa6830ad57ed261698ca3d8eef5c47ded"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/web/.next/release/release-manifest.json",
+      "sha256": "c490c9c315abc1e3fde841f738ee521061defb516a439c540d688dda4e3c1768"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/.next/release/release-manifest.json",
+      "sha256": "55a1b0b3934c86079f495a88ad390e3afc3483e2d040fc36a3deb1dcbd4b9454"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/app-install.log",
+      "sha256": "9d25fa02cca67bb1a1c5bf511c2299893a5f56a07f4de678efe57d43847e4718"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/app-check.log",
+      "sha256": "41a557ce49e015c0d648717faf3f44f4e2c3cf054e6869c8caed7a388f2a28c0"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/app-export.log",
+      "sha256": "6dd948953cd103cab1e8f981691d94f525454a7bf1d6bd65fb2006ccba971c53"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/app-post-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/app-seal.log",
+      "sha256": "84bf53a459c7e46b3935fbbf1d28c240011d772774dea695d02fc19f6e23bf74"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/app-verify.log",
+      "sha256": "32c707d6dc1d1fdcc07ad5d47bfa471f08bbf567f1235652c79881e2e7daf5b9"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/app-relocated-verify.log",
+      "sha256": "fa4b1ca15e0836d357c0a2f0b312297c9668ec72243923c7a44f3ccf74a53096"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/app-export/linji-export-manifest.json",
+      "sha256": "fa12a10c4174aceb1d8ae401335c1a1fb2207038ed1bb984094294b48a9b4578"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-audit.log",
+      "sha256": "e304282806bb9dfb7bc5cf4f939593e9a9e2db96880164867ead0bdba20f6f28"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/web-final-format.log",
+      "sha256": "0b95efe7a1df96aa81440f70658e5c8169546d284587f7ba2e8d268fd1aaea15"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/run-http.mjs",
+      "sha256": "5b14bfd723582e59b8f1c80082fd65efa7c00a54b7877de88719d0fe9ce8a3b8"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/evidence.mjs",
+      "sha256": "fac835d8274ab8d65c364553ddac21deecc426d1e5138eb3742f8a384c9832fe"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/update-docs.mjs",
+      "sha256": "add98f5e4fcc7c74b876b2db4085bae17456a5843ceaf766cf53f6ef5ed53907"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/final-proof.mjs",
+      "sha256": "04287b8f1cdd5dc98231d873031f684ea6f75fbd5562586bab0b1e5f59ef1d2d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/engineering/merchant-revenue-lifecycle.md",
+      "sha256": "755a57d75a4296f7f4826139333c337fc3602de2c9274748505d7ccb486e20fd"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "8b9a37297fc2f6580bb1321485bf6ec37db5868841b07d09a5b80a427f5c7160"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "ca907552aaccbd126b32c1a6b3ded9ff1ea9dce0965b1d97f834618e8de098cb"
+    }
+  ],
+  "overallGoalComplete": false,
+  "pending": [
+    "D-49 merchant lifecycle / D-50 resort lifecycle reasons / D-09 account deletion",
+    "Actual browser/visibility/BFCache/device acceptance",
+    "Complete Kafka remains unaccepted due to Windows directory AccessDenied",
+    "Real providers, containers, signed native packages and remote CI"
+  ]
+}

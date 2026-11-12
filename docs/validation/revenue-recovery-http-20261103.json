@@ -1,0 +1,223 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "scope": "Revenue persisted request receipt and CSV task result projection, real response-loss/idempotency/row-level revocation recovery and existing management regression",
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "httpSuites": [
+    {
+      "label": "revenue",
+      "tests": 8,
+      "completed": true,
+      "output": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx",
+      "checks": {
+        "single write response loss retains original key and reload recovers committed result": true,
+        "old key replay does not overwrite a later amount or add another write": true,
+        "request receipts remain actor-owned even for another granted account": true,
+        "CSV response loss and identical file replay recover the same pending job": true,
+        "real recovery processes partial success and replays terminal job without duplicating rows": true,
+        "import progress is actor-owned and merchant reads remain confined to own resorts": true,
+        "revoking write grant after 25 committed CSV rows preserves them and refuses the remaining row": true,
+        "another recovery pass does not rerun committed rows or change final revenue": true
+      },
+      "references": [
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/report.json",
+          "sha256": "6ed724f06136b1858c818388b09f9a910b9a10e4096ef35589e623293c74c273"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/client-result.json",
+          "sha256": "f4b14fd818570d782cfbe7690759bb9a761e90af00d8a02d999cfb35549c6ac4"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/ready.json",
+          "sha256": "fb80d80b1eb8c1329d197785f10941f98afa13ef287976ceadc6c8e732cd15ea"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/migrate-deploy.log",
+          "sha256": "d807818c510c3e6ea30c9615e36d562f809000662ee4d93953cc6cbd22c0e58f"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/seed-first.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/seed-second.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/verify-before.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/fixture-verify.log",
+          "sha256": "35f445b051a3a2299f62b96587a21dab603840f498abbe27775aeb39f1a1b778"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/verify-after.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/revenue-recover-0472cc72-22e5-4ec8-bd59-feadae8dc672.log",
+          "sha256": "970d383fce8e590a7af3fd0acc23398b003c2e3e7cef244eecbf55b0be676949"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/revenue-recover-750ef178-9340-474d-8446-773db5188d0c.log",
+          "sha256": "970d383fce8e590a7af3fd0acc23398b003c2e3e7cef244eecbf55b0be676949"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/revenue-recover-c0009281-a966-4c7b-a134-2a4b7d19b7bb.log",
+          "sha256": "970d383fce8e590a7af3fd0acc23398b003c2e3e7cef244eecbf55b0be676949"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/revenue-runtime/linji-revenue-http-9EjJrx/revenue-recover-d20412ab-abb1-448a-8003-3b43c82a234c.log",
+          "sha256": "970d383fce8e590a7af3fd0acc23398b003c2e3e7cef244eecbf55b0be676949"
+        }
+      ],
+      "cleanup": {
+        "path": "D:/linji-revenue-recovery/20261103/revenue-cleanup.json",
+        "sha256": "08722024cf744ed2d492db15295a58963182d2ec1f96a340b81d0f002e4f69c3"
+      }
+    },
+    {
+      "label": "admin",
+      "tests": 42,
+      "completed": true,
+      "output": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc",
+      "checks": {
+        "userId": 2,
+        "rawProjection": true,
+        "emptyPage": true,
+        "selfScope": true,
+        "foreignDenied": true,
+        "revocationRejected": true
+      },
+      "references": [
+        {
+          "path": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc/report.json",
+          "sha256": "6323895527afaa9ac99af6054bd992a9b7efa50a1e4f515a150cec776aec031f"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc/client-result.json",
+          "sha256": "d38e8b22fa84ce2ef6ee9d7be01ef960e78da88823b600010ef139f4facfc560"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc/ready.json",
+          "sha256": "7f809e0a39534005668d57ba80adc21f8d3e6794716ee677568a58cb29598112"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc/migrate-deploy.log",
+          "sha256": "a5db71f163cb40650a894fca22dddfb68f86b86113ef90fd10cc2e1e50777cfa"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc/seed-first.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc/seed-second.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc/verify-before.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc/fixture-verify.log",
+          "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+        },
+        {
+          "path": "D:/linji-revenue-recovery/20261103/admin-runtime/linji-admin-http-IucUgc/verify-after.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        }
+      ],
+      "cleanup": {
+        "path": "D:/linji-revenue-recovery/20261103/admin-cleanup.json",
+        "sha256": "34493a00567c3b22e0381d66fa8fb6fe60cac7b2c5a947f4389967a7801ad97c"
+      }
+    }
+  ],
+  "regression": {
+    "newTests": 18,
+    "initialFailed": 18,
+    "initialLog": {
+      "path": "D:/linji-revenue-recovery/20261103/repro.log",
+      "sha256": "54919357c3e3e381706646394871f12651c4c4792e90aa00eeec63ea57a5793a"
+    },
+    "initialErrorTextFailure": {
+      "path": "D:/linji-revenue-recovery/20261103/targeted-first.log",
+      "sha256": "5fb5c0770b476948072a95dfeaa60dc38540bf236dcef9e0a1d95740cca9613e"
+    },
+    "targetedTests": 194
+  },
+  "limitations": [
+    "CSV recovery uses real application/repository/row transactions through four guarded explicit recovery passes; timer, Kafka/Inbox, lease expiry and broker recovery were not exercised",
+    "HTTP sessionStorage/IndexedDB and Cookie jar are explicit memory/Node adaptations, not real browser/React/device acceptance",
+    "No current full database suite, real provider/storage/container, signed native package or remote CI acceptance",
+    "Existing Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; overall project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 143,
+    "unitTests": 1240,
+    "sourceExportNode": 8,
+    "httpFrameworkFiles": 9,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "productionBusinessCodeChanged": false,
+    "httpHarnessChanged": true,
+    "recoveryPasses": 4
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "230740eb85ec25d38744f36803d21b7cbcba8b337c7ad04ca7b830ebede06d3c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/native-http-runtime.ts",
+      "sha256": "629a70610fc9dc36ea311ee246700b7caac6ad4688f55115045ea7eba7f51b10"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/validate-native-revenue-http.ts",
+      "sha256": "f6145bedb61c839fc9d82211267e86220b080b15ad86f143462b31203335a5c9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/revenue-recovery-http-fixture.ts",
+      "sha256": "939371863383e3056d3ad6507751324e7609122da38771d23f149a603231d8bf"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-revenue-recovery/20261103/backend-install.log",
+      "sha256": "aae6bf15e1ebd5ef2216d33a5ea136912c93e8ba30c441f4ffddac95a6b9f771"
+    },
+    {
+      "path": "D:/linji-revenue-recovery/20261103/backend-check.log",
+      "sha256": "79a22eb0037d8731eac41361c987a46f93df0e672366e4a51605476ac46b849f"
+    },
+    {
+      "path": "D:/linji-revenue-recovery/20261103/backend-e2e.log",
+      "sha256": "a20e6e16f38ca55f40d7f39916a630a1d6cdab8f5af48f728f55bc7f3e29f355"
+    },
+    {
+      "path": "D:/linji-revenue-recovery/20261103/backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-revenue-recovery/20261103/revenue-runtime.log",
+      "sha256": "47289783bd4d0a066edce2619a1980404459f6aedfc29b448aeaec2e26e30838"
+    },
+    {
+      "path": "D:/linji-revenue-recovery/20261103/admin-runtime.log",
+      "sha256": "0f4a9538ecf17125360d156e66ff6c2f6fab5acfad4fce716787fef26c6cb6a2"
+    }
+  ]
+}

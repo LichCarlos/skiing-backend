@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-03",
+  "passed": true,
+  "scope": "Project knowledge production form/reader/write-gate/lifecycle and Outbox metadata/locator/retry through compiled Nest HTTP and isolated PostgreSQL/pgvector; no new business protocol",
+  "migrations": 24,
+  "liveHttp": {
+    "tests": 27,
+    "newKnowledgeTests": 4,
+    "newEventTests": 2,
+    "database": "linji_admin_authorization_validation",
+    "runtime": "PostgreSQL 17.11 / pgvector 0.8.1",
+    "report": {
+      "path": "D:/linji-content-http/20261103/final/linji-admin-http-owyISh/report.json",
+      "sha256": "0dad3a11bb3e002a31193cb023066e2fc562982506be2a1f8f1184b81363ae2c"
+    },
+    "clientResult": {
+      "path": "D:/linji-content-http/20261103/final/linji-admin-http-owyISh/client-result.json",
+      "sha256": "76353b4fbe204befb6162f71dc9691c77abfea1366c1dcb5e3e45e39f28d6875"
+    },
+    "fixtureVerification": {
+      "path": "D:/linji-content-http/20261103/final/linji-admin-http-owyISh/fixture-verify.log",
+      "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+    },
+    "cleanup": {
+      "path": "D:/linji-content-http/20261103/cleanup.json",
+      "sha256": "7d82cac633ae42f84f14b8fa88aa5a169678b18dcb7519a6cd9a3b33f2ddfe36"
+    },
+    "ports": [
+      60429,
+      63320
+    ],
+    "knowledgeVersion": 7,
+    "knowledgeOutboxEvents": 7,
+    "knowledgeAudits": 7,
+    "retainedFirstPublishTime": "2026-11-03T04:54:10.702Z",
+    "retryAudits": 1,
+    "eventAttempts": 5,
+    "eventMaxAttemptsBefore": 5,
+    "eventMaxAttemptsAfter": 13,
+    "outboxTotal": 13,
+    "retainedRagEvents": 4,
+    "retainedRagAudits": 6
+  },
+  "diagnostics": [
+    "Initial synthetic failed event incorrectly included a lease. The database OutboxEvent_lease_check rejected fixture preparation. Kept the constraint and failure log; fixed only the fixture to a legal failed event without lease and reran in a new isolated database. Both environments stopped."
+  ],
+  "limitations": [
+    "Overall goal remains incomplete; D-49/D-50/D-09 remain unanswered",
+    "No browser Cookie/CORS/React/BFCache or device validation in this stage; Node cookie transport only",
+    "Project knowledge edits have version protection; lifecycle commands still do not carry client expectedVersion",
+    "No cross-reload/device idempotency protocol added",
+    "Kafka dispatch/consumer disabled; pending Outbox is not delivered/indexed completion",
+    "No actual embedding/chat provider, container, signed native package or remote-CI validation",
+    "No Docker start/restart, parent dependency deletion, commit/push/deploy/publish"
+  ],
+  "businessRuntimeChanged": false,
+  "repository": "backend",
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 142,
+    "unitTests": 1220,
+    "sourceExportNode": 8,
+    "httpFrameworkFiles": 9,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "lint": "zero errors; existing no-unsafe-finally warning"
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "d1e85dea7e427f5b9662370cf49633a0ab2cf375cd4a00096de470c4030a3839"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/native-http-runtime.ts",
+      "sha256": "3c7a153df237ecedfee557315bb0eee63dbd6ed196e31a8bf057cc0310610473"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/knowledge-content/application/project-knowledge.service.ts",
+      "sha256": "c1a54bfc96c69cdbffe184c3f98d76a63ffe1f26323d0e946621718f06c39f90"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/knowledge-content/infrastructure/prisma-project-knowledge.repository.ts",
+      "sha256": "f7f35a438e589e44fbabc961c27eecf7262ffa7e7bdd89fe9fa4ac7ad738e77d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/integration-events/infrastructure/prisma-outbox-management.repository.ts",
+      "sha256": "fb92192dced80e0665f519fcf1cd92fd2fe4cc9fa95a58c4ed5297f805ad2039"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-content-http/20261103/backend-preflight-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/backend-install.log",
+      "sha256": "26ec72819f2b560f2b759e12ca6c678a273e342b2c72f336dc20e941a864dcea"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/backend-check.log",
+      "sha256": "c745c5cea6fe7c6c5e25f5565ec8a5f835c21e0457a1e66c0634e2174c26df71"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/backend-e2e.log",
+      "sha256": "1173a7b954e49bbbc0327706ffa64f943eb8bedfdc5685d6dd5b6364d6c166a6"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/native-admin.log",
+      "sha256": "227053347fa7eb80b080d88d508a24d6d014ca133fdb7540a02e15a41d0eebfd"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/native-admin-final.log",
+      "sha256": "88f1662d84d5229d47a960dc848ab34c0f6ec16bb5ed290c36afc835a439d96b"
+    }
+  ],
+  "failedFixtureLog": {
+    "path": "D:/linji-content-http/20261103/runs/linji-admin-http-f2piht/fixture-prepare.log",
+    "sha256": "b6c67c86c0ca8d495e2d021be73998ff1247903f4439bd2bdfa831d41329b1ad"
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/dictionary-workflow-20261103.json",
+      "sha256": "b737b9c9b3e8c110d038a49ebec35b977eabfcc3d13efc95dece4a851d61f742",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitTests": 1240,
+        "toolTests": 8,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "productionBusinessCodeChanged": false,
+        "httpFixtureChanged": true,
+        "postFixtureLint": 0,
+        "postFixtureTypes": 0
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/dictionary-workflow-20261103.json",
+      "sha256": "47a6be1d8e76879442d515fb27fd27826fcb02e8b7d68d411723d2e78bcecd16",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 2968,
+        "newTests": 33,
+        "dictionaryCombinedTests": 148,
+        "toolTests": 28,
+        "forcedNextBuilds": 2,
+        "standaloneVerify": 2
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/dictionary-workflow-20261103.json",
+      "sha256": "fc9c49ebd6d8667ef14104819c33e2234c53104905c60f2a343e12a1b87559b5",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 1163,
+        "toolTests": 18,
+        "doctor": "20/20",
+        "exportPlatforms": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "postExportTypes": 0,
+        "seal": 0,
+        "verify": 0,
+        "relocatedVerify": 0,
+        "businessCodeChanged": false
+      }
+    }
+  ],
+  "audit": {
+    "markdownFiles": 250,
+    "checkedLinks": 2174,
+    "broken": []
+  },
+  "verifiedUniqueReferences": 66,
+  "references": [
+    {
+      "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/commands.json",
+      "sha256": "06df2c8c5f7b6079f52296a68afe5f10751e09b8fb5728eba9d602be25e00758"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "91e2a901b95f5215bf4fda31a1d46b4b800ad79614d145af28d9700265575bc4"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/backend-install.log",
+      "sha256": "249f791af383b34f193e81b5272ebe8e43036d7cdc3cdfc7935403991cf520ae"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/backend-check.log",
+      "sha256": "81f20a923aa027334943e1b45f24ca75b774528ddf8595f11cdf6d83fd6adf81"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/backend-e2e.log",
+      "sha256": "be1c6cdda94fc11b6f69f34e77a375ebfe06deba918f3a7d5afdb693bc30c319"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/backend-fixture-format.log",
+      "sha256": "47b2cd8f177da33c051b2ffc88e67af0cd4b5313abb8fa06d97729348e41151f"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/backend-fixture-lint.log",
+      "sha256": "9da2bbc97a7329d69200c3ad010c1185542234e3b47c114b7e43ef1d80f4f659"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/backend-fixture-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/admin-runtime.log",
+      "sha256": "3201cc42db748dee1698c10fcb4d30dd531b57c8f751d9c93cba96810d6ef1df"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/targeted-first.log",
+      "sha256": "eca3229ddcb375c43e42afe13cb23f539a00d067d3f6352c673e9019918fe0a1"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/targeted.log",
+      "sha256": "356f1f41a448f71e0e0d682a96c78f8f3453e27cd78cc9d43b5e57a5a604f454"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/admin-types.log",
+      "sha256": "60a1b0c3076118d2e5b260c9c0d147ff8970cba5fb2c606b9b96dec720365c80"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/admin-types-final.log",
+      "sha256": "3dd115a54d9decc15d9b6f1babec63f20d21966a914759ea6530c5b714007d15"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/report.json",
+      "sha256": "8eea5b984855e7ac7ab8a96591275417a836ac04e2af2fffb23f860aa9c6d489"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/client-result.json",
+      "sha256": "6e7dc12ef88a771389807bd67347a5039317435553efa92aa4ecbb9d0dce6efb"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/ready.json",
+      "sha256": "4fa22862d0bac4edab006e3ca5ef7d98c7d57af8a7237f025ad840a6c993f27f"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/migrate-deploy.log",
+      "sha256": "892b30cf0689c2e94fa0f081dba9f96c5c6ab856f16241e3526e8e6a61348b8e"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/fixture-verify.log",
+      "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/cleanup.json",
+      "sha256": "b0db684c5cba45589181d1290a6269e7ebd4784fa0ef94811e5af95a88f1218a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "ace38e0799de2ffe1c17acac39753d8d7f5a3d402ea8ccbd064943a38ad8e0fe"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/dictionaries/dictionary-queries.ts",
+      "sha256": "ac507eabceb50a758d3160fda8ddc7f024651f6ffbde5cf7a7c27de9217f3792"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/dictionaries/dictionary-model.ts",
+      "sha256": "2175abdd181b85ee424b5d3aa9b0d0bfdb65015c6fed2dd7a1da55342348ff18"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/dictionaries/dictionary-commands.ts",
+      "sha256": "4f96ae29761aa7c62f42b0ed7aac1a0c11391251659acef56d42487364c8bcd4"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/dictionaries/dictionary-console.tsx",
+      "sha256": "6bdd40501b9574b5c060317fa537bfa33d98cef1f28eec0f4d10ddce6194095d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/dictionaries/dictionary-commands.test.ts",
+      "sha256": "9be04eae37867a1383e2ee086416990f76c0bd8cc9b8a14a3e49b681a0887f16"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/dictionaries/dictionary-page-lifecycle.test.tsx",
+      "sha256": "999455d06038dc22e6099ada8ff126abecc4a79b61645bc5ce89c805b8cd4785"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/test/authorization.http-spec.ts",
+      "sha256": "8d195671f585fb2de672e2fcd607c65bcc07db246b6d77eec15bc6fe1c85a40a"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/web-install.log",
+      "sha256": "a6f0a6ce5fdd27323ac006ebe2caa5f0ad6ccb5e7b3ccbc89019100eeff9accc"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/web-check.log",
+      "sha256": "ac50f6c060bea8cb1a88effe5d5ab3ab70e22abe8319ecdbece76401301b8cfc"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/web-build.log",
+      "sha256": "eb82228355ad7394e05dbf0d2e72e9eaec91f89bdc2b8878ac88456204b1406c"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/admin-http.log",
+      "sha256": "9370e4a978e34ff40493fc3feb651c5db1027693c60630fd5c08d5efb72aa9d8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/web/.next/release/release-manifest.json",
+      "sha256": "5ed65bb133337fa7d77be8d60f77ba5875bbd421e8e1f5c46050c0b1332bf207"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/.next/release/release-manifest.json",
+      "sha256": "eeb0247f4297c17fd34ef11234b46c1258fd64a195c6087bb06645fe7083a919"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "4a8a396a613bcae0ede5fb722f3809f9a378ee982f7558e440f7e6c073ab5f6f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-install.log",
+      "sha256": "c6553d3425ba526a83ed18781df507cd6bcbb2291aa485258c501a94ec2e6f1e"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-check.log",
+      "sha256": "4ce6a099a93da6d656ace1fd5138d6cb3deaa13dd8cf737953a644b251e115f5"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-export.log",
+      "sha256": "08b91205fac45003e03c4c196159143bd0bd301fd34ae6daedc497cee1012087"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-seal.log",
+      "sha256": "1c5bceeb0cd0bf8799b9a480cdc80469417e3c74a1bd288971f0f640cca104b4"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-verify.log",
+      "sha256": "e2c8fe05dfc453ce2c661897951b3efd053f9a22dd6b7a7f5fe8b13c06285d9e"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-relocated-verify.log",
+      "sha256": "0a27ed848dd8a0d3620a59c95b8ccab32beaff8d57322543791d56568287d220"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-export/linji-export-manifest.json",
+      "sha256": "4018d1f6e424bad99735d7511573a3303060af20fcb9f10064aa74b41e1f3340"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "76e1863d2cf98ed8fad3242b94a0389324a356e27f2839ac7318f29825cbabef"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final-audit.log",
+      "sha256": "faadd7c3d9142177251a3445973adc96e0a880e6833a54fe8a7d8e0c9dfff6ae"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/web-final-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/validate.mjs",
+      "sha256": "2170d5811fe1c2fc363ddae2d058d1a576116d9df59a51a047032909751deae8"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/fixture-commands.json",
+      "sha256": "364939edb89fd8b59ef3d52e47974be3788609975be58c0ee741d9b92a49627c"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/post-validate.mjs",
+      "sha256": "1e186722d3d46b8762da9608eeb811507253440d7e76b5506a5ef201dbf28f4f"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/run-http.mjs",
+      "sha256": "c26bb29264dbb6862ea65e595dbd1f411494b5854d21d84bb3df446b8f77a48e"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/evidence.mjs",
+      "sha256": "c4cd3caee3ca935be8532921824535799f6d174a43eaed2fbbf4056f2340b4fd"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/update-docs.mjs",
+      "sha256": "5ed458bb9109624d11b45dc02dac9013b6cfc80468011cf1b4ed9b490811cb95"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/final-proof.mjs",
+      "sha256": "9797282ac604c07985bd04a155e5477364280f43976dfb5ce551c25fe1594127"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/engineering/dictionary-command-lifecycle.md",
+      "sha256": "946deb86dc7b906067f4e7dfca47c1b34919ad52c3e63a22bde752b5e0dc7191"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/dictionary-workflow-http.md",
+      "sha256": "d3b0218d04ac4d9673bc4322c8b7a0aceff65d41ddc5b7aa8de00973c62a417a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "9e0e5bffe47639e95d8849255bff8a48612f6e01adffb6be667e1003ab2019e6"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "0fb9b4ff75c689fe810ae69c0cfc95945ea4fcc7af6b064f3304c398bbb1ce86"
+    }
+  ],
+  "overallGoalComplete": false,
+  "pending": [
+    "D-49 merchant lifecycle / D-50 resort lifecycle reasons / D-09 account deletion",
+    "Actual browser/visibility/BFCache/device acceptance",
+    "Kafka/Inbox/timer acceptance; Windows AccessDenied unresolved",
+    "Real providers/storage, containers, signed native packages and remote CI"
+  ]
+}

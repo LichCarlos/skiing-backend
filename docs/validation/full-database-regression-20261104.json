@@ -1,0 +1,236 @@
+{
+  "date": "2026-11-04",
+  "stage": "current-full-business-database-regression",
+  "evidenceVerified": true,
+  "apiOrSchemaChanged": false,
+  "productCodeChanged": false,
+  "dependenciesChanged": false,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "database": {
+    "output": "D:\\linji-full-database\\20261104\\runs\\linji-native-PEPr6q",
+    "checks": [
+      { "name": "postgres-version", "passed": true },
+      { "name": "initialize", "passed": true },
+      { "name": "start", "passed": true },
+      { "name": "create-database", "passed": true },
+      { "name": "migrate-deploy", "passed": true },
+      { "name": "seed-first", "passed": true },
+      { "name": "seed-second", "passed": true },
+      { "name": "verify-before", "passed": true },
+      { "name": "database-suite", "passed": true },
+      { "name": "verify-after", "passed": true },
+      { "name": "stop", "passed": true }
+    ],
+    "completed": true,
+    "stopped": true,
+    "postgresVersion": "postgres (PostgreSQL) 17.11",
+    "port": 49344,
+    "database": "linji_password_validation",
+    "pgvectorVersion": "0.8.1",
+    "migrations": 24,
+    "files": 36,
+    "tests": 859,
+    "skipped": 0,
+    "portClosed": true,
+    "passwordFileRemoved": true,
+    "pidFileRemoved": true,
+    "command": {
+      "cwd": "D:/linji-owned-asset-access/20261104/final/validated/backend",
+      "command": "pnpm test:native-db",
+      "exitCode": 0,
+      "elapsedMs": 323623,
+      "validatedSourceSha256": "d8bac0d0a079d7d64ae4b2e5210377211c0014227d64046731170ed266f7ffb3",
+      "productFiles": 647,
+      "productIdenticalToCurrent": true
+    }
+  },
+  "repos": [
+    {
+      "repo": "backend",
+      "productFiles": 647,
+      "validatedManifest": {
+        "path": "D:/linji-owned-asset-access/20261104/final/validated/backend/.source-export.json",
+        "sha256": "59f2cd9fe0a4fdd59c40d4f32b99706ba0b2d2002d7cc3eb649ec52f65b6fe34"
+      },
+      "productIdentical": true,
+      "reusedChecks": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitTests": 1446,
+        "sourceTools": 20,
+        "httpFrameworkTests": 177,
+        "build": 0,
+        "compiledOpenapi": 0,
+        "realStorageValidation": 0,
+        "assetDatabaseTests": 29,
+        "realStorageTests": 34
+      },
+      "previousReport": {
+        "path": "E:/desktop/lishiqi/backend/docs/validation/owned-asset-access-20261104.json",
+        "sha256": "e0b82788fa296a50f4b95aad4c30c3a0d73bd6eeffde7ce72aa4c47f230f952b"
+      }
+    },
+    {
+      "repo": "web",
+      "productFiles": 581,
+      "validatedManifest": {
+        "path": "D:/linji-owned-asset-access/20261104/final/validated/web/.source-export.json",
+        "sha256": "53a3cf73be27f2b9a80afcf4a1eaf2a661526aca1e08482b487bfff1811e9613"
+      },
+      "productIdentical": true,
+      "reusedChecks": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 3045,
+        "sourceTools": 20,
+        "releaseTools": 20,
+        "uncachedBuilds": 2,
+        "standaloneChecks": 2,
+        "productCodeChanged": false
+      },
+      "previousReport": {
+        "path": "E:/desktop/lishiqi/web/docs/validation/owned-asset-access-20261104.json",
+        "sha256": "23ec2bdb307f13eba0d98bf4420ab94bb01b7568cb63c36c603b4e081fe53fdf"
+      }
+    },
+    {
+      "repo": "app",
+      "productFiles": 238,
+      "validatedManifest": {
+        "path": "D:/linji-owned-asset-access/20261104/final/validated/app/.source-export.json",
+        "sha256": "45ed747a02d7c0044499bacb172cdb1b9ea6b01dfb40e57cbaf35a7ab3285f12"
+      },
+      "productIdentical": true,
+      "reusedChecks": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 1217,
+        "sourceTools": 20,
+        "artifactTools": 10,
+        "expoDoctor": "20/20",
+        "platformExports": ["ios", "android", "web"],
+        "artifactSeal": 0,
+        "relocatedArtifactVerify": 0,
+        "productCodeChanged": false
+      },
+      "previousReport": {
+        "path": "E:/desktop/lishiqi/app/docs/validation/owned-asset-access-20261104.json",
+        "sha256": "7c113d3a81ed97d551ef8ef835f24e5a1751c63a263002bb3a1193c69e70a380"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "path": "D:/linji-full-database/20261104/run.mjs",
+      "sha256": "fd39b771af1168cc21b472e16108a7b39336debbd9e32ab9cc15f9f1d56ba9b6"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/command.json",
+      "sha256": "9d34d82eb557fa8d45df61ee377a3be3f9afc9804473ab196b8c091f56295124"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/full-database.log",
+      "sha256": "12aae566d3eef3c3b26fde3dd7758d5850f610f54fbe9d34851a7e538d4629d2"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/database-suite.log",
+      "sha256": "fd585952417ed4fcc5a9c6bb901addb8a73dc77648847ea2e6b972f3c26958c6"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/initialize.log",
+      "sha256": "d1c60a588d78239d7d823aa6e0f1015f3e709dfb45c2584f2595c4eccd87d8b6"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/migrate-deploy.log",
+      "sha256": "4e1701715c6744ba2cb8d3374f58bc2d2ee210bbe93c711f3de2c0e0f865aa32"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/report.json",
+      "sha256": "ef31cc49fc4983643919caed1137c2ff257adafb2b6ffb4d241a4f5806491a87"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/server.log",
+      "sha256": "f60c3c53a97fd773f094c643cccc41f3d05219b83f6ebd047b93659d6e6f253a"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/start.log",
+      "sha256": "83468a58b9366155730bfcd24e4f618de9349e20a511b54255cb11627a0138eb"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/stop.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/runs/linji-native-PEPr6q/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    }
+  ],
+  "engineeringChecksRerun": false,
+  "checksReusedOnlyForIdenticalProductFiles": true,
+  "newTestsThisStage": 0,
+  "physicalStorageRerun": false,
+  "kafkaRerun": false,
+  "paidModelCalls": 0,
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Target browsers and Expo Web; real native devices/SecureStore and signed installable packages",
+    "Production TLS/storage/model capacity and business corpus, monitoring, sustained indexes and joint recovery",
+    "Container release and remote CI; parent dependency cleanup previously denied",
+    "D-49/D-50/D-09 remain undecided"
+  ],
+  "repo": "backend",
+  "deliveryVerification": {
+    "snapshots": [
+      {
+        "repo": "backend",
+        "cwd": "D:/linji-full-database/20261104/delivery/backend",
+        "sourceSha256": "e47dc76202d0bc58a71c240d075b65989d29d1e7bc2691011808497ca6a1a069",
+        "files": 870,
+        "productIdenticalToValidatedSnapshot": true
+      },
+      {
+        "repo": "web",
+        "cwd": "D:/linji-full-database/20261104/delivery/web",
+        "sourceSha256": "11de1cac74d0798da3982684e8e513f0c7c89ad802f69518b59656f4119ffd2d",
+        "files": 727,
+        "productIdenticalToValidatedSnapshot": true
+      },
+      {
+        "repo": "app",
+        "cwd": "D:/linji-full-database/20261104/delivery/app",
+        "sourceSha256": "59961d9a9a9ec2708fb6f9f9e48d45674e98c7c0b31e61045be1d914b2dce906",
+        "files": 331,
+        "productIdenticalToValidatedSnapshot": true
+      }
+    ],
+    "productIdenticalToValidatedSnapshot": true,
+    "finalizationCommands": 7,
+    "deliveryCommands": 7
+  }
+}

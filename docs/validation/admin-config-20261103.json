@@ -1,0 +1,160 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "System configuration full VO/page/filter/save receipt projection; local/end identity checks; list/editor visibility cancellation and clearing; explicit reload and recovery generation; shared-ledger send arbitration; real version conflict, committed-response loss recovery, anonymous fixed public projection and logout during read",
+  "http": {
+    "tests": 77,
+    "newTests": 2,
+    "output": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ",
+    "checks": {
+      "defaults": true,
+      "versionConflict": true,
+      "unknownRecovered": true,
+      "publicProjection": true,
+      "roleDenied": true,
+      "sessionRevocationRejected": true,
+      "sessionRestored": true
+    },
+    "persistence": {
+      "physicalConfigs": 2,
+      "nameVersion": 2,
+      "policyVersion": 1,
+      "status": "active",
+      "successAudits": 3,
+      "auditContainsOnlyVersionMetadata": true,
+      "totalOutbox": 53
+    },
+    "references": [
+      {
+        "path": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ/report.json",
+        "sha256": "a9e840b848b926fcb5b18fd5b4abaf5df4d92152484b840cde3078008a75d857"
+      },
+      {
+        "path": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ/client-result.json",
+        "sha256": "bab13e12861ba3fb2e1b3e71a6db5567fd68c2d9d97b910351873544fccd9a97"
+      },
+      {
+        "path": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ/ready.json",
+        "sha256": "5e3f2b0f713de1b9d4b446eeae10a94d031ed02f00f0c447f4c65aa8e109c4b0"
+      },
+      {
+        "path": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ/migrate-deploy.log",
+        "sha256": "c33e7f5dfaba0dce86ed1846a6ce40aa912dc107a57721dff5e638f0113edbb6"
+      },
+      {
+        "path": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ/fixture-verify.log",
+        "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+      },
+      {
+        "path": "D:/linji-admin-config/20261103/final/admin-runtime/linji-admin-http-vJBSqZ/verify-after.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      }
+    ],
+    "cleanup": {
+      "path": "D:/linji-admin-config/20261103/cleanup.json",
+      "sha256": "89ef41fdef1e9e18f0ce006495343f1e5fb143beda489e3788effe6b248429a2"
+    }
+  },
+  "regression": {
+    "newTests": 37,
+    "adminConfigTests": 115,
+    "publicConfigTests": 38,
+    "configCombinedTests": 153
+  },
+  "targetedReferences": [
+    {
+      "path": "D:/linji-admin-config/20261103/targeted-first.log",
+      "sha256": "683ea2ce56a740d02b5d7584da7247d0f8028d921ed430ef289d5575b5bdb736"
+    },
+    {
+      "path": "D:/linji-admin-config/20261103/admin-types.log",
+      "sha256": "3dd115a54d9decc15d9b6f1babec63f20d21966a914759ea6530c5b714007d15"
+    }
+  ],
+  "commandLedger": {
+    "path": "D:/linji-admin-config/20261103/commands.json",
+    "sha256": "987bba17e7cbeb0a93f2365b487251462422a02054ec5c0e28de4b4ea6048ec8"
+  },
+  "limitations": [
+    "Simulated Hooks/EventTarget and Node Cookie do not prove actual browser/React/BFCache/device behavior",
+    "Read-end identity verification is not a cross-request atomic permission snapshot; config writes retain existing expectedVersion and no new idempotency protocol",
+    "Committed-response loss was injected after actual HTTP success, not host power loss or a production network fault",
+    "Anonymous public config HTTP does not prove actual Next/Expo rendering",
+    "No current full database suite, real Kafka/providers/storage/container or remote CI acceptance",
+    "Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; overall project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1240,
+    "toolTests": 8,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "productionBusinessCodeChanged": false,
+    "httpFixtureChanged": true,
+    "postFixtureLint": 0,
+    "postFixtureTypes": 0
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "e106e208ed64c82cef72299625622e6623c071496d6ce3006e7bd4bfcc324a3d"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-admin-config/20261103/backend-install.log",
+      "sha256": "5b8b4c4618d269cd3038c4cad3bf19fd5a181f4dfd449a05e311c8e5ad3a19fb"
+    },
+    {
+      "path": "D:/linji-admin-config/20261103/backend-check.log",
+      "sha256": "7d4e1f31dd7892747c4f25b5c36c743043f790c31ba85f3b13214c7648bedaa8"
+    },
+    {
+      "path": "D:/linji-admin-config/20261103/backend-e2e.log",
+      "sha256": "8733688e7949e5a207b38096f6076d09aa8eaa40e4ebb8855c9460a3fa534c50"
+    },
+    {
+      "path": "D:/linji-admin-config/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-admin-config/20261103/backend-fixture-format.log",
+      "sha256": "8d86c5e79395760944e810d019e9446adb79a1f300ee006aca5d1cdc5b07155a"
+    },
+    {
+      "path": "D:/linji-admin-config/20261103/backend-fixture-lint.log",
+      "sha256": "f2c7c773ef8c0f6459e583ea395de9448f636c7482fa32a6355630de71155772"
+    },
+    {
+      "path": "D:/linji-admin-config/20261103/backend-fixture-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-admin-config/20261103/admin-runtime.log",
+      "sha256": "5dc3d2128fb0c8cf0d230f6c0fb68d991e44086a63ba30d53588996d20ea5037"
+    }
+  ]
+}

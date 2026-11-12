@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "AI conversation list uncertain creation/deletion recovery across complete screen replacement and same-account login in one QueryClient runtime; shared outstanding-task lease, revision-bound explicit review and latest-read gating; real HTTP creation-response loss and delayed committed deletion with exact PostgreSQL counts",
+  "httpSuites": [
+    {
+      "label": "ai",
+      "tests": 4,
+      "completed": true,
+      "output": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh",
+      "checks": [
+        {
+          "name": "App AI / real HTTP, SSE, PostgreSQL and pgvector; synthetic external providers recovers lost creation across account re-entry, then replays the original completed message with a public citation",
+          "status": "passed"
+        },
+        {
+          "name": "App AI / real HTTP, SSE, PostgreSQL and pgvector; synthetic external providers retries the original key from a new screen while the old committed response is still delayed",
+          "status": "passed"
+        },
+        {
+          "name": "App AI / real HTTP, SSE, PostgreSQL and pgvector; synthetic external providers isolates a second user and rejects the first lifetime before making a request",
+          "status": "passed"
+        },
+        {
+          "name": "App AI / real HTTP, SSE, PostgreSQL and pgvector; synthetic external providers retains a detached deletion across same-account re-entry until task settlement and explicit list review",
+          "status": "passed"
+        }
+      ],
+      "references": [
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/report.json",
+          "sha256": "f0a7945b0122351c405d5d224addc16ebe5c2dbfd3dc952bb8fc8023cac4464d"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/client-result.json",
+          "sha256": "2cccd0b2f9f5679003335fa5153b090ea12b7493c4d964f4e18f1474da87a708"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/ready.json",
+          "sha256": "3f7b12d1a316c61b9ddeb94eac0080578ed5a1d3896640efae93ef52e191633e"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/migrate-deploy.log",
+          "sha256": "9d1b4d9c1769e17b492f7b9cbff009895ad50ff879a0a253d67046d1ce89abbf"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/seed-first.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/seed-second.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/verify-before.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/fixture-verify.log",
+          "sha256": "307b09a4de3c832075d55e9dc398c56b02e925eb090e8213fc1d7e331ee1170f"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/verify-after.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/provider.log",
+          "sha256": "3f1264a52d4cb9c273a21db2b5a7a153a7c81c78386051413e92d600acc918a2"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/ai-runtime/linji-ai-http-hL5LKh/provider-counts.json",
+          "sha256": "01c2bb07b2dcc606285d308c66411f10069959350aa0ecf4e65afcb9763d3324"
+        }
+      ],
+      "cleanup": {
+        "path": "D:/linji-ai-list-recovery/20261103/ai-cleanup.json",
+        "sha256": "0d9e6dbaa8ca20359a0816aaae34b1213730d141d2d5cb46382d26a67a063029"
+      }
+    },
+    {
+      "label": "admin",
+      "tests": 77,
+      "completed": true,
+      "output": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h",
+      "checks": {
+        "defaults": true,
+        "versionConflict": true,
+        "unknownRecovered": true,
+        "publicProjection": true,
+        "roleDenied": true,
+        "sessionRevocationRejected": true,
+        "sessionRestored": true
+      },
+      "references": [
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/report.json",
+          "sha256": "40c120d35e8fb9097c5d3dfbd7834f8e969f644499a92bfe93abcad0dd13559f"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/client-result.json",
+          "sha256": "7f2edb309ec5fdf466321f7cfa4e3274c6fc6b8cf3ff92f5105183b68a695f60"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/ready.json",
+          "sha256": "893877f3b0bc909c8ef574720e6a5cc22af83c00152063f3af9aa0a9e572eb64"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/migrate-deploy.log",
+          "sha256": "28f0c136d568da16cc18d49d392f8f4c67f4f789d2ced8401dd8ba3d6073b7e2"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/seed-first.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/seed-second.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/verify-before.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/fixture-verify.log",
+          "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/verify-after.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        },
+        {
+          "path": "D:/linji-ai-list-recovery/20261103/admin-runtime/linji-admin-http-Bqy88h/fixture-prepare.log",
+          "sha256": "7bf60279f856d9b2caad909c6527a08a11f52bef20e99baab8bdc3d5f00f9e56"
+        }
+      ],
+      "cleanup": {
+        "path": "D:/linji-ai-list-recovery/20261103/admin-cleanup.json",
+        "sha256": "217c64cbdd887bf36bd93dafdb6edab35ad4d671de5e313e0152717624aa4a1e"
+      }
+    }
+  ],
+  "regression": {
+    "newTests": 22,
+    "targetedTests": 213,
+    "newHttpTests": 0,
+    "updatedHttpScenarios": [
+      "Lost committed creation survives full replacement/account switch/re-entry with exactly one create request",
+      "Delayed committed deletion keeps shared lease through replacement/re-entry until settlement, then requires new authorized read and explicit acknowledgment"
+    ],
+    "targetedLog": {
+      "path": "D:/linji-ai-list-recovery/20261103/targeted.log",
+      "sha256": "a7800116cad947a2c2a538dc9d8531796313a5a0414061caf523ad60e418b4f1"
+    }
+  },
+  "commandLedger": {
+    "path": "D:/linji-ai-list-recovery/20261103/commands.json",
+    "sha256": "4d112526d0051328e6f93cc34566031358fb9eddceaa000f189e1cecdef1f7fe"
+  },
+  "limitations": [
+    "Controller replacement and memory SecureStore with synthetic model/Embedding HTTP do not prove actual React/Expo navigation/browser/device/native storage or supplier behavior",
+    "List recovery contains only uncertainty, operation and task ownership in memory per QueryClient/account; no persistence across process/full reload/device; no credentials/titles/questions/list data stored",
+    "Creation/deletion have no new idempotency protocol: no automatic replay; promise settlement/list review cannot prove remote task termination and explicit continuation can still duplicate a conversation",
+    "Read-end authorization checks are not a cross-request atomic permission snapshot; production API/database protocol unchanged",
+    "No current full historical database/Kafka/provider/storage/container/remote CI acceptance; Windows Kafka AccessDenied remains unresolved",
+    "Docker and its WSL distribution were not started/restarted/used; D-49/D-50/D-09 unanswered and unimplemented; overall project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1240,
+    "toolTests": 8,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "productionBusinessCodeChanged": false,
+    "nativeRuntimeFixtureChanged": false
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/native-http-runtime.ts",
+      "sha256": "7fc09c1119bfaee053a7cb25067e227703a9a528fb89e0aa1828df398792c19b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/ai-mobile-http-fixture.ts",
+      "sha256": "73114afa6db53de210773933ac181ec4e8fe111f93f1d7d1bf5d29df4c7fdd44"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/validate-native-ai-http.ts",
+      "sha256": "86a1429717b42ddeff327a0a4d67135ebe5a49f4a6a825ce6cdd74a96c2073d3"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-ai-list-recovery/20261103/backend-install.log",
+      "sha256": "758316ea74de23629f4d89e4f62d74de29b51f577ce73a6c82aa3958c0582848"
+    },
+    {
+      "path": "D:/linji-ai-list-recovery/20261103/backend-check.log",
+      "sha256": "2899ea4d921c529dd2fdf2a4dbd3db8791bc85b610cab1c67019c593a2698e86"
+    },
+    {
+      "path": "D:/linji-ai-list-recovery/20261103/backend-e2e.log",
+      "sha256": "eb22c563556288c10c87864818aee315c94bcf9e44ffcdbcf0cd20d4594933d5"
+    },
+    {
+      "path": "D:/linji-ai-list-recovery/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-ai-list-recovery/20261103/ai-runtime.log",
+      "sha256": "32976c11ca361d17e7841ca3f4a3abd377233c48ac213ce82355c63a4c20e7fb"
+    },
+    {
+      "path": "D:/linji-ai-list-recovery/20261103/admin-runtime.log",
+      "sha256": "f16ad12165e813367521b5d65f70115c95ab94c12744a38db173572cd28c601d"
+    }
+  ]
+}

@@ -1,0 +1,762 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model LoginAttemptBucket {
+  BucketKey String @id @db.Char(64)
+  Attempts Int
+  ExpiresAt DateTime @db.Timestamptz(6)
+
+  @@index([ExpiresAt])
+  @@map("LoginAttemptBucket")
+}
+
+model User {
+  UserId                Int                   @id @default(autoincrement())
+  Account               String                @unique @db.VarChar(50)
+  PasswordHash          String                @db.VarChar(255)
+  Nickname              String                @db.VarChar(50)
+  Avatar                String?
+  AvatarAssetId         BigInt?
+  AvatarAsset           Asset?                @relation("UserAvatar", fields: [AvatarAssetId], references: [AssetId], onDelete: Restrict)
+  Status                String                @default("active") @db.VarChar(20)
+  CreateTime            DateTime              @default(now()) @db.Timestamptz(6)
+  UserRoles             UserRole[]
+  AuthSessions          AuthSession[]
+  MerchantProfile       MerchantProfile?
+  Assets                Asset[]               @relation("AssetOwner")
+  AiConversations       AiConversation[]
+  CreatedRevenueRecords ResortRevenueRecord[] @relation("RevenueCreator")
+  AuthoredArticles      Article[]             @relation("ArticleAuthor")
+  AuthoredDynamics      Dynamic[]             @relation("DynamicAuthor")
+  ModeratedDynamics     Dynamic[]             @relation("DynamicModerator")
+  Comments              Comment[]             @relation("CommentAuthor")
+  ModeratedComments     Comment[]             @relation("CommentModerator")
+  DynamicLikes          LikeRecord[]
+  Favorites             Favorite[]
+  OperationLogs         OperationLog[]
+  UpdatedConfigs        SystemConfig[]
+
+  @@index([AvatarAssetId])
+  @@map("User")
+}
+
+// Actor IDs remain as permanent tombstones even if an account is removed.
+model RevenueWriteRequest {
+  ActorUserId Int
+  Operation   String   @db.VarChar(50)
+  RequestId   String   @db.Uuid
+  RequestHash String   @db.Char(64)
+  Result      Json?    @db.JsonB
+  CreateTime  DateTime @default(now()) @db.Timestamptz(6)
+  CompletedAt DateTime @db.Timestamptz(6)
+  ExpiresAt   DateTime @db.Timestamptz(6)
+
+  @@id([ActorUserId, Operation, RequestId])
+  @@index([ExpiresAt])
+  @@map("RevenueWriteRequest")
+}
+
+model RevenueImportJob {
+  JobId            String   @id @default(uuid()) @db.Uuid
+  ActorUserId      Int
+  RequestId        String   @db.Uuid
+  FileHash         String   @db.Char(64)
+  Status           String   @default("pending") @db.VarChar(20)
+  TotalRows        Int
+  ProcessedRows    Int      @default(0)
+  SucceededRows    Int      @default(0)
+  FailedRows       Int      @default(0)
+  FailureAttempts  Int      @default(0)
+  LockToken        String?  @db.Uuid
+  LeaseUntil       DateTime? @db.Timestamptz(6)
+  NextAttemptAt    DateTime @default(now()) @db.Timestamptz(6)
+  TerminalAt       DateTime? @db.Timestamptz(6)
+  InputExpiresAt   DateTime? @db.Timestamptz(6)
+  ResultExpiresAt  DateTime? @db.Timestamptz(6)
+  InputsPurgedAt   DateTime? @db.Timestamptz(6)
+  ResultsPurgedAt  DateTime? @db.Timestamptz(6)
+  TraceId          String   @db.VarChar(100)
+  ClientIp         String?  @db.VarChar(64)
+  UserAgent        String?  @db.VarChar(500)
+  CreateTime       DateTime @default(now()) @db.Timestamptz(6)
+  UpdateTime       DateTime @default(now()) @updatedAt @db.Timestamptz(6)
+  Rows             RevenueImportRow[]
+
+  @@unique([ActorUserId, RequestId])
+  @@index([Status, NextAttemptAt, LeaseUntil])
+  @@index([InputExpiresAt])
+  @@index([ResultExpiresAt])
+  @@map("RevenueImportJob")
+}
+
+model RevenueImportRow {
+  JobId      String @db.Uuid
+  RowNumber  Int
+  Input      Json? @db.JsonB
+  Status     String @default("pending") @db.VarChar(20)
+  RevenueId  Int?
+  Error      String? @db.VarChar(100)
+  Job        RevenueImportJob @relation(fields: [JobId], references: [JobId], onDelete: Restrict)
+
+  @@id([JobId, RowNumber])
+  @@index([JobId, Status, RowNumber])
+  @@map("RevenueImportRow")
+}
+
+model AuthSession {
+  SessionId     String             @id @default(uuid()) @db.Uuid
+  UserId        Int
+  ExpiresAt     DateTime           @db.Timestamptz(6)
+  RevokedAt     DateTime?          @db.Timestamptz(6)
+  CreateTime    DateTime           @default(now()) @db.Timestamptz(6)
+  User          User               @relation(fields: [UserId], references: [UserId], onDelete: Cascade)
+  RefreshTokens AuthRefreshToken[]
+
+  @@index([UserId, RevokedAt, ExpiresAt])
+  @@map("AuthSession")
+}
+
+model AuthRefreshToken {
+  RefreshTokenId BigInt      @id @default(autoincrement())
+  SessionId      String      @db.Uuid
+  TokenHash      String      @unique @db.Char(64)
+  ExpiresAt      DateTime    @db.Timestamptz(6)
+  ConsumedAt     DateTime?   @db.Timestamptz(6)
+  CreateTime     DateTime    @default(now()) @db.Timestamptz(6)
+  Session        AuthSession @relation(fields: [SessionId], references: [SessionId], onDelete: Cascade)
+
+  @@index([SessionId, ConsumedAt])
+  @@map("AuthRefreshToken")
+}
+
+model Role {
+  RoleId          Int                   @id @default(autoincrement())
+  RoleKey         String                @unique @db.VarChar(50)
+  RoleName        String                @db.VarChar(50)
+  RoleDescription String?               @db.VarChar(300)
+  SystemRoleCode  String?               @unique @db.VarChar(50)
+  DataScope       String                @db.VarChar(20)
+  Status          String                @default("active") @db.VarChar(20)
+  UserRoles       UserRole[]
+  RolePermissions RolePermission[]
+  DataScopes      RoleDataScope[]
+  FieldPolicies   RoleFieldPermission[]
+
+  @@map("Role")
+}
+
+model UserRole {
+  UserId Int
+  RoleId Int
+  User   User @relation(fields: [UserId], references: [UserId], onDelete: Cascade)
+  Role   Role @relation(fields: [RoleId], references: [RoleId], onDelete: Cascade)
+
+  @@id([UserId, RoleId])
+  @@map("UserRole")
+}
+
+model Permission {
+  PermissionId    Int              @id @default(autoincrement())
+  ParentId        Int?
+  PermissionName  String           @db.VarChar(100)
+  PermissionType  String           @db.VarChar(20)
+  PermissionKey   String           @unique @db.VarChar(100)
+  Route           String?          @db.VarChar(200)
+  Icon            String?          @db.VarChar(100)
+  SortOrder       Int              @default(0)
+  Visible         Boolean          @default(true)
+  Status          String           @default("active") @db.VarChar(20)
+  Parent          Permission?      @relation("PermissionTree", fields: [ParentId], references: [PermissionId], onDelete: Restrict)
+  Children        Permission[]     @relation("PermissionTree")
+  RolePermissions RolePermission[]
+
+  @@index([ParentId, SortOrder])
+  @@map("Permission")
+}
+
+model RolePermission {
+  RoleId       Int
+  PermissionId Int
+  Role         Role       @relation(fields: [RoleId], references: [RoleId], onDelete: Cascade)
+  Permission   Permission @relation(fields: [PermissionId], references: [PermissionId], onDelete: Cascade)
+
+  @@id([RoleId, PermissionId])
+  @@map("RolePermission")
+}
+
+model RoleDataScope {
+  RoleId      Int
+  ResourceKey String   @db.VarChar(100)
+  ScopeType   String   @db.VarChar(20)
+  ScopeConfig Json?    @db.JsonB
+  CreateTime  DateTime @default(now()) @db.Timestamptz(6)
+  UpdateTime  DateTime @default(now()) @updatedAt @db.Timestamptz(6)
+  Role        Role     @relation(fields: [RoleId], references: [RoleId], onDelete: Cascade)
+
+  @@id([RoleId, ResourceKey])
+  @@index([ResourceKey, ScopeType])
+  @@map("RoleDataScope")
+}
+
+model SystemConfig {
+  ConfigKey       String   @id @db.VarChar(150)
+  Value           Json     @db.JsonB
+  Description     String?  @db.VarChar(300)
+  Status          String   @default("active") @db.VarChar(20)
+  Version         Int      @default(1)
+  UpdatedByUserId Int?
+  CreateTime      DateTime @default(now()) @db.Timestamptz(6)
+  UpdateTime      DateTime @default(now()) @updatedAt @db.Timestamptz(6)
+  UpdatedBy       User?    @relation(fields: [UpdatedByUserId], references: [UserId], onDelete: SetNull)
+
+  @@index([Status, ConfigKey])
+  @@map("SystemConfig")
+}
+
+model OperationLog {
+  OperationLogId       BigInt   @id @default(autoincrement())
+  ActorUserId          Int?
+  ActorAccountSnapshot String   @db.VarChar(50)
+  ActionKey            String   @db.VarChar(150)
+  ResourceKey          String   @db.VarChar(100)
+  TargetType           String   @db.VarChar(100)
+  TargetId             String   @db.VarChar(150)
+  Result               String   @db.VarChar(20)
+  Reason               String?  @db.VarChar(500)
+  TraceId              String   @db.VarChar(100)
+  ClientIp             String?  @db.VarChar(64)
+  UserAgent            String?  @db.VarChar(500)
+  Metadata             Json?    @db.JsonB
+  CreateTime           DateTime @default(now()) @db.Timestamptz(6)
+  Actor                User?    @relation(fields: [ActorUserId], references: [UserId], onDelete: SetNull)
+
+  @@index([ActorUserId, CreateTime])
+  @@index([ResourceKey, TargetType, TargetId, CreateTime])
+  @@index([TraceId])
+  @@map("OperationLog")
+}
+
+model MerchantProfile {
+  Version Int @default(1)
+  CreateTime DateTime @default(now()) @db.Timestamptz(6)
+  UpdateTime DateTime @default(now()) @updatedAt @db.Timestamptz(6)
+  MerchantId    Int           @id @default(autoincrement())
+  UserId        Int           @unique
+  BusinessName  String        @db.VarChar(100)
+  Contact       String?       @db.VarChar(100)
+  Status        String        @default("active") @db.VarChar(20)
+  CustomFields  Json          @default("{}") @db.JsonB
+  SchemaVersion Int           @default(1)
+  User          User          @relation(fields: [UserId], references: [UserId], onDelete: Restrict)
+  RagDocuments  RagDocument[]
+  Resorts       SkiResort[]
+
+  @@map("MerchantProfile")
+}
+
+model SkiResort {
+  ResortId               Int                   @id @default(autoincrement())
+  MerchantId             Int?
+  Name                   String                @db.VarChar(100)
+  Province               String?               @db.VarChar(50)
+  City                   String?               @db.VarChar(50)
+  District               String?               @db.VarChar(50)
+  Address                String?               @db.VarChar(300)
+  Longitude              Decimal?              @db.Decimal(10, 7)
+  Latitude               Decimal?              @db.Decimal(10, 7)
+  LegacyCoverImage       String?               @db.VarChar(200)
+  LegacyDistance         Decimal               @db.Decimal(5, 1)
+  CoverAssetId           BigInt?
+  Rating                 Decimal?              @db.Decimal(2, 1)
+  RatingCount            Int                   @default(0)
+  Price                  Int
+  OpenStatus             String                @default("unknown") @db.VarChar(20)
+  SnowCondition          String                @db.VarChar(50)
+  SnowConditionUpdatedAt DateTime?             @db.Timestamptz(6)
+  OpeningHours           String?               @db.VarChar(200)
+  TrailSummary           String?               @db.Text
+  FacilitySummary        String?               @db.Text
+  OfficialUrl            String?               @db.VarChar(500)
+  Description            String                @db.VarChar(1000)
+  CustomFields           Json                  @default("{}") @db.JsonB
+  SchemaVersion          Int                   @default(1)
+  Status                 String                @default("draft") @db.VarChar(20)
+  UpdateTime             DateTime              @default(now()) @updatedAt @db.Timestamptz(6)
+  DeletedAt              DateTime?             @db.Timestamptz(6)
+  Merchant               MerchantProfile?      @relation(fields: [MerchantId], references: [MerchantId], onDelete: Restrict)
+  CoverAsset             Asset?                @relation("ResortCover", fields: [CoverAssetId], references: [AssetId], onDelete: Restrict)
+  FitTags                ResortFitTag[]
+  Gallery                ResortImage[]
+  RevenueRecords         ResortRevenueRecord[]
+  Dynamics               Dynamic[]
+  Favorites              Favorite[]
+
+  @@index([MerchantId, Status])
+  @@index([Province, City, District, Status])
+  @@index([Status, OpenStatus, DeletedAt])
+  @@map("SkiResort")
+  @@index([CustomFields(ops: JsonbPathOps)], type: Gin, map: "SkiResort_CustomFields_gin")
+}
+
+model Asset {
+  StorageDeletedAt DateTime? @db.Timestamptz(6)
+  CleanupFailureCode String? @db.VarChar(50)
+  AssetId       BigInt         @id @default(autoincrement())
+  OwnerUserId   Int
+  StorageKey    String         @unique @db.VarChar(500)
+  OriginalName  String         @db.VarChar(255)
+  MimeType      String         @db.VarChar(100)
+  SizeBytes     BigInt
+  Sha256        String         @db.Char(64)
+  Status        String         @default("pending_scan") @db.VarChar(20)
+  CreateTime    DateTime       @default(now()) @db.Timestamptz(6)
+  UpdateTime    DateTime       @default(now()) @updatedAt @db.Timestamptz(6)
+  Owner         User           @relation("AssetOwner", fields: [OwnerUserId], references: [UserId], onDelete: Restrict)
+  CoverResorts  SkiResort[]    @relation("ResortCover")
+  ResortImages  ResortImage[]
+  ArticleBodyImages ArticleBodyAsset[]
+  ArticleCovers Article[]
+  DynamicImages DynamicImage[]
+  AvatarUsers   User[]         @relation("UserAvatar")
+
+  @@index([OwnerUserId, Status, CreateTime])
+  @@index([Sha256])
+  @@map("Asset")
+}
+
+model DictionaryType {
+  DictType         String                  @id @db.VarChar(100)
+  DictName         String                  @db.VarChar(100)
+  GroupKey         String                  @db.VarChar(100)
+  Status           String                  @default("active") @db.VarChar(20)
+  PubliclyReadable Boolean                 @default(false)
+  CreateTime       DateTime                @default(now()) @db.Timestamptz(6)
+  UpdateTime       DateTime                @default(now()) @updatedAt @db.Timestamptz(6)
+  Items            DictionaryItem[]
+  FieldDefinitions CustomFieldDefinition[] @relation("FieldOptions")
+
+  @@index([GroupKey, Status])
+  @@map("DictionaryType")
+}
+
+model DictionaryItem {
+  ItemId     Int              @id @default(autoincrement())
+  DictType   String           @db.VarChar(100)
+  ParentId   Int?
+  Label      String           @db.VarChar(100)
+  Value      String           @db.VarChar(100)
+  Color      String?          @db.VarChar(20)
+  SortOrder  Int              @default(0)
+  IsDefault  Boolean          @default(false)
+  Status     String           @default("active") @db.VarChar(20)
+  CreateTime DateTime         @default(now()) @db.Timestamptz(6)
+  UpdateTime DateTime         @default(now()) @updatedAt @db.Timestamptz(6)
+  Type       DictionaryType   @relation(fields: [DictType], references: [DictType], onDelete: Restrict)
+  Parent     DictionaryItem?  @relation("DictionaryItemTree", fields: [DictType, ParentId], references: [DictType, ItemId], onDelete: Restrict)
+  Children   DictionaryItem[] @relation("DictionaryItemTree")
+  ResortTags ResortFitTag[]
+  Articles   Article[]        @relation("ArticleCategory")
+
+  @@unique([DictType, Value])
+  @@unique([DictType, ItemId])
+  @@index([DictType, ParentId, SortOrder])
+  @@map("DictionaryItem")
+}
+
+model CustomFieldGroup {
+  EntityType     String                  @db.VarChar(50)
+  GroupKey       String                  @db.VarChar(100)
+  Label          String                  @db.VarChar(100)
+  SortOrder      Int                     @default(0)
+  VisibilityRule Json?                   @db.JsonB
+  Status         String                  @default("active") @db.VarChar(20)
+  CreateTime     DateTime                @default(now()) @db.Timestamptz(6)
+  UpdateTime     DateTime                @default(now()) @updatedAt @db.Timestamptz(6)
+  Definitions    CustomFieldDefinition[]
+
+  @@id([EntityType, GroupKey])
+  @@index([EntityType, Status, SortOrder])
+  @@map("CustomFieldGroup")
+}
+
+model CustomFieldDefinition {
+  FieldDefinitionId Int                   @id @default(autoincrement())
+  EntityType        String                @db.VarChar(50)
+  FieldKey          String                @db.VarChar(100)
+  Label             String                @db.VarChar(100)
+  DataType          String                @db.VarChar(30)
+  GroupKey          String                @db.VarChar(100)
+  SortOrder         Int                   @default(0)
+  Required          Boolean               @default(false)
+  DefaultValue      Json?                 @db.JsonB
+  OptionsDictType   String?               @db.VarChar(100)
+  Validation        Json?                 @db.JsonB
+  Searchable        Boolean               @default(false)
+  Filterable        Boolean               @default(false)
+  Sortable          Boolean               @default(false)
+  IsPublic          Boolean               @default(false)
+  Status            String                @default("draft") @db.VarChar(20)
+  SchemaVersion     Int                   @default(1)
+  CreateTime        DateTime              @default(now()) @db.Timestamptz(6)
+  UpdateTime        DateTime              @default(now()) @updatedAt @db.Timestamptz(6)
+  Group             CustomFieldGroup      @relation(fields: [EntityType, GroupKey], references: [EntityType, GroupKey], onDelete: Restrict)
+  OptionsType       DictionaryType?       @relation("FieldOptions", fields: [OptionsDictType], references: [DictType], onDelete: Restrict)
+  RolePolicies      RoleFieldPermission[]
+
+  @@unique([EntityType, FieldKey])
+  @@index([EntityType, GroupKey, Status, SortOrder])
+  @@index([OptionsDictType])
+  @@map("CustomFieldDefinition")
+}
+
+model RoleFieldPermission {
+  RoleId     Int
+  EntityType String                @db.VarChar(50)
+  FieldKey   String                @db.VarChar(100)
+  CanRead    Boolean               @default(false)
+  CanWrite   Boolean               @default(false)
+  CreateTime DateTime              @default(now()) @db.Timestamptz(6)
+  UpdateTime DateTime              @default(now()) @updatedAt @db.Timestamptz(6)
+  Role       Role                  @relation(fields: [RoleId], references: [RoleId], onDelete: Cascade)
+  Definition CustomFieldDefinition @relation(fields: [EntityType, FieldKey], references: [EntityType, FieldKey], onDelete: Restrict)
+
+  @@id([RoleId, EntityType, FieldKey])
+  @@index([EntityType, FieldKey])
+  @@map("RoleFieldPermission")
+}
+
+model Article {
+  ArticleId        Int            @id @default(autoincrement())
+  Title            String         @db.VarChar(200)
+  Summary          String         @db.VarChar(1000)
+  Body             String         @db.Text
+  ContentFormat    String         @default("plain_text") @db.VarChar(20)
+  BodyAssets       ArticleBodyAsset[]
+  CoverAssetId     BigInt?
+  CategoryDictType String         @default("knowledge.article_category") @db.VarChar(100)
+  CategoryValue    String         @db.VarChar(100)
+  AuthorId         Int?
+  AuthorName       String?        @db.VarChar(100)
+  Status           String         @default("draft") @db.VarChar(20)
+  PublishTime      DateTime?      @db.Timestamptz(6)
+  Version          Int            @default(1)
+  CustomFields     Json           @default("{}") @db.JsonB
+  SchemaVersion    Int            @default(1)
+  CreateTime       DateTime       @default(now()) @db.Timestamptz(6)
+  UpdateTime       DateTime       @default(now()) @updatedAt @db.Timestamptz(6)
+  DeletedAt        DateTime?      @db.Timestamptz(6)
+  CoverAsset       Asset?         @relation(fields: [CoverAssetId], references: [AssetId], onDelete: Restrict)
+  Category         DictionaryItem @relation("ArticleCategory", fields: [CategoryDictType, CategoryValue], references: [DictType, Value], onDelete: Restrict)
+  Author           User?          @relation("ArticleAuthor", fields: [AuthorId], references: [UserId], onDelete: SetNull)
+  Favorites        Favorite[]
+
+  @@index([Status, PublishTime, ArticleId])
+  @@index([CategoryDictType, CategoryValue, Status])
+  @@index([AuthorId, CreateTime])
+  @@map("Article")
+  @@index([CustomFields(ops: JsonbPathOps)], type: Gin, map: "Article_CustomFields_gin")
+}
+
+model ProjectKnowledge {
+  ProjectKnowledgeId Int       @id @default(autoincrement())
+  Title              String    @db.VarChar(200)
+  Content            String    @db.Text
+  Category           String    @db.VarChar(80)
+  SourceUrl          String?   @db.VarChar(2048)
+  Status             String    @default("draft") @db.VarChar(20)
+  PublishTime        DateTime? @db.Timestamptz(6)
+  Version            Int       @default(1)
+  CreateTime         DateTime  @default(now()) @db.Timestamptz(6)
+  UpdateTime         DateTime  @default(now()) @updatedAt @db.Timestamptz(6)
+  DeletedAt          DateTime? @db.Timestamptz(6)
+
+  @@index([Status, PublishTime, ProjectKnowledgeId])
+  @@index([Category, Status])
+  @@map("ProjectKnowledge")
+}
+
+model Dynamic {
+  DynamicId         Int            @id @default(autoincrement())
+  AuthorId          Int
+  ContentFormat String @default("plain_text") @db.VarChar(20)
+  Version Int @default(1)
+  Content           String         @db.Text
+  ResortId          Int?
+  Status            String         @default("pending") @db.VarChar(20)
+  ModeratedAt       DateTime?      @db.Timestamptz(6)
+  ModeratedByUserId Int?
+  ModerationReason  String?        @db.VarChar(500)
+  CustomFields      Json           @default("{}") @db.JsonB
+  SchemaVersion     Int            @default(1)
+  CreateTime        DateTime       @default(now()) @db.Timestamptz(6)
+  UpdateTime        DateTime       @default(now()) @updatedAt @db.Timestamptz(6)
+  DeletedAt         DateTime?      @db.Timestamptz(6)
+  Author            User           @relation("DynamicAuthor", fields: [AuthorId], references: [UserId], onDelete: Restrict)
+  Moderator         User?          @relation("DynamicModerator", fields: [ModeratedByUserId], references: [UserId], onDelete: SetNull)
+  Resort            SkiResort?     @relation(fields: [ResortId], references: [ResortId], onDelete: Restrict)
+  Images            DynamicImage[]
+  Comments          Comment[]
+  Likes             LikeRecord[]
+  Favorites         Favorite[]
+
+  @@index([Status, CreateTime, DynamicId])
+  @@index([AuthorId, Status, CreateTime])
+  @@index([ModeratedByUserId])
+  @@index([ResortId, Status])
+  @@map("Dynamic")
+  @@index([CustomFields(ops: JsonbPathOps)], type: Gin, map: "Dynamic_CustomFields_gin")
+}
+
+model DynamicImage {
+  DynamicId  Int
+  AssetId    BigInt
+  SortOrder  Int
+  CreateTime DateTime @default(now()) @db.Timestamptz(6)
+  Dynamic    Dynamic  @relation(fields: [DynamicId], references: [DynamicId], onDelete: Cascade)
+  Asset      Asset    @relation(fields: [AssetId], references: [AssetId], onDelete: Restrict)
+
+  @@id([DynamicId, AssetId])
+  @@unique([DynamicId, SortOrder])
+  @@index([AssetId])
+  @@map("DynamicImage")
+}
+
+model Comment {
+  CommentId         Int       @id @default(autoincrement())
+  DynamicId         Int
+  AuthorId          Int
+  Content           String    @db.VarChar(2000)
+  Status            String    @default("visible") @db.VarChar(20)
+  ModeratedAt       DateTime? @db.Timestamptz(6)
+  ModeratedByUserId Int?
+  ModerationReason  String?   @db.VarChar(500)
+  CreateTime        DateTime  @default(now()) @db.Timestamptz(6)
+  UpdateTime        DateTime  @default(now()) @updatedAt @db.Timestamptz(6)
+  DeletedAt         DateTime? @db.Timestamptz(6)
+  Dynamic           Dynamic   @relation(fields: [DynamicId], references: [DynamicId], onDelete: Cascade)
+  Author            User      @relation("CommentAuthor", fields: [AuthorId], references: [UserId], onDelete: Restrict)
+  Moderator         User?     @relation("CommentModerator", fields: [ModeratedByUserId], references: [UserId], onDelete: SetNull)
+
+  @@index([DynamicId, Status, CreateTime])
+  @@index([AuthorId, CreateTime])
+  @@map("Comment")
+}
+
+model LikeRecord {
+  UserId     Int
+  DynamicId  Int
+  CreateTime DateTime @default(now()) @db.Timestamptz(6)
+  User       User     @relation(fields: [UserId], references: [UserId], onDelete: Cascade)
+  Dynamic    Dynamic  @relation(fields: [DynamicId], references: [DynamicId], onDelete: Cascade)
+
+  @@id([UserId, DynamicId])
+  @@index([DynamicId, CreateTime])
+  @@map("LikeRecord")
+}
+
+model Favorite {
+  FavoriteId BigInt     @id @default(autoincrement())
+  UserId     Int
+  ResortId   Int?
+  ArticleId  Int?
+  DynamicId Int?
+  CreateTime DateTime   @default(now()) @db.Timestamptz(6)
+  User       User       @relation(fields: [UserId], references: [UserId], onDelete: Cascade)
+  Resort     SkiResort? @relation(fields: [ResortId], references: [ResortId], onDelete: Cascade)
+  Article    Article?   @relation(fields: [ArticleId], references: [ArticleId], onDelete: Cascade)
+
+  @@unique([UserId, ResortId])
+  Dynamic    Dynamic? @relation(fields: [DynamicId], references: [DynamicId], onDelete: Cascade)
+
+  @@unique([UserId, DynamicId])
+  @@index([DynamicId, UserId])
+  @@unique([UserId, ArticleId])
+  @@index([UserId, CreateTime])
+  @@index([ArticleId, UserId])
+  @@map("Favorite")
+}
+
+model ResortFitTag {
+  ResortId Int
+  DictType String         @default("resort.fit_tag") @db.VarChar(100)
+  ItemId   Int
+  Resort   SkiResort      @relation(fields: [ResortId], references: [ResortId], onDelete: Cascade)
+  Item     DictionaryItem @relation(fields: [DictType, ItemId], references: [DictType, ItemId], onDelete: Restrict)
+
+  @@id([ResortId, ItemId])
+  @@index([DictType, ItemId, ResortId])
+  @@map("ResortFitTag")
+}
+
+model ResortImage {
+  ResortId   Int
+  AssetId    BigInt
+  SortOrder  Int
+  CreateTime DateTime  @default(now()) @db.Timestamptz(6)
+  Resort     SkiResort @relation(fields: [ResortId], references: [ResortId], onDelete: Cascade)
+  Asset      Asset     @relation(fields: [AssetId], references: [AssetId], onDelete: Restrict)
+
+  @@id([ResortId, AssetId])
+  @@unique([ResortId, SortOrder])
+  @@index([AssetId])
+  @@map("ResortImage")
+}
+
+model ResortRevenueRecord {
+  RevenueId     Int       @id @default(autoincrement())
+  ResortId      Int
+  ReportDate    DateTime  @db.Date
+  RevenueAmount Decimal   @default(0) @db.Decimal(12, 2)
+  Source        String    @db.VarChar(20)
+  Note          String?   @db.VarChar(300)
+  CreatedBy     Int
+  CreateTime    DateTime  @default(now()) @db.Timestamptz(6)
+  UpdateTime    DateTime  @default(now()) @updatedAt @db.Timestamptz(6)
+  Resort        SkiResort @relation(fields: [ResortId], references: [ResortId], onDelete: Restrict)
+  Creator       User      @relation("RevenueCreator", fields: [CreatedBy], references: [UserId], onDelete: Restrict)
+
+  @@unique([ResortId, ReportDate])
+  @@index([CreatedBy, CreateTime])
+  @@map("ResortRevenueRecord")
+}
+
+model RagDocument {
+  LastFailureReason String? @db.VarChar(50)
+  LastFailureAt DateTime? @db.Timestamptz(6)
+  IndexStartedAt DateTime? @db.Timestamptz(6)
+  RagDocumentId   Int              @id @default(autoincrement())
+  SourceKey       String           @unique @db.VarChar(200)
+  SourceType      String           @db.VarChar(30)
+  SourceId        Int?
+  Title           String           @db.VarChar(300)
+  Content         String           @db.Text
+  AccessScope     String           @db.VarChar(20)
+  MerchantId      Int?
+  Status          String           @default("pending") @db.VarChar(20)
+  ManualDisabled  Boolean          @default(false)
+  ControlVersion  Int              @default(1)
+  IndexGeneration BigInt           @default(0)
+  ContentHash     String           @db.Char(64)
+  Metadata        Json?            @db.JsonB
+  SourceUpdatedAt DateTime         @db.Timestamptz(6)
+  IndexedAt       DateTime?        @db.Timestamptz(6)
+  CreateTime      DateTime         @default(now()) @db.Timestamptz(6)
+  Merchant        MerchantProfile? @relation(fields: [MerchantId], references: [MerchantId], onDelete: Restrict)
+  Chunks          RagChunk[]
+
+  @@index([Status, AccessScope, MerchantId])
+  @@map("RagDocument")
+}
+
+model RagChunk {
+  RagChunkId     BigInt                      @id @default(autoincrement())
+  RagDocumentId  Int
+  ChunkIndex     Int
+  ChunkContent   String                      @db.Text
+  Embedding      Unsupported("vector(1024)")
+  EmbeddingModel String                      @db.VarChar(100)
+  TokenCount     Int                         @default(0)
+  Metadata       Json?                       @db.JsonB
+  CreateTime     DateTime                    @default(now()) @db.Timestamptz(6)
+  Document       RagDocument                 @relation(fields: [RagDocumentId], references: [RagDocumentId], onDelete: Cascade)
+
+  @@unique([RagDocumentId, ChunkIndex])
+  @@index([RagDocumentId])
+  @@map("RagChunk")
+}
+
+model AiConversation {
+  ConversationId String      @id @default(uuid()) @db.Uuid
+  UserId         Int?
+  GuestSessionId String?     @db.VarChar(100)
+  Title          String?     @db.VarChar(200)
+  Status         String      @default("active") @db.VarChar(20)
+  CreateTime     DateTime    @default(now()) @db.Timestamptz(6)
+  UpdateTime     DateTime    @default(now()) @updatedAt @db.Timestamptz(6)
+  DeletedAt      DateTime?   @db.Timestamptz(6)
+  User           User?       @relation(fields: [UserId], references: [UserId], onDelete: Cascade)
+  Messages       AiMessage[]
+
+  @@index([UserId, UpdateTime])
+  @@index([UserId, DeletedAt, UpdateTime])
+  @@index([GuestSessionId, UpdateTime])
+  @@map("AiConversation")
+}
+
+model AiMessage {
+  MessageId           BigInt         @id @default(autoincrement())
+  ConversationId      String         @db.Uuid
+  SenderRole          String         @db.VarChar(20)
+  Content             String         @db.Text
+  ClientRequestId     String?        @db.Uuid
+  GenerationStatus    String?        @db.VarChar(20)
+  GenerationToken     String?        @db.Uuid
+  GenerationExpiresAt DateTime?      @db.Timestamptz(6)
+  ParentMessageId     BigInt?
+  ModelName           String?        @db.VarChar(100)
+  PromptTokens        Int            @default(0)
+  CompletionTokens    Int            @default(0)
+  Citations           Json?          @db.JsonB
+  CreateTime          DateTime       @default(now()) @db.Timestamptz(6)
+  Conversation        AiConversation @relation(fields: [ConversationId], references: [ConversationId], onDelete: Cascade)
+  ParentMessage       AiMessage?     @relation("AiMessageReplies", fields: [ParentMessageId], references: [MessageId], onDelete: Cascade)
+  Replies             AiMessage[]    @relation("AiMessageReplies")
+
+  @@unique([ConversationId, ClientRequestId])
+  @@unique([ParentMessageId])
+  @@index([ConversationId, CreateTime])
+  @@map("AiMessage")
+}
+
+model OutboxEvent {
+  EventId       String    @id @default(uuid()) @db.Uuid
+  EventType     String    @db.VarChar(200)
+  AggregateType String    @db.VarChar(100)
+  AggregateId   String    @db.VarChar(100)
+  Payload       Json      @db.JsonB
+  Status        String    @default("pending") @db.VarChar(20)
+  Attempts      Int       @default(0)
+  MaxAttempts   Int       @default(8)
+  AvailableAt   DateTime  @default(now()) @db.Timestamptz(6)
+  LockedAt      DateTime? @db.Timestamptz(6)
+  LockToken     String?   @db.Uuid
+  LastError     String?   @db.Text
+  OccurredAt    DateTime  @default(now()) @db.Timestamptz(6)
+  PublishedAt   DateTime? @db.Timestamptz(6)
+  CreatedAt     DateTime  @default(now()) @db.Timestamptz(6)
+
+  @@index([Status, AvailableAt, CreatedAt])
+  @@index([AggregateType, AggregateId, CreatedAt])
+  @@map("OutboxEvent")
+}
+
+model ConsumedEvent {
+  ConsumerKey String    @db.VarChar(150)
+  EventId     String    @db.Uuid
+  EventType   String    @db.VarChar(200)
+  Status      String    @default("processing") @db.VarChar(20)
+  ProcessedAt DateTime? @db.Timestamptz(6)
+  LockedAt    DateTime? @db.Timestamptz(6)
+  LockToken   String?   @db.Uuid
+
+  @@id([ConsumerKey, EventId])
+  @@index([Status, LockedAt])
+  @@index([ProcessedAt])
+  @@map("ConsumedEvent")
+}
+
+model ArticleBodyAsset {
+  ArticleId Int
+  AssetId BigInt
+  Article Article @relation(fields: [ArticleId], references: [ArticleId], onDelete: Cascade)
+  Asset Asset @relation(fields: [AssetId], references: [AssetId], onDelete: Restrict)
+  @@id([ArticleId, AssetId])
+  @@index([AssetId])
+  @@map("ArticleBodyAsset")
+}

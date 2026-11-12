@@ -1,0 +1,299 @@
+{
+  "date": "2026-11-03",
+  "passed": true,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/operation-log-lifecycle-20261103.json",
+      "sha256": "0293bc9d16cf81e67a6dd34a2e6fe6481bb11dbf804533043697cbb4062d44b3",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitFiles": 142,
+        "unitTests": 1220,
+        "sourceExportNode": 8,
+        "httpFrameworkFiles": 9,
+        "httpFrameworkTests": 166,
+        "build": 0,
+        "migrations": 24,
+        "lint": "0 errors; 1 pre-existing no-unsafe-finally warning"
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/operation-log-lifecycle-20261103.json",
+      "sha256": "50b3b6af54046aa7478139218034a74c8bad3b6afe23b47fd1c3cad2a1bc850f",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 2062,
+        "operationLogTests": 68,
+        "newOperationLogTests": 53,
+        "releaseNode": 20,
+        "sourceExportNode": 8,
+        "forcedNextBuilds": 2,
+        "firstTypecheckFailure": "Two new test fixture type errors corrected; initial failed check log retained"
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/operation-log-lifecycle-20261103.json",
+      "sha256": "f7e1f37abce43aaeb7e49bb9020d94d6bd4d2b58c822e52b617e1e65b117167f",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessFiles": 66,
+        "businessTests": 1163,
+        "sourceExportNode": 8,
+        "artifactNode": 10,
+        "doctor": "20/20",
+        "export": "iOS, Android, Web",
+        "postExportTypes": 0,
+        "seal": 0,
+        "verify": 0,
+        "relocatedVerify": 0,
+        "businessCodeChanged": false
+      }
+    }
+  ],
+  "verifiedUniqueReferences": 58,
+  "finalChecks": [
+    "All evidence source/log/contract/artifact hashes match current files",
+    "211 Markdown files / 1714 local links / zero broken links",
+    "Three Git diff checks passed",
+    "Final Web format and updated HTTP guide format passed",
+    "Actual HTTP runtime stopped; no remaining tool processes"
+  ],
+  "references": [
+    {
+      "path": "E:\\desktop\\lishiqi\\backend\\contracts\\openapi.json",
+      "sha256": "4fa8529fe48872254651a095f20ce04cd7c94fe349d00e4149824bcdebfa03f8"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\backend\\src\\modules\\platform-administration\\presentation\\http\\operation-logs.controller.ts",
+      "sha256": "259dc8fa09ad361e36a96e400e74fb4f62d03583a4b78b10a2881e5c3877cd2c"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\backend\\src\\modules\\platform-administration\\infrastructure\\prisma-operation-log.reader.ts",
+      "sha256": "efc8740a62b38c79272bc511228ab0bed0f5ea6db66ba1a3cf1d7d51898d9263"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\backend\\scripts\\native-http-runtime.ts",
+      "sha256": "3c7a153df237ecedfee557315bb0eee63dbd6ed196e31a8bf057cc0310610473"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\backend\\scripts\\admin-authorization-http-fixture.ts",
+      "sha256": "d61728c8701881bab47cc3cd60617da3ef2b70ce2ecb55b9eeb3a782c5b4885f"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\backend-install.log",
+      "sha256": "6087060ed5d0ead4fdee49498ee9d59df093070fbd084f17b23c781b54127235"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\backend-check.log",
+      "sha256": "6b8540b8549ddc6f57b678be4580933c116f6db3f3818836ad4c14691577f195"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\backend-e2e.log",
+      "sha256": "e157fe0df872ede7e11112808517ca1ebc403ffda1a6bc2d41322b62e22aa5db"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\backend-admin-http.log",
+      "sha256": "6723e10be2a84e18d1165c924d9d74ca4892906e0c4eee23a39d13373c909228"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\backend.log",
+      "sha256": "cc8453e276c1feb7769a262e329849ab1bc1d910d928aafa34aa1263ecee5f58"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\client-result.json",
+      "sha256": "f8274a7c7309baded18855f1d1c30480d409c5ff463584dc4c64d725688c436f"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\fixture-prepare.log",
+      "sha256": "7bf60279f856d9b2caad909c6527a08a11f52bef20e99baab8bdc3d5f00f9e56"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\fixture-verify.log",
+      "sha256": "954d995c6b48f1adaff4097cce4e48ed296de01eabeccfa5ac9cbe011c32db3d"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\fixture.json",
+      "sha256": "4427ffda9aaf63e011664c803dc2f4e753d0077adb8e627e8da8a03b47c02c94"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\initialize.log",
+      "sha256": "295d53fa721a9bf13c32b0aa19af66251c7095e50fc9e721b0cc7149d1eb9661"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\migrate-deploy.log",
+      "sha256": "c9291aee6309183e483fa1f83d95fd6a1f0d847fd0509ee0ad04801a0e749d9e"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\postgres.log",
+      "sha256": "5347c0c85aca0893cc5a8a5e2d67588c81c174f48159d8bafee586abc4c96c96"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\ready.json",
+      "sha256": "d72515c5a271297795a2e69b863fabea9f1941cdaa719e2a5d46e29a64968789"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\report.json",
+      "sha256": "e4ed69c035c03b01192be42b3f0aa8c2f8e58bbd5e7b9afbea61682c6dd645ed"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\stop.request",
+      "sha256": "284d1e8c4918248233df17642bbb940c001e1fa856c18aab86ba6dbe7813eb13"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\runs\\linji-admin-http-mBbvld\\verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\contracts\\openapi.json",
+      "sha256": "4fa8529fe48872254651a095f20ce04cd7c94fe349d00e4149824bcdebfa03f8"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\apps\\admin\\src\\features\\operation-logs\\operation-log-api.ts",
+      "sha256": "a8212488559dbaa2fed3b7b569aaa6fad0cd4e59cc6346c07128c42da175241e"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\apps\\admin\\src\\features\\operation-logs\\operation-log-model.ts",
+      "sha256": "7bfa63b7e0d82cbf54bb0c03be4f575869aa5d6735ed91d260a63a1fc0bf2438"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\apps\\admin\\src\\features\\operation-logs\\operation-log-list.tsx",
+      "sha256": "ef34017f25813b569b00bbdd700a5bf838f4d95d9e942de4c01ab724b30c7e17"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\apps\\admin\\src\\features\\operation-logs\\operation-log-results.tsx",
+      "sha256": "61c4890304d0095afe199501775ccf736882989226fca2eb91f7b5889bc02667"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\apps\\admin\\src\\features\\operation-logs\\operation-log-lifecycle.test.tsx",
+      "sha256": "35465ee5b0764733585d6870467658dcfd830bf3bda4eb62b07cc4a1a647fef3"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\apps\\admin\\src\\features\\operation-logs\\operation-logs.test.tsx",
+      "sha256": "e10316c97a6b94100cfed8a2ba057ee283077cece953280a0000e83f4609a534"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\apps\\admin\\test\\authorization.http-spec.ts",
+      "sha256": "a2aa2b5de00950e87fcfea466c34ef62fefa59fb19285790183773256b12bc8c"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\web-install.log",
+      "sha256": "eb5a2bbf407b8c7c92456cdd7882aca249e9d858852f036f040caf1ecb186e46"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\web-check.log",
+      "sha256": "cfe4b63563d8de333ef7f15d218c2a45a25b45ef293be8637a3d98aa773dbad6"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\web-check-final.log",
+      "sha256": "3c6123d41b207debd70bc48b1678d49acffc2d1f3b8487967edcfafac3a4bd2e"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\web-build.log",
+      "sha256": "3aac690333242af4f2fd77818c9b55dff7f8d840bd452eb378ecb01952ddf1c1"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\web-admin-http.log",
+      "sha256": "11685be382904b9a0e9d8ba807f0031886db2d57484d14949a14435ef99d1870"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\apps\\web\\.next\\release\\release-manifest.json",
+      "sha256": "9c7d9934fa032cd611ece1e17786046903cdd59eb71e518801ec4c621e91924e"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\web\\apps\\admin\\.next\\release\\release-manifest.json",
+      "sha256": "2fa5016a4d384b8e840d05c92b910eb3ebcb07ecffc209b730c5f597cd7694d8"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\app\\contracts\\openapi.json",
+      "sha256": "4fa8529fe48872254651a095f20ce04cd7c94fe349d00e4149824bcdebfa03f8"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\app\\src\\platform\\api\\openapi.ts",
+      "sha256": "7f750fb687eb2bfe6f4c19cf0cf4f497be46f642ff60feaebb8fadb513d34d78"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\app\\scripts\\export-artifact.ts",
+      "sha256": "18b4812dc3b95648fe326a2d30aa90de837add082cf8094e6c52779ca0eee8c8"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi\\app\\scripts\\export-artifact.node-test.ts",
+      "sha256": "689a9d94398c87aa06d4e3821bf4c015bd98f04df32af50e094a1df9fec69cfa"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\app-install.log",
+      "sha256": "c87078bdc575bd2a69a95fe63f1b76c29efca08f33bb8279ca0b1bdd63813ee9"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\app-check.log",
+      "sha256": "62980b2cfabbb9c623e6d3484d77988b65174fa7a4379bf3a2708c1ae69862cc"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\app-export.log",
+      "sha256": "1367eef8b6b9501fcdcfc951a27557234514585f6807d95c2109aa00c037cd2e"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\app-post-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\app-seal.log",
+      "sha256": "d94e5e4f4204dd6671feec41266ff98e5560668aae1caa81e390105bed7cfcb6"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\app-verify.log",
+      "sha256": "93b02d673ba67f3df349130357aff432d3f7dbf7f573e9ce2b55753c4d9e20cb"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\app-relocated-verify.log",
+      "sha256": "994b88b8b0b59424245f6f7b1cc3d30582eefb6827b6edd7b467a53857e2274c"
+    },
+    {
+      "path": "D:\\linji-operation-logs\\20261103\\app-export\\linji-export-manifest.json",
+      "sha256": "b46567a0422dc776c47d8ec271adf944c39fec474922450073fa075a87349f9a"
+    },
+    {
+      "path": "D:/linji-operation-logs/20261103/web-final-format.log",
+      "sha256": "0b95efe7a1df96aa81440f70658e5c8169546d284587f7ba2e8d268fd1aaea15"
+    },
+    {
+      "path": "D:/linji-operation-logs/20261103/web-final-guide-format.log",
+      "sha256": "f20510a9da4717c51c4cffee6d0dd88d6c9a723d0a83711d01216f5b48961283"
+    },
+    {
+      "path": "D:/linji-operation-logs/20261103/final-audit.log",
+      "sha256": "2242c48523db2aedeadf0f4b7ef51cc9e122ab7098a94f060020c70ba59e272d"
+    }
+  ],
+  "overallGoalComplete": false
+}

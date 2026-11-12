@@ -1,0 +1,477 @@
+{
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "scope": "Seven added admin asset scenarios in real native MinIO/ClamAV/PostgreSQL integration (17 total), original and independent source-copy reproduction, independent three-repository frozen installs/checks/builds/exports",
+  "openapiVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "newAdminStorageTests": 7,
+  "nativeStorageTests": 17,
+  "commandLedger": {
+    "path": "D:/linji-admin-storage/20261104/commands.json",
+    "sha256": "c3234e4adfdcb277b2e296ae930b551695d43909dfa15050aad165c17db62619"
+  },
+  "candidateComparison": {
+    "path": "D:/linji-admin-storage/20261104/candidate-comparison.json",
+    "sha256": "7bd26723ae12ae1fa37e1ef5d6c045e9c7fb7665abd91754a0f6b0f2e9e26a81"
+  },
+  "unchangedBusinessSources": [
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+        "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/contracts/openapi.json",
+        "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+      }
+    },
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/prisma/schema.prisma",
+        "sha256": "0e1b09fed38dfcc97e1383f496ad0ddb9d21d56c195c265b5f423fab05885398"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/prisma/schema.prisma",
+        "sha256": "0e1b09fed38dfcc97e1383f496ad0ddb9d21d56c195c265b5f423fab05885398"
+      }
+    },
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/pnpm-lock.yaml",
+        "sha256": "08acab88e8de3501cb07a16e92fe7d38879302e608aadab6cf0fcf3685249144"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/pnpm-lock.yaml",
+        "sha256": "08acab88e8de3501cb07a16e92fe7d38879302e608aadab6cf0fcf3685249144"
+      }
+    },
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/package.json",
+        "sha256": "e7283f1e6c8d3e3707d3ef13db6ec7577df8b0892b085b1cc6ed4a88ccf7a3fe"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/package.json",
+        "sha256": "e7283f1e6c8d3e3707d3ef13db6ec7577df8b0892b085b1cc6ed4a88ccf7a3fe"
+      }
+    },
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/src/modules/assets/application/manage-admin-assets.ts",
+        "sha256": "6428711f2ba2f38dc0f9f67eb469e379a3c7da56b0eb02510129d7de7d153f5b"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/src/modules/assets/application/manage-admin-assets.ts",
+        "sha256": "6428711f2ba2f38dc0f9f67eb469e379a3c7da56b0eb02510129d7de7d153f5b"
+      }
+    },
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/src/modules/assets/infrastructure/prisma-asset.repository.ts",
+        "sha256": "5a5432b3753bbbf496d3ac917c0b5b0c34f51676d287d50dbe291651169034b5"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/src/modules/assets/infrastructure/prisma-asset.repository.ts",
+        "sha256": "5a5432b3753bbbf496d3ac917c0b5b0c34f51676d287d50dbe291651169034b5"
+      }
+    },
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/src/modules/assets/infrastructure/s3-asset-storage.ts",
+        "sha256": "65ce4603cd4f4827afa5019f72888d0f696250c443594170126ce25290991bda"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/src/modules/assets/infrastructure/s3-asset-storage.ts",
+        "sha256": "65ce4603cd4f4827afa5019f72888d0f696250c443594170126ce25290991bda"
+      }
+    },
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/src/modules/assets/infrastructure/clamav-asset-scanner.ts",
+        "sha256": "2f7471b98432a828b0b7b0b9ea6e7f6f0da3bdf31a8a302d206686681338d1d2"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/src/modules/assets/infrastructure/clamav-asset-scanner.ts",
+        "sha256": "2f7471b98432a828b0b7b0b9ea6e7f6f0da3bdf31a8a302d206686681338d1d2"
+      }
+    },
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/src/modules/assets/infrastructure/admin-asset-authorization.ts",
+        "sha256": "b8fd99812ea7b760f17590cf030f84e18acc1fd2d3e04bd3eb3f32dbb43ba32e"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/src/modules/assets/infrastructure/admin-asset-authorization.ts",
+        "sha256": "b8fd99812ea7b760f17590cf030f84e18acc1fd2d3e04bd3eb3f32dbb43ba32e"
+      }
+    },
+    {
+      "current": {
+        "path": "E:/desktop/lishiqi/backend/src/modules/assets/presentation/http/admin-assets.controller.ts",
+        "sha256": "b85077642afe016c5af662526525aff9a32422ac6b7c505d7dce3f90537dd118"
+      },
+      "prior": {
+        "path": "D:/linji-native-storage/20261104/work/backend/src/modules/assets/presentation/http/admin-assets.controller.ts",
+        "sha256": "b85077642afe016c5af662526525aff9a32422ac6b7c505d7dce3f90537dd118"
+      }
+    }
+  ],
+  "validationHarness": {
+    "path": "D:/linji-admin-storage/20261104/validate-stage.mjs",
+    "sha256": "c2f3375c2410b4304e908e9d677b51956090d4bc7624bdb1c9017b2844b61e54"
+  },
+  "runtimeVersions": {
+    "minio": "minio.exe version RELEASE.2025-10-15T17-29-55Z (commit-id=9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a)\nRuntime: go1.27.3 windows/amd64\nLicense: GNU AGPLv3 - https://www.gnu.org/licenses/agpl-3.0.html\nCopyright: 2015-0000 MinIO, Inc.",
+    "clamav": "ClamAV 1.4.3",
+    "postgres": "postgres (PostgreSQL) 17.11"
+  },
+  "runtimeBinaries": [
+    {
+      "path": "D:\\linji-native-storage\\20261104\\minio.exe",
+      "sha256": "b42fdca9797a61c3f3181e1aa4c9b0eca0e7d65a40b9460a40e910f6d108f53a"
+    },
+    {
+      "path": "D:\\linji-native-storage\\20261104\\clamav\\clamav-1.4.3.win.x64\\clamd.exe",
+      "sha256": "55d13b26fb4208b5667d59c6e5de0fcd2f9289c658a611bf22ba738eadd5e84a"
+    },
+    {
+      "path": "D:\\linji-native-postgres\\20261103\\runtime\\pgsql\\bin\\postgres.exe",
+      "sha256": "f5dbfd059f8088b9511a02fc014e659369996fc7d3e88e47658b1cfa2fbb02d2"
+    }
+  ],
+  "originalNativeReport": {
+    "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/report.json",
+    "sha256": "09eb05149261160f285565c979a6db332d665c3d321bde095554c5c3b8719a2a"
+  },
+  "independentNativeReport": {
+    "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/report.json",
+    "sha256": "24c9ca1ea2afe42b83d00bc9c2c47bfbd09723a0b7e9445a37939f5493d37a2d"
+  },
+  "intermediateNativeReport": {
+    "path": "D:/linji-admin-storage/20261104/cold-runs/linji-storage-N5I188/report.json",
+    "sha256": "5148c83e89fde24943eccac0cc33096d83485b851b59eafbf7fb7df86d5344a0"
+  },
+  "fixtureReview": {
+    "reason": "Original merchant actor lacked active MerchantProfile, so 403 did not alone prove unsupported asset merchant scope. Final fixture creates and asserts active profile; cleanup compares merchant count too. Final independent copy reruns frozen install/Prisma generation/typecheck/focused lint/17 real tests; initial full backend check/e2e/build unchanged-business evidence is retained without recounting.",
+    "harness": {
+      "path": "D:/linji-admin-storage/20261104/validate-final-merchant.mjs",
+      "sha256": "8381ebafa65f030732fca8eac812e07c05305640355ff91878f400df7df2ab03"
+    },
+    "logs": [
+      {
+        "path": "D:/linji-admin-storage/20261104/merchant-preflight-types.log",
+        "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+      },
+      {
+        "path": "D:/linji-admin-storage/20261104/merchant-preflight-lint.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "nativeLogs": [
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/bucket-first.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/bucket-second.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/clamav-version.log",
+      "sha256": "6e216b71ce01ff83380e38674ecd36d96526615544b3adeb9dc4de7dea345fed"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/clamd.log",
+      "sha256": "27e3244fcfa277f4c1aa3afa9ac5ffc9df27e75a6c192de186d3a5a901bb2e68"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/initialize.log",
+      "sha256": "d0b9723ed483836464abba97867561039b67ce5090f1cfe861c9ccadf0a66966"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/migrate-deploy.log",
+      "sha256": "5bfe5c0edd20fbf06c89c7153435fe95bd3e0cee5492b48f5fcc0901e51af1bd"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/minio-version.log",
+      "sha256": "fa74355260cf82c63b182910e30ecf2167bf691f4c80549ba4c4f811bbed9ef5"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/minio.log",
+      "sha256": "6705adb065f07bd7cbb0004cfef2ddb200820a0a4cb6a53e45542a2ebde32e40"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/postgres.log",
+      "sha256": "8ab242596079353744f89b70048c3945d21d5eccb42349f00f4c5f709263ff63"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/storage-suite.log",
+      "sha256": "f28f8b24b4f1ab312409371db1d4d33368b82d2efa78e785677d6d2520198a4e"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-runs/linji-storage-SyKK58/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    }
+  ],
+  "originalNativeLogs": [
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/bucket-first.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/bucket-second.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/clamav-version.log",
+      "sha256": "6e216b71ce01ff83380e38674ecd36d96526615544b3adeb9dc4de7dea345fed"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/clamd.log",
+      "sha256": "4715418eb4c2336fa630da82602910a188225069f7316031685ff8bab210f214"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/initialize.log",
+      "sha256": "7f3c3a154284557ffee200ba52046efecc82324867036ec0f33da3f3862cd93d"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/migrate-deploy.log",
+      "sha256": "8717f2bfbf6f6ec0d26a43f180f219d66f1b1f382b7a79a84f03ffe412ca315f"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/minio-version.log",
+      "sha256": "fa74355260cf82c63b182910e30ecf2167bf691f4c80549ba4c4f811bbed9ef5"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/minio.log",
+      "sha256": "0abd2b1e43eea45877160f1873df59cb4a6ec6b66d60e9ba14e12ed756c0075f"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/postgres.log",
+      "sha256": "4ed6fed1be0c75ead2b17662bdc3d32e8d33fa59ac40d98a20cc3195b9e07fbb"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/storage-suite.log",
+      "sha256": "451948daeeb563ef0cfe070e6015865508f03f117cf0d946847667312d249442"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/runs/linji-storage-PcRTOJ/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    }
+  ],
+  "preflight": [
+    {
+      "path": "D:/linji-admin-storage/20261104/preflight-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/preflight-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/final-preflight-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    }
+  ],
+  "productSources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/test/assets.storage-integration-spec.ts",
+      "sha256": "098af0a2cb25dcbde83490b06e0c541150378c39d59b197279fd57da656b5688"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/validate-native-storage.ts",
+      "sha256": "b8c60f4243c38ca080d15882f7784e08b38fca54d13388d6e77945b7df59113d"
+    }
+  ],
+  "cleanup": {
+    "databaseStopped": true,
+    "ownedServicesStopped": true,
+    "portsClosed": true,
+    "bucketEmpty": true,
+    "passwordFileAbsent": true,
+    "postmasterPidAbsent": true,
+    "auditInjectionRemoved": true,
+    "authorizationBefore": {
+      "roles": 3,
+      "permissions": 101,
+      "userRoles": 1,
+      "rolePermissions": 130,
+      "scopes": 0,
+      "merchants": 0
+    },
+    "authorizationAfter": {
+      "roles": 3,
+      "permissions": 101,
+      "userRoles": 1,
+      "rolePermissions": 130,
+      "scopes": 0,
+      "merchants": 0
+    },
+    "finalCounts": {
+      "users": 1,
+      "assets": 0,
+      "sessions": 0,
+      "logs": 0,
+      "events": 0
+    }
+  },
+  "environment": {
+    "dockerStartedOrRestarted": false,
+    "dockerWSLUsed": false,
+    "foreignPreviewBorrowed": false,
+    "nextServerStarted": false,
+    "expoServerStarted": false,
+    "remoteCiExecuted": false,
+    "separateCodeCopies": true,
+    "reusedPerRepositoryStores": true,
+    "NODE_PATHCleared": true
+  },
+  "limitations": [
+    "Actual Nest routes/auth/Prisma/SQL and real MinIO/clamd are tested through Supertest; no browser UI/Next/Expo acceptance claim",
+    "ClamAV loads only harmless repository custom definition; production full virus databases, updates, malicious samples, TLS/S3/backups are not validated",
+    "Roles/permissions are configured by disposable database fixtures; tests do not establish account/role management UI or write API correctness",
+    "Valid deletion tests confirm real object removal; existing 204 only guarantees logical admin deletion, and asynchronous cleanup after physical failure remains unproven",
+    "Full Backend check/e2e/build ran before final test-fixture strengthening; final copy reran typecheck, focused lint and all 17 real storage scenarios. Regular business source unchanged. No business implementation, API, schema, migration, dependency or generated contract change; current stage did not rerun 845 full database or Kafka integration",
+    "Windows Kafka AccessDenied and 35-second scenario unresolved; D-49/D-50/D-09 unchanged; prior denied cleanup/servers not retried; no commit/push/deploy/publish"
+  ],
+  "overallGoalComplete": false,
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "check": 0,
+    "unitTests": 1271,
+    "sourceToolTests": 20,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "realStorageTests": 17,
+    "newAdminStorageTests": 7
+  },
+  "snapshot": {
+    "repo": "backend",
+    "cwd": "D:/linji-admin-storage/20261104/work/backend-final",
+    "sourceSha256": "b6fd7db9888ae1a5ffcf6717f349b528dc70439dcb21c4165eed21452def6354",
+    "files": 801,
+    "store": "D:/linji-source-verify/20261104/stores/backend",
+    "reusedOwnStore": true,
+    "manifest": {
+      "path": "D:/linji-admin-storage/20261104/work/backend-final/.source-export.json",
+      "sha256": "5fa9d1c46fa52b2e797c415af46f453e9b391bac19207762edbd9221bdfbc444"
+    }
+  },
+  "modules": {
+    "path": "D:/linji-admin-storage/20261104/backend-module-paths.json",
+    "sha256": "7fc52ba34dd5de2826cb24a3003ad25710e731602ce81c6f51745a81adc1bad7"
+  },
+  "logs": [
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-source.log",
+      "sha256": "3676d60b32ec79c523b0cdb72690b143dfc8793382bfc37c0f30dbc7c81de745"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-source-verify.log",
+      "sha256": "308ccc15dc5f9a3ad825f5b319dae0036cbce90bf4433fa5585057cad8038129"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-install.log",
+      "sha256": "5abe6e1b8e66af982e4e646738d06911b41b5e42977f06658517e42d00b8d3b8"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-generate.log",
+      "sha256": "6e88d12d6d89b89149a96942dec388016327a5f068f1748f1c9568d0fe1d49c7"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-check.log",
+      "sha256": "7fda37833642dbadf654125e6cee7ce79bb3c0430aa7cccfe3fc1508adfb99e3"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-e2e.log",
+      "sha256": "4787a0c0590ee5fdf3d1b93b7016394c797f2f9c5cf97a093d28b312baeb09f6"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-openapi.log",
+      "sha256": "f7aedd3ea89e63d16f8d747081049a9ae1338b484922aa21cb479766ea806bd4"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-native-storage.log",
+      "sha256": "6396c025c5ab8fe425cef1d78aff79cc831a47bbe36f7d0bdca0d891359c2697"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-final-source.log",
+      "sha256": "d989c3e7905bc05c765ac847fd5461e9a112ad5d123cd3ada6b9e85185bf640b"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-final-source-verify.log",
+      "sha256": "99db0a85da09b42d420e524282bd63afd551195b8864cae862ec7b38f465a378"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-final-install.log",
+      "sha256": "ae00bd0c217fdcefa54cd8de5c310ac45c88cbef42bf0ed70ad1df20934ace06"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-final-generate.log",
+      "sha256": "3e30bde22272db3253dc0286c1c7777c753c50e5417283021cb6d81d8a119fcb"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-final-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-final-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-storage/20261104/backend-final-storage.log",
+      "sha256": "304e4f052f8b0d611c850302276728e4c761e6eb5dc9ec4427f84f2f8eb8415e"
+    }
+  ]
+}

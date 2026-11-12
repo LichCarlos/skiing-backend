@@ -1,0 +1,82 @@
+{
+  "recordedAtUtc": "2026-11-02T21:52:16.4645677Z",
+  "execution": {
+    "output": "D:\\linji-native-postgres\\20261103\\runs\\linji-native-fEFduL",
+    "checks": [
+      {
+        "name": "postgres-version",
+        "passed": true
+      },
+      {
+        "name": "initialize",
+        "passed": true
+      },
+      {
+        "name": "start",
+        "passed": true
+      },
+      {
+        "name": "create-database",
+        "passed": true
+      },
+      {
+        "name": "migrate-deploy",
+        "passed": true
+      },
+      {
+        "name": "seed-first",
+        "passed": true
+      },
+      {
+        "name": "seed-second",
+        "passed": true
+      },
+      {
+        "name": "verify-before",
+        "passed": true
+      },
+      {
+        "name": "database-suite",
+        "passed": true
+      },
+      {
+        "name": "verify-after",
+        "passed": true
+      },
+      {
+        "name": "stop",
+        "passed": true
+      }
+    ],
+    "completed": true,
+    "stopped": true,
+    "postgresVersion": "postgres (PostgreSQL) 17.11",
+    "port": 62146,
+    "database": "linji_password_validation",
+    "pgvectorVersion": "0.8.1",
+    "migrations": 23
+  },
+  "testSummary": {
+    "filesPassed": 34,
+    "testsPassed": 830,
+    "testsTotal": 830
+  },
+  "suiteLogSha256": "e28490d2e80ee898d224e2d056d1c0f5b11b2fe4845bb56143bcd6c4751dc4ae",
+  "verifyAfter": "Database verified: 23 migrations including the committed baseline, pgvector/HNSW, 15 uniqueness/vector indexes, 18 database constraints, RAG control columns/defaults, 3 built-in roles, initial administrator, and revenue/AI permission boundaries.",
+  "provenance": {
+    "postgresArchiveUrl": "https://get.enterprisedb.com/postgresql/postgresql-17.11-5-windows-x64-binaries.zip",
+    "postgresArchiveSha256": "80379b2c04d51c30225532e0ae04509899141e9957ed096fe749d7fd9df8f82f",
+    "pgvectorTag": "v0.8.1",
+    "pgvectorCommit": "778dacf20c07caf904557a88705142631818d8cb",
+    "localVectorDllSha256": "ef359cc564ec708737daea217922948306718cc641f2f2cddd5e99502d59acc5"
+  },
+  "cleanup": {
+    "postmasterPidFileExists": false,
+    "initialPasswordFileExists": false
+  },
+  "limitations": [
+    "Windows native PostgreSQL; not Linux/container acceptance",
+    "External Chat/Embedding, Kafka, S3 and ClamAV remain mocked or outside this suite",
+    "Full source copy/cold-store isolation, browser and device acceptance were not rerun"
+  ]
+}

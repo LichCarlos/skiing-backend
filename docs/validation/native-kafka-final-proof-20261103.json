@@ -1,0 +1,410 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "engineeringChecksPassed": true,
+  "nativeKafkaIntegrationPassed": false,
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/native-kafka-20261103.json",
+      "sha256": "3dde78cd8d1c9ad217484f9d87cfe5b7a86d2626cfaf3730cb9b52a8d8e3fba8",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitFiles": 143,
+        "unitTests": 1240,
+        "newCapabilityTests": 20,
+        "sourceExportNode": 8,
+        "httpFrameworkFiles": 9,
+        "httpFrameworkTests": 173,
+        "build": 0,
+        "productionBusinessChanged": false,
+        "lint": "zero errors; existing no-unsafe-finally warning",
+        "nativeKafkaIntegration": "failed"
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/native-kafka-20261103.json",
+      "sha256": "4bf23a4eb2b38a963b764df5f670fad389ba66bda0519330bd7db55232d6ae86",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 2333,
+        "releaseNode": 20,
+        "sourceExportNode": 8,
+        "forcedNextBuilds": 2,
+        "standaloneVerify": 2,
+        "businessChanged": false
+      }
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/native-kafka-20261103.json",
+      "sha256": "7b2f59137a81a2f764b712a6f47451d0ee809bc727bc9dd41b9ceff7ae4e9661",
+      "results": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessFiles": 66,
+        "businessTests": 1163,
+        "sourceExportNode": 8,
+        "artifactNode": 10,
+        "doctor": "20/20",
+        "exportPlatforms": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "postExportTypes": 0,
+        "seal": 0,
+        "verify": 0,
+        "relocatedVerify": 0,
+        "businessChanged": false
+      }
+    }
+  ],
+  "audit": {
+    "markdownFiles": 222,
+    "checkedLinks": 1880,
+    "broken": []
+  },
+  "verifiedUniqueReferences": 83,
+  "references": [
+    {
+      "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "b3fc63978c0277a794bf0a017eb55ecbf31da211070a19935ddb106af37ff5cc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/validate-native-kafka.ts",
+      "sha256": "da890cbed0ae19fb61ed218724ae0409df4a4f3aac5aaa502889c931392f299e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/helpers/native-kafka-recovery.ts",
+      "sha256": "65a318d9e19038f53be21a01dc493ff98772658fdbe67a29756eefced4f29cda"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/helpers/native-kafka-recovery.spec.ts",
+      "sha256": "dd793eef98d267d139e112fd569d3e0dde1008904213530cc68e8edfd93f82d0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/helpers/kafka-recovery-broker.ts",
+      "sha256": "4c238b6a66cb6fe5084ec6068fe8b08a1579c3ce3176ce66a276dea5a66bc2b2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/kafka-rag.integration-spec.ts",
+      "sha256": "1ca0e92185f749706d21e27f9472c06b20e01f5ee6ee0fda1ab86497c849bcb1"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/worker-shutdown.integration-spec.ts",
+      "sha256": "3749fdcc36fc2308905c0b71bbf021255cbc35a50c5de29e18d087236a6e3044"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/backend-install.log",
+      "sha256": "efa503dcd7d4967e8ffc2812a39145a2fdcaac58c4b26d0aac9a94ec94322ee9"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/backend-check-initial.log",
+      "sha256": "d6c05e9d30ab59f08f2bff333c7c5d1067452b261c811178bbebf5556dcc23c7"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/backend-check.log",
+      "sha256": "a9f417a7a5a7615b8dac4d0e0138830cdfe3b1637cd57594f1387f23a7562485"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/backend-e2e.log",
+      "sha256": "08c4307d613f1dc9d21f4189e3d2b258844ba33a684733a63b6a3785ce51fb7d"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/backend-preflight-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/backend-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/backend-preflight-lint.log",
+      "sha256": "875b99b19e8ab72d5089097dd7f001c003c0da57abf5ed41ffada3177ef0b211"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/capability-tests.log",
+      "sha256": "f3bcb69f99653da64fe5516c856a97ef308762e58c579f5bfc0624645b5f8291"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/native-kafka.log",
+      "sha256": "04e05b9616721fd98f00abaaa81d39e9ef9da4aa001fdccf6a112358a5242693"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/native-kafka-second.log",
+      "sha256": "ccf6c659f2cc117d1c56cbd5033fff2144443d33ba397eed845cb5cc78debeca"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/native-kafka-final.log",
+      "sha256": "63b95ed2e43775c10a3f1bb0aad346383e920d7fe95367c65075546bb5573597"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/cleanup.json",
+      "sha256": "58e89dd8b2fc539dc12f8ba4b1dc0717cfd551313eab5ba1c42313fa97ddba54"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/download-verification.json",
+      "sha256": "d65328af557644d33dd5e0f9b0631fb2cc611aa2cc6118bce5c9f94bb1ea931e"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/kafka_2.13-4.1.1.tgz.sha512",
+      "sha256": "d4aba79f67451a92345d78bd05660619e0af22d842e3ea3e38d1dfeb2e0d2bd6"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/SelectorProbe.java",
+      "sha256": "4406d0e7a5279d3772e8ff810987582a52d361014623d957d6fa8608c613da70"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/selector-probe.log",
+      "sha256": "5f72ec7208625a41328c82c315bb1f6e2e9d073e7316f88da6b7706b18a3bf41"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/report.json",
+      "sha256": "8618350cd98a204bd1983743dfc1aadd84965b21ec845b540a35476ced0b3a78"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/java-version.log",
+      "sha256": "2964d5e1b3b412d2128748e82aa8b0069d4a7b2c58bd5c7e50cd3ba4ebcc8aa0"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/initialize.log",
+      "sha256": "3f577ba1c198b7215b475b4b23bb358b853b21952251658feb83179e2b5af6cc"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/migrate-deploy.log",
+      "sha256": "b604890fe66d34e756a481d5e12f44d9f7d0f46e0e12425c969e28009062a6e4"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/cluster-id.log",
+      "sha256": "c30553350ada4af37487325cd130d96a760846b4917917238eadc91a868d3909"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/runs/linji-kafka-fndLV6/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/report.json",
+      "sha256": "5c6a66858f7d40f87c1f5a09144680ffe6a74a03ceca7871658b75ebd8a4e659"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/java-version.log",
+      "sha256": "2964d5e1b3b412d2128748e82aa8b0069d4a7b2c58bd5c7e50cd3ba4ebcc8aa0"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/initialize.log",
+      "sha256": "86e8dd0e4aa2bb0e93e4e61a6606d35ddfe6dd6b8bcd4d1a1bc22997137db154"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/migrate-deploy.log",
+      "sha256": "1d3dee3d888f1b0600f2c7812994396fd197e1c9d46221480451f67d2a356e35"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/cluster-id.log",
+      "sha256": "b6d91db5f4a01a867a0aba9ea03da8b3b2ce6567916bf0af9a1501e460f7a022"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/storage-format.log",
+      "sha256": "6207ea4d3d920116af0e8ff794674a4591d717ecaebb0662313bf14c8b5e7dac"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/broker.log",
+      "sha256": "8000d9b04337ee6def3d0154e4e5d9bb655365ef6b9474fd3e7cabecf04470e6"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-eZjq3e/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/report.json",
+      "sha256": "34520a4b76df82055b8c9acd04181389747d2514ed24115757a3875ddbd58de4"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/java-version.log",
+      "sha256": "2964d5e1b3b412d2128748e82aa8b0069d4a7b2c58bd5c7e50cd3ba4ebcc8aa0"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/initialize.log",
+      "sha256": "b24b19ce1762476c63fe80e1d4513794cac4d1e8db6c8d15a1ee4c3d47d13098"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/migrate-deploy.log",
+      "sha256": "4aa42e4983a9d30451a888062c94e95a8340ecc25da18f169b97d12249ba2706"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/cluster-id.log",
+      "sha256": "a20aeb2f1fc35814c9ba1da81812badbbffa1e45368b04b28666df3fcaa95088"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/storage-format.log",
+      "sha256": "c5c747acb38a7a0149872ca59988df75aa6160dc377611c25559583a21d8b017"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/broker.log",
+      "sha256": "ab8d6cd49782f8ec57b0e73c118dde5bfba740348ab18a307014f63d91d8c4b2"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/integration-suite.log",
+      "sha256": "64b10d5431fffe0779b208c9cc9cd018375a87ee2ea57035de54ab517cfff97f"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final/linji-kafka-IMAktA/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/package.json",
+      "sha256": "17decf531de109c00e4ad4500c6ad5d5f6ddde4cbfcce610281c4a93946396c6"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/web-install.log",
+      "sha256": "0ed317917f940c8ae1ffd1e558260c109df1a6cdf5e1d64ecf7e8c332319def3"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/web-check.log",
+      "sha256": "e8b33d0a606f7a67282d03e73b0ff99115973da809f51578736ad329d5721601"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/web-build.log",
+      "sha256": "677fb53ecbbabfca8026941c4215310b33bf258fb493644bc854f2bf136b4b89"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/web/.next/release/release-manifest.json",
+      "sha256": "84fb1b4b6adfb0e4f4094237bb63f08dc659755c952d36690019b30cf0f0758c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/.next/release/release-manifest.json",
+      "sha256": "946feba7bd08fdae979e340372a8778c31a583b937f5bf3785f5b5069b9b0b8a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+      "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/scripts/export-artifact.ts",
+      "sha256": "18b4812dc3b95648fe326a2d30aa90de837add082cf8094e6c52779ca0eee8c8"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/app-install.log",
+      "sha256": "4e70da0ee785d7b6aab4bfad4a8eeb76c9699e9570541540c43d6424a5d7a07d"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/app-check.log",
+      "sha256": "a703a4a8d7ff96d578a86d32bce217b7e441a973897882872a6616e5ac4616d7"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/app-export.log",
+      "sha256": "8306f6df556dfe7a135db629aadceeb466c9a05a1b922a16b11c8300fc6e440d"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/app-post-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/app-seal.log",
+      "sha256": "794bb8f73645ee48541a5ddba1b544cdbb80d6da22f3b4e6367cd1000ae369b4"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/app-verify.log",
+      "sha256": "ceea59caf30f9283f130e0fb8a07e5b536aa78c19906203d042e2ec8753cae32"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/app-relocated-verify.log",
+      "sha256": "f71f30593cc996398fc23b4c825fdc28a99f5df943906e2498739f6232dfe51d"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/app-export/linji-export-manifest.json",
+      "sha256": "c3233e7de526bae0f3c99c680db645afe8376e137168fb7616dd8d47eb3f5328"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/final-audit.log",
+      "sha256": "964a78ded2517498b65747b55edf9b2970f11253097f4ec4ec34eb8e99067386"
+    },
+    {
+      "path": "D:/linji-native-kafka/20261103/web-final-format.log",
+      "sha256": "0b95efe7a1df96aa81440f70658e5c8169546d284587f7ba2e8d268fd1aaea15"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/native-kafka-validation.md",
+      "sha256": "dd2a57785d4c11f0b5b1644983933facbd89cb6a4e5d51a32c239033416caafd"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "7dbef3ef8c99db362c97ca026effdc9d9eeebe58ede60f273b69a444bd14060f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "48d019250f713e8fa82896de68f083e0fb51fe795f9a32ae7330be3103ae10f9"
+    }
+  ],
+  "overallGoalComplete": false,
+  "pending": [
+    "Current complete Kafka/Outbox/Inbox/RAG integration: Windows topic directory AccessDenied; supported isolated runtime required",
+    "D-49 merchant lifecycle / D-50 resort lifecycle reasons / D-09 account deletion",
+    "Actual browser/visibility/BFCache/device validation",
+    "Real embedding/chat providers, containers, signed native packages and remote CI"
+  ]
+}

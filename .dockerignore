@@ -1,0 +1,18 @@
+# Only independent Backend build inputs enter the context.
+**
+!Dockerfile
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!nest-cli.json
+!tsconfig.json
+!tsconfig.build.json
+!prisma.config.ts
+!prisma/
+!prisma/**
+!src/
+!src/**
+!scripts/
+!scripts/**
+src/**/*.spec.ts
+scripts/**/*.log

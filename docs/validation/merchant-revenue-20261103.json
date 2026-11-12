@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "scope": "Merchant revenue detail response projection shared with overview, strict identity checks and hidden/late result isolation",
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "http": {
+    "tests": 39,
+    "newRevenueTests": 4,
+    "passed": true,
+    "output": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS",
+    "revenue": {
+      "amount": "123.45",
+      "total": 1,
+      "recordResortIds": [
+        1
+      ],
+      "emptyPage": true,
+      "foreignDenied": true,
+      "emptyRange": true,
+      "revocationRejected": true,
+      "scopeConflictDenied": true
+    },
+    "references": [
+      {
+        "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/report.json",
+        "sha256": "c580265ccfb02839e719133eee2983573db99a962a3115183f13e951630686a1"
+      },
+      {
+        "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/client-result.json",
+        "sha256": "62a117f4e310c5a8e199730e3f19996a305b62335e05d45f5cfcd182e9571a7f"
+      },
+      {
+        "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/ready.json",
+        "sha256": "6b37c3803dce1c22f459319253c5b9cfe54752f264e5a695bfcde21e25a322f5"
+      },
+      {
+        "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/migrate-deploy.log",
+        "sha256": "70f3a5507b6dee0fda78dd4db4d218fcf8f569b76a8319772a98df46ff8b25cf"
+      },
+      {
+        "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/fixture-verify.log",
+        "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+      },
+      {
+        "path": "D:/linji-merchant-revenue/20261103/final-http/linji-admin-http-o8IhUS/verify-after.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      }
+    ],
+    "cleanup": {
+      "path": "D:/linji-merchant-revenue/20261103/cleanup.json",
+      "sha256": "76c4fab7d9473b9eec8e80e59373f16c8f7f0224445fd9c7a789a865123b69bc"
+    }
+  },
+  "regression": {
+    "newTests": 44,
+    "initialBoundaryTests": 34,
+    "initialFailed": 30,
+    "initialPassed": 4,
+    "initialLog": {
+      "path": "D:/linji-merchant-revenue/20261103/repro.log",
+      "sha256": "4b0dd4584cfa91cdc3501888b322f1d466344ae49da77183461da5e978b00823"
+    },
+    "targetedTests": 332,
+    "initialTypeError": {
+      "path": "D:/linji-merchant-revenue/20261103/web-types-first.log",
+      "sha256": "0afdbbe43ee40c5e7a7e2d9bf43608cd8c13fe73def70aed6bcf0f370148f7be"
+    },
+    "typeRepair": "canReadMerchantRevenue returns boolean rather than inaccurately narrowing all CurrentUserVO values; final full check passed"
+  },
+  "limitations": [
+    "List/count and summary requests remain independent snapshots; identity checks are not authorization leases or full policy-version checks",
+    "SSR/controller/Node Cookie transport does not prove actual browser visibility/BFCache, Cookie/CORS or devices",
+    "No current full database, Kafka, provider, storage, container, signed native package or remote CI acceptance",
+    "Current Windows Kafka directory AccessDenied failure remains unaccepted; Docker/its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered; overall project goal incomplete",
+    "No commit/push/deploy/publish or denied operation retried"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 143,
+    "unitTests": 1240,
+    "sourceExportNode": 8,
+    "httpFrameworkFiles": 9,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "businessCodeChanged": false,
+    "httpFixtureChanged": true
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "3cdb53d68c1785cdb9e42dc08dee31aed2bdbfa949f6188490b7208c811307a3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/native-http-runtime.ts",
+      "sha256": "3c7a153df237ecedfee557315bb0eee63dbd6ed196e31a8bf057cc0310610473"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-merchant-revenue/20261103/backend-install.log",
+      "sha256": "62495d2f136c31037c2d9fe805cc9552f78b638de6a595f5bd2dc029a81f0ad4"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/backend-check.log",
+      "sha256": "0c6752cf5316932cac98682c44723464f070ade7cc85538aac3c0f9c29d2c9db"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/backend-e2e.log",
+      "sha256": "f2a80eb9c1da244640995c07ce65cc8c22a48fe52dab14eefba09747829726d4"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-merchant-revenue/20261103/native-http-final.log",
+      "sha256": "76796c9673e1bc8d3ce9b96b533b17bb50646ccc63809790c01d378a00dc5102"
+    }
+  ]
+}

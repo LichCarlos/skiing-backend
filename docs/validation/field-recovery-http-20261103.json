@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-03",
+  "openapi": {
+    "version": "1.50.2",
+    "operations": 143,
+    "sha256": "710ef0cad15dcfb363f77a9fd1463413ca0290946dda9d1c9a7fbea8e77088e0"
+  },
+  "execution": {
+    "suite": "admin-authorization",
+    "output": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE",
+    "checks": [
+      {
+        "name": "postgres-version",
+        "passed": true
+      },
+      {
+        "name": "initialize",
+        "passed": true
+      },
+      {
+        "name": "start-postgres",
+        "passed": true
+      },
+      {
+        "name": "create-database",
+        "passed": true
+      },
+      {
+        "name": "migrate-deploy",
+        "passed": true
+      },
+      {
+        "name": "seed-first",
+        "passed": true
+      },
+      {
+        "name": "seed-second",
+        "passed": true
+      },
+      {
+        "name": "verify-before",
+        "passed": true
+      },
+      {
+        "name": "fixture-prepare",
+        "passed": true
+      },
+      {
+        "name": "compiled-api-ready",
+        "passed": true
+      },
+      {
+        "name": "fixture-verify",
+        "passed": true
+      },
+      {
+        "name": "verify-after",
+        "passed": true
+      },
+      {
+        "name": "stop-postgres",
+        "passed": true
+      }
+    ],
+    "completed": true,
+    "stopped": true,
+    "serverStopped": true,
+    "postgresVersion": "postgres (PostgreSQL) 17.11",
+    "databasePort": 60637,
+    "database": "linji_admin_authorization_validation",
+    "apiPort": 50432
+  },
+  "client": {
+    "completed": true,
+    "tests": 10,
+    "addedTests": 1,
+    "rejectedTraceCount": 8
+  },
+  "sourceHashes": [
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/custom-fields/field-console.tsx",
+      "sha256": "1fd6a2bb067cb7a2c58d5723ced0c613335113c4528e74601ef7f7d46f677863"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/custom-fields/field-model.ts",
+      "sha256": "2f04d0424dc5ab0149a73586a0c5aedb61a1fa120e8a84385a23c9afe59ea33c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/custom-fields/field-recovery.ts",
+      "sha256": "602b84228667b2a3ce59c24fe4aec8d9b5720ecf59be279db0773dba96b1c5d5"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/custom-fields/field-queries.ts",
+      "sha256": "116993eefcdaa05084e6200f1d6ecbce6b45c657a1481914e157eb03bc2e328b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/custom-fields/field-write-recovery.test.ts",
+      "sha256": "2c6a16765583449fa9a55836cbc393b684b4fad5cde4d27ca821e68506d0f490"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/custom-fields/field-queries.test.ts",
+      "sha256": "c4af831e8e2fcdc91b08570432b8237f377ba7a98bcd6a6a9d2d3eb624a9fcd2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/src/features/custom-fields/field-page.test.tsx",
+      "sha256": "6bdff2050b3e22a99f5fde5c5ae3d1e20d967b469deb508e5998810eb63a6e24"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/apps/admin/test/authorization.http-spec.ts",
+      "sha256": "fd8b5580dc094324c4df2af64d8a4b362958cdfde8a1d902b147203384f604f2"
+    }
+  ],
+  "notValidated": [
+    "Memory only within one browser tab; lost on reload/close; no cross-tab or server idempotency protocol",
+    "No browser hydration, Next production startup, Expo startup, native device, container, storage, Kafka delivery or provider acceptance",
+    "Existing public HTTP eight and full DB830 not rerun",
+    "Previous cold source snapshot predates current Web changes",
+    "D-09 D-49 D-50 D-51 remain unresolved"
+  ],
+  "repository": "backend",
+  "businessCodeChanged": false,
+  "fullVerification": {
+    "install": 0,
+    "check": 0,
+    "unitTests": 1192,
+    "sourceExportTests": 8,
+    "httpFrameworkTests": 158,
+    "build": 0,
+    "openapiExport": 0
+  },
+  "logs": [
+    {
+      "path": "E:/desktop/lishiqi/backend/field-recovery-install.log",
+      "sha256": "13de8f44c6ffd490d2ca690232cd552c6893b30ba75961ec47960957c87496e4"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/field-recovery-check.log",
+      "sha256": "4a74a1a4f7bdd7eb3fd68ac7691bc92205270f761e392d23ffe8c4c8c9676dd4"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/field-recovery-http-framework.log",
+      "sha256": "ec8d511d5a7ab459b42657cf354c8f62b2a72d5ddd1ecb6613e47d08e7429ca9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/field-recovery-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/field-recovery-openapi.log",
+      "sha256": "d2876b3ee8c7b90307dfdefc4d6081fbfe0a37043947c7b2492b7cb1dc295452"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/field-recovery-live-backend.log",
+      "sha256": "840b3904b2a5c920798db48333c7c5403dee933accf9bb16aa9ff4c007dce9f1"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/field-recovery-stop-proof.log",
+      "sha256": "9801725e0bccd3531e2f665a274c37e38bdad33b288cce2fcfd4de7f58b21877"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/field-recovery-final-backend.log",
+      "sha256": "15effcfb67dc6bc2bcfa6a60de01747ca4f789ecf2c53abc8bd4b1f3c80c2e92"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/field-recovery-final-stop-proof.log",
+      "sha256": "5e22e3f61d60f859404d83dc037f6b33dc96e1d1939e29a9ca33e48c3cc51e7e"
+    },
+    {
+      "path": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE/report.json",
+      "sha256": "4c8eb75191c891c2e7e90c6c48e31717fc9f7996f5bd8156069cc4dd5afe2a24"
+    },
+    {
+      "path": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE/client-result.json",
+      "sha256": "64a643b18c289d990cc2f60eff808e9c3341d6971447953c94416550149bac8b"
+    },
+    {
+      "path": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE/fixture-verify.log",
+      "sha256": "954d995c6b48f1adaff4097cce4e48ed296de01eabeccfa5ac9cbe011c32db3d"
+    },
+    {
+      "path": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE/verify-before.log",
+      "sha256": "70b1f3f4302b7a1c6561a466d6a442450db00fe6543676e8224dffe22d669726"
+    },
+    {
+      "path": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE/verify-after.log",
+      "sha256": "70b1f3f4302b7a1c6561a466d6a442450db00fe6543676e8224dffe22d669726"
+    },
+    {
+      "path": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE/migrate-deploy.log",
+      "sha256": "2d8ded25802d069089f91b6122afda6f0ae1cb948f6d8d9206972bac74ecc7d9"
+    },
+    {
+      "path": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-recovery/20261103/final/linji-admin-http-6FlrOE/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    }
+  ]
+}

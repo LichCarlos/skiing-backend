@@ -1,0 +1,494 @@
+{
+  "date": "2026-11-04",
+  "stage": "admin-asset-list-detail-read-authorization",
+  "evidenceVerified": true,
+  "newUnitTests": 16,
+  "newRealStorageTests": 17,
+  "apiOrSchemaChanged": false,
+  "dependenciesChanged": false,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "backendChanged": [
+    "src/modules/assets/application/manage-admin-assets.spec.ts",
+    "src/modules/assets/application/manage-admin-assets.ts",
+    "src/modules/assets/application/ports/admin-asset-repository.ts",
+    "src/modules/assets/infrastructure/admin-asset-authorization.spec.ts",
+    "src/modules/assets/infrastructure/admin-asset-authorization.ts",
+    "src/modules/assets/infrastructure/prisma-asset.repository.ts",
+    "src/modules/assets/presentation/http/admin-assets.controller.spec.ts",
+    "src/modules/assets/presentation/http/admin-assets.controller.ts",
+    "test/app.e2e-spec.ts",
+    "test/assets.storage-integration-spec.ts"
+  ],
+  "frontendUnchanged": {
+    "web": {
+      "files": 581,
+      "baseline": {
+        "path": "D:/linji-full-database/20261104/delivery/web/.source-export.json",
+        "sha256": "ae32abca7c43f3398d6994e37cfea6092849a61f3ef7d987456478bb354bf925"
+      }
+    },
+    "app": {
+      "files": 238,
+      "baseline": {
+        "path": "D:/linji-full-database/20261104/delivery/app/.source-export.json",
+        "sha256": "07d62929e45051a3062b66bc1c4fe527482187b78d1a7b847be2a60db773b130"
+      }
+    }
+  },
+  "scope": "Current management entry, explicit read grant and exact asset scope before query and after signing; batch target owner/status/storage-key validation including empty inventory",
+  "native": {
+    "output": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM",
+    "totals": { "assetDatabase": 29, "realStorage": 51 },
+    "authorizationCounts": {
+      "before": {
+        "roles": 3,
+        "permissions": 101,
+        "userRoles": 1,
+        "rolePermissions": 130,
+        "scopes": 0,
+        "merchants": 0
+      },
+      "after": {
+        "roles": 3,
+        "permissions": 101,
+        "userRoles": 1,
+        "rolePermissions": 130,
+        "scopes": 0,
+        "merchants": 0
+      }
+    },
+    "finalCounts": {
+      "users": 1,
+      "assets": 0,
+      "sessions": 0,
+      "logs": 0,
+      "events": 0
+    },
+    "bucketEmpty": true,
+    "auditInjectionRemoved": true,
+    "databaseStopped": true,
+    "servicesStopped": true,
+    "portsClosed": true
+  },
+  "fullDatabase": {
+    "output": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV",
+    "tests": 859,
+    "files": 36,
+    "portClosed": true,
+    "report": {
+      "output": "D:\\linji-admin-asset-read\\20261104\\database-runs\\linji-native-92HgOV",
+      "checks": [
+        { "name": "postgres-version", "passed": true },
+        { "name": "initialize", "passed": true },
+        { "name": "start", "passed": true },
+        { "name": "create-database", "passed": true },
+        { "name": "migrate-deploy", "passed": true },
+        { "name": "seed-first", "passed": true },
+        { "name": "seed-second", "passed": true },
+        { "name": "verify-before", "passed": true },
+        { "name": "database-suite", "passed": true },
+        { "name": "verify-after", "passed": true },
+        { "name": "stop", "passed": true }
+      ],
+      "completed": true,
+      "stopped": true,
+      "postgresVersion": "postgres (PostgreSQL) 17.11",
+      "port": 65172,
+      "database": "linji_password_validation",
+      "pgvectorVersion": "0.8.1",
+      "migrations": 24
+    }
+  },
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-admin-asset-read/20261104/final3/validated/backend",
+      "sourceSha256": "2d2f916fef14f32415d88906bcd30ccdda3e44f80aff4acedd1f52a940c34ce1",
+      "files": 872,
+      "store": "D:/linji-source-verify/20261104/stores/backend",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-admin-asset-read/20261104/final3/validated/web",
+      "sourceSha256": "b9a86e7768eccc14cce7dfd4e14849dac1ce976f40a72371e9be9788c45fba26",
+      "files": 727,
+      "store": "D:/linji-source-verify/20261104/stores/web",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-admin-asset-read/20261104/final3/validated/app",
+      "sourceSha256": "77fcd77aab7425ce90c48041758446e1b1f7043f7cb6fdd9c17e8702bcbeeebd",
+      "files": 331,
+      "store": "D:/linji-source-verify/20261104/stores/app",
+      "reusedOwnStore": true
+    }
+  ],
+  "artifact": {
+    "artifactKind": "expo-bundle-export",
+    "files": 88,
+    "contentSha256": "feffb1b2684a68ac028fe9f511f1996206e2fdc86010a6ad54c29e1fa972120c",
+    "openapiVersion": "1.51.1",
+    "openapiSha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8",
+    "nativeInstallable": false
+  },
+  "evidence": [
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-source.log",
+      "sha256": "21ee7c907b3d1f0567284cf2d7700c0d163b8f753db0ebb2daff7de7d3ee47c6"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-source-verify.log",
+      "sha256": "9e61fdf5e5dfe0a2224cdae700655ac4bd209bc2285e7fab6796c611f40b4e62"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-install.log",
+      "sha256": "3783671a26eecea9e4234f49e7cb303bbdcfac90fd3f492ea3269b111ee906e5"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-generate.log",
+      "sha256": "de2385366d2a86b65a8a04539c7a6e9d0ec4b22267a640d01a8121e9a728c32f"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-check.log",
+      "sha256": "7b35f887d2c179f50e95a86fb22f6d2b73fcb867604cadb3c287e8ee290a1194"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-e2e.log",
+      "sha256": "3340b7796918772f88f9cd024270bf08e4e1a8ccc7b3939333270c64986c91e6"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-openapi.log",
+      "sha256": "6f2e391c6337f3d12a6068b41e08fedd053d25f1de03441f544db0307b2c1f84"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-full-database.log",
+      "sha256": "763914e95b07165fd44e50ed48a9c6e68cdf57e91bf08762fcffcab341639e8d"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-native-storage.log",
+      "sha256": "202abc36483bf05cf88781a49898eb214508ad5bd357c9bf734dc4b7c53277f9"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/web-source.log",
+      "sha256": "277fe624cbb208b85e620979171ba249a6ee98fcadc4660554ec3ec5e752c870"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/web-source-verify.log",
+      "sha256": "a3cac2db3a40463bf8a427c4869ca068c44d909620b22799f08b12ca608d976b"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/web-install.log",
+      "sha256": "201f950764d031b5fac02539d59f4ecd1bdb07a10eabd4c8dc9e9d5abab1cd8a"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/web-check.log",
+      "sha256": "7e1774bc681fe50a44d774643e7975ba17e1337ed1df14a7ac115a6b0105be4b"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/web-build.log",
+      "sha256": "d0eac1488266c5c069df3dec8ce4876298bb9e3d9f64fba70df994f796d55eff"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/web-web-release.log",
+      "sha256": "36c773ca5084d90fb9fcc425186dba2f3f5c88a819a4120a46afe950037869b9"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/web-admin-release.log",
+      "sha256": "55a81fec86b3ac6a27d7c5899eac4167a4a130c845a248e0a6fac3f925302d29"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-source.log",
+      "sha256": "ba48fef71f430adf7930756ad75ed653d9e6bd0873e37ac2c101014adef9eb90"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-source-verify.log",
+      "sha256": "297f9cbf9ad09b10954c50b655e76530e6aba3988995a0b36285d94deb10a8f1"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-install.log",
+      "sha256": "7b8fc89638b3ac5c813f215193365a304508c2f15a54c81dab35c4f24208e785"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-check.log",
+      "sha256": "349299c58e29788a5474f7a4325678cec13a1561f431dbe17be615386c73ff96"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-export.log",
+      "sha256": "711a24dd3705e1520279e3473458d25181503b0a9533f410e8f02aa82d3f64b3"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-seal.log",
+      "sha256": "2cca75ac58334b5b6cb8b7d693a58cc23a51642f9b78f6553860d190eae14e93"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-verify.log",
+      "sha256": "aecfe1048aa5a2dfcee503ccd461f1d242de3103e6ef69bdba16a2b1050563a4"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-relocated-verify.log",
+      "sha256": "23af6e88ab7a6fa1ec8935d7b7dfe09ed93a05b5c2a000d508dc2d4141fafef6"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/commands.json",
+      "sha256": "24e6ba9103fbe8550ffe110a7dc4318435b460d3cda97220af4d209641ae1994"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/snapshots.json",
+      "sha256": "00c7d83e120e6e75c161e97bc93bae1e61c7709bf73afce3ebba1db05fef23e4"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/backend-module-paths.json",
+      "sha256": "7b01219f9f309154f7ddc9964616698271edd1265a8eac51747b0a3b9b74c82f"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/web-module-paths.json",
+      "sha256": "c70428db8de9dbcd2be9cb8a2019bf9ed5c5cd3e344c2422b1f2463574cbdae2"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/app-module-paths.json",
+      "sha256": "7b416340b3454e12789eea2bf82adff30e40424ac7376cfac2cd950b601d947a"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/validated/backend/.source-export.json",
+      "sha256": "1f70ae9887d40b54531e129e174572989625ef856facd9454e75e94d943a8abf"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/validated/web/.source-export.json",
+      "sha256": "d5c765d17f2e53fa5a5ed4f404969bb1797c68b09dbd7e7d17a781374242ebde"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final3/validated/app/.source-export.json",
+      "sha256": "6b841c226a7e761d146c62cf014ce645604d5fb432dc7ea2f76410f733a52c59"
+    },
+    {
+      "path": "D:/linji-full-database/20261104/delivery/backend/.source-export.json",
+      "sha256": "33c2b2dda67a794e3957a964b9d8e8508f658d0f395747073a1f1f0886c3a1d2"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/final-check3.mjs",
+      "sha256": "f5d8c7ae8e10b19a9f30de5b915d9305cd7772ca305f74dcd9b36aef4dab5492"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/evidence.mjs",
+      "sha256": "baf40e983e06b6199dc2aded44c3f8e20be487a989f9f77f97bdaee0bd162ed6"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/asset-database-suite.log",
+      "sha256": "2278d4abf26e0d829fb810eea25248f2e390d8adcc28290824f12ee6d414c260"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/bucket-first.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/bucket-second.log",
+      "sha256": "274b694d6705034b93342f108ae065796713433bf79334bf36d5bd6d03818e10"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/clamav-version.log",
+      "sha256": "6e216b71ce01ff83380e38674ecd36d96526615544b3adeb9dc4de7dea345fed"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/clamd.log",
+      "sha256": "cc756c9d36d85c019c12cb40a1974d948d2c245d812b35c8ae525d90ca929f96"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/initialize.log",
+      "sha256": "f02ac06be16bb9229ed83e0e803cfc1ad2c57aa4677f17363aff58d657f727f0"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/migrate-deploy.log",
+      "sha256": "1aba33d784f15c4d07a84c9f75bb3cb5dbef19562e56560afbb5e333738804b5"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/minio-version.log",
+      "sha256": "fa74355260cf82c63b182910e30ecf2167bf691f4c80549ba4c4f811bbed9ef5"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/minio.log",
+      "sha256": "3795c9b7d86bcdca5edb986f0b7050e7bb53bbfade7bf307d84cc1388438a848"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/report.json",
+      "sha256": "cc8c0932b129aa4d5731619b9ddf2622f5017835b5166a647609af0bc1844255"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/storage-suite.log",
+      "sha256": "d5a4a7c7dce389f6914f08f4e0b8ccd62f47226a66545131cc18bd8db6b5c2d0"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-CdfgjM/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/database-suite.log",
+      "sha256": "ccc5b5ae1f41a86c297724718430386743b1f73647525cac7c5e723b28d817eb"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/initialize.log",
+      "sha256": "2f5cfea6095985a558ab8ee81d744cd9e3333fca2ef8f5b6fc496a171cf34e96"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/migrate-deploy.log",
+      "sha256": "496a63a8b6c9ec14df1f8c8e5c9cd1713524f8b4a28b79d3c7b8fe091be37114"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/report.json",
+      "sha256": "7d5488a440d816347b389ef4d5bf5fb897aaf0b2e2f56a3a863c3ca00817aea7"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/server.log",
+      "sha256": "e82f5b41ed92ada4a4b48cfe8e40c71b96dbf4f227d81ed9db5bb8520a14181c"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/start.log",
+      "sha256": "83468a58b9366155730bfcd24e4f618de9349e20a511b54255cb11627a0138eb"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/stop.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-admin-asset-read/20261104/database-runs/linji-native-92HgOV/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    }
+  ],
+  "storageFixtureFailure": {
+    "passed": 38,
+    "failed": 13,
+    "reason": "Synthetic account logins exceeded the unchanged production 30/IP/60s limit; pace fixtures at >=2100ms instead of bypassing or retrying",
+    "log": {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-Sdi4sS/storage-suite.log",
+      "sha256": "ee00b80ab11b55555ddc775af0dad95cb30cf6cec097f5f759e2dc30108aeecb"
+    },
+    "report": {
+      "path": "D:/linji-admin-asset-read/20261104/native-runs/linji-storage-Sdi4sS/report.json",
+      "sha256": "0ed47d8f2cf2d06256adc9a70ab30ef5595aa498f53726e43eeda637c56b05eb"
+    }
+  },
+  "failedAttempt": {
+    "reason": "Three controller assertions still expected the old internal two-argument use-case call; fixed to assert server-side actor propagation",
+    "productFixRequired": false,
+    "log": {
+      "path": "D:/linji-admin-asset-read/20261104/final/backend-check.log",
+      "sha256": "0cb226d73f0f1d225ccbbb2face4fedba7e0ce73b32e1e4f61e0bcc4c5927003"
+    },
+    "commands": {
+      "path": "D:/linji-admin-asset-read/20261104/final/commands.json",
+      "sha256": "9ec697577821d47b7e72779f2bed1a1dbe1ab4839758fa8fce47b1c01ee68055"
+    }
+  },
+  "tested": [
+    "List/detail each reauthorize after Guard and before querying; unbind then403/no signing",
+    "List/detail actual signing then disable account/role, remove read grant/portal grant or change scope:403, no signed response, ready object and bytes retained",
+    "List/detail actual signing then transfer owner:404, object intact",
+    "List/detail actual owned deletion during signing:404, object physically gone",
+    "Empty inventory reauthorizes after query and refuses revoked role",
+    "Custom self/selected/all, pagination/total, deleted metadata null URL and deletion grant independence regressions retained",
+    "Previously generated real signed capability URL remains downloadable until original TTL or object removal"
+  ],
+  "paidProviderCallsThisStage": 0,
+  "kafkaIntegrationRerun": false,
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Last verification snapshot does not cancel every later revocation; existing signed URLs keep 900s capability TTL",
+    "Target browsers and Expo Web/native devices/SecureStore/signed packages",
+    "Production TLS/storage/model capacity/business corpus/monitoring/joint recovery; containers and remote CI",
+    "D-49/D-50/D-09 and previously denied actions unchanged"
+  ],
+  "repo": "backend",
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1462,
+    "sourceTools": 20,
+    "httpFrameworkTests": 177,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "fullDatabaseTests": 859,
+    "fullDatabaseFiles": 36,
+    "assetDatabaseTests": 29,
+    "realStorageTests": 51
+  },
+  "deliveryVerification": {
+    "snapshots": [
+      {
+        "repo": "backend",
+        "cwd": "D:/linji-admin-asset-read/20261104/delivery/backend",
+        "sourceSha256": "c76ef2d1600f7b5df55d7eeaf57d890b6293073a5feca4295ee7cec672e13b9c",
+        "files": 873,
+        "productIdenticalToValidatedSnapshot": true
+      },
+      {
+        "repo": "web",
+        "cwd": "D:/linji-admin-asset-read/20261104/delivery/web",
+        "sourceSha256": "adf6e0709e586db2e96b8a7c003fbdda436c06c9ad5860bc0c0e2fb58c61efac",
+        "files": 728,
+        "productIdenticalToValidatedSnapshot": true
+      },
+      {
+        "repo": "app",
+        "cwd": "D:/linji-admin-asset-read/20261104/delivery/app",
+        "sourceSha256": "134a848b45d707fda04b9653705a7d00c8d1e0471ced8c07cc8e4bda456359d2",
+        "files": 332,
+        "productIdenticalToValidatedSnapshot": true
+      }
+    ],
+    "deliveryCommands": 7,
+    "productIdenticalToValidatedSnapshot": true,
+    "productCodeChecksReusedOnlyForIdenticalFiles": true
+  }
+}

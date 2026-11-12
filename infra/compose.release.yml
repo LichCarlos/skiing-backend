@@ -1,0 +1,44 @@
+# API only. External PostgreSQL, Kafka, storage, antivirus and HTTPS are required.
+services:
+  api:
+    image: ${BACKEND_IMAGE:?Set BACKEND_IMAGE to the reviewed runtime image digest}
+    init: true
+    env_file:
+      - ${BACKEND_ENV_FILE:?Set an absolute path to the private API environment file}
+    ports:
+      - '127.0.0.1:${BACKEND_PORT:-8080}:8080'
+    environment:
+      PORT: '8080'
+      NODE_ENV: production
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 180s
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+
+  migrate:
+    profiles: [tools]
+    image: ${BACKEND_TOOLS_IMAGE:?Set BACKEND_TOOLS_IMAGE to the matching tools image digest}
+    init: true
+    env_file:
+      - ${BACKEND_ENV_FILE:?Set an absolute path to the private API environment file}
+    environment:
+      NODE_ENV: production
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: 'no'
+    command: [pnpm, db:deploy]

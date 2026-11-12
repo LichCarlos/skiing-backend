@@ -1,0 +1,319 @@
+{
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "liveBackfillTests": 8,
+  "cliInvocations": 11,
+  "realEmbeddingCalls": 19,
+  "injected503": 1,
+  "chatCalls": 0,
+  "closedPorts": [
+    { "port": 60429, "closed": true },
+    { "port": 63045, "closed": true }
+  ],
+  "reports": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/rag-backfill-cli-20261104.json",
+      "sha256": "9cdbfa650fe308171bb93a39cdc36a69ce5b3eaa94e3a873337dfc7f2de9b3a7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/rag-backfill-cli-20261104.json",
+      "sha256": "9cdbfa650fe308171bb93a39cdc36a69ce5b3eaa94e3a873337dfc7f2de9b3a7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/rag-backfill-cli-20261104.json",
+      "sha256": "9cdbfa650fe308171bb93a39cdc36a69ce5b3eaa94e3a873337dfc7f2de9b3a7"
+    }
+  ],
+  "engineeringCommands": 26,
+  "deliveryCommands": 11,
+  "allCommandsPassed": true,
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-rag-backfill/20261104/delivery/backend",
+      "sourceSha256": "3b16adb4fa059825792c7b9f95ecb4eb7702283022695964d94a5bb9669dd057",
+      "files": 884,
+      "manifest": {
+        "path": "D:/linji-rag-backfill/20261104/delivery/backend/.source-export.json",
+        "sha256": "fcbafb7dba1ccfe1291cd32972a4a449416e9825153d38c00f05ee56395e3c0d"
+      },
+      "productFiles": 649,
+      "productIdenticalToValidatedSnapshot": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-rag-backfill/20261104/delivery/web",
+      "sourceSha256": "b9de041d6296cdb55b8c52ae201ca9f087b43eaae1dd5caa85ea25b58e733005",
+      "files": 733,
+      "manifest": {
+        "path": "D:/linji-rag-backfill/20261104/delivery/web/.source-export.json",
+        "sha256": "d25d6645519719d7915e37cc6a93b43a5bf46e34e171edc9e43c9fe51b5c214b"
+      },
+      "productFiles": 581,
+      "productIdenticalToValidatedSnapshot": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-rag-backfill/20261104/delivery/app",
+      "sourceSha256": "f31533ca2bf443ca25162a37b5bb8184323f77350f808933b955acd3fce45993",
+      "files": 337,
+      "manifest": {
+        "path": "D:/linji-rag-backfill/20261104/delivery/app/.source-export.json",
+        "sha256": "c8eabfffd2f2cc9233c0b0074af258fa2613cb08198508c82b7a0ea29b8cdb9f"
+      },
+      "productFiles": 238,
+      "productIdenticalToValidatedSnapshot": true
+    }
+  ],
+  "audit": { "markdownFiles": 297, "checkedLinks": 3550, "broken": [] },
+  "verifiedReferences": 33,
+  "references": [
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/commands.json",
+      "sha256": "6d35e2c8dc4aff6c5ffcccfb35d90557940ab355b4b8f64719926cbcc585f78d"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/snapshots.json",
+      "sha256": "c4ad5e722d350b861acda9ace81efce6697a49fcbe561cf8fdb8e19df45d4504"
+    },
+    {
+      "path": "D:\\linji-rag-backfill\\20261104\\database-runs\\linji-native-fZzamf/report.json",
+      "sha256": "d2c7978df26fe4d52c94213eb12793346f9462492fc50da517543eedd1b5148c"
+    },
+    {
+      "path": "D:\\linji-rag-backfill\\20261104\\database-runs\\linji-native-fZzamf/live-tests.json",
+      "sha256": "442dd6d63e5120b6bd2a405c47feb2feb8e709a2a0d15d7dcc3f9b66046ea2e4"
+    },
+    {
+      "path": "D:\\linji-rag-backfill\\20261104\\database-runs\\linji-native-fZzamf/tests/backfill-results.json",
+      "sha256": "60109cd348a4b50b147cb511f63d62b56a23c4d2185b20f01d33f26e76554a20"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/run-20261104110009562/report.json",
+      "sha256": "2602c729e2f500e9321f42cc60d502cee92b9621d04717121104a8aac614a037"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/first-typecheck.log",
+      "sha256": "26849e4826eada88a8eda96d9e899620df682a4f4b416f72a28eb1ceef781c89"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/backend-source.log",
+      "sha256": "391fd3bbac665c6bcd8696c3a8f6e39bf59aff96edb091ec76b837933799e49f"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/backend-source-verify.log",
+      "sha256": "eb9c924432103f11287e1fb034274900d0e306a3d5668563ae9da810a22a9397"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/backend-install.log",
+      "sha256": "5b231ea78513321fba025587622974dec422d3cd64ca3af2b0b5b7514d24a3cc"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/backend-generate.log",
+      "sha256": "05600dc0f3643f45f02f22ca238d3602df977f6cbe256d6139b9dccee13eb1e3"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/backend-check.log",
+      "sha256": "86bd836676b0bb7a06616f17612ab50d8623baecbe168ee773469ac70c96987d"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/backend-e2e.log",
+      "sha256": "be41617857e4e92ce2b6da656118abfa91e141b4f3153117df03f7c4a84757dd"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/backend-openapi.log",
+      "sha256": "3a92700fda7738fedbb615e58a1d2e0d921fdc9bcecd9678d465d18bc21e5186"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/backend-live-backfill.log",
+      "sha256": "1008f5c3d4e395c8658015b7398e7fcf636c5ddae0b8fdf2b960d5fb5f3a095a"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/web-source.log",
+      "sha256": "c718f797390a9523abc5561e3eb4861671cbe7ac14c53961da9cef04a18a966a"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/web-source-verify.log",
+      "sha256": "0fce1e6e49788d5a0a1d992413dfa176d6849558acc038114e8b15eecbb370e2"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/web-install.log",
+      "sha256": "c9e1d5abbb5af20edd5f0b899f4161b382d955bca8ce3908547737abfa8082a4"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/web-check.log",
+      "sha256": "dad90adee8f046e50869cc2ebffc29eb5d181343ff5d9067fe56066170765221"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/web-build.log",
+      "sha256": "67c9791697003aea954539c23669a1fc0f3de72fe96e38c9b9da6ef4ac1244ea"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/web-web-release.log",
+      "sha256": "78cc3509cb1c580679ab137fa66926be9a64d1460767459b0fac747d8c5b6ce8"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/web-admin-release.log",
+      "sha256": "4104e8e511f9ca31d7ff23e96d2c0650ef6ecb1b207953f2d69e54a09366093e"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-source.log",
+      "sha256": "f9607c39f68f0c56cca57fb6d7d26afa54e9fe2d3500fff790c58002b9e219a1"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-source-verify.log",
+      "sha256": "6c2a920546f7cad1ade6d03be964deaa24b4393032c9b59edaf1482032bd05d4"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-install.log",
+      "sha256": "7be1fd45d64d540e5a2137899c12753b861feb4680b3c67790f777f04d240967"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-check.log",
+      "sha256": "9992b9748c723bbcb5242e9b0f25300cb2a82085c513f601cff1915a4b5f54ae"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-export.log",
+      "sha256": "60e8062cdc8faa51235bd4e9d6769036658475bddd3711d3f4bcce7682a9964c"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-seal.log",
+      "sha256": "59314706ea1c1c6dea6791c74a5c3a004a288f48921c9df98c7e436865553c39"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-verify.log",
+      "sha256": "ae5ddc03e095265b6eea51c5faea843ce27ba7435e1a0ba1cf0c2168ca1f2e50"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final/app-relocated-verify.log",
+      "sha256": "401d349fb9ae9b759ddbbf68f38337537550a7998cc5ac3e283cc6d35fd52eec"
+    }
+  ],
+  "modifiedDocuments": [
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/validation/rag-backfill-cli-20261104.json",
+      "sha256": "9cdbfa650fe308171bb93a39cdc36a69ce5b3eaa94e3a873337dfc7f2de9b3a7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/validation/rag-backfill-cli-20261104.json",
+      "sha256": "9cdbfa650fe308171bb93a39cdc36a69ce5b3eaa94e3a873337dfc7f2de9b3a7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/validation/rag-backfill-cli-20261104.json",
+      "sha256": "9cdbfa650fe308171bb93a39cdc36a69ce5b3eaa94e3a873337dfc7f2de9b3a7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/rag-backfill-cli-validation.md",
+      "sha256": "932ee8386e26df29977c53994b0484dff500d1848384e7bf30fa9a7d05812ecb"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/engineering/rag-source-visibility.md",
+      "sha256": "cb67e7890e5d66633f88ed4f8138e8ab53df383bb56ca2287fd6ad4e8d0e7114"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "6f70084a5ece144dc8f506916ea162b1600b4155f5b7cd743c8f3b5b92ace5b1"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/README.md",
+      "sha256": "46cc752a14978d333f5252248d823d883f3547a7a7b3943437f279663b2a2822"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "9483df4c67820de767853823226f814332e3d03e04e730bbb2eee0f655c370ba"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/README.md",
+      "sha256": "084e34dd5832ee08aaf63277123aa059c0e72c506d2e08af2ca0c97edb5a6db3"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "4273d22707896b60352ab1d5408fbefdd13059c98eb29889e40e7ba13792f054"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/README.md",
+      "sha256": "aba53445e88d38a4b892738a4e6f672f74978b735f1e03676c16e63d4ec220db"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/README.md",
+      "sha256": "46cc752a14978d333f5252248d823d883f3547a7a7b3943437f279663b2a2822"
+    },
+    {
+      "path": "E:/desktop/lishiqi/README.md",
+      "sha256": "7d16ec00ecce33dda50724a794ca807248deb3a47c6deabba29a7a3460ff7f96"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/README.md",
+      "sha256": "3d8531a94bba4421d3bed68a13af43d7eef99b7e84fc0079334156419b4acc10"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/05-测试质量/测试覆盖与现状.md",
+      "sha256": "a8de48c7498b05997542814b9424a116da4030b58545c7ac383ad74b21f6b15e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/本地运行与部署现状.md",
+      "sha256": "a4b289259ec2bf21f9cd0a2bb300bd5916de9323fdc61e00273d7e45710e2ecb"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "086fec5309649ec1fbe465a838d9d111d274bfde56f5d21672a7023318add32b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/RAG存量回填与恢复.md",
+      "sha256": "d295d1b0e844eece714d286108d167a4e8dba290e7dfd91a65d8a080f251debc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/README.md",
+      "sha256": "3d8531a94bba4421d3bed68a13af43d7eef99b7e84fc0079334156419b4acc10"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/02-总体设计/凛迹雪客社群滑雪综合服务APP.md",
+      "sha256": "645f45ac4396e87e3656306e449347c83b40ec920cc916f1e548f129c67a2c7b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "b4c4fb077fb12b6ad61410de07cf83798cbabd213686a9bbc407f80b69cbe5be"
+    }
+  ],
+  "scripts": [
+    {
+      "path": "D:/linji-rag-backfill/20261104/update-docs.mjs",
+      "sha256": "3770ca0bc64e28c2c51bb19f34b703cf3bbee46bd58376104f395ace1feb4647"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/prepare.mjs",
+      "sha256": "3ece3f886bd56a2c9d63f5014a43237c34cbcd0cc0b2a7d2459b987393ca601e"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/native.mjs",
+      "sha256": "48fa2cd509aafcb881f8a5253cbecacfdf75406ab4020096d41fe677bec662ed"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/embedding-runtime.mjs",
+      "sha256": "b66815b3b86181663b604cbb8451ecd9f7a26011c8a487a6e5ae381fcaa4d7c9"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/final-check.mjs",
+      "sha256": "ff73c8ec62a75b763815b02d1a669c81bfa852ab26f8a67bd71167e64d452a1f"
+    },
+    {
+      "path": "D:/linji-rag-backfill/20261104/deliver.mjs",
+      "sha256": "904aaa5a10719454a7bb272eac4bd831f2bf7a8f37a85b635a02d7d90a7899d7"
+    }
+  ],
+  "originalDocxUnchanged": true,
+  "matrixContractColumnsPreserved": true,
+  "overallGoalComplete": false
+}

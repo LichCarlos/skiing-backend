@@ -1,0 +1,320 @@
+{
+  "date": "2026-11-04",
+  "stage": "safe-http-ai-failure-diagnostics",
+  "evidenceVerified": true,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "newUnitTests": 28,
+  "newHttpTests": 4,
+  "focusedDiagnosticsTests": 80,
+  "focusedAiHttpTests": 17,
+  "scope": "Safe server-side failure metadata and trace correlation across existing HTTP/SSE protocols; real loopback upstream 503 and body deadline, with repository/auth/RAG preparation fixtures in framework tests",
+  "tested": [
+    "Safe upstream HTTP status, timeout/abort, closed network and Prisma code allowlists",
+    "Bounded cause inspection, unknown values, cycles, throwing getters and UUID-only trace",
+    "No raw messages, stacks, URLs, prompts, upstream bodies, Cookie/Token or database metadata in new events",
+    "Pre-header 500 and post-header SSE failure correlate to server traceId",
+    "Real local provider HTTP503 and streaming body timeout flow through Nest/controller/provider",
+    "Exactly one upstream request, no automatic retries, no completed partial answer",
+    "Existing upstream reader cancellation and embedding JSON deadline reason preservation"
+  ],
+  "clientProtocolChanged": false,
+  "apiOrSchemaChanged": false,
+  "dependenciesChanged": false,
+  "backendChanged": [
+    "src/modules/ai-assistant/infrastructure/model-provider-http.spec.ts",
+    "src/modules/ai-assistant/infrastructure/openai-compatible-chat-model.provider.ts",
+    "src/modules/ai-assistant/infrastructure/openai-compatible-embedding.provider.ts",
+    "src/modules/ai-assistant/infrastructure/openai-compatible-http.ts",
+    "src/modules/ai-assistant/presentation/http/ai-conversations.controller.ts",
+    "src/shared/diagnostics/failure-diagnostic.spec.ts",
+    "src/shared/diagnostics/failure-diagnostic.ts",
+    "src/shared/http/api-exception.filter.spec.ts",
+    "src/shared/http/api-exception.filter.ts",
+    "test/ai-conversations.e2e-spec.ts"
+  ],
+  "stableSchemaPackageLockFiles": 29,
+  "frontendUnchanged": {
+    "web": {
+      "files": 581,
+      "baseline": {
+        "path": "D:/linji-multi-source-rag/20261104/verified/validated/web/.source-export.json",
+        "sha256": "47734cadce2be255e44363f70cb9e00526ac161614fc9582ccd01c0bafa72f73"
+      }
+    },
+    "app": {
+      "files": 238,
+      "baseline": {
+        "path": "D:/linji-multi-source-rag/20261104/verified/validated/app/.source-export.json",
+        "sha256": "deba702101a0c3f514d96082c2a150880f611788c99f30aee4004cd4ed1ba2e9"
+      }
+    }
+  },
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-failure-diagnostics/20261104/final/validated/backend",
+      "sourceSha256": "f1a4f7946c53e31c835da3ee9412250dacf5147e42ed1933c5e46d3d9bc1b3d9",
+      "files": 851,
+      "store": "D:/linji-source-verify/20261104/stores/backend",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-failure-diagnostics/20261104/final/validated/web",
+      "sourceSha256": "95abc25638a1847fd03eb1d9f651153ff1d46d4bb731d66620177df05d5ad6e8",
+      "files": 722,
+      "store": "D:/linji-source-verify/20261104/stores/web",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-failure-diagnostics/20261104/final/validated/app",
+      "sourceSha256": "02c382da880c04bf7e5dd5c4515164d8f66de62a2c66471ba8ec62e903451f60",
+      "files": 326,
+      "store": "D:/linji-source-verify/20261104/stores/app",
+      "reusedOwnStore": true
+    }
+  ],
+  "artifact": {
+    "artifactKind": "expo-bundle-export",
+    "files": 88,
+    "contentSha256": "7298e45b3ea6f73d2b2d058719660ce68481031580fd417452f2167b5fa81f04",
+    "openapiVersion": "1.51.1",
+    "openapiSha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8",
+    "nativeInstallable": false
+  },
+  "evidence": [
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-source.log",
+      "sha256": "39761f386fa495e2a623db3b5315ec579cada4b29f5a4a74a94f5053a72ac658"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-source-verify.log",
+      "sha256": "4fbddaa1a1272bb73007cf61a14a1f60dd0a90d6d6d5b04e2577db777222540b"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-install.log",
+      "sha256": "3bd90bb52a92ac79eba8d1406074df630226ce053adce0a33176828d328ed8e3"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-generate.log",
+      "sha256": "ab844b60c3cae66f03b6997f4cfa5f05ede98c8210f44f5e0761b2655b18c54b"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-check.log",
+      "sha256": "6b5530d3204287b18e0c2d1469dedaf65ab518fc4cedfdf38fe6f791daaaea81"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-e2e.log",
+      "sha256": "2cb118cb562ed55fae03d359987e6da209a428c4017fa7ef9d13949e6eba5c8f"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-openapi.log",
+      "sha256": "fc5364709cf7321935f7d162a0033bc5f54768d02314a96e6debb7e8fcd721b3"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-diagnostics.log",
+      "sha256": "9c56b3bf0a7485be3136a849fcac2d2e48bd9bfe3cc21046df8530fc5e3759bd"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-ai-http.log",
+      "sha256": "0b844ce9289edc5928ab25fa399ab944df927e04d5674653b39a48670587869e"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/web-source.log",
+      "sha256": "6c6d1899e211ffc210aad99ec1306db3db16f3256020eaf63886f602a1d768f9"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/web-source-verify.log",
+      "sha256": "a07c621984730f8def01c68a04c436137ec962d40b61de0abd9e4fc3c030f17c"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/web-install.log",
+      "sha256": "81b93fdf44db4d47f32101b8928f0fb6b9300159f5ac44a6e8e2f497d4c7a3d0"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/web-check.log",
+      "sha256": "5b4dae4e9587a4d84435d34996a1a32085543c3e577cd0fd41f855145c35990d"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/web-build.log",
+      "sha256": "bdc55b03938bcef28d45c4f749b52b60a6316a3d46598cd5e9fe7ace87578c5e"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/web-web-release.log",
+      "sha256": "b0a071bcda126e47ae810d89bd6e3acd0ea760b06da4ae83b13a3d81a5121b77"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/web-admin-release.log",
+      "sha256": "9648db0ad27b0ece4617ae57437412c61847de948df962ea874bb1a3a16af0cc"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-source.log",
+      "sha256": "e237c17dc79ed10aebf41436b3a63fa80acdf7a514fcd5b2e73c2ad61c3088ff"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-source-verify.log",
+      "sha256": "3bc5fcf4a2d3978d4feb8eca2b7b66c2856c288602001a1c0f53d231a8fde990"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-install.log",
+      "sha256": "687a6f69aa9de63ac01c35eaea97a07a12e9756bd0ec2706a694e29d4878ed05"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-check.log",
+      "sha256": "f50eb02618cd0640f22ef7acd88652f7c5d0efb13ba9e1af563df3056934f7de"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-export.log",
+      "sha256": "d46aa080d520c286983380010a615b805e152c0f45d0f412a6ae5c1d8e0086bd"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-seal.log",
+      "sha256": "926ae4989a2f56033c54f58c839fa33a237ef992c652e5ee27d18a61b8feef8e"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-verify.log",
+      "sha256": "1d98de5d532ca395e67a48a3423390d35efd121fc636f3492769e142d4e7902d"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-relocated-verify.log",
+      "sha256": "2d02f192a7dd673e7d02d18148c42bd1263e8099461f581efbb3346c1a51c616"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/commands.json",
+      "sha256": "2dfbe16983359f31b4a0a7cceffd80c9e28e707ac783a4d75439f374d0438034"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/snapshots.json",
+      "sha256": "890414d71365c8efc7ae0f7024441f8e6e061f1789b1d5a1297a87d447799d22"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/backend-module-paths.json",
+      "sha256": "f5f65a9d50806aa3372b0dc1f690cd1cb5457de6eed2ecb58cedd43263887ffb"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/web-module-paths.json",
+      "sha256": "9baa5f60dcce9652747bd913941531710a30191ababf919d1f30bbdf28aa8286"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/app-module-paths.json",
+      "sha256": "19bce244f33a8d038be01062b96a88a7ba4beb405f0babe59984b4a3d49186ba"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/validated/backend/.source-export.json",
+      "sha256": "06db648a7caf4942fa89cb229e29de66bcf27a1d80dc29f77ae9835678384a25"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/validated/web/.source-export.json",
+      "sha256": "180f95988cfb24ff33690c2620de1d4f8549406108ec004b1eb20bf9884c3492"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final/validated/app/.source-export.json",
+      "sha256": "f93fbe46d47123d1cb3ead06911e9756091942f7f48fca58d666f6bf5ea58c8e"
+    },
+    {
+      "path": "D:/linji-multi-source-rag/20261104/verified/validated/backend/.source-export.json",
+      "sha256": "e8638bd8032c9671fab2e5210d8d2c9b977e9478b4d6bd034cfea1793b798336"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/prepare.mjs",
+      "sha256": "a38507e6971761fab41d1c423844abf2208b987fa24e845c9582f801377bac9c"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final-check.mjs",
+      "sha256": "91a45650f6ae7036f5f5d52cdff79edae443fc500bd08d9274fb2725e2b15f76"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/final-check.log",
+      "sha256": "6f4ea99c80a5c324bce68000967c904f6f47f61469d28db5fe55a84b885ec88f"
+    },
+    {
+      "path": "D:/linji-failure-diagnostics/20261104/evidence.mjs",
+      "sha256": "a8784e4a377550387ccee316e664c767b8062439ac6f99a026385f10e6be89a0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/model-provider-http.spec.ts",
+      "sha256": "9464e4b72eea507bf44a5ad02bbb3c58643795354e75748b9b9ea28e07e67fa0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-chat-model.provider.ts",
+      "sha256": "b70d4296d92dfb4948089256e0c6e8e73a240ffb0cae756b4bdd8d6f3bd7cb5c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-embedding.provider.ts",
+      "sha256": "ae706a1c007cec228c99f5d6a74276a77727a490762d196cf203e7fdddcf3164"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/openai-compatible-http.ts",
+      "sha256": "d07905e361fe9e7f20e0f0de98b93022a44c61c058014d4cc01035f7af9793b7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/presentation/http/ai-conversations.controller.ts",
+      "sha256": "d09cba8e1cf1f22ae17d44476de7357878a331c0833266b74a897ef97f017b33"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/shared/diagnostics/failure-diagnostic.spec.ts",
+      "sha256": "89e919a483edc0973fc34a26a26ea63bbe7945d631c33118fe9a88447bef38fe"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/shared/diagnostics/failure-diagnostic.ts",
+      "sha256": "b44b091f0bf6f345c808369fbdb9d74d844d3e7d1ee9fbf0b9b1b4f10184108a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/shared/http/api-exception.filter.spec.ts",
+      "sha256": "7d2531f111279bd3772783e2acd94d9514a2501977017babf3199fe83168953f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/shared/http/api-exception.filter.ts",
+      "sha256": "3463462e5755ae5c9c01e056a3b912dd22c78e316a5cac0a5d70c05f14b9d113"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/test/ai-conversations.e2e-spec.ts",
+      "sha256": "6c3cc12b64888cf8d0c91b0ee7e89779e743c6f1aa8a49be1bc37096e0cea953"
+    }
+  ],
+  "previousRealRagEvidence": "multi-source-kafka-rag-20261104.json: 17 real-model/Kafka tests under previous source snapshot, not rerun",
+  "previousFullDatabaseEvidence": "field-workflow-20261104.json: 858 database tests, not rerun",
+  "paidProviderCallsThisStage": 0,
+  "kafkaIntegrationRerun": false,
+  "databaseIntegrationRerun": false,
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "First-run real-provider HTTP500 cause remains unknown; new diagnostics do not retroactively establish it",
+    "Central log sink/retention/alerts and production model/index capacity or corpus quality",
+    "Target browsers/Expo Web/native SecureStore/devices/signed packages",
+    "Production multi-broker/storage/joint disaster recovery, containers and remote CI",
+    "D-49/D-50/D-09 and prior denied cleanup/service starts unchanged"
+  ],
+  "repo": "backend",
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1385,
+    "sourceTools": 20,
+    "httpFrameworkTests": 177,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "focusedDiagnosticsTests": 80,
+    "focusedAiHttpTests": 17
+  }
+}

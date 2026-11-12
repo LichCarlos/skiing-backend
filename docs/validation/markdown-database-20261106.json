@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-06",
+  "scope": "Fresh loopback PostgreSQL17 cluster only. No production changes. Storage/Kafka/models substituted by existing tests.",
+  "output": "D:\\linji-native-postgres\\20261103\\runs\\linji-native-ckePiP",
+  "checks": [
+    {
+      "name": "postgres-version",
+      "passed": true
+    },
+    {
+      "name": "initialize",
+      "passed": true
+    },
+    {
+      "name": "start",
+      "passed": true
+    },
+    {
+      "name": "create-database",
+      "passed": true
+    },
+    {
+      "name": "migrate-deploy",
+      "passed": true
+    },
+    {
+      "name": "seed-first",
+      "passed": true
+    },
+    {
+      "name": "seed-second",
+      "passed": true
+    },
+    {
+      "name": "verify-before",
+      "passed": true
+    },
+    {
+      "name": "database-suite",
+      "passed": true
+    },
+    {
+      "name": "verify-after",
+      "passed": true
+    },
+    {
+      "name": "stop",
+      "passed": true
+    }
+  ],
+  "completed": true,
+  "stopped": true,
+  "postgresVersion": "postgres (PostgreSQL) 17.11",
+  "port": 49615,
+  "database": "linji_password_validation",
+  "pgvectorVersion": "0.8.1",
+  "migrations": 26,
+  "tests": {
+    "files": 37,
+    "passed": 868
+  },
+  "newCoverage": [
+    "ArticleBodyAsset FK restrict deletion",
+    "deduplicated inline binding",
+    "public signed image projection",
+    "binding replacement",
+    "foreign image write rejected without audit/events",
+    "stale version conflict"
+  ],
+  "postmasterPidExistsAfterStop": false
+}

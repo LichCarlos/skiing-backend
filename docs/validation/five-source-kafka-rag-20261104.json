@@ -1,0 +1,459 @@
+{
+  "date": "2026-11-04",
+  "stage": "five-source-http-kafka-real-model-rag",
+  "evidenceVerified": true,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "livePipelineTests": 24,
+  "addedTests": 7,
+  "resultEntries": 26,
+  "skippedTests": 0,
+  "testDurationSeconds": 854.65,
+  "embeddingCalls": 37,
+  "chatCalls": 6,
+  "scope": "Synthetic project knowledge, resort, article, moderated dynamic and explicitly public hierarchical dictionary via real HTTP, production workers, secure single-broker Kafka, BGE-M3/pgvector and DeepSeek",
+  "productionWorkerBootstrap": true,
+  "handlerDirectInvocation": false,
+  "providerRepositoryOrTransportReplaced": false,
+  "tested": [
+    "Pending dynamic/private hierarchy generate no embeddings",
+    "Ordinary user cannot approve or change public dictionary policy",
+    "Approved dynamic and explicit public dictionary hierarchy index real 1024d L2 vectors",
+    "Dynamic and dictionary answers and citations persist unchanged",
+    "Broker interruption: published dynamic edit immediately pending and hidden, dictionary ancestor rename hides old descendant path; real automatic reindex after restart",
+    "Ancestor disabled: descendants immediately hidden before Kafka then disabled; re-enable rebuilds hierarchy",
+    "Moderation hide and public flag withdrawal reject old indexed vectors before Kafka consumption",
+    "No evidence is deterministic with no additional Chat call",
+    "Final dynamic soft deletion, dictionary disable, 4 moderation audits and 9 dictionary audits",
+    "Previous 17 project/article/resort and duplicate EventId/recovery scenarios retained"
+  ],
+  "security": {
+    "transport": "SASL_SSL",
+    "mechanism": "SCRAM-SHA-512",
+    "applicationPrincipalSuperuser": false,
+    "aclEntries": 3,
+    "kafka": "4.1.1",
+    "guest": "Alpine3.22.7",
+    "transitions": [
+      { "action": "start", "elapsedSeconds": 130.2 },
+      { "action": "stop", "elapsedSeconds": 171.1 },
+      { "action": "start", "elapsedSeconds": 242 },
+      { "action": "stop", "elapsedSeconds": 292 },
+      { "action": "start", "elapsedSeconds": 370.2 },
+      { "action": "stop", "elapsedSeconds": 406.9 },
+      { "action": "start", "elapsedSeconds": 486.5 },
+      { "action": "stop", "elapsedSeconds": 524.4 },
+      { "action": "start", "elapsedSeconds": 605.2 },
+      { "action": "stop", "elapsedSeconds": 647.5 },
+      { "action": "start", "elapsedSeconds": 728.5 },
+      { "action": "stop", "elapsedSeconds": 766.3 },
+      { "action": "start", "elapsedSeconds": 846.5 },
+      { "action": "stop", "elapsedSeconds": 883.5 },
+      { "action": "start", "elapsedSeconds": 959.6 },
+      { "action": "stop", "elapsedSeconds": 1005.4 }
+    ]
+  },
+  "runtime": {
+    "chatModel": "deepseek-flash",
+    "embeddingModel": "bge-m3-q8-950f4a8e5e19",
+    "modelSha256": "950f4a8e5e19477a6d3c26d2f162233c20002c601f75e4b002e3239997821167",
+    "runtime": "llama.cpp b12097 (b97627967)",
+    "pooling": "cls",
+    "normalization": "L2",
+    "contextTokens": 2048,
+    "cpuThreads": 2,
+    "postgres": "postgres (PostgreSQL) 17.11",
+    "pgvector": "0.8.1"
+  },
+  "codeComparison": {
+    "backend": {
+      "baseline": {
+        "path": "D:/linji-doc-lifecycle/20261104/delivery-final/backend/.source-export.json",
+        "sha256": "2ce24b3194502af7dcd79f2be5a1e04c8731056c89e4ea04f1640b183c7f62d3"
+      },
+      "productFiles": 647,
+      "changedFiles": ["test/rag-kafka-real-providers.live-spec.ts"],
+      "productionSchemaDependenciesUnchanged": true
+    },
+    "web": {
+      "baseline": {
+        "path": "D:/linji-doc-lifecycle/20261104/delivery-final/web/.source-export.json",
+        "sha256": "0c3f241705ab82ea6a0e1c90a3e94c900b0fca9f64b3ec194962a90b39d5bbae"
+      },
+      "productFiles": 581,
+      "changedFiles": [],
+      "productionSchemaDependenciesUnchanged": true
+    },
+    "app": {
+      "baseline": {
+        "path": "D:/linji-doc-lifecycle/20261104/delivery-final/app/.source-export.json",
+        "sha256": "7f768540b2e32650b7818e39fed9f43e2f186a2cb546f28e5231e86b0980f8b8"
+      },
+      "productFiles": 238,
+      "changedFiles": [],
+      "productionSchemaDependenciesUnchanged": true
+    }
+  },
+  "apiSchemaDependenciesChanged": false,
+  "productionCodeChanged": false,
+  "fullDatabaseSuiteRerun": false,
+  "realStorageSuiteRerun": false,
+  "previousDatabaseAndAssetEvidence": {
+    "path": "E:/desktop/lishiqi/backend/docs/validation/admin-asset-read-authorization-20261104.json",
+    "sha256": "a48dc00f9a80c73d65e7a6f60b5ab0dffe1c76b2b636c9a13518a1a075fe0de2"
+  },
+  "cleanup": {
+    "ports": [
+      { "port": 56623, "closed": true },
+      { "port": 65308, "closed": true },
+      { "port": 51493, "closed": true },
+      { "port": 65281, "closed": true },
+      { "port": 54427, "closed": true }
+    ],
+    "databaseStopped": true,
+    "modelStopped": true,
+    "guestStopped": true,
+    "guestBaseUnchanged": true,
+    "passwordAndPidFilesAbsent": true,
+    "temporarySecurityFilesRemoved": true,
+    "finalCounts": {
+      "users": 1,
+      "resorts": 0,
+      "articles": 0,
+      "projects": 0,
+      "dynamics": 0,
+      "documents": 0,
+      "chunks": 0,
+      "conversations": 0,
+      "messages": 0,
+      "outbox": 0,
+      "inbox": 0,
+      "authSessions": 0,
+      "refreshTokens": 0,
+      "loginBuckets": 0,
+      "operationLogs": 0,
+      "dictionaryItems": 0,
+      "dictionaryTypes": 2
+    },
+    "finalTopics": [],
+    "finalGroups": []
+  },
+  "failedAttempt": {
+    "reason": "Test used recovery.restart instead of existing recovery.start; first static check failed before model execution; corrected test only",
+    "commands": {
+      "path": "D:/linji-five-source-rag/20261104/final/commands.json",
+      "sha256": "d7e579de18c55801bf6fdb5947e35dfc99b3921e12052604be1098703ef440fd"
+    },
+    "log": {
+      "path": "D:/linji-five-source-rag/20261104/final/backend-check.log",
+      "sha256": "2e83807ca93852b4e8101c7019f298951ff8126d1495c2c4c2c126900ffb014c"
+    }
+  },
+  "totals": { "backend": 1462, "http": 177, "web": 3045, "app": 1217 },
+  "engineeringCommands": 27,
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-five-source-rag/20261104/final2/validated/backend",
+      "sourceSha256": "16be0f57b1ff8b05226666f3be37971e06a587828364deadd9d085c2de8727fd",
+      "files": 877,
+      "store": "D:/linji-source-verify/20261104/stores/backend",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-five-source-rag/20261104/final2/validated/web",
+      "sourceSha256": "8581bc2ff68d936ec29cf74af89e9147238bb00a0b2145e0a467140a453c42de",
+      "files": 731,
+      "store": "D:/linji-source-verify/20261104/stores/web",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-five-source-rag/20261104/final2/validated/app",
+      "sourceSha256": "9889660643ef96b77c5b12ec0268c21c05066ad7dd33277d3eb2ebd00ebf0209",
+      "files": 335,
+      "store": "D:/linji-source-verify/20261104/stores/app",
+      "reusedOwnStore": true
+    }
+  ],
+  "artifact": {
+    "artifactKind": "expo-bundle-export",
+    "files": 88,
+    "contentSha256": "c25c0d547fe96a46c3c239a82118797827af70963aa712225406fd826f3ec372",
+    "openapiVersion": "1.51.1",
+    "openapiSha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8",
+    "nativeInstallable": false
+  },
+  "evidence": [
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-source.log",
+      "sha256": "89cc8f898b65d4f62072da7f62af695f7e373063e2310434261ebfef548846e9"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-source-verify.log",
+      "sha256": "9c1af342ad6e828276f13f24bda4a13646395170faf4f28545b9405d552ff25f"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-install.log",
+      "sha256": "68b955b3c360769c43d9cb33715773fd02fa17e4a83b65865ad0563cf172d578"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-generate.log",
+      "sha256": "3e30bde22272db3253dc0286c1c7777c753c50e5417283021cb6d81d8a119fcb"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-check.log",
+      "sha256": "3f89c5a9484076941619197b327b20902ce1bb978102854b8929c94d4d571bf6"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-e2e.log",
+      "sha256": "23a9843ff44cbb8fb209fea1e251706ab1482e383f4014fd8beb70ce3bb93d7e"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-openapi.log",
+      "sha256": "06676e82c6c76e59182222f19a6fcc5a991a3621eec5009e4346dda76d9edb5f"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-live-runner-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-live-rag.log",
+      "sha256": "15f98e086182c1c11fdefd29242a35efdc1f671cd67d1504601c91704754cca4"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/web-source.log",
+      "sha256": "aa1dcee48160c1419468d638dad560a74863bb3ecf3fc0280668472bea074a3b"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/web-source-verify.log",
+      "sha256": "e3af65b91975568c5945c1a90541b917a9b7e3e40b81c01fc518023a8a0b586d"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/web-install.log",
+      "sha256": "4e95829a5579f37d723aa686767363d58ceb1ceb91f8dd96476745bc501f5b1f"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/web-check.log",
+      "sha256": "7c97429f1d3df7b9a7ede2570870db56e46745a579aff099945ae2d2639e84da"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/web-build.log",
+      "sha256": "38f31e94af19272d621c0dccaf702a755cf35880fc48263e1114b98515600e65"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/web-web-release.log",
+      "sha256": "48d3b80a8b2e25fe82c62a736b992953e92402bb38a2114e80e24afd66778940"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/web-admin-release.log",
+      "sha256": "1d10b9ff47723f22eac21508fbdc884e57c0b87ef1f8ddb6439ae0793432f4e8"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-source.log",
+      "sha256": "1d6ec948e87117328c67585fa4c680b110b207aeb1b6b4dbafd4b33ee325b93c"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-source-verify.log",
+      "sha256": "9ff735932ef7e99692818fba185874403ed790c2432eb851e2c6023f896455e6"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-install.log",
+      "sha256": "794f29f678d7ae1bf641ee2025a3745ab9db46b438debf3adfd555558d0ff55c"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-check.log",
+      "sha256": "3ee77d6a4ecf7609cdd2d1d5db5058dde5156667c86fa9b4d59ebd019f88e280"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-export.log",
+      "sha256": "df31a4d4582f35ae7c55dea2fd60844cd5c04f52e7dc49efcf9f4dda85d72d81"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-seal.log",
+      "sha256": "beb4cd52f08b757e4780c0803d2996707d2ec9e908d6f96fd4cb75caeef310d9"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-verify.log",
+      "sha256": "f34a8672b8844ad297d09a4cc55a327b84780d6809bd2b2392eb3f2ac5eca582"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-relocated-verify.log",
+      "sha256": "a217da4da5812d87b7cde21d6845c961467ff52d912203895315e147211bad9d"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/commands.json",
+      "sha256": "53a96fd7a4133aa230d8580e00a151516f4ef58d42fb59da271c8095b4d3e4e2"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/snapshots.json",
+      "sha256": "dd61a3d6816af60882eade7dd5c854229046bbfffc276c7f243210abb0a90f87"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/integration-source.json",
+      "sha256": "3295fb984ff439d33ae36f27e726a2ac5122cbb03b78dbc4268709111c97c8d8"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/backend-module-paths.json",
+      "sha256": "62e6fb7db96df8114cbc7c8065e174573aeef3ec4285ab5127a5a9e2937969ec"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/web-module-paths.json",
+      "sha256": "87769cecbb20903c65729c993b049d4209622af7a206e7d1e27e0ae3f6472719"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/app-module-paths.json",
+      "sha256": "9ec5c93ed47bd548bf19e998af6cd1d93c12ee630045a37d682d9fe253e44391"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/validated/backend/.source-export.json",
+      "sha256": "6329d4ab9444e204e9208d7a3fecbb80a762a2790665ed84ff5ab9b25f6593af"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/validated/web/.source-export.json",
+      "sha256": "e379aff433c2cea4519fffcca35033a3d365870c16b4926258441359c435d6c4"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/validated/app/.source-export.json",
+      "sha256": "00ea7eb6399dca8c3a6fec8104a4b1a7215e275fe02317091847ee269d264354"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/embedding-runtime.mjs",
+      "sha256": "811207fd5000147942b0187c9afebce6566764523fac01f83106944b6a0c1829"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/secure-broker.py",
+      "sha256": "3ca23811cebf9ae9101da2af85d8be5e6c63c726b619f4745bcdab5c504bbec8"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/bootstrap.sh",
+      "sha256": "d2e1e78ce9a3a0df79133d75324bcc581ab49be26769bf54850dafb287f71f02"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/validate-live-local.mjs",
+      "sha256": "ba71356cd9c66065ff4424fd3e6cb9868e9350a089dd87ec50ae49d6673b7de0"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final-check2.mjs",
+      "sha256": "c1bb85f4e3ec2fb548891ba7e795facfdb7aad6c38f15ddaebf7aa9f75dbd7b9"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/evidence.mjs",
+      "sha256": "fed318dea82d77b9b23c6f2803165f3381ecfe177d3e581798c9e6a1c93a0778"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/rag-kafka-real-providers.before.ts",
+      "sha256": "d670800cfbe70f36f78a4a0708351e836159783aba3d71b5ba2385427ac92e28"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final/commands.json",
+      "sha256": "d7e579de18c55801bf6fdb5947e35dfc99b3921e12052604be1098703ef440fd"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final/backend-check.log",
+      "sha256": "2e83807ca93852b4e8101c7019f298951ff8126d1495c2c4c2c126900ffb014c"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/report.json",
+      "sha256": "8734692ab0cbef66541c4943e761c53794233296fac5e575f4df42aa25320a67"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/runner.log",
+      "sha256": "65417c2af1c3d9e23cb76c9771e8ae484dd1e913ec3082066e993e8a576bd58a"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/serial.log",
+      "sha256": "3bea2dbefe93f420dce8f79dfe961ba7b38fd49562971d7a59c0c87af3163c00"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/database/report.json",
+      "sha256": "9e55feda42903bf7bebca655b8f655db8606b0550db6c57180c222bde70c779c"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/database/live-tests.json",
+      "sha256": "e2745a92209b2436f48057b0b2da41ec3e9b45089ca03a9b827f6ffe23e89232"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/database/live-rag-suite.log",
+      "sha256": "d9cdeeffb28b3b74ced546a484d8732725a62b7c3345fd6eb73e2d1914172260"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/database/migrate-deploy.log",
+      "sha256": "6ddf48e0e9920771d01da6cf2cd513eed083336c82e56f193edb5b3e8c2b1622"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/database/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/database/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/database/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/database/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/database/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-181937/live-kafka-rag-results.json",
+      "sha256": "319d1e35719773d3dbf582ec0780d9af2bb8a6b32ac79fbbdab1e8c704f13667"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-20261104101933675/report.json",
+      "sha256": "df66ec1d156fb983a5f3bc4a75fffc6f7452954261b4b80a642d1770e30e79bd"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/run-20261104101933675/embedding-server.log",
+      "sha256": "a6dd404b916dd52fcdbac5766f407a15870c6afa3ee102e5b69c62802ec0e449"
+    },
+    {
+      "path": "D:/linji-five-source-rag/20261104/final2/validated/backend/scripts/validate-live-local.mjs",
+      "sha256": "ba71356cd9c66065ff4424fd3e6cb9868e9350a089dd87ec50ae49d6673b7de0"
+    }
+  ],
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "commitPushPublishDeploy": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Production business corpus and human evaluation, model capacity/cost/long-lived indexing, multi-broker and joint recovery",
+    "Target browsers, Expo Web/native devices, SecureStore and signed packages",
+    "Containers and remote CI",
+    "D-49/D-50/optional D-09 and previously denied actions unchanged"
+  ],
+  "repo": "backend",
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1462,
+    "sourceTools": 20,
+    "httpFrameworkTests": 177,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "livePipelineTests": 24
+  }
+}

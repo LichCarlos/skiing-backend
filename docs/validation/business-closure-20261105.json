@@ -1,0 +1,211 @@
+{
+  "date": "2026-11-05",
+  "repository": "backend",
+  "status": "implementation_and_scoped_validation_complete_full_platform_acceptance_pending",
+  "implementationComplete": true,
+  "completed": false,
+  "completedMeaning": "All requested implementation delivered; full three-end real operations not complete because browser startup was rejected and iOS/device checks remain pending",
+  "contract": {
+    "version": "1.52.0",
+    "operations": 151,
+    "sha256": "4b15275231f7d421b80210b769c2d1cc0d1bc704ec73ce3c5d4839c827e9c84d"
+  },
+  "evidenceRoot": "D:/linji-business-closure/20261105",
+  "checks": {
+    "lint": {
+      "passed": true,
+      "existingWarnings": 6
+    },
+    "typecheck": true,
+    "build": true,
+    "compiledOpenapi": true,
+    "unit": {
+      "files": 157,
+      "tests": 1494,
+      "passed": true
+    },
+    "sourceTools": {
+      "tests": 20,
+      "passed": true
+    },
+    "httpFramework": {
+      "files": 9,
+      "tests": 177,
+      "passed": true,
+      "finalLog": "backend-e2e-2.log",
+      "initialFailurePreserved": "backend-final-e2e.log"
+    },
+    "postgres": {
+      "tests": 865,
+      "passed": true,
+      "migrations": 25,
+      "seedRuns": 2,
+      "dbVerify": true,
+      "evidence": {
+        "path": "D:\\linji-business-closure\\20261105\\services\\linji-storage-jWhwAn\\database-tests.json",
+        "sha256": "6d13a42d72e0f3e3f770ae1959046d17992568de891402e16a7113312d78ad46",
+        "passed": 865
+      }
+    },
+    "realHttpStorageModel": {
+      "passed": true,
+      "scenarios": 8,
+      "model": "deepseek-flash",
+      "successfulExactQueryRequests": 2,
+      "semanticEmbeddingUsed": false,
+      "checks": [
+        {
+          "name": "administrator creates an account and establishes merchant business profile without granting roles implicitly",
+          "passed": true,
+          "elapsedMs": 1543
+        },
+        {
+          "name": "merchant resort creation, review, administrator publishing reason and disable/enable lifecycle",
+          "passed": true,
+          "elapsedMs": 270
+        },
+        {
+          "name": "administrator configures dynamic business fields and field grants, writes validate and unknown fields are rejected",
+          "passed": true,
+          "elapsedMs": 2074
+        },
+        {
+          "name": "public SQL query and count include only published readable fields, private data and SQL injection stay isolated",
+          "passed": true,
+          "elapsedMs": 48
+        },
+        {
+          "name": "browser Cookie/CSRF protocol applies to the public query read command",
+          "passed": true,
+          "elapsedMs": 30
+        },
+        {
+          "name": "real DeepSeek planner executes an exact public count; SSE and idempotent replay persist one assistant reply",
+          "passed": true,
+          "elapsedMs": 1936
+        },
+        {
+          "name": "real DeepSeek plans a typed dynamic-field filter; private statistics are refused",
+          "passed": true,
+          "elapsedMs": 1366
+        },
+        {
+          "name": "real MinIO orphan cleanup previews, protects bound images and checkpoints idempotent deletion",
+          "passed": true,
+          "elapsedMs": 260
+        }
+      ]
+    }
+  },
+  "cleanup": {
+    "servicesStopped": true,
+    "portsClosed": true,
+    "bucketEmpty": true,
+    "syntheticDatabasePreserved": true,
+    "uiCredentialsRemoved": true,
+    "metroStopped": true,
+    "ownedAdbReversesRemoved": true,
+    "ownedEmulatorStopped": true,
+    "originalAvdUnchanged": true,
+    "report": "D:/linji-business-closure/20261105/services/linji-storage-KidhG7/report.json"
+  },
+  "limitations": [
+    "Full browser operations blocked by earlier automatic approval rejection of Next production and Expo Web startup; not retried",
+    "Android covers four targeted scenarios through cold-start deep links, not full navigation or multi-image selection",
+    "iOS, physical devices and signed native packages unverified this round",
+    "New index-dependency Kafka broker path unverified; PostgreSQL Inbox/fanout tests passed",
+    "No Docker/WSL restart, remote CI, push or deployment",
+    "Exact plans require business-corpus evaluation; no arbitrary SQL, private reports or unrestricted aggregates",
+    "ClamAV used a harmless test marker only, not production signature coverage"
+  ],
+  "evidence": [
+    {
+      "path": "D:/linji-business-closure/20261105/backend-final-lint.log",
+      "sha256": "a75426c92ab3a8d2a10af93cedc12d1707f83efdf63485a91cf003a773a96351"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/backend-final-typecheck.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/backend-final-unit.log",
+      "sha256": "c2144099d3f2ed3e614fff9e5d03f4c5959e599b799e7c957a575b204d2e5149"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/backend-final-source-tools.log",
+      "sha256": "7790fe5d65cb06b13d57b229bbc95a869d3d907d7c4d45fbf8a85d583832057b"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/backend-final-build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/backend-final-openapi.log",
+      "sha256": "44a08b21ea677dc67984829c9c0e7a71ccd29c75cc0e25bb3ae2f97bfb616ca1"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/backend-final-e2e.log",
+      "sha256": "b52ce06323eec6579ced829a3d68e458c1079a6fd4f4c2e9e8e7f66f0556efa3"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/backend-e2e-2.log",
+      "sha256": "6ce10a6d1132cf05697748b0688d682c652168a2fb6781b54f5b8ffbd5cef4c2"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/web-check-2.log",
+      "sha256": "3c51ac56440f6697e08e25a1445b8298de56d7d83e01fd5f6813b05aec59fc54"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/web-format-final.log",
+      "sha256": "0b95efe7a1df96aa81440f70658e5c8169546d284587f7ba2e8d268fd1aaea15"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/web-build-final.log",
+      "sha256": "9014c1e5036fe019f158bceb387089208f7e64b7ceece62bdd998c0e01650fc5"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/app-check-2.log",
+      "sha256": "a8110c74b875582e650fc73455b0b1f13477f56a69736b8e08d31ed43c0541b4"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/app-lint-final.log",
+      "sha256": "c27f60ab8e7f0b65f3e7cc49d1620898f05a82a8c34cad20b2ade5bb90f5a64b"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/app-typecheck-final.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/app-affected-final.log",
+      "sha256": "58229ffc278abc847b3e1a8ea6f10bcb1bc7e5702e4f88b95f7e1039f2666b59"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/app-export.log",
+      "sha256": "6cd2e3e8b9d552a63f151450dadec87a83d7a8a729e5d2f96f42df888c370d12"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/app-artifact-seal.log",
+      "sha256": "10fff07b0018ecbedf6268cce1e8e8a5238d7b40969c340f613e26584589352a"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/app-artifact-verify.log",
+      "sha256": "fa6d2fd35e882f0b1e1b576a2b3e917d705d23373e0680df0300d9f3ff024ed8"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/native-ui-run-4.log",
+      "sha256": "ec61cbe8f3e7920ba3943f3afb3913cc0373e4f3b0b71a616303ef6558525dc9"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/native-ui-results.json",
+      "sha256": "988a1369bc4f059220776e89c2e35837f631cf94b38f7b0905ab1f0a9dd93f71"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/services/linji-storage-KidhG7/report.json",
+      "sha256": "a5426b7c154acbfe56f17014929e5daef409246ae7ebe07e3777f18bafc8074d"
+    },
+    {
+      "path": "D:/linji-business-closure/20261105/services/linji-storage-KidhG7/api-results.json",
+      "sha256": "dc56e7326ba1b664b3fef218c1bfa20a45fed9462f88a45a08d1a2584a1dea20"
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "date": "2026-11-04",
+  "stage": "document-lifecycle-consolidation",
+  "documentationOnly": true,
+  "evidenceVerified": true,
+  "verificationInProgress": false,
+  "contract": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "archives": {
+    "README.md": "docs/07-交付归档/历史说明/根目录README-20261104.md",
+    "docs/README.md": "docs/07-交付归档/历史说明/文档索引-20261104.md",
+    "docs/00-项目治理/阶段与验收规则.md": "docs/07-交付归档/历史说明/阶段与验收规则-20261104.md",
+    "docs/03-详细设计与接口数据/实现追踪矩阵.md": "docs/07-交付归档/历史说明/实现追踪矩阵-20261104.md",
+    "docs/05-测试质量/测试覆盖与现状.md": "docs/07-交付归档/历史说明/测试覆盖与现状-20261104.md",
+    "docs/06-部署运维/本地运行与部署现状.md": "docs/07-交付归档/历史说明/本地运行与部署现状-20261104.md",
+    "backend/README.md": "backend/docs/history/README-20261104.md",
+    "web/README.md": "web/docs/history/README-20261104.md",
+    "app/README.md": "app/docs/history/README-20261104.md"
+  },
+  "documentFiles": 23,
+  "retainedMatrixRows": 80,
+  "matrixContractColumnsPreserved": true,
+  "originalDocx": {
+    "path": "docs/07-交付归档/原始来源/凛迹雪客社群滑雪综合服务微信小程序.docx",
+    "sha256": "e4c192e6a855c440e7d73d84bf2b9d03ff5f13f6ceb637dfca4e964c7fb1ff43"
+  },
+  "originalDocxUnchanged": true,
+  "rawBackups": {
+    "path": "D:/linji-doc-lifecycle/20261104/before.json",
+    "sha256": "2b54332635428084a07b8ee097d3eccf85ee8dcb4a707d6a2bb328731620e92e"
+  },
+  "productBaselines": {
+    "backend": {
+      "manifest": {
+        "path": "D:/linji-admin-asset-read/20261104/final3/validated/backend/.source-export.json",
+        "sha256": "1f70ae9887d40b54531e129e174572989625ef856facd9454e75e94d943a8abf"
+      },
+      "productFiles": 647,
+      "allProductHashesIdentical": true,
+      "previousReport": {
+        "path": "E:/desktop/lishiqi/backend/docs/validation/admin-asset-read-authorization-20261104.json",
+        "sha256": "a48dc00f9a80c73d65e7a6f60b5ab0dffe1c76b2b636c9a13518a1a075fe0de2"
+      },
+      "reusedResults": {
+        "frozenInstall": 0,
+        "check": 0,
+        "unitTests": 1462,
+        "sourceTools": 20,
+        "httpFrameworkTests": 177,
+        "build": 0,
+        "compiledOpenapi": 0,
+        "fullDatabaseTests": 859,
+        "fullDatabaseFiles": 36,
+        "assetDatabaseTests": 29,
+        "realStorageTests": 51
+      }
+    },
+    "web": {
+      "manifest": {
+        "path": "D:/linji-admin-asset-read/20261104/final3/validated/web/.source-export.json",
+        "sha256": "d5c765d17f2e53fa5a5ed4f404969bb1797c68b09dbd7e7d17a781374242ebde"
+      },
+      "productFiles": 581,
+      "allProductHashesIdentical": true,
+      "previousReport": {
+        "path": "E:/desktop/lishiqi/web/docs/validation/admin-asset-read-authorization-20261104.json",
+        "sha256": "acfcdb3e714301008aaa941b41785679c2f599aa183d4ffa7b52a985869a0c7d"
+      },
+      "reusedResults": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 3045,
+        "sourceTools": 20,
+        "releaseTools": 20,
+        "uncachedBuilds": 2,
+        "standaloneChecks": 2,
+        "productCodeChanged": false
+      }
+    },
+    "app": {
+      "manifest": {
+        "path": "D:/linji-admin-asset-read/20261104/final3/validated/app/.source-export.json",
+        "sha256": "6b841c226a7e761d146c62cf014ce645604d5fb432dc7ea2f76410f733a52c59"
+      },
+      "productFiles": 238,
+      "allProductHashesIdentical": true,
+      "previousReport": {
+        "path": "E:/desktop/lishiqi/app/docs/validation/admin-asset-read-authorization-20261104.json",
+        "sha256": "47cea4c8127d57d3a434b85c2578d96c6331922b59c60ded9bdeeb94fe89e70e"
+      },
+      "reusedResults": {
+        "frozenInstall": 0,
+        "check": 0,
+        "businessTests": 1217,
+        "sourceTools": 20,
+        "artifactTools": 10,
+        "expoDoctor": "20/20",
+        "platformExports": ["ios", "android", "web"],
+        "artifactSeal": 0,
+        "relocatedArtifactVerify": 0,
+        "productCodeChanged": false
+      }
+    }
+  },
+  "productTestsAndBuildsReused": true,
+  "productTestsAndBuildsRerun": false,
+  "apiSchemaDependenciesChanged": false,
+  "businessRulesChanged": false,
+  "immutablePriorReferencesVerified": 97,
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "paidProviderCalls": 0,
+  "commitPushPublishDeploy": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Target browsers and Expo Web/native devices, SecureStore, signed packages",
+    "Containers, remote CI and production TLS/capacity/corpus/monitoring/joint recovery",
+    "D-49/D-50/optional D-09; previously denied actions unchanged"
+  ],
+  "finalDeliveryEvidencePath": "D:/linji-doc-lifecycle/20261104/delivery-final-proof.json",
+  "audit": { "markdownFiles": 294, "checkedLinks": 3499, "broken": [] },
+  "commands": [
+    {
+      "label": "app-lint",
+      "cwd": "D:/linji-admin-asset-read/20261104/final3/validated/app",
+      "command": "pnpm lint",
+      "exitCode": 0,
+      "elapsedMs": 2757
+    },
+    {
+      "label": "app-typecheck",
+      "cwd": "D:/linji-admin-asset-read/20261104/final3/validated/app",
+      "command": "pnpm typecheck",
+      "exitCode": 0,
+      "elapsedMs": 9600
+    },
+    {
+      "label": "initial-audit",
+      "cwd": "E:/desktop/lishiqi",
+      "command": "node D:/linji-native-release/20261102/audit.mjs",
+      "exitCode": 0,
+      "elapsedMs": 846
+    }
+  ],
+  "script": {
+    "path": "D:/linji-doc-lifecycle/20261104/consolidate.py",
+    "sha256": "37cac99c6dc7f92afdb8394801328f96f605b2918bfc7e2cbb693bb50c06f6b5"
+  },
+  "validator": {
+    "path": "D:/linji-doc-lifecycle/20261104/validate.mjs",
+    "sha256": "bc36ab1fb7c4a69c66bff65482f6d0beada94001a7c3fbcea9ab1a14067972f9"
+  },
+  "currentDocReferences": [
+    {
+      "path": "E:/desktop/lishiqi/README.md",
+      "sha256": "460a6a33b36754f6b937e771d42b3011baad1374aca2e64561a48986e2a5319a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/README.md",
+      "sha256": "e035a2368120b8c1ff6eb1b94777940d93cd3db5492c577c63208a9d0a39d152"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/00-项目治理/阶段与验收规则.md",
+      "sha256": "c5bdb923a9cd19391f8f444d4a81c17465936c816d09c1ff15324d71ff180882"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/03-详细设计与接口数据/实现追踪矩阵.md",
+      "sha256": "bedb9629d765f61ff679bd718bd7744dc61c66d2583d674d5159755a4ee368ee"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/05-测试质量/测试覆盖与现状.md",
+      "sha256": "823a9c582ffc04977ce82b9c13f24956dc3273d83595d9166ee049390eb1f67a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/06-部署运维/本地运行与部署现状.md",
+      "sha256": "cbc81ee9371af2196ea168091caf93ea319421a7f1e09672a5a03644ab0055fb"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/README.md",
+      "sha256": "3906a3d964f1afd494bd2c49fb14c0b0bf5801ac9a3e20257b33c3c748097197"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/README.md",
+      "sha256": "8fa3c74422fb41ae6305885bc0a340f2717a9a2722e9dd75b737c361aa577d1a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/README.md",
+      "sha256": "df258a0cc856c8d22d097a3302a816f82d0acb89034e85dc6268743b954e51d5"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/阶段交付记录.md",
+      "sha256": "5a3694680b6d08a56e6cd817261eb7d0f21ce4ce40f35309b6decb95a1395c0a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/历史说明/根目录README-20261104.md",
+      "sha256": "171e26b03bc2e6d87611a31c02aef9bf6d4a1dcd32eba29fa6d894f8327f6d27"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/历史说明/文档索引-20261104.md",
+      "sha256": "46cdc041d504b8ca429973a5799bd40071b06ac21d08a97236f3d8f6bf183999"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/历史说明/阶段与验收规则-20261104.md",
+      "sha256": "2536366ccea900dd959e2ba419278e5165c518eae0c1e2f9156a5616d5da92df"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/历史说明/实现追踪矩阵-20261104.md",
+      "sha256": "3b623a14fbc8862416aad79af58e5d5db03d062eee4a3c09d5887729eb022459"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/历史说明/测试覆盖与现状-20261104.md",
+      "sha256": "9b07f308271a21a44a3e67fcff5848a851710e0461e8ffbb6e419ca5a9e02f6b"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/历史说明/本地运行与部署现状-20261104.md",
+      "sha256": "28875ecabab4793ec2fc0580e3f3b60caf9f27892981427019462b458e273c1e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/history/README-20261104.md",
+      "sha256": "7e131f3264c601e0399eef843574f667ea25c67ebdf72cfd4c00a50aeef09075"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/history/README-20261104.md",
+      "sha256": "3ef2e863f9a41dbace0ae109ff9c514517f9aae0b925b2ae2c6a4d82233fd46e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/history/README-20261104.md",
+      "sha256": "896f3ddaec2420bc8b9dd411c476b133aec3d2523c3fcc61d0395b3caaf9ff76"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/docs/README.md",
+      "sha256": "e36ccff611a9063d224cecb822bba1aea6129fc474425d8e33836289a1c99d08"
+    },
+    {
+      "path": "E:/desktop/lishiqi/web/docs/README.md",
+      "sha256": "b26c57e932253adb94a542bb7c9926f891352c850d6c88a937cfb4aeedf5e5d1"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/docs/README.md",
+      "sha256": "8b7b533493a6ef482170ebb1cc64e079a00e6f8ca0401ce4e6ba1e1c0172e55a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/docs/07-交付归档/历史说明/README.md",
+      "sha256": "3e4597894f7ed14ddc322df2ba745f0506e061565404625e2b8d6fa69ab7c08a"
+    }
+  ],
+  "repo": "backend",
+  "appStaticChecksRerun": {
+    "lint": {
+      "exitCode": 0,
+      "log": {
+        "path": "D:/linji-doc-lifecycle/20261104/app-lint.log",
+        "sha256": "892cfe9d2a3d8a87bb382c249a7a76dd8b211cde40b8757fd781c7eef7f78e56"
+      }
+    },
+    "typecheck": {
+      "exitCode": 0,
+      "log": {
+        "path": "D:/linji-doc-lifecycle/20261104/app-typecheck.log",
+        "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+      }
+    },
+    "cwd": "D:/linji-admin-asset-read/20261104/final3/validated/app",
+    "productIdenticalToCurrentWorkspace": true
+  },
+  "finalReview": "Clarified historical 23-migration AI-operations counts and explicitly recorded the App lint/typecheck rerun; business tests/builds/infrastructure remain reused",
+  "initialValidationCommands": [
+    {
+      "label": "app-lint",
+      "cwd": "D:/linji-admin-asset-read/20261104/final3/validated/app",
+      "command": "pnpm lint",
+      "exitCode": 0,
+      "elapsedMs": 2757
+    },
+    {
+      "label": "app-typecheck",
+      "cwd": "D:/linji-admin-asset-read/20261104/final3/validated/app",
+      "command": "pnpm typecheck",
+      "exitCode": 0,
+      "elapsedMs": 9600
+    },
+    {
+      "label": "initial-audit",
+      "cwd": "E:/desktop/lishiqi",
+      "command": "node D:/linji-native-release/20261102/audit.mjs",
+      "exitCode": 0,
+      "elapsedMs": 846
+    },
+    {
+      "label": "backend-source",
+      "cwd": "E:/desktop/lishiqi/backend",
+      "command": "node --experimental-strip-types scripts/export-source.ts D:/linji-doc-lifecycle/20261104/delivery/backend",
+      "exitCode": 0,
+      "elapsedMs": 1481
+    },
+    {
+      "label": "backend-source-verify",
+      "cwd": "D:/linji-doc-lifecycle/20261104/delivery/backend",
+      "command": "node --experimental-strip-types scripts/export-source.ts --verify D:/linji-doc-lifecycle/20261104/delivery/backend 4f1c755193638b8e02e122b0ebb542c8f018b7e25cb2facedf50d1a76a036cc5",
+      "exitCode": 0,
+      "elapsedMs": 532
+    },
+    {
+      "label": "web-source",
+      "cwd": "E:/desktop/lishiqi/web",
+      "command": "node --experimental-strip-types scripts/export-source.ts D:/linji-doc-lifecycle/20261104/delivery/web",
+      "exitCode": 0,
+      "elapsedMs": 1350
+    },
+    {
+      "label": "web-source-verify",
+      "cwd": "D:/linji-doc-lifecycle/20261104/delivery/web",
+      "command": "node --experimental-strip-types scripts/export-source.ts --verify D:/linji-doc-lifecycle/20261104/delivery/web 4659db68094323818bf03f63cbe382b887a8064b1932d6c0309ea8f8acae063d",
+      "exitCode": 0,
+      "elapsedMs": 537
+    },
+    {
+      "label": "app-source",
+      "cwd": "E:/desktop/lishiqi/app",
+      "command": "node --experimental-strip-types scripts/export-source.ts D:/linji-doc-lifecycle/20261104/delivery/app",
+      "exitCode": 0,
+      "elapsedMs": 883
+    },
+    {
+      "label": "app-source-verify",
+      "cwd": "D:/linji-doc-lifecycle/20261104/delivery/app",
+      "command": "node --experimental-strip-types scripts/export-source.ts --verify D:/linji-doc-lifecycle/20261104/delivery/app 73f8b23acf91d61bbf6182ec664354420ea007d5f8ac65978549352b9cf518f6",
+      "exitCode": 0,
+      "elapsedMs": 442
+    },
+    {
+      "label": "delivery-audit",
+      "cwd": "E:/desktop/lishiqi",
+      "command": "node D:/linji-native-release/20261102/audit.mjs",
+      "exitCode": 0,
+      "elapsedMs": 674
+    }
+  ],
+  "finalizer": {
+    "path": "D:/linji-doc-lifecycle/20261104/finalize.mjs",
+    "sha256": "c1ea0cd97f9ded0e5cabbcbbbe70cb1fedcecf0b73ad653a57594da4b68d1174"
+  }
+}

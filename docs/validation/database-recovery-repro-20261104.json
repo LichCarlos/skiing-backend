@@ -1,0 +1,615 @@
+{
+  "date": "2026-11-04",
+  "stage": "repository-owned-independent-database-recovery-rehearsal",
+  "evidenceVerified": true,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "migrations": 24,
+  "scope": "Isolated synthetic logical backup; source cluster stopped before a second independent cluster restored the encrypted archive",
+  "backupCommands": ["db:backup", "db:restore-new", "test:database-recovery"],
+  "encryption": "AES-256-GCM / random 96-bit IV / 128-bit tag",
+  "newBackupUnitTests": 0,
+  "newRecoveryBoundaryUnitTests": 11,
+  "previousBackupBoundaryUnitTests": 23,
+  "restoreChecks": [
+    {
+      "label": "tool-version",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "source-initialize",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "source-start",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "create-source",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "migrate-source",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "seed-first",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "seed-second",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "verify-source",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "encrypted-backup",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "reject-existing-backup-directory",
+      "exitCode": 1,
+      "expectedExitCode": 1
+    },
+    {
+      "label": "source-stop",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "source-stopped-status",
+      "exitCode": 3,
+      "expectedExitCode": 3
+    },
+    {
+      "label": "restore-initialize",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "restore-start",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "reject-untrusted-manifest",
+      "exitCode": 1,
+      "expectedExitCode": 1
+    },
+    {
+      "label": "reject-wrong-key",
+      "exitCode": 1,
+      "expectedExitCode": 1
+    },
+    {
+      "label": "reject-tampered-archive",
+      "exitCode": 1,
+      "expectedExitCode": 1
+    },
+    {
+      "label": "restore-new-cluster",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "verify-restored",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "restored-no-pending-migrations",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "reject-existing-restore-target",
+      "exitCode": 1,
+      "expectedExitCode": 1
+    },
+    {
+      "label": "restore-atomic-failure",
+      "exitCode": 1,
+      "expectedExitCode": 1
+    },
+    {
+      "label": "restore-stop",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "label": "restore-stopped-status",
+      "exitCode": 3,
+      "expectedExitCode": 3
+    }
+  ],
+  "dataComparison": {
+    "tables": 39,
+    "indexes": 114,
+    "constraints": 182,
+    "sequences": 19,
+    "allRowFingerprintsEqual": true,
+    "allDefinitionsEqual": true,
+    "checksComparedAfterDatabaseReparse": true,
+    "allSequencesEqual": true
+  },
+  "extensions": [
+    {
+      "extname": "plpgsql",
+      "extversion": "1.0"
+    },
+    {
+      "extname": "vector",
+      "extversion": "0.8.1"
+    }
+  ],
+  "vector": {
+    "dimensions": 1024,
+    "cosine_distance": 0
+  },
+  "sequenceContinued": true,
+  "foreignKeyEnforced": true,
+  "failedRestoreRetainedEmptyTarget": true,
+  "tested": [
+    "Streaming encryption without a plaintext dump file",
+    "External trusted manifest SHA-256, cipher SHA-256 and complete GCM authentication before database creation",
+    "Wrong manifest/key/tampered archive rejected before target exists",
+    "Existing backup directory and database rejected without changing restored data",
+    "All table row fingerprints/indexes/reparsed CHECK and other constraints/sequences/extensions match",
+    "1024-dimension synthetic vector and zero cosine distance, exact decimal, citations and Outbox/Inbox restored",
+    "Sequence increment and foreign-key enforcement",
+    "Insufficient extension privilege causes single-transaction rollback and retains empty new database"
+  ],
+  "productionSourceSchemaLockFilesUnchanged": 497,
+  "apiOrSchemaChanged": false,
+  "dependenciesChanged": false,
+  "fullDatabaseSuiteRerun": false,
+  "realModelOrKafkaRerun": false,
+  "independence": {
+    "repositoryCommand": "pnpm test:database-recovery",
+    "externalRunnerCopied": false,
+    "initialIsolationFailure": "Prisma module captured inherited engine override; fixed by sanitizing before dynamic import",
+    "originalDatabaseUrlIgnored": true,
+    "poisonedLibpqAndPrismaOverridesIgnored": true,
+    "syntheticOnly": true,
+    "platform": "win32"
+  },
+  "cleanup": {
+    "passed": true,
+    "clusters": [
+      {
+        "name": "source",
+        "port": 65416,
+        "portClosed": true,
+        "postmasterPidAbsent": true,
+        "initPasswordAbsent": true,
+        "pgCtlStatus": 3
+      },
+      {
+        "name": "restore",
+        "port": 53203,
+        "portClosed": true,
+        "postmasterPidAbsent": true,
+        "initPasswordAbsent": true,
+        "pgCtlStatus": 3
+      }
+    ],
+    "sourceStoppedBeforeRestore": true,
+    "productionSchemaLockFilesUnchanged": 497,
+    "encryptedArchiveSha256": "1be4f3a1078ca2667d6889d0880e65df306b315ef60d617d2d2da16b97bf7ac1",
+    "syntheticOnly": true,
+    "keyRetained": false,
+    "dockerStartedOrRestarted": false
+  },
+  "snapshots": [
+    {
+      "repo": "backend",
+      "cwd": "D:/linji-recovery-repro/20261104/verified/validated/backend",
+      "sourceSha256": "2359b1b87b95898d95434f68d833378f5f6c454cc573dd5521eb5c082d946edf",
+      "files": 843,
+      "store": "D:/linji-source-verify/20261104/stores/backend",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "web",
+      "cwd": "D:/linji-recovery-repro/20261104/verified/validated/web",
+      "sourceSha256": "0b1652d1a9a65a99221100868e0ce6fe5117bbdbe726092abf531b7103aaeadd",
+      "files": 720,
+      "store": "D:/linji-source-verify/20261104/stores/web",
+      "reusedOwnStore": true
+    },
+    {
+      "repo": "app",
+      "cwd": "D:/linji-recovery-repro/20261104/verified/validated/app",
+      "sourceSha256": "28e5b05b941b050cf268439f0c3f17e0446e1d33f027f5d9610b05fbb4e48c89",
+      "files": 324,
+      "store": "D:/linji-source-verify/20261104/stores/app",
+      "reusedOwnStore": true
+    }
+  ],
+  "frontendUnchanged": {
+    "web": {
+      "files": 581,
+      "baseline": {
+        "path": "D:/linji-backup-restore/20261104/final/validated/web/.source-export.json",
+        "sha256": "1575813ae9fb104bec4a89254f22409a8ace56592e2f5892e337d88cac0a4a88"
+      }
+    },
+    "app": {
+      "files": 238,
+      "baseline": {
+        "path": "D:/linji-backup-restore/20261104/final/validated/app/.source-export.json",
+        "sha256": "62bf788464d43103458396a0973fd1f2610439a54b429fd37991323960fd32c3"
+      }
+    }
+  },
+  "artifact": {
+    "artifactKind": "expo-bundle-export",
+    "files": 88,
+    "contentSha256": "d44c387f6d36f3034d88f888b8e4080a63aea2b64bf5adfe6919e3b206fa9f01",
+    "openapiVersion": "1.51.1",
+    "openapiSha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8",
+    "nativeInstallable": false
+  },
+  "evidence": [
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-source.log",
+      "sha256": "7a1e2ff8f21157656e30f50a5694ef468ae6c545bc38acb3eb6236e78b48f0d8"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-source-verify.log",
+      "sha256": "91a8ef0a9cb566ad9855711e53706c62c36da201e96101d35d32d6fef2b5bb18"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-install.log",
+      "sha256": "61b4045d9b2d59ce4b046ffa207fa4fc63bc912238783ea54d15dc23ab9ef95c"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-generate.log",
+      "sha256": "7dc860432bdca18c8ff1c1c4c724e4c8c129523de3ae38ac6067ab67c1ab8344"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-check.log",
+      "sha256": "9317d2ff4aee0aff3bf5c6407a8c9ac0eef387b639bc4c44ae6ba726daccb3db"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-e2e.log",
+      "sha256": "863f9124fd91316df6d7708b3bcc0c230bd9685b7845cc61ecba50b9e1436748"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-openapi.log",
+      "sha256": "199e974079b14e9f4afb83a0f87b0c6fe266d7cec93a523c2ee5241b1c02a6dd"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-live-restore.log",
+      "sha256": "0f6d4427f95af581ae34ef46781e33219a4c7fe4bdc0bfb48cbd0d0f0858dcac"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/web-source.log",
+      "sha256": "da6051f2bfe61799d603e46579c4b32428019b2f03ca50ffd50a3ffab8df7e4e"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/web-source-verify.log",
+      "sha256": "784cd9467f93e783e611d59a12648f4f616b29ac7688d460326baa39d1782ca9"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/web-install.log",
+      "sha256": "30686637e0b3c6829e9d1b9eb6c3dbfdcd1b00bd39482afaf2e6fa3f3341d409"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/web-check.log",
+      "sha256": "b0ec444a5e80cd50e0a1bee44e31b130467a4976adfff3a738a7fded93c7cdb2"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/web-build.log",
+      "sha256": "590c8fc215ea44a5236f43f9fd3c3e40469308f1eec5d9f0293a1ad36ebe7f90"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/web-web-release.log",
+      "sha256": "f15ddcc786075522d6bd16114d3ca999eac87ba31fc50de80b33005922068dab"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/web-admin-release.log",
+      "sha256": "b0de0298a7df57656ddf257d92178e7de04ec4d777016a7b643a83c64315d0f0"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-source.log",
+      "sha256": "d748bd3f30ae36b6d48fa2c1f56e2c822a8c4e254f3248e630881b0392524427"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-source-verify.log",
+      "sha256": "9943742695fc62b0fd43b6a7d8639048d0382c93593d798276242f9840b163e6"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-install.log",
+      "sha256": "1f2876c2642ad64d8502213ed86f1f3b8f3da29a1ea71f320a11860e7fdf293d"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-check.log",
+      "sha256": "00da662b5c12b17533e8598913c9e793a00b2f7b9277344c602b70a4c0e29664"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-export.log",
+      "sha256": "d9385b77835e18ad100575c1813caccffb274b3a8ca265befc4f2ca398f2b8c7"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-seal.log",
+      "sha256": "a38d70f4328372f3182f74ca6b9d4dd728469bab7b50382661d08430421c4e60"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-verify.log",
+      "sha256": "6c7e03eb5c86708da2dbca9739c8aae71d427e36eb6baf99ca27bf3518ae25c6"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-relocated-verify.log",
+      "sha256": "fb677c3516540525d20c6a54808a9af29cc80c8bd4b591d6d90373e6a5f4d945"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/commands.json",
+      "sha256": "561961f48b1c1460860afab08c50c9ff51b26973120d984eb6d564d63343ab89"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/snapshots.json",
+      "sha256": "8b10ba1c67064d50eb372b9050355c41a34833b9c8add170a52a77b89bb7b518"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/integration-source.json",
+      "sha256": "8d6ea4631749622c42123ac4397295f003bca1e2121c85388535e17f19740b69"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/backend-module-paths.json",
+      "sha256": "50cb16375272772badca1043445d9658d3b543a43660814da2773495d754fb95"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/web-module-paths.json",
+      "sha256": "e8f215875f10960688500a42ba5b85365215215c576811e639149542d6797d9d"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/app-module-paths.json",
+      "sha256": "ca39ae3deaf1a2d3d8bae2cae8836a2625103356cff79b0d8b6481e03ce34e27"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/validated/backend/.source-export.json",
+      "sha256": "238e886791e0e1c8aecdc9261cbb8ffba8b60474888ed1b5791fb7ca7a853d0b"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/validated/web/.source-export.json",
+      "sha256": "0de2cfb9ecd917988b30289dff073b2a18c670dbe7628ead3ff5dc85a887dcc0"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/verified/validated/app/.source-export.json",
+      "sha256": "c14f2319b08f1c5f993cceb62b60f633f489aec224dd7cb792e3cfa326230451"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/cleanup-proof.json",
+      "sha256": "87c0bb771e29eaa9e924346fd9f3891d7a16e912399268cd184283d9c034345e"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/cleanup-proof.log",
+      "sha256": "e918426bb98e9091a235515016c0c15a9aac560b2fa50f4d8d4f75a72fcfdf44"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/cleanup-proof.mjs",
+      "sha256": "c64f9b730246f4cf6cdc05a759967a1004bbac5d56b07a68f28a7601440a2f8e"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/prepare.mjs",
+      "sha256": "cffcc3de8c9f93fae755e6f9ec94e72102609d1733183eafef98c067bae2d54b"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/prepare-evidence.mjs",
+      "sha256": "875df36d2eebc1b93bd27a4f44f2bc154ff2823b323290752daab6d8e284e857"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/final-check.mjs",
+      "sha256": "f57266e5846bcf52d70944d6d47ce88fe0b08a01a3e3d5dc79a4bdd2d802247c"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/evidence.mjs",
+      "sha256": "e438c4b91dd42e6ba3c107b6d7aaefafaaa64714584a97c978c6d1b2203e842c"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/diagnostic.mjs",
+      "sha256": "994d99ef2b591cadb8279e10b82e3dc8e9d66abaf3cce0e15ccc66db31d6f320"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/diagnostic-fixed.log",
+      "sha256": "03642eed6211bcd0c09e6c6812fccdbeadf5e07466a1df733496e7a9fe39f368"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/final-check.log",
+      "sha256": "ecfcb5df84618e2c20f78ec1cb2390744dacf932add9884f99fbc0a858a584f8"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/final/backend-live-restore.log",
+      "sha256": "4a7a2080733ed59aaf9d824990bbe7cc9d6b926bfd351937a47e0c7c7bf8f55e"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/create-source.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/encrypted-backup.log",
+      "sha256": "1f9f3aa1fc5a5e0d46c52346d4dd7168a26eb4207c6c01e42ad3fbf98fa5f2a2"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/migrate-source.log",
+      "sha256": "cb06567911d732f55e9f4ff052dcbc86f931116f627a1e75e615758092903458"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/raw-check-definitions-1.json",
+      "sha256": "510d244f9fc2220354672528666ca7fe5a3541b9c175339ee73cf56c732bdbd6"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/raw-check-definitions-2.json",
+      "sha256": "510d244f9fc2220354672528666ca7fe5a3541b9c175339ee73cf56c732bdbd6"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/raw-check-definitions-3.json",
+      "sha256": "7590832bed480aae5ade65eb2f09ba956c75f1c7d54ec35d1a05424971de6012"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/raw-check-definitions-4.json",
+      "sha256": "7590832bed480aae5ade65eb2f09ba956c75f1c7d54ec35d1a05424971de6012"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/reject-existing-backup-directory.log",
+      "sha256": "3c7876beeceb900a69b8c2d771126329ace4039e4a7f02d0dadcb3fd48444815"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/reject-existing-restore-target.log",
+      "sha256": "0d2a93df7f2c17cfeac463fe1ccc9a952a2abf8be4af0373ab5779574d5fbf7b"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/reject-tampered-archive.log",
+      "sha256": "4165737490c30425b88368942bcd6ec0e0647ed759910b6f28e8f567381acf8d"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/reject-untrusted-manifest.log",
+      "sha256": "d5cf1b1e19df991cf0aa5d8a18647b52c3f6d0d7c3c58c53809b993f1933c282"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/reject-wrong-key.log",
+      "sha256": "436559c1963e923859fb86aa9b4a16ba30da407e39c8447f363b6af666af33b8"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/report.json",
+      "sha256": "2d2cf02b436a519b804242c87b5546678f5b33843a36b2effb93eb5ad844f1b0"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/restore-atomic-failure.log",
+      "sha256": "f7d90c8d285aad459a0547bdc83f211f99063a711366d6f9545d2bcfd9e44340"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/restore-initialize.log",
+      "sha256": "cc3b9b6b0ffbf7e4fcc9f7850a79855dab479b8c1c68267ba622db2c763e5b50"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/restore-new-cluster.log",
+      "sha256": "8fb2ee8d20bd4c074ffc1a1bcb89c2272186a51bded7de786a018cfb71016c0f"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/restore-stop.log",
+      "sha256": "3a6747065de8c2dbc66a6baa73d5ab09c2c03eb8851704f973ac4b886e6805f2"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/restore-stopped-status.log",
+      "sha256": "00e9e2231199060045479aeef60a466d575acde1f92e0f1567df14db2d3dc4b1"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/restored-fingerprint.json",
+      "sha256": "ca249ac87a1eb4ba2c37b1a6ef0a6f679f58534bbb7eb6d033cd9de71d128463"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/restored-no-pending-migrations.log",
+      "sha256": "f2128352dcdaf31fa186240ad346bd6707469e4c405ee2690f76cae64bf5087c"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/source-fingerprint.json",
+      "sha256": "ca249ac87a1eb4ba2c37b1a6ef0a6f679f58534bbb7eb6d033cd9de71d128463"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/source-initialize.log",
+      "sha256": "59431be81c656ad3afa4e7aeca9e2428b5046651ca0e1cbc04380cd0f8ddd7b7"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/source-stop.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/source-stopped-status.log",
+      "sha256": "00e9e2231199060045479aeef60a466d575acde1f92e0f1567df14db2d3dc4b1"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/tool-version.log",
+      "sha256": "01775fa5db0d33ce68f2d65dc580fcfab8364c7cc5e5cd5f055f000e21c1aae8"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/verify-restored.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/verify-source.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-recovery-repro/20261104/linji-recovery-E5UFlB/encrypted-backup/manifest.json",
+      "sha256": "9464d4ead04a609553846f4fad1810fdd6ea12ec99b7c696a866c6ac2517b0ad"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/validate-database-recovery.ts",
+      "sha256": "bb7d410e680f0c2a512ace9972406441ddbc75c17cfde56c9cccd548fb383d63"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/database-backup.ts",
+      "sha256": "e70dcb212bbfc05a349edadec5372f4bbac00032ccb633725234fb7003637317"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/package.json",
+      "sha256": "da3ac8af074d642b79f25c44fbbae43660c69409d3b94abe4aebe6daa86bc716"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/pnpm-lock.yaml",
+      "sha256": "08acab88e8de3501cb07a16e92fe7d38879302e608aadab6cf0fcf3685249144"
+    }
+  ],
+  "syntheticDataOnly": true,
+  "rehearsalKeyRetained": false,
+  "plaintextDumpOnDisk": false,
+  "dockerStartedOrRestarted": false,
+  "dockerWSLUsed": false,
+  "productionDisasterRecoveryComplete": false,
+  "overallGoalComplete": false,
+  "pending": [
+    "Production full-data restore, S3/Kafka joint recovery, WAL/PITR and actual RPO/RTO",
+    "Target browsers/Cookie-CSRF/BFCache, Expo Web/native devices/SecureStore and signed packages",
+    "Production model hosting/capacity, real-business corpus/manual quality and long-running indexing across all source types",
+    "Production TLS/full virus definitions/proxy; multi-broker replication/recovery",
+    "Containers and remote CI",
+    "D-49/D-50/D-09; prior denied cleanup/service starts remain unchanged"
+  ],
+  "repo": "backend",
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitTests": 1357,
+    "sourceTools": 20,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "compiledOpenapi": 0,
+    "restoreRehearsalPassed": true
+  }
+}

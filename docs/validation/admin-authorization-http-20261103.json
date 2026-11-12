@@ -1,0 +1,355 @@
+{
+  "date": "2026-11-03",
+  "openapi": {
+    "version": "1.50.2",
+    "operations": 143,
+    "sha256": "710ef0cad15dcfb363f77a9fd1463413ca0290946dda9d1c9a7fbea8e77088e0"
+  },
+  "execution": {
+    "suite": "admin-authorization",
+    "output": "D:\\linji-admin-http\\20261103\\runs\\linji-admin-http-KS39Eg",
+    "checks": [
+      {
+        "name": "postgres-version",
+        "passed": true
+      },
+      {
+        "name": "initialize",
+        "passed": true
+      },
+      {
+        "name": "start-postgres",
+        "passed": true
+      },
+      {
+        "name": "create-database",
+        "passed": true
+      },
+      {
+        "name": "migrate-deploy",
+        "passed": true
+      },
+      {
+        "name": "seed-first",
+        "passed": true
+      },
+      {
+        "name": "seed-second",
+        "passed": true
+      },
+      {
+        "name": "verify-before",
+        "passed": true
+      },
+      {
+        "name": "fixture-prepare",
+        "passed": true
+      },
+      {
+        "name": "compiled-api-ready",
+        "passed": true
+      },
+      {
+        "name": "fixture-verify",
+        "passed": true
+      },
+      {
+        "name": "verify-after",
+        "passed": true
+      },
+      {
+        "name": "stop-postgres",
+        "passed": true
+      }
+    ],
+    "completed": true,
+    "stopped": true,
+    "serverStopped": true,
+    "postgresVersion": "postgres (PostgreSQL) 17.11",
+    "databasePort": 53212,
+    "database": "linji_admin_authorization_validation",
+    "apiPort": 56780
+  },
+  "tests": 9,
+  "rejectedRequests": 8,
+  "credentialsInManifest": false,
+  "cookieAdapter": "Node cookie path jar and synthetic Origin; real fetch and production API/models; no browser validation",
+  "persistence": [
+    "exact resort description and permitted field",
+    "other merchant and private fields unchanged",
+    "final account role and field revocation",
+    "no successful audit for eight rejected traces",
+    "one resort write and one Outbox",
+    "all sessions logged out",
+    "protected admin remains active"
+  ],
+  "firstAttempt": {
+    "output": "D:/linji-admin-http/20261103/runs/linji-admin-http-BZQ8wI",
+    "report": {
+      "suite": "admin-authorization",
+      "output": "D:\\linji-admin-http\\20261103\\runs\\linji-admin-http-BZQ8wI",
+      "checks": [
+        {
+          "name": "postgres-version",
+          "passed": true
+        },
+        {
+          "name": "initialize",
+          "passed": true
+        },
+        {
+          "name": "start-postgres",
+          "passed": true
+        },
+        {
+          "name": "create-database",
+          "passed": true
+        },
+        {
+          "name": "migrate-deploy",
+          "passed": true
+        },
+        {
+          "name": "seed-first",
+          "passed": true
+        },
+        {
+          "name": "seed-second",
+          "passed": true
+        },
+        {
+          "name": "verify-before",
+          "passed": true
+        },
+        {
+          "name": "fixture-prepare",
+          "passed": true
+        },
+        {
+          "name": "compiled-api-ready",
+          "passed": true
+        },
+        {
+          "name": "stop-postgres",
+          "passed": true
+        }
+      ],
+      "completed": false,
+      "stopped": true,
+      "serverStopped": true,
+      "postgresVersion": "postgres (PostgreSQL) 17.11",
+      "databasePort": 54370,
+      "database": "linji_admin_authorization_validation",
+      "apiPort": 57483,
+      "error": "Unconfirmed client validation\n\n'failed' !== 'passed'\n"
+    },
+    "cause": "Synthetic role lacked required account:profile:read for auth/me; fixed explicit test grant, no production permission change"
+  },
+  "publicRegression": {
+    "execution": {
+      "suite": "public-content",
+      "output": "D:\\linji-admin-http\\20261103\\public-regression\\linji-public-http-eMHlTz",
+      "checks": [
+        {
+          "name": "postgres-version",
+          "passed": true
+        },
+        {
+          "name": "initialize",
+          "passed": true
+        },
+        {
+          "name": "start-postgres",
+          "passed": true
+        },
+        {
+          "name": "create-database",
+          "passed": true
+        },
+        {
+          "name": "migrate-deploy",
+          "passed": true
+        },
+        {
+          "name": "seed-first",
+          "passed": true
+        },
+        {
+          "name": "seed-second",
+          "passed": true
+        },
+        {
+          "name": "verify-before",
+          "passed": true
+        },
+        {
+          "name": "fixture-prepare",
+          "passed": true
+        },
+        {
+          "name": "compiled-api-ready",
+          "passed": true
+        },
+        {
+          "name": "fixture-verify",
+          "passed": true
+        },
+        {
+          "name": "verify-after",
+          "passed": true
+        },
+        {
+          "name": "stop-postgres",
+          "passed": true
+        }
+      ],
+      "completed": true,
+      "stopped": true,
+      "serverStopped": true,
+      "postgresVersion": "postgres (PostgreSQL) 17.11",
+      "databasePort": 55921,
+      "database": "linji_public_content_validation",
+      "apiPort": 56554
+    },
+    "tests": 8
+  },
+  "notValidated": [
+    "Next startup",
+    "browser Secure/SameSite/CORS",
+    "React UI",
+    "container",
+    "native device",
+    "real Kafka/model/storage providers",
+    "full 830 database suite not repeated",
+    "D-49 merchant profile administration remains unimplemented"
+  ],
+  "owner": "backend",
+  "code": [
+    {
+      "path": "scripts/native-http-runtime.ts",
+      "sha256": "110d10841785180ce244a4c180c5d6cb7dce7060bfc71e6e0467ef74e4ea3de5"
+    },
+    {
+      "path": "scripts/validate-native-public-http.ts",
+      "sha256": "39bff6339d1c75aba479bbb2adeed15f57b0780ad5ee2690d033d23f8a61f6c3"
+    },
+    {
+      "path": "scripts/validate-native-admin-http.ts",
+      "sha256": "d4fe4f626a82b1e38a4a68beca5cdec403e033d744e80f15bf343a5204c1909e"
+    },
+    {
+      "path": "scripts/admin-authorization-http-fixture.ts",
+      "sha256": "d7c183880dfa85f7200eb505f2ff448bacecdd88964002e35793a167038e2417"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-admin-http/20261103/runs/linji-admin-http-KS39Eg/report.json",
+      "sha256": "ae68c88b304bfd5bcf4c2a6de1b16ccdb5e9eb995ee06915c73d60f0cafec364"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/runs/linji-admin-http-KS39Eg/client-result.json",
+      "sha256": "d3eae640a1f311573491670978818712a33f36948782362c66f90a86049eea2d"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/runs/linji-admin-http-KS39Eg/fixture-verify.log",
+      "sha256": "954d995c6b48f1adaff4097cce4e48ed296de01eabeccfa5ac9cbe011c32db3d"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/runs/linji-admin-http-KS39Eg/verify-before.log",
+      "sha256": "70b1f3f4302b7a1c6561a466d6a442450db00fe6543676e8224dffe22d669726"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/runs/linji-admin-http-KS39Eg/verify-after.log",
+      "sha256": "70b1f3f4302b7a1c6561a466d6a442450db00fe6543676e8224dffe22d669726"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/runs/linji-admin-http-KS39Eg/migrate-deploy.log",
+      "sha256": "0c2be53dcccec2e4e5fc96a3bf6801d6b4b49d239f66e1c0c0dd8410f270c2a4"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/runs/linji-admin-http-KS39Eg/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/runs/linji-admin-http-KS39Eg/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/runs/linji-admin-http-KS39Eg/stop-postgres.log",
+      "sha256": "3589d2bd01f8295cc7c9ec3f5e07625fcd347ccb6f33f2d80edafe5f5217c1fb"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-live-backend.log",
+      "sha256": "e9ff0ef5a440ec43deb6492b436de497ba7da90cefc6bec4921093b6cf5db57c"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-live-backend-retry.log",
+      "sha256": "96cd204cfecf77abf3bcaaacc1df84016492097f73153efa378dfc98e629edc8"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-public-backend.log",
+      "sha256": "2f5fef2e0b66d742eba9e0aebb96677934a0d6fd75b9d8f03dd937112716a8ca"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/public-regression/linji-public-http-eMHlTz/report.json",
+      "sha256": "0e77a37e9267aef6d63611919fe0ace07a3aa7a893d259e1ded1a6c5317ae39f"
+    },
+    {
+      "path": "D:/linji-admin-http/20261103/public-regression/linji-public-http-eMHlTz/fixture-verify.log",
+      "sha256": "4b443366f21ef357563e6672e4ed1ee491e7d0a250045465c496cb7615e545b8"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-install.log",
+      "sha256": "2f76337f8d1b6b987653cc0799705fa44a15e10fb41ca718624d8e74264b2ef0"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-check.log",
+      "sha256": "5ca2bb4be18d776e382462c3132de25a7cef50349108e1293187f59650bed7d0"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-http-framework.log",
+      "sha256": "85513bd8626e45dbbc653f3d0e249f89f3d0a5b01e922925b76f937e310594f5"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-openapi.log",
+      "sha256": "564a164b0a22d3f5df160418788785a1681cd7d6137bbe6c6b36a6b8ec2f6d92"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-stop-proof.log",
+      "sha256": "4886ab0a3eaf0e067ae701994ee51f9d55ee53a9605be140c27eed6af07f6fa7"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-production-parity.log",
+      "sha256": "c7832e5c5b007f88c6f5c0b7be16fea0a88eac95e5606e92564f851ecab57778"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/backend/admin-auth-final-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    }
+  ],
+  "fullVerification": {
+    "install": 0,
+    "check": 0,
+    "unitTests": 1192,
+    "sourceExportTests": 8,
+    "httpFrameworkTests": 158,
+    "build": 0,
+    "openapiExport": 0
+  },
+  "appCompanionVerification": {
+    "install": 0,
+    "check": 0,
+    "testFiles": 66,
+    "tests": 1162,
+    "sourceExportTests": 8,
+    "doctor": "20/20",
+    "exportAllPlatforms": 0,
+    "postExportTypecheck": 0,
+    "output": "D:/linji-admin-http/20261103/app-export"
+  }
+}

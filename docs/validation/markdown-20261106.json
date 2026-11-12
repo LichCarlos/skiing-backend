@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-06",
+  "openapi": {
+    "version": "1.53.0",
+    "operations": 151,
+    "sha256": "a4542563de915963c6a4d05f6fba9582dbcadf908308774e080d406ef51ae309"
+  },
+  "productionChanged": false,
+  "deployed": false,
+  "apkBuilt": false,
+  "noCrossRepositorySourceImports": true,
+  "limitations": [
+    "No # autocomplete, persistent resort mentions or mention dependency graph",
+    "No collaborative/offline/server draft support",
+    "Physical Android and iOS validation pending",
+    "Expo Web community browser test blocked by execution policy; no workaround attempted"
+  ],
+  "checks": {
+    "lint": "passed; six existing script warnings",
+    "typecheck": "passed",
+    "build": "passed",
+    "fullUnitTests": {
+      "passed": 1523,
+      "files": 159
+    },
+    "finalRelatedTests": {
+      "passed": 185,
+      "files": 14
+    },
+    "freshDatabaseTests": {
+      "passed": 868,
+      "files": 37,
+      "migrations": 26,
+      "stopped": true
+    }
+  },
+  "databaseEvidence": "markdown-database-20261106.json",
+  "failuresRetained": [
+    "Parser initially placed in Domain; moved behind application ports without weakening architecture tests",
+    "One concurrent full test run exhausted memory; reran full suite maxWorkers=2 successfully"
+  ]
+}

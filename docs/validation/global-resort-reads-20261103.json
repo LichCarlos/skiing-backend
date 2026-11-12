@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "Full global resort VO/page/form/schema/dictionary/receipt parsing; local/end identity verification; visibility/upload lifecycle; shared-ledger arbitration; configurable global grants and fields, rating/ownership changes, public transitions, scope mismatch, actual read-time revocation and soft deletion",
+  "http": {
+    "tests": 63,
+    "newTests": 4,
+    "output": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm",
+    "checks": {
+      "resortId": 4,
+      "lifecycle": true,
+      "reassigned": true,
+      "fieldsFiltered": true,
+      "scopeRejected": true,
+      "revocationRejected": true,
+      "deleted": true
+    },
+    "persistence": {
+      "physicalResorts": 4,
+      "globalSoftDeleted": 1,
+      "globalFinalStatus": "published",
+      "globalOutbox": 6,
+      "globalSuccessAudits": 6,
+      "allResortOutbox": 15,
+      "totalOutbox": 36,
+      "originalForeignResortOutbox": 0
+    },
+    "references": [
+      {
+        "path": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm/report.json",
+        "sha256": "6662bd36cc9c538304bb267905742f61013a078338c5398a49a10892d95aff75"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm/client-result.json",
+        "sha256": "cb95d2e040bc488535a18387ecb722bd6d615ca94ce2eb3b44612b9aea082196"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm/ready.json",
+        "sha256": "e1c22747943f1316e90353f3f8d886e2bbae6fb02523ea85d7835c1a8ca6ceda"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm/migrate-deploy.log",
+        "sha256": "692ac6268e4b73166ed8a3bab1fb6d9541401e3bdf7a4342f17b662dfeecb635"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm/fixture-verify.log",
+        "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/final/admin-runtime/linji-admin-http-0OAhAm/verify-after.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      }
+    ],
+    "cleanup": {
+      "path": "D:/linji-global-resort-reads/20261103/cleanup.json",
+      "sha256": "8529637ff56988a9e8f33fdf7309781d88d6c353a87a2c0b7ca0dd2b8934ffa8"
+    }
+  },
+  "regression": {
+    "newTests": 39,
+    "resortCombinedTests": 240
+  },
+  "failures": {
+    "regression": "Initial27 boundary tests all failed against old implementation. First repaired combined227 passed/1 existing target-message assertion failed; preserved compatible message. Lifecycle test fixture had three stale component references; corrected then238 passed. Final full check240 includes two filter coercion regressions.",
+    "references": [
+      {
+        "path": "D:/linji-global-resort-reads/20261103/boundaries-before.log",
+        "sha256": "44640df67b33646ad31cc2e780f1378070c87f65718df28459fa6215ae2e8c39"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/targeted-first.log",
+        "sha256": "3fe495e3a8c727ec1115607b759e1731eb94e7a53546b9f6725420a50111cfdd"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/targeted-second.log",
+        "sha256": "b298d907240f70f8c3dded7dd764147a58b608a2fc33d29cf5e26eb1d30974ba"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/targeted.log",
+        "sha256": "f952510dd489bc08299d22419ac818b0a6972b8a8fe6b8d3f4edde5506382bae"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/admin-types.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-global-resort-reads/20261103/admin-types-final.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "commandLedger": {
+    "path": "D:/linji-global-resort-reads/20261103/commands.json",
+    "sha256": "e585a9439b2662b40a8697d23487ac7edbcf3cb808bba12857df3e75a9e80af4"
+  },
+  "limitations": [
+    "Node Cookie adapter and simulated Hooks/EventTarget do not prove actual browser/React/BFCache/device behavior",
+    "Read-end identity verification is not a cross-request atomic permission snapshot; existing resort DTO has no client version precondition or create idempotency key",
+    "No current full database suite, real Kafka/Inbox/timers/providers/storage/container or remote CI acceptance",
+    "Existing Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 143,
+    "unitTests": 1240,
+    "sourceExportNode": 8,
+    "httpFrameworkFiles": 9,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "productionBusinessCodeChanged": false,
+    "httpFixtureChanged": true,
+    "postFixtureLint": 0,
+    "postFixtureTypes": 0
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "fa88afeeaa04e173d75ba73e438c970dc17da904aff8f10330e78df4da696668"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-global-resort-reads/20261103/backend-install.log",
+      "sha256": "e5e3d04dfe8deacb091b0542c662c6466e04c1d042ad48d04b5971e76b8fe131"
+    },
+    {
+      "path": "D:/linji-global-resort-reads/20261103/backend-check.log",
+      "sha256": "a00afd2d0f4ab03a9ded71cd8b6efe9ececac7a154c60f1d2c17d21d10fddced"
+    },
+    {
+      "path": "D:/linji-global-resort-reads/20261103/backend-e2e.log",
+      "sha256": "32f95959108dc8e8b5f203c13db063f44e473229b02b70f29e5d850c6352dc98"
+    },
+    {
+      "path": "D:/linji-global-resort-reads/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-global-resort-reads/20261103/backend-fixture-format.log",
+      "sha256": "e508e2a108c58beb3445144efa9e4bd762c8424317e8d6f7eece7547f85718e3"
+    },
+    {
+      "path": "D:/linji-global-resort-reads/20261103/backend-fixture-final-format.log",
+      "sha256": "1fa9acdaab78cbd0bd5e2a2474dd512c839238b06cf72861b3bbb81ab33cc2cd"
+    },
+    {
+      "path": "D:/linji-global-resort-reads/20261103/backend-fixture-lint.log",
+      "sha256": "a4e559936dcedf9666be2fd9d1542d93dbcb3d410c662779c05f0f01fa9802bb"
+    },
+    {
+      "path": "D:/linji-global-resort-reads/20261103/backend-fixture-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-global-resort-reads/20261103/admin-runtime.log",
+      "sha256": "45595fc1d24e2464a3d22000f3bf4d4e4ac347f72a6640b42aa9ddddbaf5f451"
+    }
+  ]
+}

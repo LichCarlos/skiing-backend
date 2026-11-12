@@ -1,0 +1,171 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "Full asset metadata/page/filter/empty-deletion-receipt projection; local/end identity checks; visibility lifecycle and shared-ledger arbitration; actual self/all/selected/merchant scope HTTP, avatar reference veto, soft deletion, read-time revocation and persisted metadata/audits",
+  "http": {
+    "tests": 71,
+    "newTests": 4,
+    "output": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj",
+    "checks": {
+      "scopeIsolation": true,
+      "referencesProtected": true,
+      "deleted": true,
+      "revocationRejected": true
+    },
+    "persistence": {
+      "physicalAssets": 3,
+      "readyAssets": 2,
+      "deletedAssets": 1,
+      "deletedId": "101",
+      "bigintOwnId": "9007199254741001",
+      "bigintForeignId": "9007199254741003",
+      "assetSuccessAudits": 1,
+      "profileSuccessAudits": 2,
+      "finalAvatarAssetId": null,
+      "totalOutbox": 43
+    },
+    "references": [
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/report.json",
+        "sha256": "43a802c92fcc141f1ab989c039be23b713c80d4cd6b10eedb658023d3e4dc150"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/client-result.json",
+        "sha256": "56d40a7e0631126eac5002cef1d27f80b01e22b356b87e77261af2c51f4617a5"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/ready.json",
+        "sha256": "5c8eae34871f148a81c40f76b9823cd78606960b79edd54507db190f7b2e0fae"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/migrate-deploy.log",
+        "sha256": "4fd1c0d3b1fa6ea6039a37dfa8454441f4311814342e3220e514d42f2bf74e25"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/fixture-verify.log",
+        "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/final/admin-runtime/linji-admin-http-ZfZWCj/verify-after.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      }
+    ],
+    "cleanup": {
+      "path": "D:/linji-asset-admin-reads/20261103/cleanup.json",
+      "sha256": "94bca56d1b446bbf8208cddc2b35f83fd3105a55a063f8d292bb68b203f2f5ca"
+    }
+  },
+  "regression": {
+    "newTests": 41,
+    "assetCombinedTests": 176
+  },
+  "failures": {
+    "regression": "Initial33 boundary tests yielded29 failures/4 passes against old implementation. First repaired combined165 passed/3 existing fixture failures (pagination/end identity); corrected fixtures then176 passed including6 simulated page lifecycle and2 shared-ledger/local-identity regressions.",
+    "references": [
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/boundaries-before.log",
+        "sha256": "9900e5ea955cacfc74f48ef8e1ae0d3b4f0c99ba267e0b76d5d441c7da409b51"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/targeted-first.log",
+        "sha256": "9f7d36ff8585f72487dfaa88e849be3856003e7c961d342cccb98dcbe8e72ff5"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/targeted.log",
+        "sha256": "eea24f149c8e33c573c908b35f8fecf900c39d8395836e4efa2ec9ecb568bff3"
+      },
+      {
+        "path": "D:/linji-asset-admin-reads/20261103/admin-types.log",
+        "sha256": "3dd115a54d9decc15d9b6f1babec63f20d21966a914759ea6530c5b714007d15"
+      }
+    ]
+  },
+  "commandLedger": {
+    "path": "D:/linji-asset-admin-reads/20261103/commands.json",
+    "sha256": "f7f103e5b24088991fb52c6328fe9077db7b4612977072d313bc416e27d44fdf"
+  },
+  "limitations": [
+    "Node Cookie adapter and simulated Hooks/EventTarget do not prove actual browser/React/BFCache/device behavior",
+    "Read-end identity verification is not a cross-request atomic permission snapshot; existing asset deletion commands have no client version precondition or idempotency key",
+    "S3 points to a closed loopback port: offline signing and database soft deletion only; no upload/download/scan/physical object removal accepted",
+    "D-41 selectedIds stays positive safe number[]; bigint string IDs tested via all/self only",
+    "No current full database suite, real Kafka/Inbox/timers/providers/storage/container or remote CI acceptance",
+    "Existing Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 143,
+    "unitTests": 1240,
+    "sourceExportNode": 8,
+    "httpFrameworkFiles": 9,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "productionBusinessCodeChanged": false,
+    "httpFixtureChanged": true,
+    "postFixtureLint": 0,
+    "postFixtureTypes": 0
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "a54c2f6c483367eb831e3c7e4c6eecd5beeb4cd504a6117bf48af495603a3573"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-install.log",
+      "sha256": "08ca5a8e57e7f701c5b42eac7792a0da38d03604d28e36570fb6820a1403954b"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-check.log",
+      "sha256": "ea48a0e8a67c4d6817eaf0d4fd3a97612dc5ecd39ba8a1534d78dbd2486bb2de"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-e2e.log",
+      "sha256": "39e354434e0f23d48ea44f1ccab6cc48cde6936a06c8b75c6c80a8149a37b029"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-build.log",
+      "sha256": "9aba080a04d36f3c5b3e64cf2e200d70a422c78297ff80bac5f5551def846538"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-fixture-format.log",
+      "sha256": "b38b08fab8db47e3639fbda498dc7ec2df8c7f216f56e9838ccf0cd6cd7d2d57"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-fixture-lint.log",
+      "sha256": "6cafd7ca2eb5da402eeb90a5c76a9afe148a1b3b23bea424e9a9f715dd283bd9"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/backend-fixture-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-asset-admin-reads/20261103/admin-runtime.log",
+      "sha256": "d83d9e0d624ac242332e59c7435216ded60e1be475d4486ff21b2a059ff3f233"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "release": "20261106-markdown",
+  "productionDeployed": true,
+  "activation": {
+    "activatedAt": "2026-11-06T08:16:18.737835+00:00",
+    "openapi": "1.53.0",
+    "services": ["linji-api", "linji-web", "linji-admin"],
+    "localHealth": true,
+    "migration": 26,
+    "seedExecuted": false,
+    "schemaRollbackPerformed": false,
+    "backup": "/opt/linji/private/backups/20261106-markdown"
+  },
+  "serverReleaseDirectory": "/opt/linji/releases/20261106-markdown",
+  "openapi": {
+    "version": "1.53.0",
+    "operations": 151,
+    "sha256": "a4542563de915963c6a4d05f6fba9582dbcadf908308774e080d406ef51ae309"
+  },
+  "urls": {
+    "website": "https://lichcarlos.top/snow",
+    "admin": "https://lichcarlos.top/snow-admin/login",
+    "api": "https://lichcarlos.top/snow-api/api/v1"
+  },
+  "backup": {
+    "createdAt": "2026-11-06T07:46:58.763928+00:00",
+    "before": {
+      "migrations": 25,
+      "articles": 8,
+      "dynamics": 20,
+      "assets": 34,
+      "users": 17,
+      "resorts": 5
+    },
+    "backup": "/opt/linji/private/backups/20261106-markdown",
+    "dumpBytes": 469200,
+    "dumpSha256": "27d6848dee6065cd07d98271f60edb89e72e1909c5b9f93b37f9deaeea941a17",
+    "dumpListVerified": true,
+    "storageBackupBytes": 1554423
+  },
+  "migration": "20261106000100_article_markdown_assets",
+  "serverVerification": {
+    "at": "2026-11-06T08:21:13.197497+00:00",
+    "productionCounts": {
+      "migrations": 26,
+      "articles": 8,
+      "dynamics": 20,
+      "assets": 34,
+      "users": 17,
+      "resorts": 5,
+      "articleMarkdown": 0,
+      "dynamicMarkdown": 0,
+      "bodyBindings": 0
+    },
+    "originalCountsPreserved": true,
+    "clonedDatabaseDropped": true,
+    "candidateEnvRemoved": true,
+    "serviceChanges": {
+      "linji-web.service": {
+        "before": {
+          "MainPID": "1456266",
+          "Id": "linji-web.service",
+          "ActiveState": "active"
+        },
+        "after": {
+          "MainPID": "1464546",
+          "Id": "linji-web.service",
+          "ActiveState": "active"
+        }
+      },
+      "linji-api.service": {
+        "before": {
+          "MainPID": "1431609",
+          "Id": "linji-api.service",
+          "ActiveState": "active"
+        },
+        "after": {
+          "MainPID": "1464475",
+          "Id": "linji-api.service",
+          "ActiveState": "active"
+        }
+      },
+      "linji-admin.service": {
+        "before": {
+          "MainPID": "1456280",
+          "Id": "linji-admin.service",
+          "ActiveState": "active"
+        },
+        "after": {
+          "MainPID": "1464533",
+          "Id": "linji-admin.service",
+          "ActiveState": "active"
+        }
+      }
+    },
+    "otherServiceChanges": {}
+  },
+  "rawEvidenceDirectory": "D:/linji-local/20261106/markdown-release",
+  "limitations": [
+    "No physical Android installation or interaction test",
+    "No iOS build or native test",
+    "No separate Expo Web deployment or community browser acceptance",
+    "No new Markdown production content saved during acceptance",
+    "Clone Kafka and Outbox delivery disabled; no new Markdown-to-vector end-to-end claim"
+  ],
+  "rollback": {
+    "frontendOnlyScript": "/opt/linji/releases/20261106-markdown/rollback-frontends.sh",
+    "executed": false,
+    "schemaRollbackPerformed": false,
+    "rule": "Retain new schema/API readers after Markdown writes; database restore requires separate maintenance and data-loss assessment"
+  },
+  "retainedFailureLogs": [
+    "Initial build memory exhaustion; user-approved unrelated Expo dev server stop",
+    "APK isolated dependency path Ninja regeneration; fixed only in build copy with hoisted linker",
+    "Initial browser selectors missed Ant Design spaced labels; corrected without business code changes"
+  ],
+  "repository": "backend",
+  "frozenSource": {
+    "files": 929,
+    "sha256": "a047ad156e53b414d56874c1fd199aaaf21859a4ac3d340189296550fdf891bf",
+    "includesUncommittedWorkingTree": true
+  },
+  "cloneAcceptance": {
+    "passed": true,
+    "scope": "Restored clone database only; actual HTTP/storage/ClamAV; Kafka disabled; no production content changes",
+    "checks": [
+      "old plain text remains plain_text",
+      "actual upload and ClamAV scan ready",
+      "article source and body Asset binding saved",
+      "stale article version rejected",
+      "article original publish workflow retained",
+      "public body and authorized signed image readable",
+      "community Markdown preserves independent primary resort and pending workflow",
+      "community approval and public projection",
+      "moderation increments version and stale edit is rejected",
+      "dangerous link protocol rejected",
+      "arbitrary remote image/SSRF path rejected",
+      "referenced Asset deletion protected",
+      "test asset detached and removed using API"
+    ]
+  },
+  "rehearsal": {
+    "clone": "linji_markdown_rehearsal_20261106",
+    "restore": true,
+    "migration": true,
+    "verify": true,
+    "candidateHealth": "ok",
+    "openapi": "1.53.0",
+    "articlesPublicReadable": true
+  },
+  "cleanup": {
+    "scope": "clone only",
+    "removedActualObjectAssets": ["35"]
+  },
+  "archiveSha256": "0ffef40efc3fc95dba67feff0544db197222717f053b10b4b141761609679f0b"
+}

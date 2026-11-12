@@ -1,0 +1,328 @@
+{
+  "passed": true,
+  "scope": "2026-11-07 personal center; deployed website and API",
+  "activation": {
+    "passed": true,
+    "activatedAt": "2026-11-07T05:04:47.678316+00:00",
+    "openapi": "1.54.0",
+    "buildId": "-pXIJMFe4DFcnjkm4KJep",
+    "services": ["linji-api", "linji-web"],
+    "databaseMigration": 27,
+    "seedExecuted": false,
+    "adminRestarted": false,
+    "schemaRollbackPerformed": false
+  },
+  "backup": {
+    "createdAt": "2026-11-07T04:21:43.421038+00:00",
+    "before": {
+      "migrations": 26,
+      "articles": 8,
+      "dynamics": 20,
+      "assets": 34,
+      "users": 18,
+      "resorts": 5
+    },
+    "backup": "/opt/linji/private/backups/20261107-member-center",
+    "dumpBytes": 473048,
+    "dumpSha256": "11730144ef235eb167299bea8dde2f8ec5273ec78378ad00a05d252309a57ef9",
+    "dumpListVerified": true,
+    "storageBackupBytes": 1554596
+  },
+  "rehearsal": {
+    "clone": "linji_member_rehearsal_20261107",
+    "restore": true,
+    "migration": true,
+    "verify": true,
+    "candidateHealth": "ok",
+    "openapi": "1.54.0",
+    "articlesPublicReadable": true
+  },
+  "cloneHttp": {
+    "passed": true,
+    "scope": "isolated restored database only",
+    "checks": [
+      "new note pending, public absent, another owner cannot read or edit",
+      "approval exposes source; dynamic favorites are idempotent, private, opt-in and mobile-compatible",
+      "moderation increments version, stale edit rejected, published edit returns pending and hides favorite",
+      "administrator can withdraw public note",
+      "owner soft delete and idempotent favorite removal"
+    ]
+  },
+  "cloneBrowser": {
+    "checks": [
+      "guest gate and login return to personal center",
+      "sidebar has personal center without nickname or logout",
+      "Tiptap heading writes correct Markdown",
+      "source editing and table reading preview",
+      "Markdown export content matched",
+      "two owned uploads passed actual scanner and inserted outside table cells",
+      "new note submitted pending",
+      "administrator approved in clone and public rich content readable",
+      "favorite saved and shown in personal collection",
+      "cancel favorite returns empty collection",
+      "published own note loaded with complete source and version",
+      "edit re-enters pending and image bindings removed",
+      "reopen action reloads pending version",
+      "owner delete confirmed and own list empty",
+      "development StrictMode request activation fixed",
+      "private clone storage images cleaned via API"
+    ],
+    "scope": "isolated restored production database; localhost candidate website",
+    "desktop": {
+      "height": 720,
+      "width": 1280
+    },
+    "mobile": {
+      "background": "rgb(255, 218, 61)",
+      "height": 844,
+      "navBackground": "rgb(255, 218, 61)",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    "passed": true,
+    "screenshots": ["mobile-first-view.png", "collection-desktop.png"]
+  },
+  "https": {
+    "passed": true,
+    "at": "2026-11-07T05:05:19.590Z",
+    "buildId": "-pXIJMFe4DFcnjkm4KJep",
+    "openapi": "1.54.0",
+    "checks": [
+      {
+        "path": "/snow",
+        "status": 200
+      },
+      {
+        "name": "personal center static assets",
+        "count": 23
+      },
+      {
+        "path": "/snow/me",
+        "status": 200
+      },
+      {
+        "path": "/snow/me/new",
+        "status": 200
+      },
+      {
+        "path": "/snow/me/notes/1",
+        "status": 200
+      },
+      {
+        "path": "/snow/me?tab=favorites&type=dynamic",
+        "status": 200
+      },
+      {
+        "path": "/snow/login?returnTo=%2Fme",
+        "status": 200
+      },
+      {
+        "path": "/snow/resorts",
+        "status": 200
+      },
+      {
+        "path": "/snow/knowledge?keyword=&categoryValue=",
+        "status": 200
+      },
+      {
+        "path": "/snow/knowledge?keyword=%E6%B5%8B%E8%AF%95&categoryValue=",
+        "status": 200
+      },
+      {
+        "path": "/snow/dynamics",
+        "status": 200
+      }
+    ],
+    "privateNotesGuestStatus": 401
+  },
+  "build": {
+    "passed": true,
+    "buildId": "-pXIJMFe4DFcnjkm4KJep",
+    "filesVerified": 2197,
+    "linksVerified": 21,
+    "sha256": "73156a71eaad849332e6eb1f805b0242386711ce7ae8a7514a4a0a86839ab533",
+    "checks": [
+      {
+        "route": "/snow",
+        "status": 200
+      },
+      {
+        "route": "/snow/login",
+        "status": 200
+      },
+      {
+        "route": "/snow/me",
+        "status": 200
+      },
+      {
+        "route": "/snow/me/new",
+        "status": 200
+      },
+      {
+        "route": "/snow/me/notes/1",
+        "status": 200
+      },
+      {
+        "route": "/snow/me?tab=favorites&type=dynamic",
+        "status": 200
+      },
+      {
+        "route": "/snow/resorts",
+        "status": 200
+      },
+      {
+        "route": "/snow/knowledge?keyword=&categoryValue=",
+        "status": 200
+      },
+      {
+        "route": "/snow/knowledge?keyword=%E6%B5%8B%E8%AF%95&categoryValue=",
+        "status": 200
+      },
+      {
+        "route": "/snow/dynamics",
+        "status": 200
+      }
+    ]
+  },
+  "final": {
+    "passed": true,
+    "at": "2026-11-07T05:13:40.218449+00:00",
+    "before": {
+      "migrations": 26,
+      "articles": 8,
+      "dynamics": 20,
+      "assets": 34,
+      "users": 18,
+      "resorts": 5
+    },
+    "after": {
+      "migrations": 27,
+      "articles": 8,
+      "dynamics": 20,
+      "assets": 34,
+      "users": 18,
+      "resorts": 5
+    },
+    "productionContentCountsUnchanged": true,
+    "services": {
+      "linji-api": {
+        "MainPID": "1488566",
+        "WorkingDirectory": "/opt/linji/releases/20261107-member-center/backend",
+        "ActiveState": "active"
+      },
+      "linji-web": {
+        "MainPID": "1488567",
+        "WorkingDirectory": "/opt/linji/releases/20261107-member-center/web-final",
+        "ActiveState": "active"
+      },
+      "linji-admin": {
+        "MainPID": "1464533",
+        "WorkingDirectory": "/opt/linji/releases/20261106-markdown/admin",
+        "ActiveState": "active"
+      },
+      "nginx": {
+        "MainPID": "740",
+        "WorkingDirectory": "",
+        "ActiveState": "active"
+      }
+    },
+    "cleanup": {
+      "cloneDatabase": "linji_member_rehearsal_20261107",
+      "dropped": true,
+      "privateCandidateConfigRemoved": true
+    },
+    "productionDatabaseRestored": false
+  },
+  "tests": {
+    "backendUnit": {
+      "tests": 1525,
+      "files": 159
+    },
+    "backendHttp": {
+      "tests": 178,
+      "files": 9
+    },
+    "actualPostgresDynamicFavorites": {
+      "tests": 7
+    },
+    "website": {
+      "tests": 470,
+      "files": 32
+    },
+    "affectedAdmin": {
+      "tests": 155,
+      "files": 7
+    },
+    "apiClient": {
+      "tests": 15
+    }
+  },
+  "checks": [
+    "Backend and both web application type checks passed",
+    "Backend lint passed with six existing unrelated script warnings",
+    "Website lint, workspace boundaries, OpenAPI snapshot and changed source formatting passed",
+    "Linux backend and website production builds passed"
+  ],
+  "productionBrowser": {
+    "passed": true,
+    "contentWrites": false,
+    "checks": [
+      "Authenticated sidebar only contains personal center entry, no nickname above it",
+      "Own list and collection pages readable",
+      "Tiptap editor rendered and five public resort choices loaded",
+      "390x844 editor yellow background and scrollWidth 390; viewport screenshot visually checked in browser",
+      "Refreshing collection route restores authenticated personal center",
+      "Logout removes private content and shows login gate",
+      "Homepage retains SVG viewBox 0 0 60 24 and coarse five-color mosaic during actual scrolling"
+    ],
+    "screenshots": ["production-center.png", "production-editor-desktop.png"]
+  },
+  "screenshots": {
+    "directory": "member-center-20261107",
+    "files": [
+      {
+        "file": "production-center.png",
+        "scope": "production HTTPS"
+      },
+      {
+        "file": "production-editor-desktop.png",
+        "scope": "production HTTPS"
+      },
+      {
+        "file": "mobile-first-view.png",
+        "scope": "isolated clone website"
+      },
+      {
+        "file": "collection-desktop.png",
+        "scope": "isolated clone website"
+      }
+    ]
+  },
+  "limitations": [
+    "Unsubmitted notes are memory-only; export before leaving or refreshing",
+    "No physical mobile device or OS reduced-motion settings operated",
+    "Full Markdown import matrix not exercised in browser",
+    "Unknown-write and account-change protections covered by model tests; no production network disruption or cross-account browser exercise"
+  ],
+  "source": {
+    "backendSha256": "40b7c5866b4241ddf19fc305c162fd4513ced18cd699901be896f634f1d6b307",
+    "websiteSha256": "4411a9e39350129cf34eca0d75cf7ce52de146cac68b4d0389b45edbd3872116",
+    "openapiSha256": "09f9a1724f89899c50761950d861c924fa251a82c577a8766e078e38e9a70c16"
+  },
+  "rollback": {
+    "command": "python3 /opt/linji/releases/20261107-member-center/rollback.py",
+    "executed": false,
+    "retainAdditiveSchema": true,
+    "restoreProductionDatabase": false
+  },
+  "cleanup": {
+    "cloneDatabase": "linji_member_rehearsal_20261107",
+    "dropped": true,
+    "privateCandidateConfigRemoved": true,
+    "localPreviewStopped": true,
+    "localApiProxyStopped": true,
+    "taskSshTunnelStopped": true,
+    "originalDev3108Preserved": true
+  },
+  "screenshotRoot": "../../../web/docs/validation/member-center-20261107"
+}

@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-03",
+  "passed": true,
+  "scope": "RAG source management production reader/command/recovery controllers through compiled Nest HTTP and isolated PostgreSQL/pgvector; no new business protocol",
+  "migrations": 24,
+  "liveHttp": {
+    "tests": 21,
+    "newRagTests": 6,
+    "database": "linji_admin_authorization_validation",
+    "runtime": "PostgreSQL 17.11 / pgvector 0.8.1",
+    "report": {
+      "path": "D:/linji-rag-http/20261103/verified/linji-admin-http-MFQwEY/report.json",
+      "sha256": "b479a8c2b34d4163c5ec602b32ee9015720ffafa3e1cebacf1a47a2d8259f3c3"
+    },
+    "clientResult": {
+      "path": "D:/linji-rag-http/20261103/verified/linji-admin-http-MFQwEY/client-result.json",
+      "sha256": "3901dc2aa4dde9af4d823a6f5425abd5b160d8f33901beef16c4286143c499e8"
+    },
+    "fixtureVerification": {
+      "path": "D:/linji-rag-http/20261103/verified/linji-admin-http-MFQwEY/fixture-verify.log",
+      "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+    },
+    "ports": [
+      60826,
+      63995
+    ],
+    "cleanup": {
+      "path": "D:/linji-rag-http/20261103/cleanup.json",
+      "sha256": "7a4989340cdfda9b8f756315fd16e8fe218201c4794e586a6e177c0ff405b0ff"
+    },
+    "verifiedVersions": [
+      2,
+      4,
+      5,
+      7
+    ],
+    "controlAudits": 6,
+    "ragOutboxEvents": 4,
+    "finalControlVersion": 7,
+    "finalIndexGeneration": 6
+  },
+  "diagnostics": [
+    "Initial TypeScript preflight rejected Array.findLast for this repository lib; replaced with reverse().find() on a copy",
+    "First live run: all six RAG tests passed, but four existing tests used a stale account snapshot after grant changes; fixed only the fixture identity restoration, reran in fresh databases",
+    "Second live run: 21 passed plus persistence verification. Final new database rerun adds raw response whitelist assertions; 21 passed plus persistence verification again. Runs are not accumulated.",
+    "Initial Web build wrapper included an extra -- separator and forwarded build flags into the packaging script; source compilation succeeded but packaging rejected extra arguments. Preserved log and reran forced builds with the correct wrapper arguments."
+  ],
+  "limitations": [
+    "Overall goal remains incomplete; D-49/D-50/D-09 not answered or implemented in this stage",
+    "Injected response loss occurs after actual server success at the client boundary; not a real browser/network-disconnect experiment",
+    "Node Cookie jar is not browser cookie/CORS/React/BFCache validation",
+    "Recovery metadata is tab memory only, not historical execution attribution or cross-reload idempotency",
+    "Kafka dispatch/consumer disabled in this suite; pending Outbox is not delivered/indexed completion",
+    "No real embedding/chat provider, browser, device, container or remote-CI validation in this stage",
+    "No Docker restart/start, parent dependency deletion, commit/push/deploy/publish"
+  ],
+  "businessRuntimeChanged": false,
+  "repository": "backend",
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 142,
+    "unitTests": 1220,
+    "sourceExportNode": 8,
+    "httpFrameworkFiles": 9,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "lint": "zero errors; existing no-unsafe-finally warning"
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "10c80c427357a7ffabab3c89847771fe07eaf496bdd67a0c664c5852e239cf62"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/native-http-runtime.ts",
+      "sha256": "3c7a153df237ecedfee557315bb0eee63dbd6ed196e31a8bf057cc0310610473"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/src/modules/ai-assistant/infrastructure/prisma-rag-source-management.repository.ts",
+      "sha256": "933ecad50f429d4ea562d9a523a28249464aaaabbb25a5cbc37400a9a1857c22"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-rag-http/20261103/backend-install.log",
+      "sha256": "784766d29bf3d690ebd3bc090fd1653f40b55d9ec2671a4e94363ace3e91a474"
+    },
+    {
+      "path": "D:/linji-rag-http/20261103/backend-check.log",
+      "sha256": "4b5f536feb9392352f19e3391b50843775a8adaa072fffd00582e4297103433e"
+    },
+    {
+      "path": "D:/linji-rag-http/20261103/backend-e2e.log",
+      "sha256": "193e9c3744fd572c8ba11011585118a39f02ac8cebac22ac87f4cb5ca4a9c062"
+    },
+    {
+      "path": "D:/linji-rag-http/20261103/backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-rag-http/20261103/native-admin.log",
+      "sha256": "a50a619deb47834baa895fc8e0001b292e17bd0c4daec0177bffcaf461e1a59b"
+    },
+    {
+      "path": "D:/linji-rag-http/20261103/native-admin-final.log",
+      "sha256": "f6d88b25ca07a268931c43a40a3334643b7d276ad89ecc422017b69a0d761642"
+    },
+    {
+      "path": "D:/linji-rag-http/20261103/native-admin-verified.log",
+      "sha256": "c0b84a35bb1accb3f302c033c18ebf2bf78adee97dd7dd18ac0d64e14ba42ce7"
+    }
+  ]
+}

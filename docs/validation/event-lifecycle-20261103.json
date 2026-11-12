@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-03",
+  "passed": true,
+  "scope": "Outbox frontend response projection, final authorization checks, cancellation/late-result protection and current read-proof recovery; no new protocol",
+  "migrations": 24,
+  "liveHttp": {
+    "tests": 27,
+    "report": {
+      "path": "D:/linji-event-lifecycle/20261103/final/linji-admin-http-8qZr8b/report.json",
+      "sha256": "34944466d039c055db3914ee5177aacbc8c81aef2e1b20bb82b940cb7d4a896a"
+    },
+    "clientResult": {
+      "path": "D:/linji-event-lifecycle/20261103/final/linji-admin-http-8qZr8b/client-result.json",
+      "sha256": "2df0940f846228ae25ad482ef7ce4be1f66e28481eed54f96b7ded7f816d6432"
+    },
+    "fixtureVerification": {
+      "path": "D:/linji-event-lifecycle/20261103/final/linji-admin-http-8qZr8b/fixture-verify.log",
+      "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+    },
+    "cleanup": {
+      "path": "D:/linji-event-lifecycle/20261103/cleanup.json",
+      "sha256": "e778f35f318bf1d9d0009c7290b8579b734fa9327dd8dd8c6d1fa52cf90ca13b"
+    },
+    "ports": [
+      61794,
+      50485
+    ],
+    "knowledgeVersion": 7,
+    "knowledgeOutboxEvents": 7,
+    "knowledgeAudits": 7,
+    "retainedFirstPublishTime": "2026-11-03T05:30:44.409Z",
+    "retryAudits": 1,
+    "eventAttempts": 5,
+    "eventMaxAttemptsBefore": 5,
+    "eventMaxAttemptsAfter": 13,
+    "outboxTotal": 13,
+    "retainedRagEvents": 4,
+    "retainedRagAudits": 6
+  },
+  "diagnostics": [
+    "Initial frontend preflight failed because a test mock inferred private extra fields as required. Widened only the untrusted mock response to unknown; final types and complete check/build passed. Initial diagnostic retained.",
+    "First 27-test native run passed. After fixing the additional post-write identity HTTP rejection branch, repeated all 27 on a new isolated database; both runtimes stopped.",
+    "Initial Web complete-check invocation passed all business/tool tests but failed its last format step on a newly added test. Simplified the test mock setup and corrected formatting, retained web-check-first.log, then repeated the complete check successfully.",
+    "An extra targeted lint command was initially invoked from the workspace root, which has no ESLint executable. Reissued it through the admin package and passed; the complete workspace check had already passed. Both logs retained."
+  ],
+  "limitations": [
+    "Overall goal incomplete; D-49/D-50/D-09 remain unanswered",
+    "Model and SSR tests do not validate actual React visibility events, Cookie/CORS or BFCache/browser behavior",
+    "Recovery ledger is browser memory only: no full-reload, separate-tab, browser-close or cross-device guarantee",
+    "Kafka dispatch/consumer disabled; pending does not prove delivery or indexing",
+    "No actual embedding/chat provider, container, signed native package or remote CI validation",
+    "No Docker start/restart, parent dependency deletion, commit/push/deploy/publish"
+  ],
+  "repository": "backend",
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "path": "E:/desktop/lishiqi/backend/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "unitFiles": 142,
+    "unitTests": 1220,
+    "sourceExportNode": 8,
+    "httpFrameworkFiles": 9,
+    "httpFrameworkTests": 173,
+    "build": 0,
+    "businessChanged": false,
+    "lint": "zero errors; existing no-unsafe-finally warning"
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/admin-authorization-http-fixture.ts",
+      "sha256": "d1e85dea7e427f5b9662370cf49633a0ab2cf375cd4a00096de470c4030a3839"
+    },
+    {
+      "path": "E:/desktop/lishiqi/backend/scripts/native-http-runtime.ts",
+      "sha256": "3c7a153df237ecedfee557315bb0eee63dbd6ed196e31a8bf057cc0310610473"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-event-lifecycle/20261103/backend-install.log",
+      "sha256": "af308ad48508f9e37483f28b1572e54d4558e4912fb0a246381b1440b42a3b25"
+    },
+    {
+      "path": "D:/linji-event-lifecycle/20261103/backend-check.log",
+      "sha256": "1f5453f85a70ade8914576094d51be754a24eab35d9f274de622a6c9eac250bf"
+    },
+    {
+      "path": "D:/linji-event-lifecycle/20261103/backend-e2e.log",
+      "sha256": "3f87170b53e9ab747200dc1c84b0f34a113d69134603a4a740fc4f175d0f8578"
+    },
+    {
+      "path": "D:/linji-event-lifecycle/20261103/backend-build.log",
+      "sha256": "c9bbb792e87e76102443f726d9d61fcec8c7f422fb97cc739cf187013632726f"
+    },
+    {
+      "path": "D:/linji-event-lifecycle/20261103/native-admin.log",
+      "sha256": "27b58d086290e9e4b17ed9fc67703d326f1fe3bcc43c2b4154dd028f6c6629b3"
+    },
+    {
+      "path": "D:/linji-event-lifecycle/20261103/native-admin-final.log",
+      "sha256": "bacab793721f2fccdda6ea0729f619b0076247685087c21ef7666cb67927b92a"
+    }
+  ]
+}

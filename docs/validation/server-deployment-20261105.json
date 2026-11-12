@@ -1,0 +1,80 @@
+{
+  "completed": true,
+  "checkedAt": "2026-11-05T07:09:56.650Z",
+  "scope": "user-authorized single-host HTTPS test deployment and independently signed ARM64 release APK",
+  "server": "47.109.181.69",
+  "urls": {
+    "website": "https://lichcarlos.top/snow",
+    "admin": "https://lichcarlos.top/snow-admin/login",
+    "api": "https://lichcarlos.top/snow-api/api/v1",
+    "apk": "https://lichcarlos.top/snow-downloads/linji-snow-1.0.0-arm64.apk"
+  },
+  "contract": {
+    "version": "1.52.0",
+    "operations": 151,
+    "sha256": "4b15275231f7d421b80210b769c2d1cc0d1bc704ec73ce3c5d4839c827e9c84d"
+  },
+  "evidenceDirectory": "D:/linji-local/20261105",
+  "checks": {
+    "httpsAuthentication": 6,
+    "nativeAuthentication": 4,
+    "apkDownloadMatches": true,
+    "chromiumScenarios": 3,
+    "realStorage": 3,
+    "realRemoteRag": 3,
+    "adminPathTests": 2,
+    "metadataTests": 37,
+    "webLint": true,
+    "webTypecheck": true,
+    "linuxWebBuilds": 2,
+    "appLint": true,
+    "appTypecheck": true,
+    "workspaceAppFilesCompared": 212,
+    "deployedWebProductFilesCompared": 9
+  },
+  "apk": {
+    "completed": true,
+    "file": "D:/linji-local/20261105/linji-snow-1.0.0-arm64.apk",
+    "sizeBytes": 37697366,
+    "sha256": "b8e01090593be221bc3c4397b92f8cd3b827fd11bdd3a45a93ade96109853f1c",
+    "packageName": "com.linji.snow.preview",
+    "version": "1.0.0",
+    "abi": "arm64-v8a",
+    "apiBaseUrl": "https://lichcarlos.top/snow-api/api/v1",
+    "embeddedJsBytes": 3586332,
+    "nativeLibraries": 24,
+    "signing": "Dedicated local preview key; private keystore retained outside repositories",
+    "standaloneRelease": true,
+    "deviceInstallationVerified": false,
+    "checkedAt": "2026-11-05T07:05:28.7667869Z"
+  },
+  "services": [
+    "linji-api",
+    "linji-web",
+    "linji-admin",
+    "linji-postgres",
+    "linji-kafka",
+    "linji-minio",
+    "linji-clamav"
+  ],
+  "embedding": {
+    "host": "local Windows computer",
+    "model": "bge-m3-q8-950f4a8e5e19",
+    "dimensions": 1024,
+    "localPort": 19181,
+    "serverLoopbackPort": 19180,
+    "task": "LinjiSnow-LocalEmbedding",
+    "requiresComputerOnlineAndLoggedIn": true
+  },
+  "boundaries": [
+    "No physical-device installation claimed",
+    "No complete browser business journey suite claimed",
+    "No iOS build or installation",
+    "No EAS cloud or store signing/submission",
+    "No production capacity or disaster recovery acceptance",
+    "Model availability depends on local Windows and SSH tunnel",
+    "Existing server projects preserved",
+    "No Git commit or push"
+  ],
+  "failedBuildLogsPreserved": true
+}
