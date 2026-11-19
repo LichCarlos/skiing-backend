@@ -1,5 +1,7 @@
 # Backend 本地开发与接口协作
 
+空白电脑请先完成[逐项环境安装与三端运行](from-zero.md)，再回到本文调试业务；下面的命令以工具和基础设施已准备好为前提。
+
 ## 初始化
 
 按 README 安装 Node 22.16.0、pnpm 11.25.0，复制 `.env.example`。生产配置和数据库不能用于开发测试。生成两个不同的随机秘密可用 `node -e "console.log(require('node:crypto').randomBytes(48).toString('hex'))"`，输出只保存到私有配置，不粘到提交或公开日志。
@@ -12,7 +14,7 @@ docker compose --env-file .env -f infra/docker-compose.yml up -d --build
 pnpm db:generate
 pnpm db:deploy
 pnpm db:seed
-pnpm db:verify
+pnpm exec tsx --env-file=.env scripts/verify-database.ts
 pnpm storage:init
 pnpm start:dev
 ```

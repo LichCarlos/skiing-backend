@@ -1,7 +1,8 @@
 # Backend 文档索引
 
-## 当前教程入口（2026-11-12）
+## 当前教程入口（2026-11-19）
 
+- [从空白电脑到三端运行与部署：版本下载、环境与验收](guide/from-zero.md)
 - [三仓协作与技术学习路线](guide/learning-roadmap.md)
 - [本地开发教程](guide/development.md)
 - [部署与发布教程](guide/deployment.md)
@@ -9,7 +10,6 @@
 - [文章图片不设固定数量上限](engineering/article-images-20261112.md)
 
 以下为历次工程与验收记录，状态按各自日期理解。
-
 
 - [2026-11-07 个人笔记收藏与官网发布](engineering/member-center-20261107.md)、[报告](validation/member-center-20261107.json)：OpenAPI 1.54.0 / 27 迁移，社区审核复用、动态收藏与默认列表兼容、克隆验收、正式服务和数据数量核对、备份回滚。
 

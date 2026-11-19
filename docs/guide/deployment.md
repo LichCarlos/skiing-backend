@@ -1,5 +1,7 @@
 # Backend 部署、备份与恢复教程
 
+首次部署先按[空白 Ubuntu 的完整安装、三端服务与 HTTPS 配置](from-zero.md)操作；本文侧重已有环境的发布、备份与回滚。作者本机模型路径不属于新环境必备条件。
+
 当前 API 已上线，本文提供可复用流程；历史单次上线结果在 engineering/validation 中按日期记录。API 健康 200 只代表存活，完整验收还包括认证、数据库、私有存储、扫描、消息与真实 AI。
 
 ## 1. 环境规划
@@ -69,6 +71,7 @@ docker compose -f infra/compose.release.yml up -d api
 ```nginx
 location /snow-api/ {
     proxy_pass http://127.0.0.1:18080/;
+    proxy_cookie_path /api/v1 /snow-api/api/v1;
     proxy_http_version 1.1;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-Proto $scheme;
@@ -79,7 +82,7 @@ location /snow-api/ {
 }
 ```
 
-这里尾斜杠将 `/snow-api/` 替换为 `/`，公开 `/snow-api/api/v1/...` 到内部 `/api/v1/...`。前端 Next basePath 的代理规则不同，不能一律加或去掉斜杠。
+这里尾斜杠将 `/snow-api/` 替换为 `/`，公开 `/snow-api/api/v1/...` 到内部 `/api/v1/...`。Cookie Path 同步重写到外部前缀，否则浏览器可能登录后无法保持身份。前端 Next basePath 的代理规则不同，不能一律加或去掉斜杠。
 
 SSE 需关闭响应缓冲并容许模型延迟；客户端取消要传到服务端。Origin/CSRF 和 Cookie 规则必须按实际 HTTPS 域名验证。上传在 Nginx 与应用各层都有预算，调大反代上限不会取消单文件/正文/JSON 的服务端限制。私有存储签名入口必须保留正确 Host、路径和 HTTPS。
 
@@ -115,6 +118,8 @@ pnpm db:restore-new --directory /opt/linji/private/backups/KNOWN_BATCH --pg-bin 
 
 ## 8. 当前模型运行限制
 
-现有 BGE-M3 在本机 Windows 运行，通过受控反向隧道接入服务器。`D:/linji-real-rag` 中包含仍在运行的模型/工具，`D:/linji-local` 包含监督脚本与发布材料；不能当作普通临时目录随意移动。开发机休眠/关机/断网会影响语义检索，应长期规划服务器独立模型或可靠托管 Embedding，验证维度、分块、重试与容量。
+现有 BGE-M3 在本机 Windows 运行，通过受控反向隧道接入服务器。`D:/develop/coding/linji/runtime/linji-real-rag` 中包含仍在运行的模型/工具，`D:/develop/coding/linji/runtime/linji-local` 包含监督脚本与发布材料；不能当作普通临时目录随意移动。开发机休眠/关机/断网会影响语义检索，应长期规划服务器独立模型或可靠托管 Embedding，验证维度、分块、重试与容量。
 
 当前 GitHub 工作流不自动部署。远程 Actions、物理设备、容量与联合灾备的结果均需单独确认，不从一次构建成功推断。
+
+2026-11-19 已修复磁盘迁移后本机模型计划任务工作目录与 Node 路径失效的问题，恢复模型及反向隧道，真实 HTTPS 对话、引用及历史保存验收通过。现有 health 入口仅判断 API 存活，不代表模型依赖可用；AI 故障应额外检查 Windows 模型任务、服务器 19180 loopback 监听及真实 embedding/chat。
